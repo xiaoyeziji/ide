@@ -8,9 +8,9 @@
 
     Your entire business infrastructure can be migrated to the Alibaba Cloud much sooner than you have imagined. This way, you can make maximum use of the massive resources that Alibaba Cloud offer and optimize business productivity. With Alibaba Cloud’s mature business scaling solutions, enterprises do not need to focus too much on seamless service expansion and other allied matters.
 
--   Reduces investment and O&amp;M costs
+-   Reduces investment and O&M costs
 
-    It can greatly reduce the material resources, labor, and R&amp;D investment required for any self-built big data platforms.
+    It can greatly reduce the material resources, labor, and R&D investment required for any self-built big data platforms.
 
 -   Security and stability
 
@@ -21,7 +21,7 @@
 
 DataWorks + AnalyticDB + MaxCompute
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16169/15361988498914_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16169/15362006288914_en-US.png)
 
 ## Weather queries and advertisement business log analysis {#section_q51_p3p_r2b .section}
 
@@ -44,7 +44,7 @@ DataWorks + AnalyticDB + MaxCompute
 
 DataWorks + Data Integration + AnalyticDB + Quick BI + MaxCompute
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16169/15361988498916_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16169/15362006288916_en-US.png)
 
 ## Detail-oriented operations {#section_uvc_v3p_r2b .section}
 
@@ -65,5 +65,5 @@ DataWorks + Data Integration + AnalyticDB + Quick BI + MaxCompute
 
 DataWorks + Data integration + Quick BI + MaxCompute
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16169/15361988498917_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16169/15362006288917_en-US.png)
 
