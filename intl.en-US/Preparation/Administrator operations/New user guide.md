@@ -14,11 +14,7 @@ If you are using the DTplus products for the first time, log on by using your Al
 
     To assure smooth processing of tasks of data in DataWorks, you must create an AccessKey. Similar to the way you use the account name and password to log on, an AccessKey is primarily used to access permission verification between various Alibaba Cloud products and services. For more information, see [Prepare Alibaba Cloud account](intl.en-US/Preparation/Administrator operations/Prepare Alibaba Cloud account.md#).
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16173/15362020748929_en-US.jpg)
-
     An AccessKey comprises of an AccessKey ID and an AccessKeySecret. Generally, the AccessKey is secured and kept confidential. Once the AccessKey is disabled, the services that use this AccessKey fail to run and report exceptions to users. If an AccessKey information changes, it can impact the products and services that use this AccessKey. Therefore, you must keep a close eye on such changes and take appropriate actions on time.
-
-    ![](images/8930_en-US.jpg)
 
     **Note:** The AccessKey is highly critical to your account. After creating the AccessKey, you must secure the AccessKey ID and AccessKeySecret. Do not reveal this information to others on any condition. If you suspect of any information leak or other risks, you must promptly disable or modify your AccessKey.
 
@@ -26,15 +22,11 @@ If you are using the DTplus products for the first time, log on by using your Al
 
     If a region does not contain any project, it automatically shows that you have no project. You can proceed to create a project. The data development, O&M center, and data management are selected by default.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16173/15362020748931_en-US.jpg)
-
 4.  Create a project.
 
     Only a primary account, which has the data integration function can create a project, and the other sub-accounts are treated only as users in the project.
 
     **Note:** This makes it necessary for a primary account to prepare a project environment for other sub-accounts.
-
-    ![](images/8932_en-US.jpg)
 
     -   **Project name**: The length of the project name is at least 3 and must not exceed 27 characters.
     -   **Display name**: The length of the display name must not exceed 27 characters.
@@ -47,7 +39,5 @@ If you are using the DTplus products for the first time, log on by using your Al
 5.  Click **Create Project**.
 
     After a project is successfully created, the project appears on the project list page. This page usually displays the project according to its time of creation or latest time of use.
-
-    ![](images/8933_en-US.jpg)
 
 
