@@ -28,8 +28,6 @@ The AccessKey facilitates smooth operation of the tasks created in DataWorks. Th
     1.  The main account enters the **RAM** \> **Settings** page, click **User Security Settings** from the Actions column.
     2.  Select User Security Settings tab, and select **allow the user to manage their own AccessKey**, Click **Save Changes** to complete the settings.
 
-        ![](images/8949_en-US.png)
-
         This option is not checked by default, and the subaccount user cannot create and manage his own AccessKey. After **allow the user to manage their own AccessKey**, sub-account login to the Alibaba cloud, you can create the AccessKey on your own in the console.
 
         **Note:** It is very important to run the key AK. Whether it is the AK of the primary account or the AK of the sub-account, once it is created successfully, be sure to ensure its security and scope of use. If the AccessKey is leaked, timely prohibit it and create a new one.
