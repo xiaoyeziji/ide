@@ -17,12 +17,12 @@ The steps for task configuration are as follows:
 
 Synchronization tasks support data transmission between various homogenous data sources and heterogeneous data sources. First, register the target data source at Data Integration. Then you can select the data source directly when configuring a synchronization task on Data Integration.
 
-After confirming that the target data source is supported by Data Integration, you can register the data source at Data Integration. For detailed data source registration, see [configuring data source information](https://help.aliyun.com/knowledge_list/72788.html).
+After confirming that the target data source is supported by Data Integration, you can register the data source at Data Integration. For detailed data source registration, see [configuring data source information](https://www.alibabacloud.com/help/faq-list/72788.htm).
 
 **Note:** 
 
--   For some data sources Data Integration does not support test connectivity. For more information on data source test connectivity, see[Data Source testing connectivity](intl.en-US/User Guide/Data Integration/Data source configuration/Data Source testing connectivity.md#).
--   Many times, data sources are created locally and cannot be connected without a public network IP or network. In this case, testing connectivity at the time of configuration of the data source fails directly, data Integration supports adding[Concepts](../../../../intl.en-US/Product Introduction/Concepts.md#) to address this type of network inaccessibility, however, when creating a new synchronization task, you can only select Script Mode \(because the network is not connected, information such as table structure cannot be obtained in wizard mode \).
+-   For some data sources Data Integration does not support test connectivity. For more information on data source test connectivity, see [Data Source testing connectivity](intl.en-US/User Guide/Data Integration/Data source configuration/Data Source testing connectivity.md#).
+-   Many times, data sources are created locally and cannot be connected without a public network IP or network. In this case, testing connectivity at the time of configuration of the data source fails directly, data Integration supports adding [Concepts](../../../../intl.en-US/Product Introduction/Concepts.md#) to address this type of network inaccessibility, however, when creating a new synchronization task, you can only select Script Mode \(because the network is not connected, information such as table structure cannot be obtained in wizard mode \).
 
 ## Create a synchronization task and the reader {#section_tfn_1kc_p2b .section}
 
@@ -31,18 +31,18 @@ After confirming that the target data source is supported by Data Integration, y
 1.  Enter the [DataWorks management console](https://workbench.data.aliyun.com/console) as a developer, and click **Enter workspace** in the corresponding project action bar.
 2.  Click **Data Development** in the left-hand menu bar to open the Business Process navigator.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16216/15367213127611_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16216/15367477167611_en-US.png)
 
 3.  Right-click **Business Flow** in the navigation bar, create **Data Integration node** \> **Data Sync**, and enter the synchronization Task Name.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16216/15367213127612_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16216/15367477167612_en-US.png)
 
-4.  After the synchronization task is created, you can continue to manually configure the reader data source and the target table information for the data synchronization task. When you select a data source to read from, see [configuring reader](https://help.aliyun.com/knowledge_list/49806.html?spm=a2c4g.11186623.6.589.Sxaf4R).
+4.  After the synchronization task is created, you can continue to manually configure the reader data source and the target table information for the data synchronization task. When you select a data source to read from, see [configuring reader](https://www.alibabacloud.com/help/faq-list/49806.htm).
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16216/15367213127614_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16216/15367477167614_en-US.png)
 
 
-**Note:** Many tasks require incremental synchronization of data when configuring read-side data sources, you can now get the relative date in conjunction with what DataWorks provides[Parameter configuration](intl.en-US/User Guide/Data development/Scheduling Configuration/Parameter configuration.md#) to complete the requirement to get the incremental data.
+**Note:** Many tasks require incremental synchronization of data when configuring read-side data sources, you can now get the relative date in conjunction with what DataWorks provides [Parameter configuration](intl.en-US/User Guide/Data development/Scheduling Configuration/Parameter configuration.md#) to complete the requirement to get the incremental data.
 
 ## Configure the writer {#section_nz2_jlc_p2b .section}
 
@@ -57,7 +57,7 @@ When the configuration of both the Read and Write side is complete, you need to 
 -   Peer mapping: automatically sets the mapping relationship for the same row of data.
 -   Automatic Layout: After the mapping relationship is set, the field ordering display is displayed.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16216/15367213137615_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16216/15367477167615_en-US.png)
 
 **Note:** Note whether the field types mapped between columns are data compatible.
 
@@ -65,7 +65,7 @@ When the configuration of both the Read and Write side is complete, you need to 
 
 When the above steps are configured, the efficiency configuration is required. Efficiency configuration mainly includes dum settings, synchronous concurrency number settings, synchronous rate settings, synchronous dirty data settings and synchronizing information such as resource group settings.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16216/15367213137616_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16216/15367477177616_en-US.png)
 
 Parameters:
 
@@ -76,19 +76,19 @@ Parameters:
 -   When you configure Synchronization Concurrency, the data records are split into several tasks based on the specified reader splitting key. These tasks run simultaneously to improve the transmission rate.
 -   Synchronous rate: Setting the synchronous rate protects the read-side database from excessive extraction speed, put too much pressure on the source library. It is recommended to throttle the synchronization rate and configure the extraction rate properly based on source database configurations.
 -   For example, if the source has varchar type data but is written to a destination column having int type data, a data conversion exception occurs and the data cannot be written to the destination column. The dirty data is mainly set to control the quality of synchronized data. You should set an appropriate number of dirty data based on your business requirements.
--   When you configure a synchronization task, you specify the resource group in which the task runs, default runs on the default Resource Group. When the project has a tight schedule of resources, you can also expand a scheduled resource by adding a Custom Resource Group, the synchronization task is then specified to run on a Custom Resource Group, see adding custom resource groups[Add scheduling resources](intl.en-US/User Guide/Data Integration/Common configuration/Add scheduling resources.md#). You can make a reasonable configuration based on data source network conditions, project scheduling resource conditions, and business importance.
+-   When you configure a synchronization task, you specify the resource group in which the task runs, default runs on the default Resource Group. When the project has a tight schedule of resources, you can also expand a scheduled resource by adding a Custom Resource Group, the synchronization task is then specified to run on a Custom Resource Group, see adding custom resource groups [Add scheduling resources](intl.en-US/User Guide/Data Integration/Common configuration/Add scheduling resources.md#). You can make a reasonable configuration based on data source network conditions, project scheduling resource conditions, and business importance.
 
-**Note:** When synchronizing data is not efficient, see [Optimizing configurations](intl.en-US/User Guide/Data Integration/Task Configuration/Data Synchronization task configuration/Optimizing configuration.md#)optimizing your synchronization tasks.
+**Note:** When synchronizing data is not efficient, see [Optimizing configurations](intl.en-US/User Guide/Data Integration/Task Configuration/Optimizing configuration.md#) optimizing your synchronization tasks.
 
 ## Scheduling parameters {#section_dhv_xmc_p2b .section}
 
 You often need to use scheduling parameters to filter your data in synchronization tasks, you will be shown below how to configure scheduling parameters in the synchronization task.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16216/15367213137617_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16216/15367477177617_en-US.png)
 
 As shown in the figure above, you can declare a schedule parameter variable in the form of a $ \{variable name, when the variable declaration is complete, write the initialization value of the variable in the scheduled parameter properties, the value initialized here by the variable is identified by $, the content can be either a time expression or a constant.
 
-For example, $ \{today\} was written in code, by assigning today = $ \[yyyymmdd\] in the scheduling parameter, you can get the date of the day, to add-minus to a date, see[Parameter configuration](intl.en-US/User Guide/Data development/Scheduling Configuration/Parameter configuration.md#).
+For example, $ \{today\} was written in code, by assigning today = $ \[yyyymmdd\] in the scheduling parameter, you can get the date of the day, to add-minus to a date, see [Parameter configuration](intl.en-US/User Guide/Data development/Scheduling Configuration/Parameter configuration.md#).
 
 ## Using custom schedule parameters in synchronization tasks {#section_scv_jnc_p2b .section}
 
@@ -98,7 +98,7 @@ All you need to do in the synchronization task is declare the following paramete
 -   cyctime: gets the current run time, in the form of yyyymmddhhmiss.
 -   Dataworks provides two system default scheduling parameters, bizdate and cycletime.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16216/15367213137618_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16216/15367477177618_en-US.png)
 
 ## Configure scheduling Properties {#section_a4t_rnc_p2b .section}
 
