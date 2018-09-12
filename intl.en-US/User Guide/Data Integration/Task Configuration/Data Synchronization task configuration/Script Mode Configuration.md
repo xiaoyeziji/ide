@@ -17,7 +17,7 @@ The steps for task configuration are as follows:
 
 ## Create data source {#section_vkd_w2c_p2b .section}
 
-Synchronization tasks support data transmission between various homogenous data sources and heterogeneous data sources. First, register the target data source at Data Integration. Then you can select the data source directly when configuring a synchronization task on Data Integration. Data integration the data source types that support synchronization are shown in[Supported data sources](intl.en-US/User Guide/Data Integration/Data source configuration/Supported data sources.md#).
+Synchronization tasks support data transmission between various homogenous data sources and heterogeneous data sources. First, register the target data source at Data Integration. Then you can select the data source directly when configuring a synchronization task on Data Integration. Data integration the data source types that support synchronization are shown in [Supported data sources](intl.en-US/User Guide/Data Integration/Data source configuration/Supported data sources.md#).
 
 After confirming that the target data source is supported by Data Integration, you can register the data source at Data Integration. For detailed data source registration, see [configuring data source information](intl.en-US/User Guide/Data Integration/Data source configuration/Supported data sources.md#).
 
@@ -33,21 +33,21 @@ After confirming that the target data source is supported by Data Integration, y
 1.  Enter the [DataWorks management console](https://workbench.data.aliyun.com/console) as a developer, and click **Enter workspace** in the corresponding project action bar.
 2.  Click **Data Development** in the left-hand menu bar to open the Business Process navigator.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15367213497629_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15367411267629_en-US.png)
 
 3.  Right-click **Business Flow** in the navigation bar, create **Data Integration** \> **Data Sync**, and enter the synchronization Task Name.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15367213497630_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15367411267630_en-US.png)
 
 4.  After successfully creating the synchronization node, click the **Switch to Script Mode** in the upper-right corner of the new synchronization node, select **Ok** to enter Script Mode.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15367213497631_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15367411267631_en-US.png)
 
     **Note:** Script Mode supports more features, such as synchronous task editing if the network is not up to date.
 
 5.  Click **Import template** in the upper-right corner of the script pattern, in the bullet box, select the source type of the read and the data source, the target type of the write, and the data source respectively, click **confirm** to generate the initial script.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15367213497632_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15367411267632_en-US.png)
 
 
 ## Configure the synchronization task reader {#section_nz2_jlc_p2b .section}
@@ -92,7 +92,7 @@ Configurations:
 
 When you configure the read side, for specific parameter settings and code descriptions, see the Script Mode section in [configuring reader](intl.en-US/User Guide/Data Integration/Task Configuration/Configure Reader plug-in/Configure DB2 Reader.md#).
 
-**Note:** Many tasks require incremental synchronization of data when configuring read-side data sources, you can now get the date in conjunction with what dataworks provides to complete the requirement[Parameter configuration](intl.en-US/User Guide/Data development/Scheduling Configuration/Parameter configuration.md#) to get the incremental data.
+**Note:** Many tasks require incremental synchronization of data when configuring read-side data sources, you can now get the date in conjunction with what dataworks provides to complete the requirement [Parameter configuration](intl.en-US/User Guide/Data development/Scheduling Configuration/Parameter configuration.md#) to get the incremental data.
 
 ## Configure the synchronization task writer {#section_xwc_g5c_p2b .section}
 
@@ -161,7 +161,7 @@ Configurations:
     When you configure a synchronization task, you specify the resource group in which the task runs, default runs on the default Resource Group. When the project has a tight schedule of resources, you can also expand a scheduled resource by adding a Custom Resource Group, the synchronization task is then specified to run on a Custom Resource Group, to add a Custom Resource Group, see adding a scheduled resource. You can make a reasonable configuration based on data source network conditions, project scheduling resource conditions, and business importance.
 
 
-**Note:** When synchronizing data is not efficient, see [Optimizing configurations](intl.en-US/User Guide/Data Integration/Task Configuration/Data Synchronization task configuration/Optimizing configuration.md#)optimizing your synchronization tasks.
+**Note:** When synchronizing data is not efficient, see [Optimizing configurations](intl.en-US/User Guide/Data Integration/Task Configuration/Optimizing configuration.md#)optimizing your synchronization tasks.
 
 ## Configure scheduling properties {#section_a4t_rnc_p2b .section}
 
