@@ -2,7 +2,7 @@
 
 Project administrators can create new and modify scheduled resources on the **data integration** \> **synchronous Resource Management** \> **Resource Group** page.
 
-When the default scheduling resource is unable to connect to your complex network environment, with the deployment of the data integration agent, the synchronization of data transfer between any network environment can be reached, see[Data integration when the network of data source \(one side only\) is disconnected](intl.en-US/User Guide/Data Integration/Best practice/Data integration when the network of data source (one side only) is disconnected.md#)and[Data sync when the network of data source \(both sides\) is disconnected](intl.en-US/User Guide/Data Integration/Best practice/Data sync when the network of data source (both sides) is disconnected.md#) for details.
+When the default scheduling resource is unable to connect to your complex network environment, with the deployment of the data integration agent, the synchronization of data transfer between any network environment can be reached, see [Data integration when the network of data source \(one side only\) is disconnected](intl.en-US/User Guide/Data Integration/Best practice/Data integration when the network of data source (one side only) is disconnected.md#) and [Data sync when the network of data source \(both sides\) is disconnected](intl.en-US/User Guide/Data Integration/Best practice/Data sync when the network of data source (both sides) is disconnected.md#) for details.
 
 **Note:** 
 
@@ -25,8 +25,6 @@ Purchase the ECS cloud server.
 
 You can go to the**cloud server ECS** \> **instance** page to view the ECS host name and IP purchased.
 
-![](images/8542_en-US.png)
-
 ## Provision 8000 port to read log { .section}
 
 **Note:** If it is a VPC network type, there is no need to provision a 8000 port.
@@ -35,27 +33,14 @@ You can go to the**cloud server ECS** \> **instance** page to view the ECS host 
 
     Navigate to the **cloud server ECS** \> **network and security** \> **Security Group** page, click **configuration rules**, and enter the configuration rules page.
 
-    ![](images/8543_en-US.png)
-
 2.  Go to the **security group rules** \> **Intranet entry direction**page, and click in the upper right corner to **add security group rules**.
-
-    ![](images/8544_en-US.png)
-
 3.  Complete the configuration information in the **add security group Rule** dialog box, configure IP as 10.116.134.123, and access port 8000.
-
-    ![](images/8545_en-US.png)
-
 
 ## Add scheduling resources { .section}
 
 1.  Enter the dataworks management console as a developer, and click **Enter workspace** in the corresponding project action bar.
 2.  Click **data integration** in the top menu bar to navigate to **resource management** \> **new resource groups**.
-
-    ![](images/8546_en-US.png)
-
 3.  Click **Next** to **add the purchased ECS** cloud server to the Resource Group in the Add Server dialog box.
-
-    ![](images/8547_en-US.png)
 
     Configurations:
 
@@ -74,8 +59,6 @@ You can go to the**cloud server ECS** \> **instance** page to view the ECS host 
     -   For example, to execute `dmidecode | grep UUID`, the return result is UUID: 713f4718-8446-4433-a8ec-6b5b62d75a24, the corresponding UUID is 713F4718-8446-4433-A8EC-6B5B62D75A24.
 4.  Install Agent and initialize.
 
-    ![](images/8551_en-US.png)
-
     If you are adding a newly added server, follow these steps.
 
     1.  Log into the ECS server as a root user.
@@ -92,12 +75,8 @@ You can go to the**cloud server ECS** \> **instance** page to view the ECS host 
 
         **Note:** If you do install.sh an error occurred during Sh or a re-execution is required at install.sh the same directory of SH runs `rm –rf install.sh` to delete the files that have been generated. Then execute `install.sh`. The initialization interface above is different for each user's command, please execute the relevant commands according to your own initialization interface.
 
-        ![](images/8555_en-US.jpg)
-
 
 After doing so, if the service status has been **stopped**, you may encounter the following problems.
-
-![](images/8558_en-US.png)
 
 The error shown in the preceding figure indicates that no host was bound. To fix the error, follow these steps:
 
