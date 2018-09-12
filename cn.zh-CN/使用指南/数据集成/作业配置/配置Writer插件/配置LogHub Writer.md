@@ -38,7 +38,7 @@ LogHub Writer针对LogHub类型的转换，如下表所示：
 
 暂不支持向导模式配置，您可以接点击链接转换为脚本模式或者选择导入脚本模板进行开发。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16257/15353704428506_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16257/15367231348506_zh-CN.png)
 
 ## 脚本模式介绍 {#section_gg5_1b5_q2b .section}
 
