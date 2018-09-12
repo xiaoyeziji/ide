@@ -4,23 +4,23 @@ Cyclic Task: Tasks automatically triggered by the scheduling system.
 
 Click the **Cycle Task**, default display the current landing responsibility person node.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16357/15367351178766_en-US.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16357/15367434618766_en-US.jpg)
 
 As shown in the figure above, task nodes can be filtered, providing name search, responsible person, baseline and other conditional search.
 
 Default displays the name of the current task, modification date, task type, responsible person, scheduling type, resource group, alarm settings, operations. The operation button contains the following functions:
 
-1.  DAG diagram: the DAG diagram of this node is displayed.
+-   DAG diagram: the DAG diagram of this node is displayed.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16357/15367351178767_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16357/15367434618767_en-US.jpg)
 
-2.  Test: to test the current node, please refer to [test instance](http://help.aliyun-inc.com/internaldoc/detail/59490.html?spm=a2c1f.8259796.2.69.vVbKOe).
-3.  Data complement: data complement for the current node, please refer to [data instance](http://help.aliyun-inc.com/internaldoc/detail/59491.html?spm=a2c1f.8259796.2.70.xUv8wt).
-4.  More: including node status modification and more functions.
+-   Test: to test the current node.
+-   Data complement: data complement for the current node, see [Data completion instances](intl.en-US/User Guide/Operation center/Task O&M/PatchData.md#).
+-   More: including node status modification and more functions.
 
 More functions:
 
--   Pause \(freeze\): Set the current node to a pause \(freeze\) state and stop scheduling. When the node state is paused, the ![](images/8856_en-US.png) icon appears after the node name.
+-   Pause \(freeze\): Set the current node to a pause \(freeze\) state and stop scheduling. When the node state is paused, the ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16357/153674346111847_en-US.png) icon appears after the node name.
 -   Restore \(thaw\): restore the suspend \(frozen\) node to schedule.
 -   View instances: view the cycle instance of this node.
 -   Add alarm: configure alarm for node
@@ -31,7 +31,7 @@ More functions:
 -   Upstream and downstream: this node in the DAG diagram, the right-click node will pop up the operable window. The detailed operation is as follows:
 
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16357/15367351178768_en-US.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16357/15367434618768_en-US.jpg)
 
 -   Expanding parent / child nodes: When a workflow has three or more nodes, the operation and maintenance center will automatically hide the nodes when displaying tasks. Users can see more node dependencies by expanding the parent-child hierarchy. The larger the hierarchy, the more comprehensive the display.
 -   View node code: You can view the current code of the node.
