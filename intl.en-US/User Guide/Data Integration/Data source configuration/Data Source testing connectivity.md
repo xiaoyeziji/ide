@@ -101,11 +101,11 @@ When test connectivity fails, you need to verify that the data source area, the 
 
 -   The Database Password is incorrect, as shown below.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16196/15367204097520_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16196/15367285277520_en-US.png)
 
 -   The network doesn't have a diagram, as shown below.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16196/15367204097521_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16196/15367285287521_en-US.png)
 
 -   During synchronization, there is a network disconnect and so on.
 
@@ -142,6 +142,6 @@ Example 1
 
     -   Troubleshooting
 
-        For non-VPC MongoDB, you must add a whitelist for the connectivity test of the MongoDB data source. For details, see Add a Whitelist[Add a whitelist](intl.en-US/User Guide/Data Integration/Common configuration/Add whitelist.md#).
+        For non-VPC MongoDB, you must add a whitelist for the connectivity test of the MongoDB data source. For details, see Add a Whitelist [Add whitelist](intl.en-US/User Guide/Data Integration/Common configuration/Add whitelist.md#).
 
 
