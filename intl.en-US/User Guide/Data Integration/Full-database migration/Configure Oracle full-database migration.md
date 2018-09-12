@@ -2,27 +2,17 @@
 
 This article demonstrates how to migrate a full Oracle database to MaxCompute by using the full-database migration feature.
 
-The whole library migration is a fast tool for improving user efficiency and reducing user usage costs, it can quickly upload all the tables in the Oracle database to maxcompute, for a detailed introduction to the whole library migration, see[Full-database migration overview](intl.en-US/User Guide/Data Integration/Full-database migration/Full-database migration overview.md#).
+The whole library migration is a fast tool for improving user efficiency and reducing user usage costs, it can quickly upload all the tables in the Oracle database to maxcompute, for a detailed introduction to the whole library migration, see [Full-database migration overview](intl.en-US/User Guide/Data Integration/Full-database migration/Full-database migration overview.md#).
 
 ## Procedure {#section_fn2_s1v_q2b .section}
 
 1.  Log in to the [DataWorks management console](https://workbench.data.aliyun.com/console) and select **data integration** in the top menu bar.
 2.  Select **offline synchronization** \> **data source** in the left navigation bar and go to the data source management page.
-
-    ![](images/8569_en-US.png)
-
 3.  Click **Add-in data source** in the upper-right corner to add an Oracle Data Source hub for the whole library migration.
-
-    ![](images/8570_en-US.png)
-
 4.  After you click **test connectivity** and verify that the data source is accessed correctly, confirm and save the data source.
 5.  After successful addition, the newly added Oracle data source clone\_database is displayed in the data source list. Click the entire library migration that corresponds to the Oracle data source, you can go to the **entire library migration** features page for the corresponding data source.
 
-    ![](images/8571_en-US.png)
-
     The whole library migration page mainly has three functional areas.
-
-    ![](images/8572_en-US.png)
 
     -   Filter area of tables to be migrated: It lists all the database tables under the Oracle data source clone\_database. You can select database tables to be migrated in batch.
     -   Advanced settings: It provides the conversion rules of table names, column names, and column types between Oracle and MaxCompute data tables.
@@ -35,8 +25,6 @@ The whole library migration is a fast tool for improving user efficiency and red
     To protect the Oracle data source from being overloaded by too many data synchronization jobs started at the same point of time, Batch Upload can be selected. You can set to start synchronizing three database tables every one hour from 00:00 every day.
 
     Finally, click **Submit task**, where you can see the migration progress information and the status of the migration task for each table.
-
-    ![](images/8573_en-US.png)
 
 8.  Click the **view task** corresponding to the table to jump to the task Development page for data integration, you can view the run details of the task.
 
