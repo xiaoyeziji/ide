@@ -2,7 +2,7 @@
 
 This article describes how to add a corresponding whitelist and security group when you are using DataWorks in different regions.
 
-To make sure the security and stability of databases, you can add the IP addresses or IP segments used for accessing the database to the whitelist or [Add security group](intl.en-US/User Guide/Data Integration/Common configuration/Add security group.md#)security group of the target instance before using certain database instances. 
+To make sure the security and stability of databases, you can add the IP addresses or IP segments used for accessing the database to the whitelist or [Add security group](intl.en-US/User Guide/Data Integration/Common configuration/Add security group.md#) security group of the target instance before using certain database instances. 
 
 ## Add a whitelist {#section_djc_kj5_q2b .section}
 
@@ -11,7 +11,7 @@ To make sure the security and stability of databases, you can add the IP address
 
     Currently, the supported regions are China East 2 \(Shanghai\), China South 1 \(Shenzhen\), Hong Kong, and Asia Pacific SOU 1 \(Singapore\). The default region is China East 2, and you can switch to other regions where your project is located, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16265/15367232528537_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16265/15367481748537_en-US.jpg)
 
 3.  Select the whitelist for your project region.
 
@@ -56,6 +56,4 @@ When Data Integration is connected to RDS for data synchronization, the database
 If you have set up an IP white list for your RDS, go to the RDS [Management Console](https://account.alibabacloud.com/login/login.htm), and navigate to **security control** to make the whitelike settings based on the [whitelike list](https://www.alibabacloud.com/help/doc-detail/26198.htm) above.
 
 **Note:** If you use a custom resource group to schedule the RDS data synchronization task, you must add the IP address of the computer hosting the custom resource group to the RDS whitelist.
-
-![](images/8541_en-US.jpg)
 
