@@ -2,7 +2,7 @@
 
 This article describes how to add a corresponding security group when you are using DataWorks \(formerly Data IDE\) in different regions.
 
-To ascertain the security and stability of databases, you must add the IP addresses or IP segments used for accessing the database to the [Add a whitelist](intl.en-US/User Guide/Data Integration/Common configuration/Add whitelist.md#) or security group of the target instance before using certain database instances. This article describes how to add a corresponding security group when you are using DataWorks \(formerly Data IDE\) in different regions 
+To ascertain the security and stability of databases, you must add the IP addresses or IP segments used for accessing the database to the [Add whitelist](intl.en-US/User Guide/Data Integration/Common configuration/Add whitelist.md#) or security group of the target instance before using certain database instances. This article describes how to add a corresponding security group when you are using DataWorks \(formerly Data IDE\) in different regions 
 
 ## Add a security group {#section_djc_kj5_q2b .section}
 
@@ -29,12 +29,6 @@ To ascertain the security and stability of databases, you must add the IP addres
 3.  Select the target region.
 4.  Locate the security group where you want to configure authorization rules, and click the **configuration rule** that is listed in the action.
 5.  Click **Security Groups** and click **Add Rules**.
-
-    ![](images/8535_en-US.jpg)
-
 6.  Sets the parameters in the pop-up dialog box.
-
-    ![](images/8536_en-US.jpg)
-
 7.  Click **Confirm**.
 
