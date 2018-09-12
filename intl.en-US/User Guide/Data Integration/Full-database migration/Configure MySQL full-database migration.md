@@ -38,5 +38,3 @@ So far, you have completed migrating the full MySQL data source clone\_databae t
 
 The whole library migration A1 table task performs a successful log as shown in the following figure:
 
-![](images/8567_en-US.png)
-
