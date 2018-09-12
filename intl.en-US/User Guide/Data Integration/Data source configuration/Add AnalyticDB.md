@@ -8,12 +8,12 @@ AnalyticDB \(ADS\) allows you to write data to AnalyticDB but does not allow you
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New source** to pop up the supported data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16197/15367204437524_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16197/15367289377524_en-US.png)
 
 4.  In the Create Data Source dialog box displayed, set the data source type to AnalyticDB \(ADS\).
 5.  Complete the configuration items of the AnalyticDB data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16197/15367204437525_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16197/15367289377525_en-US.png)
 
     Configurations:
 
@@ -21,6 +21,7 @@ AnalyticDB \(ADS\) allows you to write data to AnalyticDB but does not allow you
     -   Description: It is a brief description of the data source with no more than 80 characters.
     -   Link Url: The ADS URL. Format: serverIP:Port.
     -   Schema: The ADS Schema information.
+    -   AccessID/AceessKey: [the access key](https://www.alibabacloud.com/help/doc-detail/53045.htm) \(AccessKeyID and AccessKeySecret\) is equivalent to the login password.
 6.  Click **Test Connectivity**.
 7.  When the connectivity test is passed, click**Complete**.
 
@@ -29,5 +30,5 @@ AnalyticDB \(ADS\) allows you to write data to AnalyticDB but does not allow you
 
 ## Next step { .section}
 
-Now you have learned how to configure the ADS data source. The document explains how to configure the ADS Writer plug‑in later. For more information, see [Configure AnalyticDB（ADS）writer](intl.en-US/User Guide/Data Integration/Task Configuration/Configure Writer plug-in/Configure AnalyticDB(ADS) writer.md#).
+Now you have learned how to configure the ADS data source. The document explains how to configure the ADS Writer plug‑in later. For more information, see [Configure AnalyticDB\(ADS\) writer](intl.en-US/User Guide/Data Integration/Task Configuration/Configure Writer plug-in/Configure AnalyticDB(ADS) writer.md#).
 
