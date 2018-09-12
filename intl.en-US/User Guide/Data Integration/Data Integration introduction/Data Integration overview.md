@@ -6,8 +6,6 @@ The Alibaba Group offers Data Integration - a data synchronization platform that
 
 The offline \(batch\) data channel provides a set of abstract data extraction plug-ins \(Readers\) and data writing plug-ins \(Writers\) by defining the source and target databases and data sets. Also, it designs a set of simplified intermediate data transmission formats based on the framework to transfer the data between any structured and semi-structured data sources.
 
-![](images/7498_en-US.png)
-
 ## Supported data source types {#section_ikd_b45_42b .section}
 
 Data Integration provides extensive options for data sources shown as follows:
