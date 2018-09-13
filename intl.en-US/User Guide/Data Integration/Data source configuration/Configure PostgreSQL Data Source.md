@@ -18,7 +18,7 @@ The PostgreSQL data source allows you to read data from and write data to Postgr
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New Source** source to pop up the supported data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16211/15367210767572_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16211/15368046167572_en-US.png)
 
 4.  In the new data source pop-up box, select the data source type as **PostgreSQL**.
 5.  Configure individual information items for the PostgreSQL data source.
@@ -27,7 +27,7 @@ The PostgreSQL data source allows you to read data from and write data to Postgr
 
     Consider a data source of the new **PostgreSQL** \> **Ali cloud database \(RDS\)** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16211/15367210767581_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16211/15368046167581_en-US.png)
 
     Configurations:
 
@@ -36,11 +36,11 @@ The PostgreSQL data source allows you to read data from and write data to Postgr
     -   Description: It is a brief description of the data source with no more than 80 characters.
     -   RDS instance ID: You can view the instance id of the RDS in the control desk of the RDS.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16211/15367210767582_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16211/15368046167582_en-US.png)
 
         Consider a data source that adds a **PostgreSQL** \> **with a common network IP** type.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16211/15367210767584_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16211/15368046167584_en-US.png)
 
         Configurations:
 
@@ -51,14 +51,14 @@ The PostgreSQL data source allows you to read data from and write data to Postgr
         -   Username/Password: The user name and password used to connect to the database.
     Consider the new **PostgreSQL** \> **Data Source with no public network IP** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16211/15367210767585_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16211/15368046167585_en-US.png)
 
     Configurations:
 
     -   Type: data source without a public IP address.
     -   Name: It is a combination of letters, numbers, and underlines It must begin with a letter or underline and cannot exceed 60 characters.
     -   Description: It is a brief description of the data source with no more than 80 characters.
-    -   Resource Group: It is used to run synchronization tasks, and generally multiple machines can be bound when you add a resource group. For details, see[Add scheduling resources](intl.en-US/User Guide/Data Integration/Common configuration/Add scheduling resources.md#)
+    -   Resource Group: It is used to run synchronization tasks, and generally multiple machines can be bound when you add a resource group. For details, see [Add scheduling resources](intl.en-US/User Guide/Data Integration/Common configuration/Add scheduling resources.md#).
     -   JDBC URL: Format: jdbc:mysql://ServerIP:Port/database.
     -   Username/Password: The user name and password used to connect to the database.
 6.  Click **Test Connectivity**
@@ -71,5 +71,5 @@ The PostgreSQL data source allows you to read data from and write data to Postgr
 
 ## Next step {#section_jb1_tyb_p2b .section}
 
-Now you have learned how to configure the PostgreSQL data source. The document explains how to configure the PostgreSQL Writer plug‑in later. For more information, see [Configuring PostgreSQL writer](intl.en-US/User Guide/Data Integration/Task Configuration/Configure Writer plug-in/Configure PostgreSQL Writer.md#).
+Now you have learned how to configure the PostgreSQL data source. The document explains how to configure the PostgreSQL Writer plug‑in later. For more information, see [Configure PostgreSQL Writer](intl.en-US/User Guide/Data Integration/Task Configuration/Configure Writer plug-in/Configure PostgreSQL Writer.md#).
 
