@@ -62,8 +62,6 @@ The two data entries as the historical data are available. Perform full data syn
 
     **Note:** Note: If you configure the “Data Filtering”, all the data added to the source table on November 14 is retrieved and synchronized to the incremental partition in the target table during the synchronization on the early morning the next day, which is November 15.
 
-    ![](images/8879_en-US.png)
-
 5.  View synchronization results.
 
     If you set the task scheduling cycle as daily scheduling, the task is scheduled automatically the next day after the task is submitted and released, and the data in the MaxCompute target table is changed as follows once the task runs successfully.
