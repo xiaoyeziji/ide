@@ -2,7 +2,7 @@
 
 Generally, you must create tables during data development to store the results of data synchronization and data processing. The Data Management module of Alibaba Cloud DTplus platform provides two ways to create a table.
 
-**Note:** Statement-based table creation The classification can facilitate metadata management for numerous businesses in the organization. For more information on creating tables with the maxcompute client, see :[Create a table](intl.en-US/User Guide/Data management/Create a table.md#).
+**Note:** Statement-based table creation The classification can facilitate metadata management for numerous businesses in the organization. For more information on creating tables with the maxcompute client, see [Create a table](intl.en-US/User Guide/Data management/Create a table.md#).
 
 ## Prerequisites {#section_c1g_ll1_r2b .section}
 
@@ -29,11 +29,11 @@ Generally, you must create tables during data development to store the results o
 2.  Click Data Management in the upper navigation pane and navigate to Manage Data Tables page.
 3.  Click **Create table**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16346/15368065878649_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16346/15368283068649_en-US.png)
 
 4.  Complete the configurations of the Basic information steps in the Create table dialog box.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16346/15368065878650_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16346/15368283068650_en-US.png)
 
     Parameters:
 
@@ -48,7 +48,7 @@ Generally, you must create tables during data development to store the results o
     -   Add the field settings.
     -   Set the partitions.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16346/15368065878651_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16346/15368283068651_en-US.png)
 
         Parameters:
 
@@ -81,15 +81,15 @@ Generally, you must create tables during data development to store the results o
 
 5.  Click Submit and the following page appears:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16346/15368065888653_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16346/15368283068653_en-US.png)
 
     Except Alias, Category, and Lifecycle, all the other configuration items on the Basic Information page are automatically filled in. You need to edit and provide the names and the security levels of fields on the Field and Partition Information page.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16346/15368065888654_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16346/15368283068654_en-US.png)
 
 6.  Fill in the remaining configuration items on the Basic Info. tab page.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16346/15368065888655_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16346/15368283068655_en-US.png)
 
 7.  Click **Next step**.
 8.  Click **Submit**.
