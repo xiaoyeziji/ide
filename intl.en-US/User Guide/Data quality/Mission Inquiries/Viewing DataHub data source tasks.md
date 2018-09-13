@@ -3,13 +3,11 @@
 1.  Visit the Data Quality Center, click **Mission Inquiries**, and enter the query page.
 2.  Step 2: Choose **DataHub Data Source** , and enter key words as prompted in the search box to find the specific topic.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16398/15367420488822_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16398/15368268658822_en-US.png)
 
     -   View task run details
 
         Click **Details** on the right of the topic to check the topic details.
-
-        ![](images/8823_en-US.png)
 
     -   Viewing rule configurations
 
