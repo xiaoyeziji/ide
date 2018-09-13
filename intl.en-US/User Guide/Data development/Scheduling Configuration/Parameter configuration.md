@@ -4,11 +4,11 @@ To ensure that tasks can dynamically adapt to environment changes when running a
 
 -   No space can be added on either side of the equation mark "=" of a parameter. Correct: bizdate=$bizdate
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15367329377838_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15368247717838_en-US.png)
 
 -   Multiple parameters \(if any\) must be separated by spaces.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15367329377839_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15368247717839_en-US.png)
 
 
 ## System parameters {#section_dp4_2sq_p2b .section}
@@ -46,11 +46,11 @@ For example, for an ODPS SQL node, add $\{variable name\} in the code, and then 
 
 1.  For a parameter referenced in the code, you must add the resolved value during scheduling.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15367329377840_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15368247727840_en-US.png)
 
 2.  Values must be assigned to variables referenced in the code. The value assignment rule is variable name=parameter.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15367329377841_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15368247727841_en-US.png)
 
 
 ## Configure scheduling parameters for a Shell node {#section_slh_x1r_p2b .section}
@@ -61,13 +61,13 @@ For example, for a Shell node, the Shell syntax declaration in the code is: $1, 
 
 1.  For a parameter referenced in the code, you must add the resolved value during scheduling.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15367329377842_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15368247727842_en-US.png)
 
     **Note:** For a Shell node, when the number of parameters reaches 10, $\{10\} should be used to declare the variable.
 
 2.  Values must be assigned to variables referenced in the code. The value assignment rule is parameter 1 parameter 2 parameter 3....\( Replaced variables are resolved based on the parameter location, for example, $1 is resolved to parameter 1\).
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15367329387843_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15368247727843_en-US.png)
 
 
 ## The variable value is a fixed value {#section_a4l_gcr_p2b .section}
@@ -102,9 +102,7 @@ For example, In the code of the ODPS SQL node, pt=$\{datetime\}. In the paramete
 
 For example, In the code of the ODPS SQL node, pt=$\{datetime\}. In the parameter configuration of the node, datetime=$gmtdate. Today is July 1, 2017. When the node is executed today, $gmtdate is replaced by pt=20170701.
 
-$cyctime: scheduled time of the task. If no scheduled time is configured for a daily task, cyctime is 00:00 of the current day. The time is accurate to hour, minute, and second, and is generally used for a hour-level or minute-level scheduling task. Example: cyctime=$cyctime
-
-![](images/7844_en-US.png)
+$cyctime: scheduled time of the task. If no scheduled time is configured for a daily task, cyctime is 00:00 of the current day. The time is accurate to hour, minute, and second, and is generally used for a hour-level or minute-level scheduling task. Example: cyctime=$cyctime.
 
 **Note:** Pay attention to the difference between the time parameters configured using $\[\] and $\{\}. $bizdate: business date, which is one day before the current time by default. $cyctime: It is the scheduled time of the task. If no scheduled time is configured for a daily task, the task is executed on 00:00 of the current day. The time is accurate to hour, minute, and second, and is generally used for an hour-level or minute-level scheduling task. If a task is scheduled to run on 00:30, for example, on the current day, the scheduled time is yyyy-mm-dd 00:30:00. If the time parameter is configured using \[\], cyctime is used as the benchmark for running. For more information about the usage, see the instructions below. The time calculation method is the same with that of Oracle. During data population, the parameter is replaced by the selected business date plus 1 day. For example, if the business date 20140510 is selected during data population, cyctime will be replaced by 20140511.
 
@@ -184,10 +182,6 @@ Method for testing the parameter $cyctime:
 After the instance runs, right-click the node to **check the node attribute**. Check whether the scheduled time is the time at which the instance runs periodically.
 
 Result after the parameter value is replaced by the scheduled time minus one hour.
-
-![](images/7847_en-US.png)
-
-![](images/7848_en-US.png)
 
 ## FAQs {#section_rvd_tfr_p2b .section}
 
