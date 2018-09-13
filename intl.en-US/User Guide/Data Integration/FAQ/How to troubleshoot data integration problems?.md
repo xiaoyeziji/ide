@@ -18,7 +18,6 @@ If any problem arises during Data Integration operations, you must identify the 
 When Data Integration fails, you must review the information on data sources:
 
 -   check the data sources among which the synchronization tasks are run.
-
 -   check the environment of the data sources.
 
     For example: Alibaba Cloud database, data sources with/without public IPs or VPC network environment \(RDS and other sources\), Financial Cloud \(VPC and classic network\).
@@ -30,15 +29,11 @@ When Data Integration fails, you must review the information on data sources:
 
 ## Check the region in which the synchronization tasks are configured {#section_dfl_snb_r2b .section}
 
-You can see the related regions in the DataWorks console, such as East China 2, North China 1, Hong Kong, Southeast Asia Pacific 1, Central Europe 1, and Southeast Asia Pacific 2. Generally, the default region is the East China 2. You can see the corresponding region after purchasing the MaxCompute, as shown in the following figure:
-
-![](images/8678_en-US.png)
+You can see the related regions in the DataWorks console, such as East China 2, North China 1, Hong Kong, Southeast Asia Pacific 1, Central Europe 1, and Southeast Asia Pacific 2. Generally, the default region is the East China 2. You can see the corresponding region after purchasing the MaxCompute.
 
 ## Copy the troubleshooting code when interface pattern errors are reported {#section_n3w_ynb_r2b .section}
 
-When interface pattern errors are reported, copy the troubleshooting code for relevant personnel, as shown in the following figure:
-
-![](images/8679_en-US.jpg)
+When interface pattern errors are reported, copy the troubleshooting code for relevant personnel.
 
 ## The log reports exceptions {#section_i2l_g4b_r2b .section}
 
@@ -203,45 +198,45 @@ Write the statement as follows:
 
 -   The JSON list is written less \[\]
 
+    In using smart analysis of DataX, the most likely reason for error is:
 
-In using smart analysis of DataX, the most likely reason for error is:
+    `com.alibaba.datax.common.exception.DataXException: Code:[Framework-02]`
 
-`com.alibaba.datax.common.exception.DataXException: Code:[Framework-02]`
+    Error Details:
 
-Error Details:
+    The DataX engine encountered an error when running. For details, see the error diagnostic information after DataX stops running
 
-The DataX engine encountered an error when running. For details, see the error diagnostic information after DataX stops running
+    ```
+    java.lang.String cannot be cast to java.util.List - java.lang.String cannot be cast to java.util.List  
+    at com.alibaba.datax.common.exception.DataXException.asDataXException(DataXException.java:41)
+    ```
 
-```
-java.lang.String cannot be cast to java.util.List - java.lang.String cannot be cast to java.util.List  
-at com.alibaba.datax.common.exception.DataXException.asDataXException(DataXException.java:41)
-```
+    Troubleshooting:
 
-Troubleshooting:
+    When \[\] is missing, the list type is changed. You can resolve this by finding where the is missing and adding the.
 
-When \[\] is missing, the list type is changed. You can resolve this by finding where the is missing and adding the.
 
 **Permission issues**
 
 -   Permission issues \(no permission for "delete" operation\)
 
-For synchronization from MaxCompute to RDS-MySQL, the error message is: Code:DBUtilErrorCode-07
+    For synchronization from MaxCompute to RDS-MySQL, the error message is: Code:DBUtilErrorCode-07
 
-Error Details:
+    Error Details:
 
-Failed to read database data. Check your column/table/where/querySql configuration or ask DBA for help.
+    Failed to read database data. Check your column/table/where/querySql configuration or ask DBA for help.
 
-The executed SQL statement is as follows:
+    The executed SQL statement is as follows:
 
-`delete from fact_xxx_d where sy_date=20170903`
+    `delete from fact_xxx_d where sy_date=20170903`
 
-The error details are shown as follows:
+    The error details are shown as follows:
 
-```
-**DELETE command denied** to user ‘xxx_odps’@‘[xx.xxx.xxx.xxx](http://xx.xxx.xxx.xxx)’ for table ‘fact_xxx_d’ - com.mysql.jdbc.exceptions.jdbc4. MySQLSyntaxErrorException: DELETE command denied to user ‘xxx_odps’@‘[xx.xxx.xxx.xxx](http://xx.xxx.xxx.xxx)’ for table 'fact_xxx_d’
-```
+    ```
+    **DELETE command denied** to user ‘xxx_odps’@‘[xx.xxx.xxx.xxx](http://xx.xxx.xxx.xxx)’ for table ‘fact_xxx_d’ - com.mysql.jdbc.exceptions.jdbc4. MySQLSyntaxErrorException: DELETE command denied to user ‘xxx_odps’@‘[xx.xxx.xxx.xxx](http://xx.xxx.xxx.xxx)’ for table 'fact_xxx_d’
+    ```
 
--   Troubleshooting:
+    Troubleshooting:
 
     The error message "DELETE command denied to" indicates that you have no permission to delete the table, and you must grant the permission required in the corresponding database.
 
@@ -305,36 +300,37 @@ The temporary project account is cloud-data-pipeline@aliyun-inner.com. ADS offic
 
 -   The whitelist has not been added and the connectivity test of data source fails.
 
-Test connection failed. Connectivity test of data source failed:
+    Test connection failed. Connectivity test of data source failed:
 
-```
-error message: Timed out after 5000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{[address:3717=dds-bp1afbf47fc7e8e41.mongodb.rds.aliyuncs.com](http://address:3717=dds-bp1afbf47fc7e8e41.mongodb.rds.aliyuncs.com), type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketReadException: Prematurely reached end of stream}}, {[address:3717=dds-bp1afbf47fc7e8e42.mongodb.rds.aliyuncs.com](http://address:3717=dds-bp1afbf47fc7e8e42.mongodb.rds.aliyuncs.com), type=UNKNOWN, state=CONNECTING,** exception={com.mongodb.MongoSocketReadException: Prematurely reached end of stream**}}]
-```
+    ```
+    error message: Timed out after 5000 ms while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=UNKNOWN, servers=[{[address:3717=dds-bp1afbf47fc7e8e41.mongodb.rds.aliyuncs.com](http://address:3717=dds-bp1afbf47fc7e8e41.mongodb.rds.aliyuncs.com), type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketReadException: Prematurely reached end of stream}}, {[address:3717=dds-bp1afbf47fc7e8e42.mongodb.rds.aliyuncs.com](http://address:3717=dds-bp1afbf47fc7e8e42.mongodb.rds.aliyuncs.com), type=UNKNOWN, state=CONNECTING,** exception={com.mongodb.MongoSocketReadException: Prematurely reached end of stream**}}]
+    ```
 
-Troubleshooting
+    Troubleshooting
 
-When adding data source to MongoDB in non-VPC environment, if the error message Timed out after 5000 is reported, it means that the whitelist has a problem.
+    When adding data source to MongoDB in non-VPC environment, if the error message Timed out after 5000 is reported, it means that the whitelist has a problem.
 
-**Note:** If you are using ApsaraDB for MongoDB, a root account is provided by default. To ensure security, Data Integration only supports using the relevant account of MongoDB for connection. Avoid using root account as the access account when adding and using the MongoDB data source.
+    **Note:** If you are using ApsaraDB for MongoDB, a root account is provided by default. To ensure security, Data Integration only supports using the relevant account of MongoDB for connection. Avoid using root account as the access account when adding and using the MongoDB data source.
 
 -   White List not complete
 
-for Code:\[DBUtilErrorCode-10\]
+    for Code:\[DBUtilErrorCode-10\]
 
-Error Details:
+    Error Details:
 
-An error occurred while connecting to the database. Check your account, password, database name, IP address and port or ask DBA for help \(note the network environment\).
+    An error occurred while connecting to the database. Check your account, password, database name, IP address and port or ask DBA for help \(note the network environment\).
 
-The error details are shown as follows:
+    The error details are shown as follows:
 
-```
-java.sql.SQLException: Invalid authorization specification, message from server: "#**28000ip not in whitelist, client ip is xx.xx.xx.xx". **  
-2017-10-18 11:03:00. 673 [job-Newfoundland] Error retryutil-exception when calling callable
-```
+    ```
+    java.sql.SQLException: Invalid authorization specification, message from server: "#**28000ip not in whitelist, client ip is xx.xx.xx.xx". **  
+    2017-10-18 11:03:00. 673 [job-Newfoundland] Error retryutil-exception when calling callable
+    ```
 
-Troubleshooting:
+    Troubleshooting:
 
-The whitelist you added is incomplete. You has not added your server into the whitelist.
+    The whitelist you added is incomplete. You has not added your server into the whitelist.
+
 
 **The data source information is incorrect**
 
@@ -393,8 +389,6 @@ The whitelist you added is incomplete. You has not added your server into the wh
     The last packet sent successfully to the server was** 528 milliseconds ago**.
     ```
 
-    ![](images/8686_en-US.png)
-
     Troubleshooting:
 
     Datax client timeouts can be added when adding DRDs data sources `? useUnicode=true&characterEncoding=utf-8&socketTimeout=3600000` timeout Parameter
@@ -406,8 +400,6 @@ The whitelist you added is incomplete. You has not added your server into the wh
     ```
 
 -   System internal problems
-
-    ![](images/8687_en-US.png)
 
     Troubleshooting:
 
@@ -545,15 +537,11 @@ The whitelist you added is incomplete. You has not added your server into the wh
 
 -   JDBC formatting error
 
-    ![](images/8688_en-US.png)
-
     Troubleshooting:
 
     The JDBC format is incorrect. The correct format is: jdbc:mysql://ServerIP:Port/Database.
 
 -   Test connectivity failed
-
-    ![](images/8692_en-US.png)
 
     Troubleshooting:
 
@@ -573,7 +561,7 @@ The whitelist you added is incomplete. You has not added your server into the wh
 
     Generally, when synchronizing data from RDS to MaxCompute, if the preceding error is reported, you can directly copy the RequestId:F9FD049B-xxxx-xxxx-xxx-xxxx to the RDS personnel.
 
--   - The query parameter in MongoDB is incorrect
+-   The query parameter in MongoDB is incorrect
 
     When the following error is reported as synchronizing data from MongoDB to MySQL, if you find that it is caused by incorrect JSON, it means that the JSON query parameter is not configured properly.
 
@@ -586,7 +574,7 @@ The whitelist you added is incomplete. You has not added your server into the wh
     The DataX plug-in encountered an error while running. For the specific causes, refer to the error diagnostic information after DataX stops running.
 
     ```
-     org.bson.json.JsonParseException: Invalid JSON input. Position: 34. Character :'.'.
+    org.bson.json.JsonParseException: Invalid JSON input. Position: 34. Character :'.'.
     ```
 
     Troubleshooting:
@@ -617,7 +605,8 @@ The whitelist you added is incomplete. You has not added your server into the wh
 
     Troubleshooting:
 
-    -   The max\_allowed\_packet parameter is used to define the maximum length of the communication buffer. MySQL may limit the size of the data packets received by the server based on the configuration file. Sometimes, insertions and updates in large size may fail due to the limitation of the max\_allowed\_packet parameter.
+    he max\_allowed\_packet parameter is used to define the maximum length of the communication buffer. MySQL may limit the size of the data packets received by the server based on the configuration file. Sometimes, insertions and updates in large size may fail due to the limitation of the max\_allowed\_packet parameter.
+
 -   If the value of Max\_allowed\_packet parameter is too large, you can change it into a smaller one. 10 MB = 10\_1024\_1024.
 -   "HTTP Status 500" is reported and an error occurred while reading the logs.
 
