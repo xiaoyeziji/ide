@@ -78,7 +78,7 @@ Certain skills are required for the development of a component process. Input pa
 
 You can create a component as shown in the following figure.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16311/15367336857944_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16311/15368251697944_en-US.png)
 
 ## Source table schema definition {#section_plv_mnf_q2b .section}
 
@@ -205,15 +205,15 @@ There are two sharing scopes: project component and public component.
 
 After a component is published, it is visible to users within the project by default. The component developer can click the Publish Component icon to publish a universal global component to the entire tenant, allowing all users in the tenant to view and use the public component. Whether a component is public depends on whether the icon in the following figure is visible:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16311/15367336857945_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16311/15368251697945_en-US.png)
 
 ## Use of components {#section_iz3_vxf_q2b .section}
 
-How can users use a developed component? For more information, see .[Use Components](intl.en-US/User Guide/Data development/Component Management/Use Components.md#)
+How can users use a developed component? For more information, see [Use Components](intl.en-US/User Guide/Data development/Component Management/Use Components.md#)
 
 ## Reference records of components {#section_d4g_wxf_q2b .section}
 
 The component developer can click the **Reference Records** tab to view the reference record of a component.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16311/15367336857946_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16311/15368251697946_en-US.png)
 
