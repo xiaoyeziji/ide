@@ -8,7 +8,7 @@ The FTP data source allows you to read data from and write data to FTP, and supp
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New source** to pop up the supported data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15367206957534_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15368045737534_en-US.png)
 
 4.  In the new data source pop-up box, select the data source type as **FTP**.
 5.  Configure the information items of the FTP data source.
@@ -17,7 +17,7 @@ The FTP data source allows you to read data from and write data to FTP, and supp
 
     -   With public IP address
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15367206957535_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15368045737535_en-US.png)
 
         Configurations:
 
@@ -30,14 +30,14 @@ The FTP data source allows you to read data from and write data to FTP, and supp
         -   Username/Password: The account and password for accessing the FTP service.
     -   Without public IP address
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15367206957536_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15368045737536_en-US.png)
 
         Configurations:
 
         -   Data source type: data source without a public IP address. The data source of this type must use custom scheduling resources so that it can synchronize data. For details, click **Help Manual**.
         -   Data source name: It is a combination of letters, numbers, and underlines It must begin with a letter or underline and cannot exceed 60 characters.
         -   Data source description: It is a brief description of the data source with no more than 80 characters.
-        -   - Resource Group: It is used to run synchronization tasks, and generally multiple machines can be bound when you add a resource group. For details, see[Add scheduling resources](intl.en-US/User Guide/Data Integration/Common configuration/Add scheduling resources.md#)
+        -   - Resource Group: It is used to run synchronization tasks, and generally multiple machines can be bound when you add a resource group. For details, see [Add scheduling resources](intl.en-US/User Guide/Data Integration/Common configuration/Add scheduling resources.md#).
         -   Protocol: Currently only FTP and SFTP are supported.
         -   Host: The FTP host IP address.
         -   Port: If you select the FTP protocol, the port defaults to 21. If SFTP is selected, the port 22 is used by default.
@@ -55,5 +55,5 @@ The FTP data source allows you to read data from and write data to FTP, and supp
 
 ## Next step {#section_dqv_5d1_p2b .section}
 
-Now you have learned how to configure the FTP data source. The document explains how to configure the FTP Writer plug‑in later. For more information, see [Configure the FTP writer](intl.en-US/User Guide/Data Integration/Task Configuration/Configure Writer plug-in/Configure FTP Writer.md#).
+Now you have learned how to configure the FTP data source. The document explains how to configure the FTP Writer plug‑in later. For more information, see [Configure FTP Writer](intl.en-US/User Guide/Data Integration/Task Configuration/Configure Writer plug-in/Configure FTP Writer.md#).
 
