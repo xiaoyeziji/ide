@@ -11,13 +11,13 @@ Rules configuration is the core function module of Data Quality. Data sources ar
 
     You can also use the search box to find topics in other data sources quickly.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15367419898793_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15368267298793_en-US.png)
 
 3.  Click **Configure monitoring rules**on the right side.
 
 **Note:** 
 
-Additionally, you can select **ODPS data source** in My subscriptions by[My subscription](intl.en-US/User Guide/Data quality/My subscription.md#) , and click **Partition expressions**on the right to enter the Rules configuration page.
+Additionally, you can select **ODPS data source** in My subscriptions by [My subscription](intl.en-US/User Guide/Data quality/My subscription.md#) , and click **Partition expressions**on the right to enter the Rules configuration page.
 
 ## Configure the partition expression {#section_bby_bb3_r2b .section}
 
@@ -25,7 +25,7 @@ A partition expression is a filtering condition used to match a validation rule.
 
 In the Rule Configuration page, click the plus sign**+** in the upper left corner to add a partition expression.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15367419898796_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15368267298796_en-US.png)
 
 -   Expression for new partition: Click **+** in the upper left corner to pop up Add a partition, you can edit a syntax-compliant partition expression to suit your needs. Non-partition table can be directly selected **NOTAPARTITIONTABLE** in the recommended partition expressions list.
 -   Format of the first-level partition expressions: Partition name = partition value. Partition value can be a fixed value or a built-in parameter expression.
@@ -60,7 +60,7 @@ The partition expression cycle is determined by the configured run time, for exa
 -   One hour ago: $ \[hh24miss-1/24\]
 -   Half an hour ago: $ \[hh24miss-30/24/60\]
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15367419898798_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15368267298798_en-US.png)
 
 -   Added partition expressions: Indicates the partition expressions already added to the table.
 -   Recommended partition expressions: Indicates the partition expressions recommended by Data Quality. In the list of recommended partition expressions, you can find the partition expression that meets your requirements, and select to add it. When a recommended partition is successfully added to the table, it is displayed in the Added Partitions section.
@@ -100,20 +100,12 @@ To monitor offline data on the production links, you must use Data Quality assoc
 
 You can add associated scheduling to the already created Task node. After associating with the schedule, the task run automatically \(you can also select not to associate, and skip this step\). Currently, associated scheduling supports Operation and maintenance center.
 
-![](images/8804_en-US.png)
-
 **Note:** 
 
 You can enter Operation Center to set the associated scheduling quality monitoring configuration.
 
 1.  Click**more** in the corresponding task tab, and select **Quality monitoring configuration** .
-
-    ![](images/8805_en-US.png)
-
 2.  Input the name of the table, and click **Configuration** in the corresponding partition expression tab \(you can also add a partition expression by yourself\) to configure this partition expression.
-
-    ![](images/8808_en-US.png)
-
 
 ## Create rules {#section_jdy_hh3_r2b .section}
 
@@ -125,7 +117,7 @@ After creating the rules, click **Save batches**, you can save all the rules to 
 
 **Template rules**
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15367419898809_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15368267298809_en-US.png)
 
 -   **Add monitoring rules**
     -   Field type: Consists of table-level rules and field-level rules. The field-level rules configure monitoring rules for specific fields in the table. The table-level rules are selected here, and other setting items in the interface correspond to the table-level rules configuration.
@@ -143,7 +135,7 @@ If the template rules do not meet your requirements for partition expressions qu
 
 On the Customized rules page, you can select to create table-level rules or custom SQL.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15367419898814_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15368267298814_en-US.png)
 
 -   **Add monitoring rules**
     -   Field Type: Consists of table-level rules, field-level rules, and custom SQL. The table-level rules are selected here, and other settings items in the interface correspond to the table-level customized rules configuration.
@@ -165,7 +157,7 @@ After the rules are configured, you can perform a test run for all the rules und
 
 1.  Select the required scheduling date, and click **Test run**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15367419898816_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15368267298816_en-US.png)
 
     -   **Test run partition**: the actual partition changes with the change of business date. If NOPARTITIONTABLE, the actual partition is automatically added.
     -   **Scheduling time**: The default is the current time.
@@ -177,19 +169,19 @@ When the responsible person leaves or changes job, person in charge of the parti
 
 Place the mouse over the responsible person, and the hidden button is displayed. Click to modify the responsible person, input the name of the new person in charge, and click**Confirm** to submit.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15367419898817_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15368267298817_en-US.png)
 
 ## More {#section_atk_vc4_r2b .section}
 
 Option **More** includes the following options: Partition operations logs, Last verification results, and Copy rules.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15367419898818_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15368267308818_en-US.png)
 
 -   **Partition operations logs**: Displays a record of all the rule settings for the current partition expression.
 -   **Last verification results**: Redirects to the the task query interface where you can view the running results under the current partition expression. You can also check the historical results.
 -   **Copy rules**: You can copy the currently set rules into the target expression, and the transmissions can be synchronized.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15367419908821_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16396/15368267308821_en-US.png)
 
 
 For more information about template rules supported by ODPS data source, see [Template rule](intl.en-US/User Guide/Data quality/Template rule.md#).
