@@ -11,13 +11,13 @@ The MaxCompute Manager provides system status monitoring, resource group allocat
 
 You can log on the [DataWorks management console](https://account.alibabacloud.com/login/login.htm)，click **CU Manage**.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16417/15363214978825_en-US.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16417/15368168688825_en-US.jpg)
 
 ## System Status {#section_mvr_cp3_r2b .section}
 
 On System Status page, you can see the consumption of CU computing resources and current storage.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16417/15363214978827_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16417/15368168688827_en-US.png)
 
 -   Quotas: You can select the resource group you want to view and find its consumption information and current storage.
 -   Time Length: You can select the time periods for the selected resource group. With different time periods, resource group data are displayed with different time granularities.
@@ -26,7 +26,7 @@ On System Status page, you can see the consumption of CU computing resources and
 
 A quota refers to a resource group. For example, if you purchased 100 CUs, you have a total quota of 100 CUs. You can create a new quota using MaxCompute Manager. Operaters can easily isolate the resources of each project to ensure that the calculation resources of the important projects are sufficient.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16417/15363214978829_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16417/15368168688829_en-US.png)
 
 -   **Create Quota**: Create a quota, and assign projects to it. Created quotas cannot be deleted if there is an project under the current quota.
 -   **Modify CU Usage Limit**: You can modify the minimum CUs used by a quota.
@@ -41,7 +41,7 @@ Max is the largest assigned resource, and Min is the smallest guaranteed resourc
 
 You can view the current task queuing status, such as which task has occupied the resource. Then you can analyze your task and decide if you want to stop it.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16417/15363214978833_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16417/15368168688833_en-US.png)
 
 You can specify the quota and the project name to filter the tasks.
 
