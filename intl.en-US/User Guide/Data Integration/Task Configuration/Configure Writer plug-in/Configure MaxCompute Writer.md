@@ -46,7 +46,7 @@ To avoid this problem, we recommend that you try not to operate on one partition
 
     Configuration item descriptions:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16247/15367225248125_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16247/15368019008125_en-US.png)
 
     Parameters:
 
@@ -67,20 +67,20 @@ To avoid this problem, we recommend that you try not to operate on one partition
 
     The source table field on the left and the target table field on the right are one-to-one relationships, click Add row to **add a single** field and click **Delete** to delete the current field.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16247/15367225248126_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16247/15368019008126_en-US.png)
 
     -   In-row mapping: You can click **In-row Mapping** to create a mapping for the same row. Note that the data type must be consistent.
     -   Automatic formatting: The fields are automatically sorted based on corresponding rules.
 3.  Control the tunnel
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15367225247675_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15368019007675_en-US.png)
 
     Parameters:
 
     -   DMU: A unit which measures the resources \(including CPU, memory, and network bandwidth\) consumed during data integration. One DMU represents the minimum amount of resources used for a data synchronization task.
     -   Concurrent job count: Maximum number of threads used to concurrently read data from or write data into the data storage media in a data synchronization task. In wizard mode, configure a concurrency for the specified task on the wizard page.
     -   The maximum number of errors indicates the maximum number of dirty data records.
-    -   Task Resource Group: the machine on which the task runs, if the number of tasks is large, the default Resource Group is used to wait for a resource, it is recommended that you add a Custom Resource Group \(currently only 1 East China, east China 2 supports adding custom resource groups\). For more information, see[Add scheduling resources](intl.en-US/User Guide/Data Integration/Common configuration/Add scheduling resources.md#).
+    -   Task Resource Group: the machine on which the task runs, if the number of tasks is large, the default Resource Group is used to wait for a resource, it is recommended that you add a Custom Resource Group \(currently only 1 East China, east China 2 supports adding custom resource groups\). For more information, see [Add scheduling resources](intl.en-US/User Guide/Data Integration/Common configuration/Add scheduling resources.md#).
 
 ## Development in script mode {#section_cp2_wsh_p2b .section}
 
@@ -149,7 +149,7 @@ To ensure data is written in a reliable manner, data loss from redundant columns
 
 **Partition configuration**
 
-MaxCompute Writer only provides the \*\*write through to a last-level partition\*\* function, and does not support partition routing of writing based on a specific field. For a table that has three levels of partition, you must specify writing data to a level-3 partition. For example, to write data to the level-3 partition of a table, you can configure it to pt=20150101,type＝1,biz=2, but not pt=20150101,type＝1 or pt=20150101.
+MaxCompute Writer only provides the write through to a last-level partition function, and does not support partition routing of writing based on a specific field. For a table that has three levels of partition, you must specify writing data to a level-3 partition. For example, to write data to the level-3 partition of a table, you can configure it to pt=20150101,type＝1,biz=2, but not pt=20150101,type＝1 or pt=20150101.
 
 **Task rerunning and failover**
 
