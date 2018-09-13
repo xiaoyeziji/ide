@@ -48,13 +48,7 @@ The two data entries as the historical data are available. Perform full data syn
 
 2.  Configure a task to synchronize the historical data.
 
-    ![](images/8877_en-US.png)
-
     Given that the task is performed only once, only one test is required.  After the test is complete, change the status of the task to Paused \(in the rightmost scheduling configuration\) and submit and release the task again in the “Data Development” module to prevent the task from being scheduled automatically.
-
-    View the result of the MaxCompute table:
-
-    ![](images/8878_en-US.png)
 
 3.  Write more data to the RDS source table as the incremental data.
 
@@ -73,8 +67,6 @@ The two data entries as the historical data are available. Perform full data syn
 5.  View synchronization results.
 
     If you set the task scheduling cycle as daily scheduling, the task is scheduled automatically the next day after the task is submitted and released, and the data in the MaxCompute target table is changed as follows once the task runs successfully.
-
-    ![](images/8880_en-US.png)
 
 
 ## Incremental synchronization of changed data {#section_p3y_32j_r2b .section}
@@ -125,17 +117,11 @@ insert into user(uid,uname,deptno,gender,optime) values (6,'Lucy',105,'F',CURREN
 
 2.  Configure full synchronization tasks.
 
-    ![](images/8887_en-US.png)
-
     **Note:** Set the scheduling cycle of the task as daily scheduling because daily full synchronization is required.
 
 3.  Test the task and view the synchronized MaxCompute target table.
 
-    ![](images/8888_en-US.png)
-
-    Because full synchronization is performed on a daily basis and no incremental synchronization is performed in this case, you can see the following data results after the task is automatically scheduled on the next day:
-
-    ![](images/8889_en-US.png)
+    Because full synchronization is performed on a daily basis and no incremental synchronization is performed in this case, you can see the following data results after the task is automatically scheduled on the next day.
 
     To query the data results, set `where ds = '20161114'` to retrieve the full data.
 
@@ -171,20 +157,7 @@ create table ods_user_inc(
 
     **Note:** Note: Run this task only once and set the task as Paused in the **Data Development** module after the task runs successfully.
 
-    ![](images/8890_en-US.png)
-
-    The result is shown as follows:
-
-    ![](images/8891_en-US.png)
-
 2.  Configure a task to write incremental data to the incremental record.
-
-    ![](images/8892_en-US.png)
-
-    The result is shown as follows:
-
-    ![](images/8893_en-US.png)
-
 3.  Merge the data.
 
     ```
@@ -200,10 +173,6 @@ create table ods_user_inc(
     full outer join ods_user_inc b
     on a.uid = b.uid ;
     ```
-
-    The result is shown as follows:
-
-    ![](images/8894_en-US.png)
 
 
 as you can see in the preceding figure, the deleted data entries are not synchronized.
