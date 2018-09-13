@@ -5,29 +5,24 @@
 1.  Click **Table Management** in the upper left corner of the page.
 2.  Select the **+** icon to create a table.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16332/15367344908220_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16332/15368243858220_en-US.png)
 
 3.  Enter the table name, only MaxCompute tables are supported currently, click **Submit**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16332/15367344908221_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16332/15368243858221_en-US.png)
 
 4.  Set basic attributes.
-
-    ![](images/8222_en-US.png)
-
     -   Chinese Name: Chinese name of the table to be created.
     -   Level-1 Topic: Name of the level-1 target folder of the table to be created.
     -   Level-2 Topic: Name of the level-2 target folder of the table to be created.
     -   Description: Description of the table to be created.
     -   Click **Create Topic**. On the displayed Topic Management page, create level-1 and level-2 topics.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15367344907965_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15368243857965_en-US.png)
 
 5.  Create a table in DDL mode.
 
     Click **DDL Mode**. In the displayed dialog box, enter the standard table creation statements.
-
-    ![](images/8223_en-US.png)
 
     After editing the table creation SQL statements, click **Generate Table Structure**. Information in the Basic Attributes, Physical Model Design, and Table Structure Design areas is automatically entered.
 
@@ -95,8 +90,6 @@ After editing the table structure information, submit the new table to the devel
 ## Query tables by type {#section_hzs_wn4_q2b .section}
 
 On the Table Management page, you can select Development Environment or Production Environment to query tables. The query results are sorted by folder of topics.
-
-![](images/8225_en-US.png)
 
 -   If you select Development Environment, you can only query tables in the development environment.
 -   If you select Production Environment, you can query tables in the production environment. Be cautious when operating the tables in the production environment.
