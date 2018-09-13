@@ -11,7 +11,7 @@ Go to Operation center, you can create new data sources.  You can configure the
 
     Select DataHub data source, you can see all topics in this data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16395/15367419518777_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16395/15368265398777_en-US.png)
 
 
 ## Monitor rules configuration {#section_qp2_myh_r2b .section}
@@ -20,11 +20,7 @@ Go to Operation center, you can create new data sources.  You can configure the
 
     You can also navigate to **My Subscription** \> **DataHub data source** \> **Topic name** to enter the subscribed topic quickly.
 
-    ![](images/8778_en-US.png)
-
 2.  Click **create rule**, and the datahub data source can now only create a template rule with a data type of cut-off monitoring.
-
-    ![](images/8783_en-US.png)
 
     Configurations:
 
