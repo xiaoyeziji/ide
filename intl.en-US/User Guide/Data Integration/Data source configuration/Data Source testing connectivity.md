@@ -59,7 +59,7 @@
 |DataHub|ApsaraDB|Classic network|Yes|-|
 |VPC network|No|-|
 
-**Note:** Whether to add a Custom Resource Group, refer to [Add scheduling resources](intl.en-US/User Guide/Data Integration/Common configuration/Add scheduling resources.md#).
+**Note:** Whether to add a Custom Resource Group, see [Add scheduling resources](intl.en-US/User Guide/Data Integration/Common configuration/Add scheduling resources.md#).
 
 ## Description {#section_uy4_1hv_42b .section}
 
@@ -101,11 +101,11 @@ When test connectivity fails, you need to verify that the data source area, the 
 
 -   The Database Password is incorrect, as shown below.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16196/15367285277520_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16196/15368030647520_en-US.png)
 
 -   The network doesn't have a diagram, as shown below.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16196/15367285287521_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16196/15368030647521_en-US.png)
 
 -   During synchronization, there is a network disconnect and so on.
 
