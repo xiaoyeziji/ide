@@ -1,6 +1,6 @@
 # Apply for data permissions {#concept_w5f_1rt_q2b .concept}
 
-Alibaba Cloud DTplus DataWorks provides the following three data types:
+Alibaba Cloud DTplus DataWorks provides the following three data types.
 
 -   Table: Namely the data tables.
 -   Function: Namely the UDF, functions that can be used in SQL.
@@ -13,11 +13,11 @@ These three data types have a strict permission control feature. You can use the
 1.  Find the data table that needs to apply for permission by **Data Management** \> **All Data** page.
 2.  Click **Application permissions** in the Actions column of the data table.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16345/15368064888552_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16345/15368280338552_en-US.png)
 
 3.  Complete the configurations in the **Apply for authorization** dialog box.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16345/15368064888553_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16345/15368280338553_en-US.png)
 
     Parameters:
 
@@ -25,7 +25,7 @@ These three data types have a strict permission control feature. You can use the
         -   Self Apply: With this option selected, the permission is granted to the you, because you being the current logon user, after the application is approved.
         -   Apply as agent: With this option selected, enter the account \(the logon name in the upper-right corner of the system\) to whom you want to apply the permission for.  Once the application is approved, the permission is granted to the specified account.
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16345/15368064888554_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16345/15368280338554_en-US.png)
 
     -   Permission expiration date: The duration of the applied table permission. The unit is in days. If not specified, the permission does not expire permanently by default. When the validity period expires, the permission is automatically revoked by the system.
     -   Application reason: Enter a brief application reason for faster approval.
@@ -35,12 +35,7 @@ These three data types have a strict permission control feature. You can use the
 
 1.  Enter the **Data Management** \> **Query Data** page.
 2.  Click Apply for data permission in the upper-right corner of the list.
-
-    ![](images/8556_en-US.png)
-
 3.  Complete the configurations in the Apply for authorization dialog box.
-
-    ![](images/8557_en-US.png)
 
     Parameters:
 
