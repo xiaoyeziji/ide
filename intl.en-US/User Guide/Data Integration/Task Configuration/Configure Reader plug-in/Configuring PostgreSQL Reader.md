@@ -67,7 +67,7 @@ The PostgreSQL reader has a list of Type transformations for PostgreSQL, as show
 
     Configure the source and destination of the data for the synchronization task.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16231/15367218587845_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16231/15368020287845_en-US.png)
 
     Configurations:
 
@@ -84,7 +84,7 @@ The PostgreSQL reader has a list of Type transformations for PostgreSQL, as show
 
     The source table field on the left and the target table field on the right are one-to-one relationships, click **Add row** to add a single field and click **Delete** to delete the current field.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16231/15367218587846_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16231/15368020287846_en-US.png)
 
     -   Peer mapping: Click **Enable Same-Line Mapping** to establish a corresponding mapping relationship in the peer, note that match the data type.
     -   Automatic formatting: The fields are automatically sorted based on corresponding rules.
@@ -97,14 +97,14 @@ The PostgreSQL reader has a list of Type transformations for PostgreSQL, as show
     -   If the value you entered cannot be parsed, the type is displayed as Not identified.
 3.  Control the tunnel
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15367218587675_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15368020287675_en-US.png)
 
     Configurations:
 
     -   DMU: A unit which measures the resources \(including CPU, memory, and network bandwidth\) consumed during data integration. One DMU represents the minimum amount of resources used for a data synchronization task.
     -   Concurrent job count: Maximum number of threads used to concurrently read data from or write data into the data storage media in a data synchronization task. In wizard mode, configure a concurrency for the specified task on the wizard page.
     -   The maximum number of errors indicates the maximum number of dirty data records.
-    -   Task Resource Group: the machine on which the task runs, if the number of tasks is large, the default Resource Group is used to wait for a resource, it is recommended that you add a Custom Resource Group. For more information, see[Add scheduling resources](intl.en-US/User Guide/Data Integration/Common configuration/Add scheduling resources.md#).
+    -   Task Resource Group: the machine on which the task runs, if the number of tasks is large, the default Resource Group is used to wait for a resource, it is recommended that you add a Custom Resource Group. For more information, see [Add scheduling resources](intl.en-US/User Guide/Data Integration/Common configuration/Add scheduling resources.md#).
 
 ## Development in script mode {#section_cp2_wsh_p2b .section}
 
