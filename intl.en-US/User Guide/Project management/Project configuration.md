@@ -6,10 +6,7 @@ You can use the **Project Management** page in the administration console, manag
 
 1.  Log in to the dataworks management console and navigate to the **Project List** page.
 2.  Click **Config** after the corresponding project to enter the dataworks project configuration page.
-3.  1. Configure your project as needed,
-
-    ![](images/8744_en-US.png)
-
+3.  Configure your project as needed,
     -   Basic Attributes
         -   Project name: the name of the current project in dataworks, only letters or numbers \(must begin with letters\) are supported, not case-sensitive. It is the unique identifier of the project and cannot be changed once created.
         -   Project display name: The project display name of the current project in dataworks, used to identify the project, letters, numbers, or Chinese are supported and can be modified.
@@ -28,9 +25,6 @@ You can use the **Project Management** page in the administration console, manag
         With SandBox whitelist configured here, even if the Shell task run on the default Resource Group, you can also access the IP directly \(where the whitelist can be configured with IP and domain names \).
 
     -   Calculation engine information
-
-        ![](images/8745_en-US.png)
-
         -   Development Environment Project name: Current dataworks project, project name of the maxcompute Project Development Environment used by the underlying layer \(this maxcompute project acts as a resource for calculation and storage\).
         -   Production Environment Project name: the name of the project for the current dataworks project, the maxcompute project production environment that is used at the bottom.
         -   Development Environment access identity: default is a personal account, not modifiable.
