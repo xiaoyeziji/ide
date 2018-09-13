@@ -9,7 +9,7 @@ To meet the needs of high-end users for personalized queries, the Data Service a
 1.  Navigate to the **API Service list** \> **Generate API**.
 2.  Click **Script Mode** to fill in the API basics.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368069198791_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368286518791_en-US.png)
 
     Note the settings for the API grouping during configuration. An API group includes a collection of APIs that are used for a specific scenario. It is the minimum management unit in API Gateway. In the Alibaba Cloud API Marketplace, each API group corresponds to a specific API product.
 
@@ -37,7 +37,7 @@ To meet the needs of high-end users for personalized queries, the Data Service a
 
     You can enter the SQL code in the code box on the right side. The system supports one-click SQL function, checking fields in the list of fields, and clicking **Generate SQL**, the SQL statement for `SELECT xxx FROM xxx` is automatically generated and inserted at the right cursor.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16408/15368069198802_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16408/15368286518802_en-US.png)
 
     **Note:** 
 
@@ -49,7 +49,7 @@ To meet the needs of high-end users for personalized queries, the Data Service a
 
     **Note:** To help the caller of the API get a more comprehensive understanding of the API, please complete the API parameter information as much as possible.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16408/15368069198803_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16408/15368286518803_en-US.png)
 
 
 You need to pay attention to the settings that return result paging during the configuration process.
@@ -72,7 +72,7 @@ The following public parameters are available only when the response pagination 
 -   Only one SQL statement is supported, and multiple SQL statements are not supported.
 -   Only the \`SELECT\` clause is supported. Other clauses such as \`INSERT\`, \`UPDATE\`, and \`DELETE\` are not supported.
 -   The query field for select is the return parameter for the API, the variable Param in the $ \{Param\} in the where condition is a request parameter for the API.
--   Select `SELECT \*` is not supported, columns of the query must be specified explicitly.
+-    `SELECT \*` is not supported, columns of the query must be specified explicitly.
 -   Single table queries, table join queries, and nested queries within one data source are supported.
 -   If the column name of the SELECT query column has a table name prefix \(such as T. name\), the alias must be taken as the return parameter name \(such as T. name as name \).
 -   If you use the aggregate function \(min/max/sum/count, etc \), the alias must be taken as the return parameter name \(such as sum \(Num\) as total \\ \_ num \).
@@ -85,13 +85,13 @@ When the configuration of the API parameters is complete, click **Next** to ente
 
 After completing configuration of API parameters, you can start the API test.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368069198797_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368286518797_en-US.png)
 
 Set parameters and click **Start Test** to send the API request online. The API request details and response are displayed on the right. If the test fails, read the error message carefully and make the appropriate adjustments to test your API again.
 
 You need to note the settings for the normal return example during the configuration process. When testing an API, the system automatically generates exception examples and error codes. However, normal response examples are not automatically generated. After the test succeeds, you need to click **Save as Normal Response Sample** to save the current test result as the normal response sample. If sensitive data is included in the response, you can manually edit it.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368069198799_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368286518799_en-US.png)
 
 **Note:** 
 
@@ -104,5 +104,5 @@ After completing the API test, click **Finish**. The data API is successfully cr
 
 Back on the API service list page, click **details** in the Action column to view the details of the API. This page displays detailed information about an API from the view of a caller.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368069198800_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368286518800_en-US.png)
 
