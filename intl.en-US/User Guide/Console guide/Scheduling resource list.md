@@ -17,7 +17,7 @@ On the DataWorks console, you can view all the scheduling resources under the cu
             -   Initialize the server: Enter a machine initialization statement as prompted.
             -   Modify the server: Modify server configurations of the current scheduling resource, such as adding or deleting a server and changing the maximum number of concurrent server tasks.
             -   Modify owner project: You can allocate the current scheduling resource to a specific project. This operation can only be performed by the main account that activated the service. After creating the project, you can use an existing ECS by modifying the owner project.
-    -   Add scheduling resources: For more information, see [EN-US\_TP\_16266.md\#](intl.en-US/User Guide/Data Integration/Common configuration:/Add scheduling resources.md#).
+    -   Add scheduling resources: For more information, see [Add scheduling resources](intl.en-US/User Guide/Data Integration/Common configuration/Add scheduling resources.md#).
 
 ## What are scheduling resources? {#section_ndz_nwg_r2b .section}
 
