@@ -30,7 +30,7 @@ For the complex network environments where either the data source or the data ta
 
 The data synchronization method in this scenario is shown in the following figure:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16272/15368194378568_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16272/15368195458568_en-US.png)
 
 -   Because ECS2 server cannot access the public network, an ECS1 machine that is in the same network segment as ECS2 and has the ability to access the public network is required for agent deployment.
 -   Set ECS1 as the resource group, and run the synchronization task on the machine.
@@ -49,7 +49,7 @@ The user-created data source synchronization task on ECS2 runs in the custom res
 
 The data synchronization method in this scenario is shown in the following figure:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16272/15368194388574_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16272/15368195458574_en-US.png)
 
 -   Because machine 1 cannot access the public network, an machine 2 that is in the same network segment as machine 1 and has the ability to access the public network is required for agent deployment.
 -   Set machine 2 as the scheduling resource group, and run the synchronization task on the machine.
@@ -58,7 +58,7 @@ The data synchronization method in this scenario is shown in the following figur
 
 Configure the Data Source
 
-1.  Enter the[DataWorks management console](https://account.aliyun.com/login/mixlogin.htm?oauth_callback=https%3A%2F%2Fsso.data.aliyun.com%2Faliyun%2FaliyunCallback%3Fredirect%3Dhttps%253A%252F%252Fworkbench.data.aliyun.com%252Fconsole%253Fspm%253D5176.doc47762.2.4.fUQkD2) as a developer, and click Enter workspace in the corresponding project action bar.
+1.  Enter the [DataWorks management console](https://account.aliyun.com/login/mixlogin.htm?oauth_callback=https%3A%2F%2Fsso.data.aliyun.com%2Faliyun%2FaliyunCallback%3Fredirect%3Dhttps%253A%252F%252Fworkbench.data.aliyun.com%252Fconsole%253Fspm%253D5176.doc47762.2.4.fUQkD2) as a developer, and click Enter workspace in the corresponding project action bar.
 2.  Click Data Integration from the top menu bar and navigate to the Data Source page.
 3.  Click Add Data Source to show the supported data source types.
 4.  Select the data source without a public IP address from the data sources for the relational database MySQL.
