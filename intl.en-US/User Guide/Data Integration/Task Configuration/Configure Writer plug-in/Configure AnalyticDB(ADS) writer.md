@@ -9,7 +9,7 @@ AnalyticDB Writer allows you to write data to AnalyticDB in the following two mo
     -   Advantage: Writes a small volume of data \(less than 10 million data records\) at a high speed.
     -   Disadvantage: Not suitable for writing a large volume of data due to a low speed.
 
-You must configure the data source before configuring the AnalyticDB Writer plug-in. For more information, see [Add AnalyticDB](intl.en-US/User Guide/Data Integration/Data source configuration/Add AnalyticDB.md#),Configure the AnalyticDB data source.
+You must configure the data source before configuring the AnalyticDB Writer plug-in. For more information, see [Configure the AnalyticDB Data Source](intl.en-US/User Guide/Data Integration/Data source configuration/Configure the AnalyticDB Data Source.md#),Configure the AnalyticDB data source.
 
 AnalyticDB Writer supports the following data types in AnalyticDB:
 
@@ -37,8 +37,7 @@ AnalyticDB Writer supports the following data types in AnalyticDB:
 
     To ensure your data security, only the data from the MaxCompute Project in which the operator is the project owner or MaxCompute table owner can be imported to AnalyticDB. Most of private clouds have no such restriction.
 
--   If the source table is of other table types such as RDS, at least the Load Data permission needs to be granted to cloud-data-pipeline@aliyun-inner.com in AnalyticDB.
--   If the source table is synchronized from RDS to AnalyticDB, it can only run on the default machine.
+-   ADS Writer only supports being written from MaxCompute data source. If other data sources need to be written to ADS, write to MaxCompute first and then write to ADS.
 
 ## ​Parameter description​ {#section_jn2_gqh_p2b .section}
 
@@ -72,7 +71,7 @@ AnalyticDB Writer supports the following data types in AnalyticDB:
 
     Configure the source and destination of the data for the synchronization task.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15367221537998_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15368919567998_en-US.png)
 
     Configuration item descriptions:
 
@@ -83,13 +82,13 @@ AnalyticDB Writer supports the following data types in AnalyticDB:
 
     The source table field on the left and the target table field on the right are one-to-one relationships, click **Add row** to add a single field and click **Delete** to delete the current field.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15367221538002_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15368919578002_en-US.png)
 
     -   Peer mapping: Click **peer mapping** to establish a corresponding mapping relationship in the peer, note that match the data type.
     -   Automatic formatting: The fields are automatically sorted based on corresponding rules.
 3.  Channel control
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15367221537675_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15368919577675_en-US.png)
 
     Configurations:
 
