@@ -8,12 +8,12 @@ AnalyticDB \(ADS\) allows you to write data to AnalyticDB but does not allow you
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New source** to pop up the supported data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16197/15367291837524_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16197/15368919147524_en-US.png)
 
 4.  In the Create Data Source dialog box displayed, set the data source type to AnalyticDB \(ADS\).
 5.  Complete the configuration items of the AnalyticDB data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16197/15367291837525_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16197/15368919147525_en-US.png)
 
     -   [Configure the DM Data Source](https://www.alibabacloud.com/help/faq-detail/74294.htm)
     -   [Configure the DM Data Source](https://www.alibabacloud.com/help/faq-detail/74294.htm)

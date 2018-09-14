@@ -8,12 +8,12 @@ AnalyticDB（简称ADS） 提供了其他数据源向AnalyticDB写入的功能�
 2.  单击顶部菜单栏中的**数据集成**，导航至**数据源**页面。
 3.  单击**新增数据源**，弹出支持的数据源。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16197/15367326207524_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16197/15368919127524_zh-CN.png)
 
 4.  在新建数据源弹出框中，选择数据源类型为AnalyticDB（ADS）。
 5.  配置AnalyticDB数据源的各个信息项。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16197/15367326207525_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16197/15368919127525_zh-CN.png)
 
     配置项说明如下：
 
