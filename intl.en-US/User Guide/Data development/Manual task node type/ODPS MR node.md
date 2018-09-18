@@ -12,15 +12,15 @@ To use an ODPS MR node, you must first upload and release the resource to be use
 
     Click **Manual Business Flow** in the left-side navigation pane, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15371850577961_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15372474977961_en-US.png)
 
 2.  Right-click **Resource**, and select **Create Resource** \> **jar**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16324/15371850578082_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16324/15372474978082_en-US.png)
 
 3.  Enter the resource name in the Create Resource according to the naming convention, set the resource type to jar, select a local jar package to the uploaded.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15371850577721_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15372474977721_en-US.png)
 
     **Note:** 
 
@@ -29,7 +29,7 @@ To use an ODPS MR node, you must first upload and release the resource to be use
     -   Naming convention for a resource name: a string of 1 to 128 characters, including letters, numbers, underlines, and dots. The name is case insensitive. If the resource is a jar resource, the extension is .jar. If the resource is a Python resource, the extension is .py.
 4.  Click **Submit** to submit the resource to the development scheduling server.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15371850577722_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15372474977722_en-US.png)
 
 5.  Publish a node task.
 
@@ -42,17 +42,17 @@ To use an ODPS MR node, you must first upload and release the resource to be use
 
     Click **Manual Business Flow** in the left-side navigation pane, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15371850577961_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15372474977961_en-US.png)
 
 2.  Create an ODPS MR node.
 
     Right-click **Data Development**, and select **Create Data Development Node** \> **ODPS MR**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16324/15371850588086_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16324/15372474978086_en-US.png)
 
 3.  Edit the node code.Double click the new ODPS MR node and enter the following interface：
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15371850587724_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15372474977724_en-US.png)
 
     Node code editing example:
 
@@ -63,12 +63,12 @@ To use an ODPS MR node, you must first upload and release the resource to be use
     The code is described below:
 
     -   `-resources base_test.jar`: indicates the file name of the referenced jar resource.
-    -   `-classpath`: jar package path, you can right-click the resource file to view the historical version and obtain this path.
+    -   `-classpath`: jar package path, you can right-click the Reference resource and obtain this path.
 
-        **Note:** When you refer to jar resources, you need to enter the ODPS MR node interface.
+        **Note:** Double click the new ODPS MR node and enter the jar resource after entering the ODPS MR node interface.
 
     -   `com.taobao.edp.odps.brandnormalize.Word.NormalizeWordAll`: indicates the main class in the jar package that is called during execution. It must be consistent with the main class name in the jar package.
-    When one MR calls multiple jar resources, classpath must be written as follows: `-classpath hppt:./xxxx1.jar,./xxxx2.jar`, that is, two paths must be separated by a comma.
+    When one MR calls multiple jar resources, classpath must be written as follows: `-classpath ./xxxx1.jar,./xxxx2.jar`, that is, two paths must be separated by a comma.
 
 4.  Node scheduling configuration.
 
