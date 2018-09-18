@@ -6,8 +6,7 @@ When the default scheduling resource is unable to connect to your complex networ
 
 **Note:** 
 
--   Currently only East China 1, East China 2, South China 1 and North China 2 support adding custom resources \(deployment agent \), the ability of other regions to add custom resource groups is still in the pipeline.
--   A machine can add only one custom Resource Group, you can select only one network type per Custom Resource Group, you can set up scheduling resource sharing in the add-on console. Custom scheduling resource groups currently only support odps\_sql/odps\_MR/Shell/ synchronization tasks, other tasks are not supported.
+-   Currently only East China 2 support odps\_sql/odps\_MR/Shell/ synchronization tasks by using costum sheduling resources. In other regions only syschronization task support costum sheduling resources.
 -   Admin permission is required to customize some files running on a resource group, for example, calling shell files, SQL on custom ECs in a shell script task that you write yourself documents, etc.
 
 ## An ECS instance must be used to import commands. {#section_rp5_qp5_q2b .section}
