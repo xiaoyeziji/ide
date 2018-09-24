@@ -1,4 +1,4 @@
-# Script Mode Configuration {#concept_olb_drc_p2b .concept}
+# Script mode configuration {#concept_olb_drc_p2b .concept}
 
 This article will show you how to configure tasks through the data integration Script Mode.
 
@@ -33,21 +33,21 @@ After confirming that the target data source is supported by Data Integration, y
 1.  Enter the [DataWorks management console](https://workbench.data.aliyun.com/console) as a developer, and click **Data Development** in the corresponding project action bar.
 2.  Click **Data Development** in the left-hand menu bar to open the Business Process navigator.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15377899367629_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15377901147629_en-US.png)
 
 3.  Right-click **Business Flow** in the navigation bar, create **Data Integration** \> **Data Sync**, and enter the synchronization Task Name.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15377899367630_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15377901147630_en-US.png)
 
 4.  After successfully creating the synchronization node, click the **Switch to Script Mode** in the upper-right corner of the new synchronization node, select **Ok** to enter Script Mode.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15377899367631_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15377901157631_en-US.png)
 
     **Note:** Script Mode supports more features, such as synchronous task editing if the network is not up to date.
 
 5.  Click **Import template** in the upper-right corner of the script pattern, in the bullet box, select the source type of the read and the data source, the target type of the write, and the data source respectively, click **confirm** to generate the initial script.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15377899367632_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15377901157632_en-US.png)
 
 
 ## Configure the synchronization task reader {#section_nz2_jlc_p2b .section}
