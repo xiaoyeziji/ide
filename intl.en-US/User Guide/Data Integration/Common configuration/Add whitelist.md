@@ -2,7 +2,7 @@
 
 This article describes how to add a corresponding whitelist and security group when you are using DataWorks in different regions.
 
-To make sure the security and stability of databases, you can add the IP addresses or IP segments used for accessing the database to the whitelist or [Add security group](intl.en-US/User Guide/Data Integration/Common configuration/Add security group.md#) security group of the target instance before using certain database instances. 
+To make sure the security and stability of databases, you can add the IP addresses or IP segments used for accessing the database to the whitelist or [Add security group](intl.en-US/User Guide/Data Integration/Common configuration/Add security group.md#) of the target instance before using certain database instances. 
 
 ## Add a whitelist {#section_djc_kj5_q2b .section}
 
@@ -11,14 +11,14 @@ To make sure the security and stability of databases, you can add the IP address
 
     Currently, the supported regions are China East 2 \(Shanghai\), China South 1 \(Shenzhen\), Hong Kong, and Asia Pacific SOU 1 \(Singapore\). The default region is China East 2, and you can switch to other regions where your project is located, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16265/15367481748537_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16265/15378458608537_en-US.jpg)
 
 3.  Select the whitelist for your project region.
 
-    A part of the data sources have a white list restrictions, they need to release access IPs of data integration. The common data sources, such as RDS, MongoDB, and Redis, need to release access IPs in their consoles.  Adding a white list has the following two case:
+    Some data sources have a whitelist restrictions currently and need to add IPs of data integration to whitelists. Common data sources, such as RDS, MongoDB, and Redis, need to add IPs to whitelists in their consoles.  Adding a whitelist has the following two case:
 
-    -   When a sync task is running on the custom resource group. You must authorize machines for the custom resource group, and add machines intranet IPs and extranet IPs to the white list of data source.
-    -   The whitelist entries differs from region to region. Select the whitelist for the selected region from the following whitelist table.
+    -   When a sync task is running on the custom resource group. You must authorize machines for the custom resource group, and add machines' intranet IPs and extranet IPs to the whitelist of data source.
+    -   The whitelist entries differs from region to region. Select the whitelist for the selected region from the following table.
 
         |region|Whitelist|
         |:-----|:--------|
@@ -42,11 +42,11 @@ The RDS data source can be configured in the following two ways.
 
 -   RDS instance
 
-    In this case, a data source is created by using an RDS instance. Currently, the connectivity test \(including the RDS in VPC environments\) is supported. If the connectivity test fails, you can try to add the data source using the jdbcUrl.
+    In this case, a data source is created by using an RDS instance. Currently, the connectivity test \(including the RDS in VPC environments\) is supported. If the connectivity test fails, you can try to add the data source using the JDBCURL.
 
--   jdbcUrl
+-   JDBCURL
 
-    For the IP in jdbcUrl, enter an intranet IP address or an Internet IP address if no intranet IP address is available. The intranet IP address features faster synchronization because the address is relevant to Alibaba Cloud data centers, while the synchronization speed of the internet IP address is subject to the available internet bandwidth.
+    For the IP in JDBCURL, enter an intranet IP address or an Internet IP address if no intranet IP address is available. The intranet IP address features faster synchronization because the address is relevant to Alibaba Cloud data centers, while the synchronization speed of the internet IP address is subject to the available internet bandwidth.
 
 
 RDS whitelist configuration
