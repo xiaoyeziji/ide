@@ -6,8 +6,8 @@ To ascertain the security and stability of databases, you must add the IP addres
 
 ## Add a security group {#section_djc_kj5_q2b .section}
 
--   If the self-built data source synchronization tasks on your ECS run on a custom resource group, you must authorize the machine of that custom resource group by adding the private/public IP and port of the custom machine to the ECS security group.
--   If the self-built data source on your ECs runs on the default Resource Group, to give default machine authorization, choose to add your security group content based on your ECs machine region, for example, your ECs is North China 2, and the security group adds North China 2 \(Beijing \): 2ze3236e8pcbxw61o9y0 and 1156529087455811 content, as shown in the following table.
+-   If your data synchronization tasks run on your own ECS resource group, you should authorize your ECS resource group by adding its private/public IP and port to the ECS security group.
+-   If your data synchronization tasks run on the default resource group, you should add your security group based on your ECS machine region. For example, if your ECS is North China 2, you should add the security group based on North China 2 \(Beijing \): 2ze3236e8pcbxw61o9y0 and 1156529087455811, as shown in the following table.
 
     |Region|Authorization object|Account ID|
     |:-----|:-------------------|:---------|
@@ -19,7 +19,7 @@ To ascertain the security and stability of databases, you must add the IP addres
     |US \(Silicon Valley\)|sg-rj9bowpmdvhyl53lza2j|1156529087455811|
     |China \(Beijing\)|sg-2ze3236e8pcbxw61o9y0|1156529087455811|
 
-    **Note:** The ECS of the VPC environment does not support adding the above security groups.
+    **Note:** ECS in VPC environment does not support adding the above security groups.
 
 
 ## Add an ECS security group {#section_vzl_bk5_q2b .section}
