@@ -6,8 +6,6 @@ DataService Studio aims to build a data service bus to help enterprises centrall
 
 DataService Studio adopts the serverless architecture. All you need to care is the query logic of APIs, instead of the infrastructure such as the running environment. DataService Studio prepares the computing resources for you, supports elastic scaling, and requires zero O&M cost.
 
-![](images/8746_en-US.png)
-
 ## Creation of data APIs {#section_acv_msh_r2b .section}
 
 DataService Studio currently supports the use of the visualized wizard to quickly create data APIs based on tables of the relational database and NoSQL database. You can configure a data API in several minutes without writing codes. To meet the personalized query requirements of advanced users, DataService Studio provides the custom SQL script mode to allow you compile the API query SQL statements by yourself. It also supports multi-table association, complex query conditions, and aggregate functions.

@@ -1,6 +1,6 @@
 # 配置AnalyticDB（ADS） Writer {#concept_bft_jyk_q2b .concept}
 
-er实现了两种向Analytic DB（ADS）导入数据的模式。
+AnalyticDB（ADS） Writer实现了两种向Analytic DB（ADS）导入数据的模式。
 
 -   Load Data（批量导入） 模式：数据中转落地导入方式。
     -   优点：当数据量较大（\>1KW）时，能够以较快速度进行导入。
@@ -71,7 +71,7 @@ AnalyticDB Writer支持AnalyticDB中以下数据类型。
 
     配置同步任务的数据来源和数据去向。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15368919547998_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15369069767998_zh-CN.png)
 
     配置项说明如下：
 
@@ -82,13 +82,13 @@ AnalyticDB Writer支持AnalyticDB中以下数据类型。
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15368919548002_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15369069778002_zh-CN.png)
 
     -   同行映射：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
     -   自动排版：可以根据相应的规律自动排版。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15368919547675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15369069777675_zh-CN.png)
 
     配置项说明如下：
 

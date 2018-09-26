@@ -1,10 +1,10 @@
 # Overview of console {#concept_hml_kmg_r2b .concept}
 
-You can view the recently used projects on the **Overview** page, and enter the work zone to configure a project, create a project, and one-click to import CDNs.
+You can view the recently used projects on the Overview page, and enter the work zone to configure a project, create a project, and one-click to import CDNs.
 
 Log on to the [DataWorks console](https://workbench.data.aliyun.com/console) page as an organization administrator \(main account\).
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16186/15363720598728_en-US.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16186/15373509078728_en-US.jpg)
 
 **Note:** The overview page updates the display based on your usage and creation time, displays only the three projects that you recently used or created.
 
