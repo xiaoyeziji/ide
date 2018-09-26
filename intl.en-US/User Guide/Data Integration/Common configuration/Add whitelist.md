@@ -11,7 +11,7 @@ To make sure the security and stability of databases, you can add the IP address
 
     Currently, the supported regions are China East 2 \(Shanghai\), China South 1 \(Shenzhen\), Hong Kong, and Asia Pacific SOU 1 \(Singapore\). The default region is China East 2, and you can switch to other regions where your project is located, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16265/15378458608537_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16265/15379335848537_en-US.jpg)
 
 3.  Select the whitelist for your project region.
 
@@ -34,6 +34,7 @@ To make sure the security and stability of databases, you can add the IP address
         |Japan|100.105.55.0/24,11.192.147.0/24,11.192.148.0/24,11.192.149.0/24,100.64.0.0/8,47.91.12.0/24,47.91.13.0/24,47.91.9.0/24|
         |United Arab Emirates \(Dubai\)|11.192.107.0/24,11.192.127.0/24,11.192.88.0/24,11.193.246.0/24,47.91.116.0/24,100.64.0.0/8|
         |India \(Mumbai\)|11.194.10.0/24,11.246.70.0/24,11.246.71.0/24,11.246.73.0/24,11.246.74.0/24,100.64.0.0/8,149.129.164.0/24|
+        |UK|11.199.93.0/24,100.64.0.0/8|
 
 
 ## Add an RDS whitelist {#section_nwx_mm5_q2b .section}
