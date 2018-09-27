@@ -58,7 +58,7 @@ Run the preceding code, and then the inputValue of "aGVsbG8=" can be obtained.
 Finally, write the value into the configuration: \{"type":"binary","value" : "aGVsbG8="\}.
 
 |No|Read data from the beginning of the table|
-|range: \{"end "\}|The end range that is exported, and the input of this value can fill in an empty array or PK prefix, you can also fill in the complete PK. When reading data in positive order, the default population PK suffix is INF\_MAX, and the reverse order is INF\_MIN.If your table has two PKs in the type of string and int, the data of the table can be entered in the following three methods:
+|range: \{"end "\}|The end range that is exported, and the value can be an empty array, a PK prefix, or a complete PK. When reading data in positive order, the default population PK suffix is INF\_MAX, and the reverse order is INF\_MIN.If your table has two PKs in the type of string and int, the data of the table can be entered in the following three methods:
 
 -   \[\] Indicates that it is read from the beginning of the table.
 -   \[\{“type”:”string”, “value”:”a”\}\] means from \[\{“type”:”string”, “value”:”a”\},\{“type”:”INF\_MIN”\}\].
