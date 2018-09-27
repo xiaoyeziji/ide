@@ -8,7 +8,7 @@ SQL code is encoded as follows:
 -   Code lines are clear, neat, and nice looking.
 -   The code lines are well arranged and have a good hierarchical structure.
 -   Comments must be provided whenever necessary to enhance readability of codes.
--   Requirements in this convention are not mandatory constraints for coding behaviors of developers. In practice, on the precondition that general requirements are not violated, rational deviations from this convention is acceptable if they are beneficial to code development, and this convention will be continuously improved and supplemented.
+-   Requirements in this convention are not required constraints for coding behaviors of developers. In practice, on the precondition that general requirements are not violated, rational deviations from this convention is acceptable if they are beneficial to code development, and this convention will be continuously improved and supplemented.
 -   All keywords and reserved words used in SQL codes are in lower case. Examples of such words include select, from, where, and, or, union, insert, delete, group, having, and count.
 -   In addition to keywords and reserved codes used in SQL codes, other codes \(such as field names and table alias\) must be in lower case.
 -   Four spaces are equivalent to an indention unit. All indentions must be the integer multiples of an indention unit and aligned according to the code hierarchy.
@@ -23,7 +23,7 @@ The code specification for SQL code is as follows:
 
     Information, such as the subject, function description, author, and date, must be added to the code header. The log and title bars must be reserved so that later users can add change records. Note that each line cannot have more than 80 characters. The following is a template:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16308/15380383767938_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16308/15380386057938_en-US.png)
 
     ```
     -- MaxCompute(ODPS) SQL
@@ -44,9 +44,9 @@ The code specification for SQL code is as follows:
     -   One indention next to the word "select" is directly followed by the first selected field. That is, the field is two indentions away from the start of the line.
     -   Each of other fields starts with two indentions, followed by a comma \(,\) and then the field name.
     -   The comma \(,\) between two fields is right before the second field.
-    -   The as statement must be in the same line as the related fields. It is recommended that the "as" statements with multiple fields be aligned in the same column.
+    -   The as statement must be in the same line as the related fields. We recommended that the "as" statements with multiple fields be aligned in the same column.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16308/15380383768881_en-US.jpg)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16308/15380386058881_en-US.jpg)
 
 -   Insert sub-statement arrangement requirements
 
@@ -62,11 +62,11 @@ The code specification for SQL code is as follows:
     -   The logical operators \(such as "and" and "or"\) in a "where" sub-statement must be left aligned with where.
     -   If the length of a sub-statement exceeds two indentions, add a space to the sub-statement and then write the subsequent code, such as "order by" and "group by".
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16308/15380383768882_en-US.jpg)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16308/15380386058882_en-US.jpg)
 
 -   Requirements for spacing before and after an operator One space must be reserved before and after an arithmetic operator or a logical operator. Operators must be written on the same line unless the line length exceeds 80 characters.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16308/15380383768883_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16308/15380386058883_en-US.jpg)
 
 -   Compiling of the "case" statement
 
@@ -78,20 +78,20 @@ The code specification for SQL code is as follows:
     -   One "when" sub-statement occupies one line. Line feed is acceptable if the statement is too long.
     -   A "case" statement must contain the "else" sub-statement. The "else" sub-statement must be aligned with the "when" sub-statement.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16308/15380383768884_en-US.jpg)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16308/15380386058884_en-US.jpg)
 
 -   Nesting query compiling specification
 
     Nesting sub-query is often used in ETL development of the data warehouse system. Therefore, it is important to arrange codes in a hierarchical manner. Example:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16308/15380383778885_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16308/15380386058885_en-US.jpg)
 
 -   Table alias definition convention
     -   Alias must be added to all tables. Once an alias is defined for an operation table in a "select" statement, the alias must be used whenever the statement references the table. To facilitate code compiling, alias must be simple and concise whenever possible and keywords must be avoided.
-    -   The table alias is defined using simple characters. It is recommended that aliases be defined in alphabetical order.
+    -   The table alias is defined using simple characters. We recommended that aliases be defined in alphabetical order.
     -   Before multi-layered nesting sub-query of an alias, the hierarchy must be shown. The SQL statement alias is defined by layer. Layer 1 to layer 4 are represented by P \(Part\), S \(Segment\), U \(Unit\), and D \(Detail\), respectively. Alternatively, layer 1 to layer 4 can be represented by a, b, c, and d. Sub-statements at the same layer are differentiated from each other by the numbers \(such as 1, 2, 3, and 4\) behind the letter that represents the layer. A comment can be added for a table alias if necessary.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16308/15380383778886_en-US.jpg)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16308/15380386068886_en-US.jpg)
 
 -   SQL comments
 
@@ -101,7 +101,7 @@ The code specification for SQL code is as follows:
     -   Comments must be added for branch condition expressions that are not easy to understand.
     -   Comments must be added for important calculations to describe their functions.
     -   If a function is too long, its statement must be segmented based on the implemented functions, and comments must be added to describe each segment.
-    -   For a constant or variable, it is mandatory to add a comment to explain the meaning of the saved value, and optional to add a comment to explain the valid value range.
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16308/15380383777939_en-US.png)
+    -   For a constant or variable, it is required to add a comment to explain the meaning of the saved value, and optional to add a comment to explain the valid value range.
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16308/15380386067939_en-US.png)
 
 
