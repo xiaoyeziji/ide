@@ -42,13 +42,13 @@ Currently, OTS Reader supports all OTS types. The conversion of OTS types in the
 -   - The following types are supported: string, int, and binary. Binary data is passed in as Base64 strings in binary format. INF\_MIN represents an infinitely small value and INF\_MAX represents an infinitely large value.
 
 |No|Reads from the beginning of the table to the end of the table|
-|range: \{"begin "\}|The starting range that is exported, and the input of this value can fill in an empty array or PK prefix, you can also fill in the complete PK. When reading data in positive order, the default fill PK suffix is inf\_min, and the reverse order is inf\_max, as shown in the example below.If your table has two PrimaryKeys in the type of string and int, the data of the table can be entered in the following three methods:
+|range: \{"begin "\}|The starting range that is exported, and the value can be an empty array, a PK prefix, or a complete PK. When reading data in positive order, the default fill PK suffix is inf\_min, and the reverse order is inf\_max, as shown in the example below.If your table has two PrimaryKeys in the type of string and int, the data of the table can be entered in the following three methods:
 
 -   \[\] Indicates that it is read from the beginning of the table.
 -   \[\{"type": "string", "value ": "a"\}\] means from \[\{"type": "string ", "value": "a"\}, \{"type": "INF\_MIN"\}\].
 -   \[\{“type”:”string”, “value”:”a”\},\{“type”:”INF\_MIN”\}\]
 
-PrimaryKey column in binary type is special. Json doesn't support directly passing in binary data, so the following rules are defined: To pass in binary data, you must use \(Java\) Base64.encodeBase64String method to convert binary data into a visualized string and then enter the string in value. The example is as follows \(Java\):
+PrimaryKey column in binary type is special. JSON doesn't support directly passing in binary data, so the following rules are defined: To pass in binary data, you must use \(Java\) Base64.encodeBase64String method to convert binary data into a visualized string and then enter the string in value. The example is as follows \(Java\):
 
 -   `byte[] bytes = "hello".getBytes();` :Create binary data. Here the byte value of string hello is used.
 -   `String inputValue = Base64.encodeBase64String(bytes)`: Call Base64 method to convert binary data into visualized strings.
@@ -64,7 +64,7 @@ Finally, write the value into the configuration: \{"type":"binary","value" : "aG
 -   \[\{“type”:”string”, “value”:”a”\}\] means from \[\{“type”:”string”, “value”:”a”\},\{“type”:”INF\_MIN”\}\].
 -   \[\{“type”:”string”, “value”:”a”\},\{“type”:”INF\_MIN”\}\].
 
-PrimaryKey column in binary type is special. Json doesn't support directly passing in binary data, so the following rules are defined: To pass in binary data, you must use \(Java\) Base64.encodeBase64String method to convert binary data into a visualized string and then enter the string in value. The example is as follows \(Java\):-   `byte[] bytes = "hello".getBytes();`: Create binary data. Here the byte value of string hello is used.
+PrimaryKey column in binary type is special. JSON doesn't support directly passing in binary data, so the following rules are defined: To pass in binary data, you must use \(Java\) Base64.encodeBase64String method to convert binary data into a visualized string and then enter the string in value. The example is as follows \(Java\):-   `byte[] bytes = "hello".getBytes();`: Create binary data. Here the byte value of string hello is used.
 -   `String inputValue = Base64.encodeBase64String(bytes)`: Call Base64 method to convert binary data into visualized strings.
 
 Run the preceding code, and then the inputValue of "aGVsbG8=" can be obtained.
