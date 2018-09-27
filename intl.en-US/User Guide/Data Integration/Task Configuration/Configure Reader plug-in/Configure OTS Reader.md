@@ -28,7 +28,9 @@ Currently, OTS Reader supports all OTS types. The conversion of OTS types in the
 
 |Attribute|Description|Required|Default Value|
 |:--------|:----------|:-------|:------------|
-|endpoint|The endpoint for the OTs server \(service address\), see [access control for details](https://help.aliyun.com/document_detail/27296.html).|Yes|N/A|
+|endpoint|The endpoint for the OTS server \(service address\).for more information, see [Access control](https://www.alibabacloud.com/help/faq-detail/27296.htm).
+
+|Yes|N/A|
 |accessId|The accessId of the OTS.|Yes|N/A|
 |accessKey|The accesskey of the OTS.|Yes|N/A|
 |Instance name|Description: The name of OTS instance. The instance is an entity for using and managing OTS service.After you enable the OTS service, you can create an instance in the Console to create and manage tables.
