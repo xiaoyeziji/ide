@@ -8,15 +8,15 @@ A virtual node is a control node that does not generate any data. Generally, it 
 
     Click **Manual Business Flow** in the left-side navigation pane, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15367342397961_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15381260227961_en-US.png)
 
 2.  Create a virtual node. Right-click **Data Development**, and select **Create Data Development Node** \> **Virtual Node**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16326/15367342398159_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16326/15381260228159_en-US.png)
 
 3.  Set the node type to **Virtual Node**, enter the node name, select the target folder, and click **Submit**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16298/15367342397817_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16298/15381260227817_en-US.png)
 
 4.  Edit the node code: You do not need to edit the code of a virtual node.
 5.  Node scheduling configuration.
@@ -29,7 +29,7 @@ A virtual node is a control node that does not generate any data. Generally, it 
 
 7.  Publish a node task.
 
-    For more information about the operation, see [Release management](intl.en-US/User Guide/Data development/Publish management.md#).
+    For more information about the operation, see Release management.
 
 8.  Test in the production environment.
 
