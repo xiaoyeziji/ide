@@ -14,11 +14,11 @@ Only the China \(Shanghai\) region supports PYODPS nodes.
 
 1.  Right-click **Business Flow** under **Data Development**, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15367325017651_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15381257787651_en-US.png)
 
 2.  Right-click **Data Development**, and select **Create Data Development Node** \> **PYODPS**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15367325017741_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15381257787741_en-US.png)
 
 3.  Edit the PYODPS node.
     1.  ODPS portal
@@ -86,10 +86,10 @@ Only the China \(Shanghai\) region supports PYODPS nodes.
 
 6.  Publish a node task.
 
-    For more information about the operation, see [Release management](intl.en-US/User Guide/Data development/Publish management.md#).
+    For more information about the operation, see Release management.
 
 7.  Test in the production environment.
 
-    For more information about the operation, see [Cyclic tasks](intl.en-US/User Guide/Operation center/Task list/Cyclic task.md#).
+    For more information about the operation, see [Cyclic task](intl.en-US/User Guide/Operation center/Task list/Cyclic task.md#).
 
 

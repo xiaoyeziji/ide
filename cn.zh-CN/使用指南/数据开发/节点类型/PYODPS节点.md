@@ -14,11 +14,11 @@ Maxcompute提供了[Python SDK](https://www.alibabacloud.com/help/doc-detail/346
 
 1.  右键单击**数据开发**下的**业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15367324987651_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15381257757651_zh-CN.png)
 
 2.  右键单击**数据开发**，选择**新建数据开发节点** \> **PYODPS**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15367324987741_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15381257757741_zh-CN.png)
 
 3.  编辑PYODPS节点。
     1.  ODPS入口
@@ -86,7 +86,7 @@ Maxcompute提供了[Python SDK](https://www.alibabacloud.com/help/doc-detail/346
 
 6.  发布节点任务。
 
-    具体操作请参见[发布管理](intl.zh-CN/使用指南/数据开发/发布管理.md#)。
+    具体操作请参见[发布管理](intl.zh-CN/使用指南/数据开发/发布管理/任务发布.md#)。
 
 7.  在生产环境测试。
 
