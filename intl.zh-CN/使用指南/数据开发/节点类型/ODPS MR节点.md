@@ -10,15 +10,15 @@ ODPS MR类型节点的编辑和使用方法，请参见MaxCompute文档示例[Wo
 
 1.  右键单击**数据开发**下的**业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16288/15372463537643_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16288/15381257377643_zh-CN.png)
 
 2.  右键单击**资源**，选择**新建资源** \> **jar**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15372463537720_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15381257377720_zh-CN.png)
 
 3.  按照命名规则在新建资源对话框输入资源名称，并选择资源类型为jar，同时选择需要上传本机的Jar包。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15372463537721_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15381257377721_zh-CN.png)
 
     **说明：** 
 
@@ -27,26 +27,26 @@ ODPS MR类型节点的编辑和使用方法，请参见MaxCompute文档示例[Wo
     -   资源名命名规范：1到128个字符，字母、数字、下划线、小数点，大小写不敏感，Jar资源时后缀是.jar，Python资源时后缀为.py。
 4.  单击**提交**，将资源提交到调度开发服务器端。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15372463537722_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15381257377722_zh-CN.png)
 
 5.  发布节点任务。
 
-    具体操作请参见[发布管理](intl.zh-CN/使用指南/数据开发/发布管理.md#)。
+    具体操作请参见[发布管理](intl.zh-CN/使用指南/数据开发/发布管理/任务发布.md#)。
 
 
 ## 新建ODPS MR节点 {#section_gzm_hbj_p2b .section}
 
 1.  右键单击**数据开发**下的**业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15372463537651_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15381257377651_zh-CN.png)
 
 2.  右键单击**数据开发**，选择**新建数据开发节点** \> **ODPS MR**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15372463537723_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15381257377723_zh-CN.png)
 
 3.  编辑节点代码。双击新建的ODPS MR节点，进入如下界面：
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15372463537724_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15381257377724_zh-CN.png)
 
     编辑节点代码示例：
 
@@ -74,7 +74,7 @@ ODPS MR类型节点的编辑和使用方法，请参见MaxCompute文档示例[Wo
 
 6.  发布节点任务。
 
-    具体操作请参见[发布管理](intl.zh-CN/使用指南/数据开发/发布管理.md#)。
+    具体操作请参见[发布管理](intl.zh-CN/使用指南/数据开发/发布管理/任务发布.md#)。
 
 7.  在生产环境测试。
 
