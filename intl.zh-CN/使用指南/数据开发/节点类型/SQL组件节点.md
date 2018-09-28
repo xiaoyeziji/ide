@@ -4,11 +4,11 @@
 
 1.  右键单击**数据开发**下的**业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15367327967651_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15381258057651_zh-CN.png)
 
 2.  右键单击**数据开发**，选择**新建数据开发节点** \> **SQL组件节点**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15367327967778_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15381258057778_zh-CN.png)
 
 3.  为提高开发效率，数据任务的开发者可以使用项目成员和租户成员贡献的组件来新建数据处理节点。
 
@@ -16,11 +16,11 @@
     -   租户成员创建的组件在公共组件下。
     新建节点时，选择节点类型为**SQL组件节点**类型，并为该节点指定名字。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15367327967777_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15381258057777_zh-CN.png)
 
     为选定的组件指定参数。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15367327967779_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15381258057779_zh-CN.png)
 
     输入参数名称后，选择参数类型为Table或String。
 
@@ -38,7 +38,7 @@
 
 6.  发布节点任务。
 
-    具体操作请参见[发布管理](intl.zh-CN/使用指南/数据开发/发布管理.md#)。
+    具体操作请参见[发布管理](intl.zh-CN/使用指南/数据开发/发布管理/任务发布.md#)。
 
 7.  在生产环境测试。
 
@@ -57,7 +57,7 @@
 
 ## 界面功能 {#section_h3p_32q_p2b .section}
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15367327967780_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15381258057780_zh-CN.png)
 
 界面功能说明如下：
 
