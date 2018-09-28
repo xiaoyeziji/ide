@@ -1,6 +1,6 @@
 # SHELL Node {#concept_s1d_mbn_q2b .concept}
 
-SHELL tasks support standard SHELL syntax but not interactive syntax. SHELL task can run on the default resource group. If you want to access an IP address or a domain name, add the IP address or domain name to the whitelist by choosing **Project Management** \> **Project Configuration**.
+SHELL tasks support standard SHELL syntax but not interactive syntax. SHELL task can run on the default resource group. If you want to access an IP address or a domain name, add the IP address or domain name to the whitelist by choosing Project Configuration.
 
 ## Procedure {#section_r4m_kz4_p2b .section}
 
@@ -8,20 +8,20 @@ SHELL tasks support standard SHELL syntax but not interactive syntax. SHELL task
 
     Click **Manual Business Flow** in the left-side navigation pane, select **Manual Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15367342747961_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15381260557961_en-US.png)
 
 2.  Create a SHELL node.
 
     Right-click **Data Development**, and select **Create Data Development Node** \> **SHELL**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16327/15367342748173_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16327/15381260558173_en-US.png)
 
 3.  Set the node type to SHELL, enter the node name, select the target folder, and click **Submit**.
 4.  Edit the node code.
 
     Go to the SHELL node code editing page and edit the code. 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16296/15367342747753_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16296/15381260557753_en-US.png)
 
     If you want to call the System Scheduling Parameters in a SHELL statement, compile the SHELL statement as follows:
 
@@ -41,7 +41,7 @@ SHELL tasks support standard SHELL syntax but not interactive syntax. SHELL task
 
 7.  Release a node task.
 
-    For more information about the operation, see [Release management](intl.en-US/User Guide/Data development/Publish management.md#). 
+    For more information about the operation, see Release management. 
 
 8.  Test in the production environment.
 
