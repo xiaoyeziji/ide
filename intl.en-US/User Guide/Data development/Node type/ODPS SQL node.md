@@ -6,19 +6,19 @@ ODPS SQL adopts the syntax similar to that of SQL, and is applicable to the dist
 
     Right-click **Business Flow** under **Data Development**, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15367307877651_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15381257057651_en-US.png)
 
 2.  Create ODPS SQL node.
 
     Right-click **Data Development**, and select **Create Data Development Node** \> **ODPS SQL**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/15367307877679_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/15381257057679_en-US.png)
 
 3.  Edit the node code.
 
     For more information about the syntax of the SQL statements, see [MaxCompute SQL](https://www.alibabacloud.com/help/doc-detail/27860.htm) statements.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/15367307877680_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/15381257057680_en-US.png)
 
 4.  Query result display
 
@@ -26,7 +26,7 @@ ODPS SQL adopts the syntax similar to that of SQL, and is applicable to the dist
 
     The query results are displayed directly in the style of a spreadsheet. Users can perform operations in DataWorks, open them in a spreadsheet, or freely copy content stations in local excels.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16335/15367307878260_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16335/15381257068260_en-US.png)
 
     -   Hidden column: select one or more columns hidden to hide the column.
     -   Copy the row: select one or more rows that need to be copied on the left side and click Copy the row.
@@ -43,10 +43,10 @@ ODPS SQL adopts the syntax similar to that of SQL, and is applicable to the dist
 
 7.  Publish a node task.
 
-    For more information about the operation, see [Release management](intl.en-US/User Guide/Data development/Publish management.md#).
+    For more information about the operation, see Release management.
 
 8.  Test in the production environment.
 
-    For more information about the operation, see [Cyclic tasks](intl.en-US/User Guide/Operation center/Task list/Cyclic task.md#).
+    For more information about the operation, see [Cyclic task](intl.en-US/User Guide/Operation center/Task list/Cyclic task.md#).
 
 

@@ -6,19 +6,19 @@ ODPS SQL采用类似SQL的语法，适用于海量数据（TB级）但实时性�
 
     右键单击**数据开发**下的**业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15381026967651_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15381257037651_zh-CN.png)
 
 2.  新建ODPS SQL节点。
 
     右键单击**数据开发**，选择**新建数据开发节点** \> **ODPS SQL**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/15381026967679_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/15381257037679_zh-CN.png)
 
 3.  编辑节点代码。
 
     ODPS SQL的具体语法请参见[MaxCompute SQL](https://www.alibabacloud.com/help/doc-detail/27860.htm)模块 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/15381026967680_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/15381257037680_zh-CN.png)
 
     示例：创建一张表并向表中插入数据，查询结果。
 
@@ -52,7 +52,7 @@ ODPS SQL采用类似SQL的语法，适用于海量数据（TB级）但实时性�
 
     4.  写好SQL，单击顶部的**运行**或单击**F8**，此时系统会将我们的SQL按照从上往下的顺序执行，并打印日志。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/153810269611262_zh-CN.jpg)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/153812570311262_zh-CN.jpg)
 
         **说明：** 当使用insert into语句时，日志中会提示：**!!!警告!!!** 。
 
@@ -68,7 +68,7 @@ ODPS SQL采用类似SQL的语法，适用于海量数据（TB级）但实时性�
 
     查询出的结果，会直接以电子表格的风格展示出来，您可以在DataWorks中执行操作，或者在电子表格中打开，也可自由复制内容粘贴在本地Excel中。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16335/15381026978260_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16335/15381257038260_zh-CN.png)
 
     -   隐藏列：选择隐藏其中的一列或多列，可以隐藏该列。
     -   复制该行：左侧选中需要复制的一行或多行后，单击复制该行。
@@ -85,7 +85,7 @@ ODPS SQL采用类似SQL的语法，适用于海量数据（TB级）但实时性�
 
 7.  发布节点任务。
 
-    具体操作请参见[发布管理](intl.zh-CN/使用指南/数据开发/发布管理.md#)。
+    具体操作请参见[发布管理](intl.zh-CN/使用指南/数据开发/发布管理/任务发布.md#)。
 
 8.  在生产环境测试。
 
