@@ -4,7 +4,7 @@ Currently, the data integration task supports the following data sources: MaxCom
 
 ## Configure a integration task {#section_ej2_5cf_1fb .section}
 
-For more information, see [Create a synchronization task and the reader](intl.en-US/User Guide/Data Integration/Task Configuration/Data Synchronization task configuration/Wizard mode configuration.md#section_tfn_1kc_p2b)
+For more information, see [Create a synchronization task and the reader](intl.en-US/User Guide/Data Integration/Task Configuration/Configure Reader plug-in/Wizard mode configuration.md#section_tfn_1kc_p2b)
 
 ## Node scheduling configuration. {#section_jnx_vd3_p2b .section}
 
@@ -16,9 +16,9 @@ After the configuration is completed, click **Save** in the upper left corner of
 
 ## Publish a node task {#section_zlv_yd3_p2b .section}
 
-For more information about the operation, see [Release management](intl.en-US/User Guide/Data development/Publish management.md#).
+For more information about the operation, see Release management.
 
 ## Test in the production environment. {#section_bfb_123_p2b .section}
 
-For more information about the operation, see [Cyclic tasks](intl.en-US/User Guide/Operation center/Task list/Cyclic task.md#).
+For more information about the operation, see [Cyclic task](intl.en-US/User Guide/Operation center/Task list/Cyclic task.md#).
 
