@@ -1,23 +1,23 @@
 # SHELL node {#concept_m5l_3z4_p2b .concept}
 
-SHELL tasks support standard SHELL syntax but not interactive syntax. SHELL task can run on the default resource group. If you want to access an IP address or a domain name, add the IP address or domain name to the whitelist by choosing **Project Management** \> **Project Configuration**.
+SHELL tasks support standard SHELL syntax but not interactive syntax. SHELL task can run on the default resource group. If you want to access an IP address or a domain name, add the IP address or domain name to the whitelist by choosing Project Configuration.
 
 ## Procedure {#section_r4m_kz4_p2b .section}
 
 1.  Right-click **Business Flow** under **Data Development**, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15367327257651_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15381220857651_en-US.png)
 
 2.  Right-click **Data Development**, and select **Create Data Development Node** \> **SHELL**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16296/15367327257752_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16296/15381220857752_en-US.png)
 
 3.  Set the node type to SHELL, enter the node name, select the target folder, and click **Submit**.
 4.  Edit the node code.
 
     Go to the SHELL node code editing page and edit the code.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16296/15367327257753_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16296/15381220867753_en-US.png)
 
     If you want to call the System Scheduling Parameters in a SHELL statement, compile the SHELL statement as follows:
 
@@ -37,11 +37,11 @@ SHELL tasks support standard SHELL syntax but not interactive syntax. SHELL task
 
 7.  Release a node task.
 
-    For more information about the operation, see [Release management](intl.en-US/User Guide/Data development/Publish management.md#).
+    For more information about the operation, see Release management.
 
 8.  Test in the production environment.
 
-    For more information about the operation, see [Cyclic tasks](intl.en-US/User Guide/Operation center/Task list/Cyclic task.md#).
+    For more information about the operation, see [Cyclic task](intl.en-US/User Guide/Operation center/Task list/Cyclic task.md#).
 
 
 ## Use cases {#section_vlg_w1p_p2b .section}
