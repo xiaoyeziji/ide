@@ -6,13 +6,13 @@
 
     Click **Manual Business Flow** in the left-side navigation pane, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15367342077961_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15381259917961_en-US.png)
 
 2.  Create an SQL component node
 
     Right-click **Data Development**, and select **Create Data Development Node** \> **SQL Component Node**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16325/15367342078127_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16325/15381259918127_en-US.png)
 
 3.  To improve the development efficiency, data task developers can use components contributed by project members and tenant members to create data processing nodes.
 
@@ -20,11 +20,11 @@
     -   Components created by tenant members are located under Public Components.
     When create a node, set the node type to the **SQL component node** type, and specify the name of the node.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15367342077777_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15381259917777_en-US.png)
 
     Specify parameters for the selected component.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15367342077779_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15381259917779_en-US.png)
 
     Enter the parameter name, and set the parameter type to Table or String.
 
@@ -42,7 +42,7 @@
 
 6.  Publish a node task.
 
-    For more information about the operation, see [Release management](intl.en-US/User Guide/Data development/Publish management.md#).
+    For more information about the operation, see Release management.
 
 7.  Test in a production environment.
 
@@ -61,7 +61,7 @@ To upgrade an SQL component node developed based on the component template, you 
 
 ## Interface functions {#section_h3p_32q_p2b .section}
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16325/15367342078137_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16325/15381259918137_en-US.png)
 
 The interface features are described below:
 
