@@ -8,20 +8,20 @@ SHELL任务支持标准SHELL语法，不支持交互性语法。SHELL任务可�
 
     单击左侧导航栏中的**手动业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15381260527961_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15382071157961_zh-CN.png)
 
 2.  新建SHELL节点。
 
     右键单击**数据开发**，选择**新建数据开发节点** \> **SHELL**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16327/15381260528173_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16327/15382071158173_zh-CN.png)
 
 3.  选择节点类型为SHELL，命名节点名称并选择目标文件夹，单击**提交**。
 4.  编辑节点代码。
 
     进入SHELL节点代码编辑页面编辑代码。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16296/15381260527753_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16296/15382071157753_zh-CN.png)
 
     如果想在SHELL中调用系统调度参数，SHELL语句如下所示：
 
@@ -54,7 +54,9 @@ SHELL任务支持标准SHELL语法，不支持交互性语法。SHELL任务可�
 
 -   如果数据库是在阿里云上搭建的，且区域是华东2，需要将数据库对如下白名单开放，即可连接数据库。
 
+    ```
     10.152.69.0/24,10.153.136.0/24,10.143.32.0/24,120.27.160.26,10.46.67.156,120.27.160.81,10.46.64.81,121.43.110.160,10.117.39.238,121.43.112.137,10.117.28.203,118.178.84.74,10.27.63.41,118.178.56.228,10.27.63.60,118.178.59.233,10.27.63.38,118.178.142.154,10.27.63.15,100.64.0.0/8
+    ```
 
     **说明：** 如果是在阿里云上搭建的数据库，但区域不是华东2，则建议使用外网或购买与数据库同区域的ECS作为调度资源，将该SHELL任务运行在自定义资源组上。
 
