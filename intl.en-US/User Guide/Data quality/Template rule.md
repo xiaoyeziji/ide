@@ -81,4 +81,8 @@ Currently, Data Quality only supports **Fluctuation detection value** and **Comp
 |41|The number of rows in the table, fluctuation compared to the one month before.|The reference value is the number of partitions of the table generated one month before. Compare to the number of table rows collected on the current day, then compare the fluctuation.|
 |42|The number of rows in the table, the first day of the current month fluctuation compared to the one day, one week, one month before.|Compare the number of table rows collected on the first day of the current month to one day, one week, one month before, and compare the fluctuation.|
 |43|The number of rows in the table, fluctuation compared to the previous period.|The reference value is the number of partitions of the table generated in the previous period. Compare to the number of table rows collected on the current day, and compare the fluctuation.|
+|44|Discrete value monitoring \(number of packets\)|The number of packets is compared with a fixed value.|
+|45|Discrete value monitoring \(group number fluctuation\)|The number of divisions for fluctuation detection, one day, seven days, one month ago that day the number of groups is the benchmark.|
+|46|Discrete value monitoring \(state value\)|As in select count \(\*\) from table group by table.id, the value of each group after grouping is compared to a certain number.|
+|47|Discrete value monitoring \(state value and fluctuation of state value\)|Like select count \(\*\) from table group by table. id, it compares the value of each group after grouping with a certain number; and if the number of groupings increases, it will alarm, without alarming.|
 
