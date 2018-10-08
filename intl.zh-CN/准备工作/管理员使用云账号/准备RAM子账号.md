@@ -28,12 +28,20 @@
     1.  主账号进入**访问控制** \> **设置**页面，单击**子用户安全设置**。
     2.  勾选子用户安全设置页面中的**允许自主管理AccessKey**，单击**保存修改**即可生效。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/15362020548949_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/15389654368949_zh-CN.png)
 
         该选项默认不勾选，故使用子账号的用户默认无法为自己创建AK并进行管理。启用**允许自主管理AcessKey**后，子账号登录阿里云官网后即可在管理控制台自行创建AK。
 
         **说明：** 运行密钥AK非常重要，无论是主账号的AK还是子账号的AK，一旦创建成功，请您务必保证它的安全和使用范围。一旦有泄漏的风险，请及时禁用和更新。
 
+
+## 给子账号授权 {#section_yxy_5rz_jfb .section}
+
+如果您需要让子账号能够创建DataWorks项目，需要给子账号授予权限：**AliyunDataWorksFullAccess**。如下图所示，您可以在用户管理页面选择需要授权的子账号，点击**授权**后搜索出授权名称，点击 **\>**进行授权。
+
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/153896543613331_zh-CN.png)
+
+授权完毕后，子账号即可创建项目。
 
 ## 将子账号交付其他用户使用 {#section_sng_tzp_r2b .section}
 

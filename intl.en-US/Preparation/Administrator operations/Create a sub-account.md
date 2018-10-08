@@ -33,9 +33,15 @@ The AccessKey facilitates smooth operation of the tasks created in DataWorks. Th
         **Note:** It is very important to run the key AK. Whether it is the AK of the primary account or the AK of the sub-account, once it is created successfully, be sure to ensure its security and scope of use. If the AccessKey is leaked, timely prohibit it and create a new one.
 
 
+## Authorize a sub-account {#section_i12_y5z_jfb .section}
+
+If you want to create projects using your sub-account, you may need you authorize it with **AliyunDataWorksFullAccess** policy.
+
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/153896543913331_en-US.png)
+
 ## Delivery sub-accounts to other users {#section_sng_tzp_r2b .section}
 
-**Note:** Sub-accounts belong to a primary account. Thus, sub-accounts do not have resources and billing system of their own. The operation cost of a DTplus sub-account is borne by the primary account. Fees incurred by operations of subaccounts in Alibaba Cloud products shall be uniformly paid through the primary account to which these subaccounts belong. Therefore, the primary account views the RAM user log on link and its own enterprise alias, and provide this information to a sub-account.
+**Note:** Sub-accounts belong to a primary account. Thus, sub-accounts do not have resources and billing system of their own. The operation cost of a DTplus sub-account is borne by the primary account. Fees incurred by operations of sub-accounts in Alibaba Cloud products shall be uniformly paid through the primary account to which these subaccounts belong. Therefore, the primary account views the RAM user log on link and its own enterprise alias, and provide this information to a sub-account.
 
 Log on to **RAM** \> **Settings**, and click **Enterprise Alias Settings** to view enterprise alias.
 
