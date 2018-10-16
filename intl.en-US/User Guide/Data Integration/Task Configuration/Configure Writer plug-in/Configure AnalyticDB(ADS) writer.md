@@ -9,7 +9,7 @@ AnalyticDB Writer allows you to write data to AnalyticDB in the following two mo
     -   Advantage: Writes a small volume of data \(less than 10 million data records\) at a high speed.
     -   Disadvantage: Not suitable for writing a large volume of data due to a low speed.
 
-You must configure the data source before configuring the AnalyticDB Writer plug-in. For more information, see [Configure the AnalyticDB Data Source](intl.en-US/User Guide/Data Integration/Data source configuration/Configure the AnalyticDB Data Source.md#),Configure the AnalyticDB data source.
+You must configure the data source before configuring the AnalyticDB Writer plug-in. For more information, see [Configure the AnalyticDB data source](reseller.en-US/User Guide/Data Integration/Data source configuration/Configure the AnalyticDB data source.md#),Configure the AnalyticDB data source.
 
 AnalyticDB Writer supports the following data types in AnalyticDB:
 
@@ -71,7 +71,7 @@ AnalyticDB Writer supports the following data types in AnalyticDB:
 
     Configure the source and destination of the data for the synchronization task.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15368919567998_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15396641127998_en-US.png)
 
     Configuration item descriptions:
 
@@ -82,13 +82,13 @@ AnalyticDB Writer supports the following data types in AnalyticDB:
 
     The source table field on the left and the target table field on the right are one-to-one relationships, click **Add row** to add a single field and click **Delete** to delete the current field.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15368919578002_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15396641128002_en-US.png)
 
     -   Peer mapping: Click **peer mapping** to establish a corresponding mapping relationship in the peer, note that match the data type.
     -   Automatic formatting: The fields are automatically sorted based on corresponding rules.
 3.  Channel control
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15368919577675_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15396641127675_en-US.png)
 
     Configurations:
 
