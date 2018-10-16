@@ -4,16 +4,16 @@ The Memcache \(formerly known as OCS\) data source provides the ability to write
 
 ## Procedure {#section_jy4_q4v_42b .section}
 
-1.  Log on to the [DataWorks console](https://workbench.data.aliyun.com/console) as an administrator and click **Enter Workspace** in the actions column of the relevant project in the Project List.
+1.  Log on to the [DataWorks console](https://partners-intl.aliyun.com) as an administrator and click **Enter Workspace** in the actions column of the relevant project in the Project List.
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New source** to pop up the supported data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16205/15367208577544_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16205/15396613607544_en-US.png)
 
 4.  In the new data source pop-up box, select the data source type as **Memcached**.
 5.  Complete the configuration items for the Memcache data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16205/15367208577545_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16205/15396613607545_en-US.png)
 
     Configurations:
 
@@ -31,5 +31,5 @@ The Memcache \(formerly known as OCS\) data source provides the ability to write
 
 ## Next step {#section_dqv_5d1_p2b .section}
 
-Now you have learned how to configure the Memcache data source. The document explains how to configure the Memcache Writer plug‑in later. For more information, see [Configure memcache \(OSS\) writer](intl.en-US/User Guide/Data Integration/Task Configuration/Configure Writer plug-in/Configure Memcache (OCS) Writer.md#).
+Now you have learned how to configure the Memcache data source. The document explains how to configure the Memcache Writer plug‑in later. For more information, see [Configure Memcache \(OCS\) Writer](reseller.en-US/User Guide/Data Integration/Task Configuration/Configure Writer plug-in/Configure Memcache (OCS) Writer.md#).
 
