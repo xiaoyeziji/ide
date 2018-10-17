@@ -4,11 +4,11 @@ Manual instances are generated after a manual task is triggered, which allows O&
 
 A manual instance, as the name implies, is an instance of a manual task, and a manual task is characterized by No scheduling dependency, you only need to trigger manually.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16360/15367352208835_en-US.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16360/15397474228835_en-US.jpg)
 
-1.  Instance name/DAG graph: You can open the DAG graph for this node to view the results of the Instance run.
-2.  Stop running: If the instance is running, click STOP to run the kill task.
-3.  Re-run: re-schedule this instance.
+-   Instance name/DAG graph: You can open the DAG graph for this node to view the results of the Instance run.
+-   Stop running: If the instance is running, click STOP to run the kill task.
+-   Re-run: re-schedule this instance.
 
 Manual tasks have no dependencies, so the DAG graph only displays this instance, click the instance to see the properties, run log, operation log, code four columns. Right-click instance to see run log, code, edit node, view blood, terminate run, run again.
 
