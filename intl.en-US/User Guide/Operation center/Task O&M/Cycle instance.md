@@ -6,7 +6,7 @@ Cycle instances are instance snapshots that are automatically scheduled when any
 
 The instance list provides operations and management for the tasks that have been scheduled in the form of a list. including checking running logs, re-running tasks, and killing running tasks. The specific functions are described as follows:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15367351858775_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15397473938775_en-US.png)
 
 -   Filter Function: As the modules in the figure above, there are abundant Screening Conditions, the default filtering business date is a workflow task that is a day before the current time. You can add criteria such as Task Name, run time, owner, and so on for more precise filtering.
 
@@ -43,7 +43,7 @@ Click the task name to view the instance DAG. In the instance DAG View:
 
 -   Double-click an instance to pop up task properties, run logs, operation logs, code, and so on, as shown in the following figure:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15367351858779_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15397473938779_en-US.png)
 
 -   **Refresh node instance**: If you have modified the code or schedule parameters after the instance has been generated, you can click this button to use the latest code and parameters \(bulk operations are not supported \). **Use this function with caution because refreshing node instances is not refreshing the node status**.
 
@@ -57,21 +57,21 @@ Click the task name to view the instance DAG. In the instance DAG View:
 
 -   **Expand parent node/child node**: When a workflow has 3 nodes and above, nodes are automatically hidden when the operations center displays tasks, and you can expand the parent-child level, to see the contents of all nodes. as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15367351858780_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15397473938780_en-US.png)
 
 -   Expand/Close workflow: When you have a workflow task, you can expand a workflow task, view the Run Status of the internal node task. as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15367351858781_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15397473938781_en-US.png)
 
 
 ## Description of instance status {#section_afv_lzh_r2b .section}
 
 |SN|Status|State Mark|
 |:-|:-----|:---------|
-|1|Running succeeded|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15367351858784_en-US.png)|
-|2|Not running|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15367351858785_en-US.png)|
-|3|Running failed|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15367351858786_en-US.png)|
-|4|Under running|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15367351858787_en-US.png)|
-|5|Waiting status|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15367351858788_en-US.png)|
-|6|Frozen status|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15367351858789_en-US.png)|
+|1|Running succeeded|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15397473938784_en-US.png)|
+|2|Not running|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15397473938785_en-US.png)|
+|3|Running failed|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15397473938786_en-US.png)|
+|4|Under running|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15397473938787_en-US.png)|
+|5|Waiting status|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15397473938788_en-US.png)|
+|6|Frozen status|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15397473938789_en-US.png)|
 
