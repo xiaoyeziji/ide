@@ -6,7 +6,7 @@ When the periodic task reaches the periodic run time configured to enable the mo
 
 The instance list provides operations and management for the tasks that have been scheduled in the form of a list. including checking running logs, re-running tasks, and killing running tasks. The specific functions are described as follows:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16362/15367437708868_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16362/15397474938868_en-US.png)
 
 -   Filter Function: As the modules in the figure above, there are abundant Screening Conditions, the default filtering business date is a workflow task that is a day before the current time. You can add criteria such as Task Name, run time, owner, and so on for more precise filtering.
 -   Kill: It only applies to the instances in "Waiting" and "Running" statuses. If you perform this operation on an instance, the instance becomes "Failed".
@@ -35,7 +35,7 @@ Click the task name to view the instance DAG. In the instance DAG View:
 -   Right-click an instance, you can view the dependencies and details of this instance and perform specific actions such as stopping, rerunning, and so on.
 -   Double-click an instance to pop up task properties, run logs, operation logs, code, and so on, as shown in the following figure:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16362/15367437708869_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16362/15397474938869_en-US.png)
 
 -   **Refresh node instance**: If you have modified the code or schedule parameters after the instance has been generated, you can click this button to use the latest code and parameters \(bulk operations are not supported \). **Use this function with caution because refreshing node instances is not refreshing the node status.**
 -   **Properties**: View instance properties, including various time information about the instance Run, Run Status, and so on.
@@ -44,21 +44,21 @@ Click the task name to view the instance DAG. In the instance DAG View:
 -   **Code**: It allows you to view the code of the instance task.
 -   **Expand parent node/child node**: When a workflow has 3 nodes and above, nodes are automatically hidden when the operations center displays tasks, and you can expand the parent-child level, to see the contents of all nodes. As shown in the following illustration:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16362/15367437718870_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16362/15397474938870_en-US.png)
 
 -   **Expand/Close workflow**: When you have a workflow task, you can expand a workflow task, view the Run Status of the internal node task. As shown in the following illustration:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16362/15367437718871_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16362/15397474938871_en-US.png)
 
 
 ## Description of instance status {#section_jjq_xw3_r2b .section}
 
 |SN|Status|State Mark|
 |:-|:-----|:---------|
-|1|Running succeeded|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15367437718784_en-US.png)|
-|2|Not running|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15367437718785_en-US.png)|
-|3|Running failed|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15367437718786_en-US.png)|
-|4|Under running|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15367437718787_en-US.png)|
-|5|Waiting status|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15367437718788_en-US.png)|
-|6|Frozen status|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15367437718789_en-US.png)|
+|1|Running succeeded|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15397474938784_en-US.png)|
+|2|Not running|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15397474938785_en-US.png)|
+|3|Running failed|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15397474938786_en-US.png)|
+|4|Under running|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15397474938787_en-US.png)|
+|5|Waiting status|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15397474938788_en-US.png)|
+|6|Frozen status|![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16359/15397474938789_en-US.png)|
 
