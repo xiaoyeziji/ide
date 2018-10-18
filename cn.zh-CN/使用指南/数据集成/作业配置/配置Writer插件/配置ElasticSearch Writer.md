@@ -106,7 +106,7 @@ Elasticsearch中可以有多个索引（index）/（数据库），每个索引�
 ```
 
 |是|无|
-|dynamic|不使用datax的mappings，使用ES自己的自动mappings。|否|false|
+|dynamic|如果为true，则不使用datax的mappings，使用ES自己的自动mappings。|否|false|
 
 ## 脚本开发介绍 {#section_pcz_fh4_q2b .section}
 
@@ -161,5 +161,5 @@ Elasticsearch中可以有多个索引（index）/（数据库），每个索引�
 }
 ```
 
-**说明：** VPC环境的ElasticSearch，目前只能使用自定义调度资源，运行在默认资源组会存在网络不通的情况。添加自定义资源组具体的步骤请参见[新增调度资源](intl.zh-CN/使用指南/数据集成/常见配置/新增调度资源.md#)
+**说明：** VPC环境的ElasticSearch，目前只能使用自定义调度资源，运行在默认资源组会存在网络不通的情况。添加自定义资源组具体的步骤请参见[新增调度资源](cn.zh-CN/使用指南/数据集成/常见配置/新增调度资源.md#)
 
