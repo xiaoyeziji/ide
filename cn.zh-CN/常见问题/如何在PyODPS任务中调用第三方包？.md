@@ -2,11 +2,11 @@
 
 1.  首先您需要在**数据开发** \> **业务流程** \> **资源**中右键新建Python类型资源。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23998/153986196113917_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23998/154034882913917_zh-CN.png)
 
 2.  在弹框中输入新建的Python资源名称，完成创建。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23998/153986196113918_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23998/154034883013918_zh-CN.png)
 
 3.  在您新建的Python资源内粘贴您要引用的第三方包的代码，举例如下。
 
@@ -25,11 +25,11 @@
 
     完成代码后请点击**提交**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23998/153986196113919_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23998/154034883013919_zh-CN.png)
 
 4.  在您的业务流程内新建一个PyODPS类型节点。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23998/153986196113921_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23998/154034883013921_zh-CN.png)
 
 5.  在节点内输入引用第三方包的代码并测试，举例如下。
 
@@ -46,7 +46,7 @@
 
     请注意下图中框内代码，用于引用业务流程中您之前建立的test2.py资源，请不要遗漏。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23998/153986196113923_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23998/154034883013923_zh-CN.png)
 
-6.  完成上述步骤后，点击**运行**测试您的代码。您可以在下方的日志中查看到您的运行结果。![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23998/153986196213924_zh-CN.png)
+6.  完成上述步骤后，点击**运行**测试您的代码。您可以在下方的日志中查看到您的运行结果。![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23998/154034883013924_zh-CN.png)
 
