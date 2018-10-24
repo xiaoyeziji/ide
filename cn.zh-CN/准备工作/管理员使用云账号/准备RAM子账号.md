@@ -1,18 +1,30 @@
 # 准备RAM子账号 {#concept_j4w_qnp_r2b .concept}
 
-如果您只打算本人使用数加产品，请根据[准备阿里云账号](intl.zh-CN/准备工作/管理员使用云账号/准备阿里云账号.md#)的操作准备好您的账号，并跳过此章节进行后续操作。如果您计划邀请其他用户协作使用数加产品，请您根据本文的操作准备RAM子账号。
+如果您只打算本人使用数加产品，请根据[准备阿里云账号](cn.zh-CN/准备工作/管理员使用云账号/准备阿里云账号.md#)的操作准备好您的账号，并跳过此章节进行后续操作。如果您计划邀请其他用户协作使用数加产品，请您根据本文的操作准备RAM子账号。
 
 ## 创建子账号 {#section_v3r_xxp_r2b .section}
 
 1.  主账号登录DataWorks管理控制台，导航至 **访问控制** \> **用户管理**页面。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/15403608568944_zh-CN.png)
+
 2.  单击右上角的**新建用户**。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/15403608568945_zh-CN.png)
+
 3.  填写对话框的各配置项。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/15403608568946_zh-CN.png)
+
 4.  单击**确定**，即可创建子账号。
 
 ## 允许子账号登录 {#section_cyg_nyp_r2b .section}
 
 1.  成功创建子账号后，主账号进入**访问控制台** \> **用户管理** 页面，单击对应子账号后的**管理**，进入用户详情页面。
 2.  单击**启用控制台登录**并重置密码，填写该子账号用于登录的密码。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/15403608568947_zh-CN.png)
+
 
 ## 创建子账号的运行密钥 {#section_z4g_vyp_r2b .section}
 
@@ -22,13 +34,15 @@
     1.  主账号进入**访问控制** \> **用户管理**页面，单击对应子账号后的**管理**，进入用户详情页面。
     2.  单击**创建Accesskey**，填写手机收到的验证码，即可为子账号创建新的AK。
 
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/15403608568948_zh-CN.png)
+
         **说明：** 子账号的AccessKeySecret只会出现一次，请在创建的时候妥善保管。如有遗失，只能重新创建。
 
 -   **允许子账号自行创建AK并进行管理**
     1.  主账号进入**访问控制** \> **设置**页面，单击**子用户安全设置**。
     2.  勾选子用户安全设置页面中的**允许自主管理AccessKey**，单击**保存修改**即可生效。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/15389654368949_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/15403608578949_zh-CN.png)
 
         该选项默认不勾选，故使用子账号的用户默认无法为自己创建AK并进行管理。启用**允许自主管理AcessKey**后，子账号登录阿里云官网后即可在管理控制台自行创建AK。
 
@@ -39,7 +53,7 @@
 
 如果您需要让子账号能够创建DataWorks项目，需要给子账号授予权限：**AliyunDataWorksFullAccess**。如下图所示，您可以在用户管理页面选择需要授权的子账号，点击**授权**后搜索出授权名称，点击 **\>**进行授权。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/153896543613331_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/154036085713331_zh-CN.png)
 
 授权完毕后，子账号即可创建项目。
 
@@ -48,6 +62,8 @@
 **说明：** 子账号归属于主账号，本身不拥有资源，也没有独立的计量计费。子账号在阿里云各产品中操作产生的费用，将由创建这些子账号的主账号统一付费。因此主账号需要查看RAM用户登录链接和自己的企业别名，并告知子账号。
 
 主账号进入**访问控制** \> **设置**页面，单击**企业别名设置**，即可看到自己的企业别名，并可编辑进行修改。
+
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/15403608578950_zh-CN.png)
 
 交付子账号给其他用户使用时，需要提供如下信息：
 
