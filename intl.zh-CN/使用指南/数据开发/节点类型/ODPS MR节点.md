@@ -10,15 +10,15 @@ ODPS MR类型节点的编辑和使用方法，请参见MaxCompute文档示例[Wo
 
 1.  右键单击**数据开发**下的**业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16288/15404466067643_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16288/15404488847643_zh-CN.png)
 
 2.  右键单击**资源**，选择**新建资源** \> **jar**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404466067720_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404488847720_zh-CN.png)
 
 3.  按照命名规则在新建资源对话框输入资源名称，并选择资源类型为jar，同时选择需要上传本机的Jar包（可以通过 Eclipse 的 Export 功能打包，也可以通过 ant 或其他工具生成）。本例中使用的示例[mapreduce\_example.jar](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/57148/cn_zh/1534313773021/mapreduce-examples.jar)。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404466067721_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404488847721_zh-CN.png)
 
     **说明：** 
 
@@ -35,15 +35,15 @@ ODPS MR类型节点的编辑和使用方法，请参见MaxCompute文档示例[Wo
 
 1.  右键单击**数据开发**下的**业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15404466067651_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15404488857651_zh-CN.png)
 
 2.  右键单击**数据开发**，选择**新建数据开发节点** \> **ODPS MR**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404466067723_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404488857723_zh-CN.png)
 
 3.  编辑节点代码。双击新建的ODPS MR节点，进入如下界面：
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404466077724_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404488857724_zh-CN.png)
 
     编辑节点代码示例：
 
@@ -76,11 +76,11 @@ ODPS MR类型节点的编辑和使用方法，请参见MaxCompute文档示例[Wo
     代码说明如下：
 
     -   `--@resource_reference{"mapreduce-examples.jar"}` 通过右键资源，选择**引用**自动产生。
-    -   `-resources base_test.jar`：引用到的Jar资源文件名。
+    -   `-resources`：引用到的Jar资源文件名。
     -   `-classpath`：Jar包路径，由于已经引用了资源，此处路径统一为./下的Jar包即可。
     -   `com.aliyun.odps.mapred.open.example.WordCount`：执行过程调用Jar中的主类，需与Jar中的主类名称保持一致。
-    -   jingyan\_wc\_in：MR的输入表名称，已在上述代码中提前建立好。
-    -   jingyan\_wc\_out：MR的输出表名称，已在上述代码中提前建立好。
+    -   `jingyan_wc_in`：MR的输入表名称，已在上述代码中提前建立好。
+    -   `jingyan_wc_out`：MR的输出表名称，已在上述代码中提前建立好。
     一个MR调用多个Jar资源时，classpath写法为`-classpath ./xxxx1.jar,./xxxx2.jar`，即两个路径之间用英文逗号分隔。
 
 4.  节点调度配置。
