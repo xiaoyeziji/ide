@@ -4,21 +4,17 @@ DataWorks也提供PyODPS任务类型，集成了Maxcompute的Python SDK，您可
 
 Maxcompute提供了[Python SDK](https://www.alibabacloud.com/help/doc-detail/34615.htm)，您可以使用Python的SDK来操作Maxcompute。
 
-## 适用Region {#section_zrx_c3l_p2b .section}
-
-目前只有华东2（上海）Region支持PyODPS节点。
-
 **说明：** 底层的Python版本为2.7。
 
 ## 新建PyODPS节点 {#section_eyd_w3l_p2b .section}
 
 1.  右键单击**数据开发**下的**业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15382070717651_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15404508207651_zh-CN.png)
 
 2.  右键单击**数据开发**，选择**新建数据开发节点** \> **PyODPS**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15382070717741_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15404508207741_zh-CN.png)
 
 3.  编辑PyODPS节点。
     1.  ODPS入口
