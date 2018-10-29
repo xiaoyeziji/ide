@@ -2,7 +2,7 @@
 
 The figure below shows the basic attribute configuration interface:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16300/15367328987831_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16300/15407941317831_en-US.png)
 
 -   Node Name: It is the node name that you enter when creating a workflow node. To modify a node name, right-click the node on the directory tree and choose **Rename** from the short-cut menu.
 -   Node ID: It is the unique node ID generated when a task is submitted, and cannot be modified.
@@ -21,16 +21,6 @@ The figure below shows the basic attribute configuration interface:
 
 -   ODPS SQL, ODPS PL, ODPS MR types: `Variable name 1=Parameter 1 Variable name 2=Parameter 2...`, Multiple parameters are separated by space.
 -   SHELL type: `Parameter 1 Parameter 2...`, Multiple parameters are separated by space.
--   Synchronization center type task: Currently, a synchronization center type task does not automatically generate a template default value for a scheduling parameter. For value assignment of node parameters, refer to the following format: `-p" "`. In the double quotation marks, "-D variable name=xxx" is added.
 
-    **Note:** Value assignment template:
-
-    ```
-    -p"-Dbizdate=$bizdate -Denvpath=$envpath -Dhour=$hour -D variable name=$[time expression]"
-    ```
-
-    Note that the time expression here is `yyyymmdd`.
-
-
-Some frequently-used time parameters are provided as built-in scheduling parameters. For more information about these parameters, see [Parameter configuration](intl.en-US/User Guide/Data development/Scheduling Configuration/Parameter configuration.md#).
+Some frequently-used time parameters are provided as built-in scheduling parameters. For more information about these parameters, see [Parameter configuration](reseller.en-US/User Guide/Data development/Scheduling Configuration/Parameter configuration.md#).
 
