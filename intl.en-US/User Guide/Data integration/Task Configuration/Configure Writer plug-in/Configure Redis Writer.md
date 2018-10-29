@@ -1,8 +1,8 @@
 # Configure Redis Writer {#concept_fdm_sxn_q2b .concept}
 
-Redis \(Remote Dictionary Server\) is a high-performance persistent log-based key-value storage system supporting network and based on memory, which can be used as a database, high-speed cache, and message queue \(MQ\) proxy. Redis supports diverse types of storage values, including string, list, set, zset \(sorted set\), and hash. For details about Redis, see [redis.io](http://redis.io/).
-
 Redis Writer is a Redis writing plug-in based on the Data Integration framework. It can import data from a data warehouse or other data sources to a Redis instance. Redis Writer interacts with Redis Server via Jedis. As a preferred Java client development kit provided by Redis, Jedis has almost all Redis features.
+
+Redis \(Remote Dictionary Server\) is a high-performance persistent log-based key-value storage system supporting network and based on memory, which can be used as a database, high-speed cache, and message queue \(MQ\) proxy. Redis supports diverse types of storage values, including string, list, set, zset \(sorted set\), and hash. For details about Redis, see [redis.io](http://redis.io/).
 
 **Note:** 
 

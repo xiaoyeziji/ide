@@ -1,8 +1,8 @@
 # 配置Redis Writer {#concept_fdm_sxn_q2b .concept}
 
-Redis（REmote DIctionary Server）是一个支持网络、可基于内存也可持久化的日志型、高性能的key-value存储系统，可用作数据库、高速缓存和消息队列代理。Redis支持较丰富的存储value类型，包括String （字符串）、List（链表） 、Set（集合） 、ZSet（sorted set 有序集合）和 Hash（哈希类型）。Redis详情请参见[redis.io](http://redis.io/)。
-
 Redis Writer是基于数据集成框架实现的Redis写入插件，可以借助Redis Writer从数仓或者其它数据源导入数据到Redis。Redis Writer与Redis Server之间的交互是基于Jedis实现的，Jedis是Redis官方首选的Java客户端开发包，几乎实现了 Redis 的所有功能。
+
+Redis（REmote DIctionary Server）是一个支持网络、可基于内存也可持久化的日志型、高性能的key-value存储系统，可用作数据库、高速缓存和消息队列代理。Redis支持较丰富的存储value类型，包括String （字符串）、List（链表） 、Set（集合） 、ZSet（sorted set 有序集合）和 Hash（哈希类型）。Redis详情请参见[redis.io](http://redis.io/)。
 
 **说明：** 
 
