@@ -1,5 +1,7 @@
 # 配置OTSReader-Internal {#concept_cpg_nzq_p2b .concept}
 
+本文为您介绍OTSReader-Internal支持的数据类型、读取方式、字段映射和数据源等参数及配置举例。
+
 表格存储（Table Store，简称OTS）是构建在阿里云飞天分布式系统之上的NoSQL数据库服务，提供海量结构化数据的存储和实时访问。OTS以实例和表的形式组成数据，通过数据分片和负载均衡技术，实现规模上的无缝扩展。
 
 OTSReader-Internal主要用于OTS Internal模型的表数据导出，而另外一个插件OTS Reader则用于OTS Public模型的数据导出。
