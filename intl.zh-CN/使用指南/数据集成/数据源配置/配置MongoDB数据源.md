@@ -12,7 +12,7 @@ MongoDB是文档型的NoSQL数据库，目前是全世界最受欢迎的文档�
 2.  单击顶部菜单栏中的**数据集成**，导航至**数据源**页面。
 3.  单击**新增数据源**，弹出支持的数据源。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15367208887534_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15408678677534_zh-CN.png)
 
 4.  在新建数据源弹出框中，选择数据源类型为**MongoDB**。
 5.  配置MongoDB数据源的各个信息项。
@@ -23,7 +23,7 @@ MongoDB是文档型的NoSQL数据库，目前是全世界最受欢迎的文档�
     -   有公网IP的自建数据库：一般使用的网络是公网，然而公网可能产生一定的费用。
     以新增**MongDB** \> **阿里云数据库**类型的数据源为例。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15367208887547_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15408678677547_zh-CN.png)
 
     配置项说明如下：
 
@@ -41,14 +41,14 @@ MongoDB是文档型的NoSQL数据库，目前是全世界最受欢迎的文档�
     -   用户名/密码：数据库对应的用户名和密码。
     以新增**MongDB** \> **有公网IP的自建数据库**类型的数据源为例。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15367208887548_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15408678677548_zh-CN.png)
 
     配置项说明如下：
 
     -   数据源类型：当前选择的数据源类型MongoDB\>有公网IP的自建数据库。
     -   数据源名称： 由英文字母、数字、下划线组成且需以字符或下划线开头，长度不超过60个字符。
     -   数据源描述： 对数据源进行简单描述，不得超过80个字符。
-    -   访问地址：格式为host:port。
+    -   访问地址：格式为`host:port`，如果此处您需要同时添加多个地址，请注意地址必须全部为公网地址或全部为私网地址，不可以公网、私网地址混杂。
     -   添加访问地址：添加访问地址，格式为host:port。
     -   数据库名：该数据源对应的数据库名称。
     -   用户名/密码：数据库对应的用户名和密码。
