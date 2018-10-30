@@ -13,12 +13,12 @@
 2.  单击顶部菜单栏中的**数据集成**，导航至**数据源**页面。
 3.  单击**新增数据源**，弹出支持的数据源。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16209/15367210017559_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16209/15408682117559_zh-CN.png)
 
 4.  在新建数据源弹出框中，选择数据源类型为**OSS**。
 5.  配置OSS数据源的各个信息项。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16209/15367210017560_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16209/15408682117560_zh-CN.png)
 
     配置项说明如下：
 
@@ -32,6 +32,8 @@
     -   AccessID/AceessKey：[访问密匙](https://www.alibabacloud.com/help/doc-detail/53045.htm)（AccessKeyID和AccessKeySecret）相当于登录密码。
 6.  单击**测试连通性**。
 7.  测试连通性通过后，单击**确定**。
+
+**说明：** 在准备OSS数据时，注意如果数据为CSV文件，则必须为标准格式的CSV文件。例如：列内容如果在半角引号（"）内时，需要替换成两个半角引号（""），否则可能会造成文件被错误分割。
 
 ## 测试连通性说明 {#section_eq3_lnb_p2b .section}
 
