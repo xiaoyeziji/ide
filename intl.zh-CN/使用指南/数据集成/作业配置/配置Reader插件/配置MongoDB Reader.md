@@ -1,6 +1,8 @@
 # 配置MongoDB Reader {#concept_lsz_f2p_p2b .concept}
 
-MongoDB Reader插件利用MongoDB的Java客户端MongoClient进行MongoDB的读操作。最新版本的Mongo已经将DB锁的粒度从DB级别降低到document级别，配合MongoDB强大的索引功能，即可达到高性能读取MongoDB的需求。
+MongoDB Reader插件利用MongoDB的Java客户端MongoClient进行MongoDB的读操作。本文为您介绍MongoDB Reader支持的数据类型、字段映射和数据源等参数及配置举例。
+
+最新版本的Mongo已经将DB锁的粒度从DB级别降低到document级别，配合MongoDB强大的索引功能，即可达到高性能读取MongoDB的需求。
 
 **说明：** 
 
