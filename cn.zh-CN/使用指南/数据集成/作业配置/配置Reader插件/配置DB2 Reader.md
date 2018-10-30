@@ -1,8 +1,8 @@
 # 配置DB2 Reader {#concept_ydt_b4h_p2b .concept}
 
-DB2 Reader插件实现了从DB2读取数据。在底层实现上，DB2 Reader通过JDBC连接远程DB2数据库，并执行相应的SQL语句将数据从DB2库中SELECT出来。
+DB2 Reader插件实现了从DB2读取数据。在底层实现上，DB2 Reader通过JDBC连接远程DB2数据库，并执行相应的SQL语句将数据从DB2库中SELECT出来。本文为您介绍DB2 Reader Reader支持的数据类型、字段映射和数据源等参数及配置举例。
 
-简而言之，DB2 Reader通过JDBC连接器连接到远程的DB2数据库，根据您配置的信息生成查询SELECT SQL语句并发送到远程DB2数据库，将该SQL执行返回结果使用数据集成自定义的数据类型拼装为抽象的数据集，并传递给下游Writer处理。
+DB2 Reader通过JDBC连接器连接到远程的DB2数据库，根据您配置的信息生成查询SELECT SQL语句并发送到远程DB2数据库，将该SQL执行返回结果使用数据集成自定义的数据类型拼装为抽象的数据集，并传递给下游Writer处理。
 
 -   对于您配置的table、column、where信息，DB2 Reader将其拼接为SQL语句并发送到DB2数据库。
 -   对于您配置的querySql信息，DB2 Reader直接将其发送到DB2数据库。
