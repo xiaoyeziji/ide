@@ -101,11 +101,11 @@ When test connectivity fails, you need to verify that the data source area, the 
 
 -   The Database Password is incorrect, as shown below.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16196/15396787697520_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16196/15408675977520_en-US.png)
 
 -   The network doesn't have a diagram, as shown below.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16196/15396787697521_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16196/15408675977521_en-US.png)
 
 -   During synchronization, there is a network disconnect and so on.
 
