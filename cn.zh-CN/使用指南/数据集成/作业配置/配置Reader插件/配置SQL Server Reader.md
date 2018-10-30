@@ -1,5 +1,7 @@
 # 配置SQL Server Reader {#concept_bgv_5qq_p2b .concept}
 
+本文为您介绍SQL Server Reader支持的数据类型、读取方式、字段映射和数据源等参数及配置举例。
+
 SQL Server Reader插件从SQL Server读取数据。在底层实现上，SQL Server Reader通过JDBC连接远程SQL Server数据库，并执行相应的SQL语句将数据从SQL Server库中SELECT出来。
 
 简而言之，SQL Server Reader通过JDBC连接器连接到远程的SQL Server数据库，根据您配置的信息生成查询SELECT SQL语句并发送到远程SQL Server数据库，将该SQL执行返回结果使用数据集成自定义的数据类型拼装为抽象的数据集，并传递给下游Writer处理。
@@ -59,7 +61,7 @@ SQL Server Reader针对SQL Server的类型转换列表，如下所示。
 
     配置同步任务的数据来源和数据去向。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16232/15368021667861_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16232/15408847487861_zh-CN.png)
 
     配置项说明如下：
 
@@ -71,7 +73,7 @@ SQL Server Reader针对SQL Server的类型转换列表，如下所示。
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16232/15368021667862_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16232/15408847487862_zh-CN.png)
 
     -   同行映射：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
     -   自动排版：可以根据相应的规律自动排版。
@@ -84,7 +86,7 @@ SQL Server Reader针对SQL Server的类型转换列表，如下所示。
     -   如果您输入的值无法解析，则类型显示为未识别。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15368021667675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15408847487675_zh-CN.png)
 
     配置项说明如下：
 
