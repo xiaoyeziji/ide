@@ -1,5 +1,7 @@
 # 配置MaxCompute Reader {#concept_xtt_j1p_p2b .concept}
 
+本文为您介绍MaxCompute Reader支持的数据类型、字段映射和数据源等参数及配置举例。
+
 MaxCompute Reader插件实现了从MaxCompute读取数据的功能，有关MaxCompute的详细介绍请参见[MaxCompute简介](https://www.alibabacloud.com/help/doc-detail/27800.htm)。
 
 根据您配置的源头项目/表/分区/表字段等信息，在底层实现上可通过Tunnel从MaxCompute系统中读取数据。常用的Tunnel命令请参见[Tunnel命令操作](https://www.alibabacloud.com/help/doc-detail/27833.htm)。
@@ -49,7 +51,7 @@ MaxCompute Writer支持MaxCompute中以下数据类型。
 
     配置同步任务的数据来源和数据去向。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16225/15367216377759_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16225/15408695037759_zh-CN.png)
 
     配置项说明如下：
 
@@ -65,7 +67,7 @@ MaxCompute Writer支持MaxCompute中以下数据类型。
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16225/15367216377760_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16225/15408695037760_zh-CN.png)
 
     -   同行映射：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
     -   自动排版：可以根据相应的规律自动排版。
@@ -78,7 +80,7 @@ MaxCompute Writer支持MaxCompute中以下数据类型。
     -   如果您输入的值无法解析，则类型显示为未识别。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15367216377675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15408695037675_zh-CN.png)
 
     配置项说明如下：
 
