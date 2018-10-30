@@ -1,5 +1,7 @@
 # 配置OTSStream Reader {#concept_m4h_5gr_p2b .concept}
 
+本文为您介绍OTSStream Reader支持的数据类型、读取方式、字段映射和数据源等参数及配置举例。
+
 OTSStream Reader插件主要用于Table Store增量数据的导出，增量数据可以看作操作日志，除数据本身外还附有操作信息。
 
 与全量导出插件不同，增量导出插件只有多版本模式，且不支持指定列，这与增量导出的原理有关，导出格式的详细介绍请参见下文。
