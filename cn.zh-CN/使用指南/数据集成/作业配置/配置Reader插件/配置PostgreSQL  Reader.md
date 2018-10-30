@@ -1,5 +1,7 @@
 # 配置PostgreSQL Reader {#concept_axy_tmq_p2b .concept}
 
+本文为您介绍PostgreSQL Reader支持的数据类型、读取方式、字段映射和数据源等参数及配置举例。
+
 PostgreSQL Reader插件从PostgreSQL读取数据。在底层实现上，PostgreSQL Reader通过JDBC连接远程PostgreSQL数据库，并执行相应的SQL语句将数据从PostgreSQL库中SELECT出来。公共云上RDS提供PostgreSQL存储引擎。
 
 简而言之，PostgreSQL Reader通过JDBC连接器连接到远程的PostgreSQL数据库，根据您配置的信息生成查询SELECT SQL语句并发送到远程PostgreSQL数据库，将该SQL执行返回结果使用数据集成自定义的数据类型拼装为抽象的数据集，并传递给下游Writer处理。
@@ -82,7 +84,7 @@ PostgreSQL Reader针对PostgreSQL的类型转换列表，如下所示。
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16231/15368020257846_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16231/15408846897846_zh-CN.png)
 
     -   同行映射：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
     -   自动排版：可以根据相应的规律自动排版。
@@ -95,7 +97,7 @@ PostgreSQL Reader针对PostgreSQL的类型转换列表，如下所示。
     -   如果您输入的值无法解析，则类型显示为未识别。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15368020257675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15408846897675_zh-CN.png)
 
     配置项说明如下：
 
