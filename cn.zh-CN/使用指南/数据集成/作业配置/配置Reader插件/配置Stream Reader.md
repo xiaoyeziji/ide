@@ -1,5 +1,7 @@
 # 配置Stream Reader {#concept_sjr_nlr_p2b .concept}
 
+本文为您介绍Stream Reader支持的数据类型、读取方式、字段映射和数据源等参数及配置举例。
+
 Stream Reader插件实现了从内存中自动产生数据的功能，主要用于数据同步的性能测试和基本的功能测试。
 
 Stream Reader支持的数据类型，如下所示。
