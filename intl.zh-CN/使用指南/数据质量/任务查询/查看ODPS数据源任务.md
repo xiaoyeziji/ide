@@ -1,17 +1,19 @@
 # 查看ODPS数据源任务 {#concept_wq3_v43_r2b .concept}
 
+本文将为您介绍如何查看ODPS数据源任务。
+
 任务查询模块主要显示规则校验结果情况列表与查看。规则运行即任务运行，在**任务查询**模块可以查看规则运行记录。
 
 1.  访问数据质量中心，单击**任务查询**，进入查询页面。
 2.  选择**ODPS数据源**，根据搜索框要求输入内容，精确定位到要查找的表。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16399/15367420798828_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16399/15408929608828_zh-CN.png)
 
     -   查看任务运行情况
 
         在任务列表中，您可以看到任务运行的状态、配置的规则数量和异常的规则数量，右侧对应的蓝色字体可以链接到其他页面，方便您进行查看和修改。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16399/15367420798830_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16399/15408929608830_zh-CN.png)
 
     -   查看分区表达式的详情
 
@@ -20,7 +22,7 @@
         -   单击**更多**，即可查看数据源、应用名、节点ID和责任人等信息。
         -   单击对应字段后的**查看历史记录**，即可查看每次调度之后的运行记录。
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16399/15367420798832_zh-CN.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16399/15408929608832_zh-CN.png)
 
     -   查看规则配置
 
