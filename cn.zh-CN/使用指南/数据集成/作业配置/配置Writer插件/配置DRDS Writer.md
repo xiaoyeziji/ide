@@ -1,5 +1,7 @@
 # 配置DRDS Writer {#concept_tgk_fkl_q2b .concept}
 
+本文为您介绍DRDS Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 DRDS Writer插件实现将数据写到DRDS表的功能。在底层DRDS Writer是通过JDBC连接远程DRDS数据库的Proxy，执行相应的`replace into…`的SQL语句将数据写入DRDS。
 
 **说明：** 执行的SQL语句是replace into，为避免数据重复写入，需要您的表具备主键（Primary Key）或者唯一性索引（Unique index）。开始配置DRDS Writer插件前，请首先配置好数据源，详情请参见[配置DRDS数据源](intl.zh-CN/使用指南/数据集成/数据源配置/配置DRDS数据源.md#)。
@@ -54,13 +56,13 @@ DRDS Writer针对DRDS类型的转换列表，如下所示。
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16242/15367222528014_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16242/15411401908014_zh-CN.png)
 
     -   同行映射：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
     -   自动排版：可以根据相应的规律自动排版。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15367222527675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15411401907675_zh-CN.png)
 
     配置项说明如下：
 
