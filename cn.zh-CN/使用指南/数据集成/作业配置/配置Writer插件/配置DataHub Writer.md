@@ -1,5 +1,7 @@
 # 配置DataHub Writer {#concept_kyh_52l_q2b .concept}
 
+本文为您介绍DataHub Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 DataHub是实时数据分发平台，流式数据（Streaming Data）的处理平台，提供对流式数据的发布（Publish）、订阅（Subscribe）和分发功能，让您可以轻松构建基于流式数据的分析和应用。
 
 DataHub服务基于阿里云自研的飞天平台，具有高可用、低延迟、高可扩展和高吞吐的特点，它与阿里云流计算引擎StreamCompute无缝连接，您可以轻松使用SQL进行流数据分析。它也提供分发流式数据到各种云产品的功能，目前支持分发到MaxCompute（原ODPS）、OSS等。
