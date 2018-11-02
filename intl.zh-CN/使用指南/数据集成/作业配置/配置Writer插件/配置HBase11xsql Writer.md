@@ -1,5 +1,7 @@
 # 配置HBase11xsql Writer {#concept_kfw_ryl_q2b .concept}
 
+本文为您介绍HBase11xsql Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 HBase11xsql Writer实现了向Hbase中的SQL表（phoenix）批量导入数据的功能。Phoenix因为对rowkey做了数据编码，所以直接使用HBaseAPI进行写入会面临手工数据转换的问题，麻烦且易错。HBase11xsql Writer插件为您提供了单间的SQL表的数据导入方式。
 
 在底层实现上，通过Phoenix的JDBC驱动，执行UPSERT语句向Hbase写入数据。
