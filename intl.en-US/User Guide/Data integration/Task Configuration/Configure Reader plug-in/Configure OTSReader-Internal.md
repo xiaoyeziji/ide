@@ -1,6 +1,6 @@
 # Configure OTSReader-Internal {#concept_cpg_nzq_p2b .concept}
 
-In this article we will show you the data types and parameters supported by OTSReader-Internal and how to configure Reader in both wizard mode and script mode
+In this article we will show you the data types and parameters supported by OTSReader-Internal and how to configure Reader in script mode
 
 Table Store \(originally known as OTS\) is a NoSQL database service built upon Alibaba Cloud's Apsara distributed system, enabling you to store and access massive structured data in real time. OTS organizes data into instances and tables. Using data partition and server load balancing technology, it provides seamless scaling.
 
