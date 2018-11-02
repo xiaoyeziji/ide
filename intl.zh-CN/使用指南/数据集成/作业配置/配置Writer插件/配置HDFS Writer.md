@@ -1,5 +1,7 @@
 # 配置HDFS Writer {#concept_q3n_hdm_q2b .concept}
 
+本文为您介绍HDFS Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 HDFS Writer提供向HDFS文件系统指定路径中写入TextFile文件、 ORCFile文件以及ParquetFile格式文件，文件内容可与 Hive 中表关联。在开始配置 HDFS Writer 插件前，请首先配置好数据源，详情请参见 [配置FTP数据源](intl.zh-CN/使用指南/数据集成/数据源配置/配置FTP数据源.md#)。
 
 ## 实现过程 {#section_dvy_43m_q2b .section}
@@ -16,7 +18,7 @@ HDFS Writer的实现过程，如下所示。
 
 **说明：** 数据同步需要使用Admin账号，并且有访问相应文件的读写权限。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16224/15367224427725_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16224/15411408347725_zh-CN.png)
 
 命令说明如下：
 
