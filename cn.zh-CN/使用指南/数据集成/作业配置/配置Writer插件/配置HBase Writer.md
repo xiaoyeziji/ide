@@ -1,5 +1,7 @@
 # 配置HBase Writer {#concept_nr5_w5l_q2b .concept}
 
+本文为您介绍HBase Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 HBase Writer插件实现了向HBase中写入数据。在底层实现上，HBase Writer通过HBase的Java客户端连接远程HBase服务，并通过put方式写入Hbase。
 
 ## 支持的功能 {#section_wv3_x5l_q2b .section}
