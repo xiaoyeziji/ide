@@ -1,5 +1,7 @@
 # 配置MaxCompute Writer {#concept_jjy_y4m_q2b .concept}
 
+本文为您介绍MaxCompute Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 MaxCompute Writer插件用于实现向MaxCompute中插入或者更新数据，主要适用于ETL开发同学，可以将业务数据导入MaxCompute，适合于TB、GB等数量级的数据传输。
 
 **说明：** 在开始配置MaxCompute Writer插件前，请首先配置好数据源，详情请参见[配置MaxCompute数据源](intl.zh-CN/使用指南/数据集成/数据源配置/配置MaxCompute数据源.md#)。
@@ -46,7 +48,7 @@ MaxCompute Writer支持MaxCompute中以下数据类型。
 
     配置同步任务的数据来源和数据去向。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16247/15368018978125_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16247/15411409068125_zh-CN.png)
 
     配置项说明如下：
 
@@ -71,7 +73,7 @@ MaxCompute Writer支持MaxCompute中以下数据类型。
     -   自动排版：可以根据相应的规律自动排版。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15368018977675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15411409067675_zh-CN.png)
 
     配置项说明如下：
 
