@@ -1,5 +1,7 @@
 # 配置DB2 Writer {#concept_prk_khl_q2b .concept}
 
+本文为您介绍DB2 Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 DB2 Writer插件实现了写入数据到DB2数据库的目标表的功能。在底层实现上， DB2 Writer通过JDBC连接远程DB2数据库，执行相应的`insert into…`的SQL语句，将数据写入DB2，内部会分批次提交入库。
 
 DB2 Writer面向ETL开发工程师，使用DB2 Writer从数仓导入数据到DB2。同时DB2 Writer也可以作为数据迁移工具为DBA等用户提供服务。
