@@ -1,11 +1,12 @@
 # 配置MongoDB Writer {#concept_gmn_qwm_q2b .concept}
 
-MongoDB Writer插件利用MongoDB的Java客户端MongoClient进行MongoDB的写操作。最新版本的Mongo已经将DB锁的粒度从DB级别降低到Document级别，配合MongoDB强大的索引功能，基本可以满足数据源向MongoDB写入数据的需求。针对数据更新的需求，通过配置业务主键的方式也可以实现。
+本文为您介绍MongoDB Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
 
-**说明：** 在开始配置MongoDB Writer插件前，请首先配置好数据源，详情请参见[配置MongoDB数据源](intl.zh-CN/使用指南/数据集成/数据源配置/配置MongoDB数据源.md#)。
+MongoDB Writer插件利用MongoDB的Java客户端MongoClient进行MongoDB的写操作。最新版本的Mongo已经将DB锁的粒度从DB级别降低到Document级别，配合MongoDB强大的索引功能，基本可以满足数据源向MongoDB写入数据的需求。针对数据更新的需求，通过配置业务主键的方式也可以实现。
 
 **说明：** 
 
+-   在开始配置MongoDB Writer插件前，请首先配置好数据源，详情请参见[配置MongoDB数据源](intl.zh-CN/使用指南/数据集成/数据源配置/配置MongoDB数据源.md#)。
 -   如果您使用的是云数据库MongoDB版，MongoDB默认会有root账号。
 -   出于安全策略的考虑，数据集成仅支持使用 MongoDB数据库对应账号进行连接，您添加使用MongoDB数据源时，也请避免使用root作为访问账号。
 
