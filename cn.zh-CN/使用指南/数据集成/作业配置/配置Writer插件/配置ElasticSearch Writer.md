@@ -1,5 +1,7 @@
 # 配置ElasticSearch Writer {#concept_okj_c24_q2b .concept}
 
+本文为您介绍ElasticSearch Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 Elasticsearch是一个基于Lucene的搜索和数据分析工具，它提供了一个分布式服务。Elasticsearch是遵从Apache开源条款的一款开源产品，是当前主流的企业级搜索引擎。Elasticsearch核心概念同数据库核心概念对应关系如下所示。
 
 ```
@@ -161,5 +163,5 @@ Elasticsearch中可以有多个索引（index）/（数据库），每个索引�
 }
 ```
 
-**说明：** VPC环境的ElasticSearch，目前只能使用自定义调度资源，运行在默认资源组会存在网络不通的情况。添加自定义资源组具体的步骤请参见[新增调度资源](cn.zh-CN/使用指南/数据集成/常见配置/新增调度资源.md#)
+**说明：** VPC环境的ElasticSearch，目前只能使用自定义调度资源，运行在默认资源组会存在网络不通的情况。添加自定义资源组具体的步骤请参见[新增调度资源](intl.zh-CN/使用指南/数据集成/常见配置/新增调度资源.md#)
 

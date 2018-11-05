@@ -1,5 +1,7 @@
 # 配置ElasticSearch Writer {#concept_okj_c24_q2b .concept}
 
+本文为您介绍ElasticSearch Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 Elasticsearch是一个基于Lucene的搜索和数据分析工具，它提供了一个分布式服务。Elasticsearch是遵从Apache开源条款的一款开源产品，是当前主流的企业级搜索引擎。Elasticsearch核心概念同数据库核心概念对应关系如下所示。
 
 ```
@@ -106,7 +108,7 @@ Elasticsearch中可以有多个索引（index）/（数据库），每个索引�
 ```
 
 |是|无|
-|dynamic|不使用datax的mappings，使用ES自己的自动mappings。|否|false|
+|dynamic|如果为true，则不使用datax的mappings，使用ES自己的自动mappings。|否|false|
 
 ## 脚本开发介绍 {#section_pcz_fh4_q2b .section}
 
