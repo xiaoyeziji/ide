@@ -4,7 +4,7 @@
 
 App Usertrack Android SDK是数加面向移动开发者提供的Android平台下的数据统计与监控服务。通过该SDK，开发者可以在自己的APP中便捷地进行数据埋点，监控日常的业务数据与网络性能数据，并通过数加控制台界面观察对应的数据报表展现。另外，您后续可以通过设置自定义的数据解析规则实现定制化的数据图表展现。
 
-您可以通过获取[alicloud-android-demo](https://github.com/aliyun/alicloud-android-demo)工程源码获得移动数据分析服务的使用示例，详情请参见man\_android\_demo项目。
+您可以通过获取工程源码获得移动数据分析服务的使用示例，详情请参见man\_android\_demo项目。
 
 ## 安装Mobile Analytics Android SDK {#section_mnc_ct1_r2b .section}
 
@@ -567,7 +567,7 @@ manService.getMANAnalytics().getDefaultTracker().send(hitBuilder.build());
 
 ## 上报H5数据 {#section_hcc_xgb_r2b .section}
 
-H5页面采集并没有单独的SDK，依赖native进行上传，通过JSBridge通知给native，然后调用MAN的相应方法，进行数据的上报。可运行示例请参见[alicloud-android-demo](https://github.com/aliyun/alicloud-android-demo?spm=a2c4g.11186623.2.4.1c7wd7)。
+H5页面采集并没有单独的SDK，依赖native进行上传，通过JSBridge通知给native，然后调用MAN的相应方法，进行数据的上报。
 
 JavaScript代码示例如下：
 
