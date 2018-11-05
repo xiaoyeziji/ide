@@ -1,6 +1,8 @@
 # 配置OpenSearch Writer {#concept_kwq_vnt_q2b .concept}
 
-openSearch Writer插件用于向OpenSearch中插入或者更新数据，主要提供给数据开发的同学，将处理好的数据导入到OpenSearch，以搜索的方式输出。数据传输的速率取决于OpenSearch表对应的帐号的qps。
+本文为您介绍OpenSearch Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
+OpenSearch Writer插件用于向OpenSearch中插入或者更新数据，主要提供给数据开发者，将处理好的数据导入到OpenSearch，以搜索的方式输出。数据传输的速率取决于OpenSearch表对应的帐号的qps。
 
 实现原理
 
