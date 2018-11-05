@@ -1,5 +1,7 @@
 # 配置LogHub Writer {#concept_byy_4xt_q2b .concept}
 
+本文为您介绍LogHub Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 LogHub Writer使用SLS的Java SDK，可以将DataX Reader中的数据推送到指定的SLS LogHub上，供其他程序消费。
 
 **说明：** 
@@ -38,7 +40,7 @@ LogHub Writer针对LogHub类型的转换，如下表所示：
 
 暂不支持向导模式配置，您可以接点击链接转换为脚本模式或者选择导入脚本模板进行开发。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16257/15367231348506_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16257/15413894978506_zh-CN.png)
 
 ## 脚本模式介绍 {#section_gg5_1b5_q2b .section}
 
