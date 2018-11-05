@@ -1,5 +1,7 @@
 # 配置MySQL Writer {#concept_ynf_pzm_q2b .concept}
 
+本文为您介绍MySQL Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 MySQL Writer插件实现了写入数据到MySQL数据库目标表的功能。在底层实现上， MySQL Writer通过JDBC连接远程MySQL数据库，并执行相应的`insert into...`或`replace into...`的SQL语句将数据写入MySQL，内部会分批次提交入库，需要数据库本身采用innodb引擎。
 
 **说明：** 在开始配置MySQL Writer插件前，请首先配置好数据源，详情请参见[配置MySQL数据源](intl.zh-CN/使用指南/数据集成/数据源配置/配置MySQL数据源.md#)。
@@ -60,7 +62,7 @@ MySQL Writer针对MySQL类型的转换列表，如下所示。
     -   自动排版：可以根据相应的规律自动排版。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15367226447675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15413886817675_zh-CN.png)
 
     配置项说明如下：
 
