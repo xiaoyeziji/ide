@@ -1,7 +1,5 @@
 # DataService studio overview {#concept_ewh_bsh_r2b .concept}
 
-**Note:** Dataworks DataService Studio is currently available for internal testing only in the Shanghai region.
-
 DataService Studio aims to build a data service bus to help enterprises centrally manage private and public APIs. DataService Studio allows you to quickly create APIs based on data tables and register existing APIs with the DataService Studio platform for centralized management and release. In addition, DataService Studio is connected to API Gateway. You can deploy APIs to API Gateway with one-click. DataService Studio works together with API Gateway to provide a secure, stable, low-cost, and easy-to-use data sharing service.
 
 DataService Studio adopts the serverless architecture. All you need to care is the query logic of APIs, instead of the infrastructure such as the running environment. DataService Studio prepares the computing resources for you, supports elastic scaling, and requires zero O&M cost.
