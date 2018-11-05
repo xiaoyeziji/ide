@@ -1,8 +1,10 @@
 # 配置Tair Writer {#concept_ynf_pzm_q2b .concept}
 
+本文为您介绍Tair Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 ## DataX3.0 tairwriter说明 {#section_i4h_2d4_q2b .section}
 
-datax2 任务迁移同步中心的tair writer的，请先阅读完tair 配置介绍。datax2和同步中心tair 配置对应关系请移步到文档最后。
+如果您使用Datax2 任务迁移同步中心的tair writer，请先阅读完tair 配置介绍。Datax2和同步中心tair 配置对应关系请移步到文档最后。
 
 Tair 是一个高性能，分布式，可扩展，高可靠的nosql存储系统。现支持Java，C/C++版本和restful的客户端。
 
@@ -113,7 +115,7 @@ pkey-\>1112223, skey-\>money, value-\>1000
 
 1.同步配置：数据来源和数据去向。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16262/15367229248319_zh-CN.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16262/15413912018319_zh-CN.jpg)
 
 配置项说明：
 
@@ -126,7 +128,7 @@ pkey-\>1112223, skey-\>money, value-\>1000
 
 2.字段映射：
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16262/15367229258321_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16262/15413912018321_zh-CN.png)
 
 来源或目标拥有Lindon,Hbase,Tair等数据源，字段不需要连线，直接编辑即可保存。
 
@@ -134,7 +136,7 @@ pkey-\>1112223, skey-\>money, value-\>1000
 
 3.通道控制
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16262/15367229258322_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16262/15413912018322_zh-CN.png)
 
 -   jvm参数：数据集成消耗资源（包含 CPU、内存、网络等资源分配）的度量单位。一个jvm描述了一个数据集成作业最小运行能力，即在限定的CPU、内存、网络等资源情况下对于数据同步的处理能力。
 -   作业并发数：可将此属性视为数据同步任务内，可从源并行读取或并行写入数据存储端的最大线程数。向导模式通过界面化配置并发数，指定任务所使用的并行度。
@@ -150,7 +152,7 @@ pkey-\>1112223, skey-\>money, value-\>1000
     "version":"2.0",//版本号
     "steps":[
         {
-            "stepType":"stream",
+            "stepType":"tair",
             "parameter":{},
             "name":"Reader",
             "category":"reader"
