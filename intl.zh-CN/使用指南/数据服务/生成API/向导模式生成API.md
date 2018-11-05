@@ -1,19 +1,27 @@
 # 向导模式生成API {#concept_cgn_txh_r2b .concept}
 
-本文将为您介绍向导模式生成API的操作步骤和注意事项。
+本文将为您介绍如何通过向导模式生成API。
 
-使用向导模式生成数据API简单且容易上手，不需要编写任何代码，通过产品界面进行勾选配置即可快速生成API。推荐对API功能的要求不高或者无代码开发经验的用户使用。
+使用向导模式生成数据API简单且容易上手，您不需编写任何代码，通过产品界面进行勾选配置即可快速生成API。推荐对API功能的要求不高或者无代码开发经验的用户使用。
 
-**说明：** 配置API前，请首先在DataWorks控制台的**数据集成** \> **数据源**页面配置好数据源。
+**说明：** 配置API前，请首先在**数据集成** \> **数据源**页面配置好数据源。
 
 ## 配置API基础信息 {#section_qdt_jzh_r2b .section}
 
-1.  导航至**API服务列表**中的**生成API**页面。
+1.  进入**API服务列表** \> **生成API**页面。
 2.  单击**向导模式**，填写API基础信息。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368068828791_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15413799678791_zh-CN.png)
 
-    配置过程中请注意API分组的设置。API分组是指针对某一个功能或场景的API集合，也是API网关对API的最小管理单元。在阿里云API市场中，一个API分组对应于一个API商品。
+    |配置|说明|
+    |:-|:-|
+    |**API名称**|支持中文、英文、数字、下划线，且只能以英文或中文开头，4-50个字符。|
+    |**API分组**|API分组是指针对某一个功能或场景的API集合，也是API网关对API的最小管理单元。在阿里云API市场中，一个API分组对应于一个API商品。您可单击**新建API分组**进行新建。|
+    |**协议**|目前，生成API仅支持HTTP协议。|
+    |**API Path**|API存放的路径，如/user。|
+    |**请求方式**|目前，生成API仅支持GET请求方式。|
+    |**返回类型**|目前，生成API仅支持JSON返回类型。|
+    |**描述**|对API进行简要描述。|
 
     **说明：** API分组的设置示例如下：
 
@@ -21,13 +29,11 @@
 
     当然，如果您生成的API在自己的APP中使用，则可以把分组当作分类来使用。
 
-    目前，生成API仅支持HTTP协议、GET请求方式和JSON返回类型。
-
-3.  填写好API基础信息之后，单击**下一步**，即可进入API参数配置页面。
+3.  填写好API基础信息后，单击**下一步**，即可进入API参数配置页面。
 
 ## 配置API参数 {#section_c1n_g13_r2b .section}
 
-1.  导航至**数据源类型** \> **数据源名称** \> **数据表**，选择需要配置的表。
+1.  进入**数据源类型** \> **数据源名称** \> **数据表**页面，选择需要配置的表。
 
     **说明：** 您需提前在数据集成中配置好数据源，数据表下拉框支持表名搜索。
 
@@ -39,7 +45,7 @@
 
     单击请求参数和返回参数列表右上角的**编辑**，进入参数信息编辑页面，设置参数的名称、示例值、默认值、是否必选、模糊匹配（只支持String类型设置）和描述。其中是否必选和描述必填。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368068828794_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15413799678794_zh-CN.png)
 
 
 配置过程中需要注意返回结果分页的设置。
@@ -71,13 +77,13 @@
 
 完成API参数的配置后，即可进行API测试。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368068828797_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15413799688797_zh-CN.png)
 
 填写好参数值，单击**开始测试**，即可在线发送API请求，在右侧可以看到API请求详情及返回内容。如果测试失败，请仔细查看错误提示并做相应的修改重新测试。
 
 配置过程中需要注意正常返回示例的设置。配置好API之后，系统会自动生成异常返回示例和错误码，但没办法自动生成正常返回示例。需要在测试成功后，单击**保存为正常返回示例**，将当前的测试结果保存为正常返回示例。如果返回结果中有敏感数据需要脱敏，可以手动编辑修改。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368068828799_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15413799688799_zh-CN.png)
 
 **说明：** 
 
@@ -90,5 +96,5 @@
 
 回到API服务列表页面，单击操作列中的**详情**，可查看API的详情信息。API详情页面以调用者的视角展示了API的详细信息。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368068828800_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15413799688800_zh-CN.png)
 
