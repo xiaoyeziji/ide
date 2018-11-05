@@ -1,5 +1,7 @@
 # 配置Oracle Writer {#concept_dzy_j2n_q2b .concept}
 
+本文为您介绍Oracle Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 Oracle Writer插件实现了写入数据到Oracle主库的目标表的功能。在底层实现上， Oracle Writer通过JDBC连接远程Oracle数据库，并执行相应的`insert into...`的SQL语句将数据写入Oracle。
 
 **说明：** 在开始配置Oracle Writer插件前，请首先配置好数据源，详情请参见[配置Oracle数据源](intl.zh-CN/使用指南/数据集成/数据源配置/配置Oracle数据源.md#)。
@@ -40,7 +42,7 @@ Oracle Writer针对Oracle类型的转换列表，如下所示。
 
     配置同步任务的数据来源和数据去向。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16251/15367226798194_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16251/15413889508194_zh-CN.png)
 
     配置项说明如下：
 
@@ -53,13 +55,13 @@ Oracle Writer针对Oracle类型的转换列表，如下所示。
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16251/15367226808195_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16251/15413889508195_zh-CN.png)
 
     -   同行映射：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
     -   自动排版：可以根据相应的规律自动排版。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15367226807675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15413889507675_zh-CN.png)
 
     配置项说明如下：
 
