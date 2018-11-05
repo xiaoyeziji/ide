@@ -4,7 +4,7 @@
 
 App Usertrack Analytics IOS SDK是数加面向移动开发者提供的IOS平台下的数据统计与监控服务。通过该SDK，开发者可以在自己的APP中便捷地进行数据埋点，监控日常的业务数据与性能数据，并通过阿里云控制台界面观察对应的数据报表展现。另外，用户可以通过设定自定义的数据解析规则实现定制化的数据图表展现。
 
-您可以通过获取[alicloud-ios-demo](https://github.com/aliyun/alicloud-ios-demo)工程源码获得移动数据分析服务的使用例程，详情请参见`man_ios_demo`项目。
+您可以通过获取工程源码获得移动数据分析服务的使用例程，具体参考`man_ios_demo`项目即可。
 
 ## 安装Mobile Analytics iOS SDK {#section_t4j_tmv_q2b .section}
 
@@ -528,7 +528,7 @@ ALBBMANTracker *traker = [[ALBBMANAnalytics getInstance] getDefaultTracker];
 
 ## H5页面数据的采集 {#section_kdr_nmb_r2b .section}
 
-H5页面采集并没有单独的SDK，依赖native进行上传，通过JSBridge通知给native，然后调用MAN的相应方法，进行数据的上报。可运行demo请参见[alicloud-ios-demo](https://github.com/aliyun/alicloud-ios-demo)。
+H5页面采集并没有单独的SDK，依赖native进行上传，通过JSBridge通知给native，然后调用MAN的相应方法，进行数据的上报。
 
 代码示例：
 
