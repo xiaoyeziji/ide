@@ -1,5 +1,7 @@
 # 配置PostgreSQL Writer {#concept_pyy_trn_q2b .concept}
 
+本文为您介绍PostgreSQL Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 PostgreSQL Writer插件实现了向PostgreSQL写入数据。在底层实现上，PostgreSQL Writer通过JDBC连接远程PostgreSQL数据库，并执行相应的SQL语句将数据从PostgreSQL库中SELECT出来，公共云上RDS提供PostgreSQL存储引擎。
 
 **说明：** 在开始配置PostgreSql Writer插件前，请首先配置好数据源，详情请参见[配置PostgreSQL数据源](intl.zh-CN/使用指南/数据集成/数据源配置/配置PostgreSQL数据源.md#)。
@@ -49,7 +51,7 @@ PostgreSQL Writer针对PostgreSQL的类型转换列表，如下所示。
 
     配置同步任务的数据来源和数据去向。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16253/15367227498214_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16253/15413891558214_zh-CN.png)
 
     配置项说明如下：
 
@@ -61,13 +63,13 @@ PostgreSQL Writer针对PostgreSQL的类型转换列表，如下所示。
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16253/15367227498215_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16253/15413891558215_zh-CN.png)
 
     -   同行映射：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
     -   自动排版：可以根据相应的规律自动排版。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15367227497675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15413891557675_zh-CN.png)
 
     配置项说明如下：
 
