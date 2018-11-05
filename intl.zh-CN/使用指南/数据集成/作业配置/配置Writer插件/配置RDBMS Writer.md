@@ -1,12 +1,14 @@
 # 配置RDBMS Writer {#concept_e12_jyt_q2b .concept}
 
-RDBMS Writer 插件实现了写入数据到 RDBMS 主库的目的表的功能。在底层实现上， RDBMS Writer 通过 JDBC 连接远程 RDBMS 数据库，并执行相应的 insert into … 的 sql 语句将数据写入 RDBMS。 RDBMS Writer是一个通用的关系数据库写插件，您可以通过注册数据库驱动等方式增加任意多样的关系数据库写支持。
+本文为您介绍RDBMS Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
+RDBMS Writer 插件实现了写入数据到 RDBMS 主库的目的表的功能。在底层实现上， RDBMS Writer 通过 JDBC 连接远程 RDBMS 数据库，并执行相应的 insert into … 的 SQL 语句将数据写入 RDBMS。 RDBMS Writer是一个通用的关系数据库写插件，您可以通过注册数据库驱动等方式增加任意多样的关系数据库写支持。
 
 RDBMS Writer 面向ETL开发工程师，他们使用 RDBMS Writer 从数仓导入数据到 RDBMS。同时 RDBMS Writer 亦可以作为数据迁移工具为DBA等用户提供服务。
 
 ## 实现原理 {#section_f12_jyt_q2b .section}
 
-RDBMS Writer 通过 DataX 框架获取 Reader 生成的协议数据，RDBMS Writer 通过 JDBC 连接远程 RDBMS 数据库，并执行相应的 insert into … 的 sql 语句将数据写入 RDBMS。
+RDBMS Writer 通过 DataX 框架获取 Reader 生成的协议数据，RDBMS Writer 通过 JDBC 连接远程 RDBMS 数据库，并执行相应的 insert into … 的 SQL 语句将数据写入 RDBMS。
 
 ## 功能说明 {#section_vhx_qk5_q2b .section}
 
