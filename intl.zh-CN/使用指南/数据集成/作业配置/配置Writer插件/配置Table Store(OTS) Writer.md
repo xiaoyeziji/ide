@@ -1,5 +1,7 @@
 # 配置Table Store\(OTS\) Writer {#concept_sdt_fb4_q2b .concept}
 
+本文为您介绍Table Store\(OTS\) Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 表格存储 Table Store 是构建在阿里云飞天分布式系统之上的 NoSQL 数据库服务，提供海量结构化数据的存储和实时访问。Table Store 以实例和表的形式组织数据，通过数据分片和负载均衡技术，实现规模上的无缝扩展。
 
 简而言之，Table Store Writer 通过 Table Store 官方 Java SDK 连接到 Table Store 服务端，并通过 SDK 写入 Table Store 服务端 。Table Store Writer 本身对于写入过程做了很多优化，包括写入超时重试、异常写入重试、批量提交等 Feature。
