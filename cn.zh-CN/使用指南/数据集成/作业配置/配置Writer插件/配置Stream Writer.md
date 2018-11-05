@@ -1,5 +1,7 @@
 # 配置Stream Writer {#concept_okj_c24_q2b .concept}
 
+本文为您介绍Stream Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 Stream Writer 插件实现了从 Reader 端读取数据并向屏幕上打印数据或者直接丢弃数据，主要用于数据同步的性能测试和基本的功能测试。
 
 ## 参数说明 {#section_a3m_424_q2b .section}
