@@ -1,5 +1,7 @@
 # 配置OSS Writer {#concept_fw1_2ln_q2b .concept}
 
+本文为您介绍OSS Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 OSS Writer插件提供了向OSS写入类CSV格式的一个或者多个表文件的功能。
 
 **说明：** 在开始配置OSS Writer插件前，请首先配置好数据源，详情请参见[配置OSS数据源](intl.zh-CN/使用指南/数据集成/数据源配置/配置OSS数据源.md#)。
@@ -60,7 +62,7 @@ OSS本身不提供数据类型，下表中的类型是DataX OSS Writer定义。
 
     配置同步任务的数据来源和数据去向。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16229/15367227167815_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16229/15413890767815_zh-CN.png)
 
     配置项说明如下：
 
@@ -73,13 +75,13 @@ OSS本身不提供数据类型，下表中的类型是DataX OSS Writer定义。
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16229/15367227167818_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16229/15413890767818_zh-CN.png)
 
     同行映射：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
 
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15367227167675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15413890767675_zh-CN.png)
 
     配置项说明如下：
 
