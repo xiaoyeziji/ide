@@ -2,11 +2,9 @@
 
 Data Integration provides data acquisition capabilities for client apps and webpages \(including HTML5 page\) to meet your needs of data tracking and acquisition of user behavior data.
 
-At the same time, you can synchronize the user behavior data acquired from clients to Alibaba Cloud [Maxcompute](https://www.alibabacloud.com/help/zh/product/27797.htm)in real time for personalized analysis or digging of the acquired behavior data.
+At the same time, you can synchronize the user behavior data acquired from clients to Alibaba Cloud [MaxCompute](https://www.alibabacloud.com/help/zh/product/27797.htm)in real time for personalized analysis or digging of the acquired behavior data.
 
 **Note:** Currently, only East China 2 supports this feature.
-
-![](images/8576_en-US.png)
 
 ## Create new application {#section_t4j_tmv_q2b .section}
 
@@ -14,30 +12,22 @@ At the same time, you can synchronize the user behavior data acquired from clien
 
     Select client type, and customize the application name and industry.
 
-    ![](images/8577_en-US.png)
-
 2.  Perform the following to configure the data synchronization task.
 
-    First, you must enter the Alibaba Cloud AK information, and then enter the target address of synchronization. Currently, you can only synchronize data to Maxcompute \(if you have not activated Maxcompute, activate it and create a project\).
+    First, you must enter the Alibaba Cloud AK information, and then enter the target address of synchronization. Currently, you can only synchronize data to MaxCompute \(if you have not activated MaxCompute, activate it and create a project\).
 
     After selecting the project name that maxcompute has created, fill in a new custom data table name.
 
     **Note:** Not a data table name that has been created, just fill in a new table name, the synchronization process automatically creates the data table.
 
-    ![](images/8579_en-US.png)
-
 3.  Application created.
 
     After the application has been created successfully, the app appkey and scream are displayed, and the SDK address and integration guide documentation are downloaded.
-
-    ![](images/8581_en-US.jpg)
 
 
 ## Manage applications {#section_k2z_vnv_q2b .section}
 
 After an application is created, the system automatically goes to the **application list** page, where you can manage the application that you created by deleting the application, viewing application data synchronization status, and configuring \(disabling, enabling, or editing\) data synchronization.
-
-![](images/8582_en-US.png)
 
 1.  Turn on data synchronization.
 
@@ -45,19 +35,13 @@ After an application is created, the system automatically goes to the **applicat
 
     If a prompt is in sync, the data synchronization is in progress in real time, you can view the latest synchronization data for the data table by going to the [maxcompute console](https://account.alibabacloud.com/login/login.htm).
 
-    ![](images/8583_en-US.png)
-
 2.  Edit the data synchronization.
 
     The editable items are the same as that of the data synchronization enabling. After successful editing, the target data source for data synchronization is updated in real time.
 
-    ![](images/8584_en-US.png)
-
 3.  Stops data synchronization.
 
-    If you do not want to synchronize the data from a certain application to Maxcompute, you can disable data synchronization. After that, the data synchronization is stopped, but the historical data that has been synchronized is not affected.
-
-    ![](images/8585_en-US.png)
+    If you do not want to synchronize the data from a certain application to MaxCompute, you can disable data synchronization. After that, the data synchronization is stopped, but the historical data that has been synchronized is not affected.
 
 
 ## Data content fields of data synchronization {#section_ecz_p4v_q2b .section}
