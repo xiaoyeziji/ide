@@ -1,62 +1,66 @@
 # 注册API {#concept_r1l_kf3_r2b .concept}
 
-本文将为您介绍注册API的操作步骤。
+本文将为您介绍如何注册API，与通过数据表生成的API统一管理和发布到API网关。
 
-数据服务支持将您手里现成的API服务注册上来，与通过数据表生成的API统一管理和发布到API网关。目前支持Restful风格的API注册，包含GET/POST/PUT/DELETE四类常见请求方式，支持表单/JSON/XML三种数据格式。
+目前数据服务支持Restful风格的API注册，包含GET/POST/PUT/DELETE四类常见请求方式，支持表单/JSON/XML三种数据格式。
 
 ## 配置API基础信息 {#section_o12_1g3_r2b .section}
 
-1.  选择**API服务列表**中的**注册API**，即可进入注册API页面。
+1.  进入**API服务列表** \> **注册API**页面。
 2.  配置API基础信息。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16409/15368069508806_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16409/15413801118806_zh-CN.png)
 
-    配置项说明如下：
+    |配置|说明|
+    |:-|:-|
+    |**API名称**|支持中文、英文、数字、下划线，且只能以英文或中文开头，4-50个字符。|
+    |**API分组**|API分组是指针对某一个功能或场景的API集合，也是API网关对API的最小管理单元。在阿里云API市场中，一个API分组对应于一个API商品。您可单击**新建API分组**进行新建。|
+    |**协议**|目前仅支持HTTP协议。|
+    |**后台服务Host**|待注册API服务的Host，以http://或https://开头，并且不包含Path。|
+    |**后台服务Path**|待注册API服务的Path，Path中支持参数，参数要放在\[\]中，如/user/\[userid\]。定义了Path中的参数后，在注册API向导的第二步API参数配置环节，系统会自动在请求参数列表添加Path位置的参数。
 
-    -   协议：目前暂时只支持HTTP。
-    -   后台服务Host：待注册API服务的Host，以http://或https://开头，并且不包含Path。
-    -   后台服务Path：待注册API服务的Path，Path中支持参数，参数要放在\[\]中，如/user/\[userid\]。
+|
+    |**API Path**|后台服务Path的别名，为了支持相同的后台服务Host和Path的API注册为多个API。如果后台服务Path中定义了参数，那么API Path中需要定义同样的参数，参数也是放在\[\]中。
 
-        定义了Path中的参数后，在注册API向导的第二步API参数配置环节，系统会自动在请求参数列表添加Path位置的参数。
+|
+    |**请求方式**|支持GET、POST、PUT和DELETE，不同的请求方式后续的配置项会略有不同。|
+    |**返回类型**|目前支持JSON和XML返回类型。|
+    |**描述**|对API进行简要描述。|
 
-    -   API Path：API Path是后台服务Path的别名，是为了支持相同的后台服务Host和Path的API注册为多个API。
-
-        如果后台服务Path中定义了参数，那么API Path中需要定义同样的参数，参数也是放在\[\]中。
-
-    -   请求方式：支持GET、POST、PUT和DELETE，不同的请求方式后续的配置项会略有不同。
-    -   返回类型：支持JSON和XML。
-3.  填写好API基础信息之后，单击**下一步**，即可进入API参数配置页面。
+3.  填写好API基础信息后，单击**下一步**，即可进入API参数配置页面。
 
 ## 配置API参数 { .section}
 
 配置API基础信息后即可配置API参数。这里将配置API的请求参数、返回示例和错误码。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16409/15368069518807_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16409/15413801118807_zh-CN.png)
 
--   请求参数定义：
-    -   参数位置：请求参数位置支持Path、Header、Query和Body，不同的请求方式所支持的可选参数位置不一样，请根据产品上提供的可选项按需选择。
-    -   常量参数：常量参数即参数值是固定的参数，对调用者不可见，API调用时不需传入常量参数，但后台服务始终接收这里定义好的常量参数及参数值。适用于当您希望把API的某个参数的取值固定为某个值以及要对调用者隐藏参数的场景。
+|配置|说明|
+|:-|:-|
+|**请求参数定义**| -   参数位置：请求参数位置支持Path、Header、Query和Body，不同的请求方式所支持的可选参数位置不一样，请根据产品上提供的可选项按需选择。
+-   常量参数：常量参数即参数值是固定的参数，对调用者不可见，API调用时不需传入常量参数，但后台服务始终接收这里定义好的常量参数及参数值。适用于当您希望把API的某个参数的取值固定为某个值以及要对调用者隐藏参数的场景。
 -   请求Body定义：请求Body定义只在请求方式为POST和PUT时出现。请求Body定义支持输入Body内容描述，即相当于一个请求Body的示例，以供API调用者参考格式。请求Body的内容类型（Content-Type）支持JSON和XML两种。
 
-    **说明：** 当定义了请求Body，如果您同时在请求参数定义中定义了Body位置的参数，那么Body位置的参数就无效了，系统会以请求Body为准。
+**说明：** 当定义了请求Body，如果您同时在请求参数定义中定义了Body位置的参数，那么Body位置的参数就无效了，系统会以请求Body为准。
 
--   返回示例：支持填写正常返回示例和异常返回示例，以供API调用者参考和编写API返回结果解析代码。
--   错误码：这里填写API调用时的错误信息及解决方案，以帮助API调用者在遇到错误时能够自行查找错误原因并解决。
 
-    **说明：** 为了让API更容易被调用者使用，请尽可能完整的填写API的参数信息，尤其是参数的示例值、默认值以及返回示例等。
+ |
+|**返回示例**|支持填写正常返回示例和异常返回示例，以供API调用者参考和编写API返回结果解析代码。|
+|**错误码**|这里填写API调用时的错误信息及解决方案，以帮助API调用者在遇到错误时能够自行查找错误原因并解决。**说明：** 为了让API更容易被调用者使用，请尽可能完整的填写API的参数信息，尤其是参数的示例值、默认值以及返回示例等。
 
+|
 
 ## API测试 {#section_d5j_nb3_r2b .section}
 
 完成API查询SQL及参数的配置后，即可进行API测试。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368069518797_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15413801118797_zh-CN.png)
 
 填写好参数值，单击**开始测试**，即可在线发送API请求，在右侧可以看到API请求详情及返回内容。如果测试失败，请仔细查看错误提示并做相应的修改重新测试。
 
 配置过程中需要注意正常返回示例的设置。配置好API之后，系统会自动生成异常返回示例和错误码，但没办法自动生成正常返回示例。需要在测试成功后，单击**保存为正常返回示例**，将当前的测试结果保存为正常返回示例。如果返回结果中有敏感数据需要脱敏，可以手动编辑修改。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368069518799_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15413801118799_zh-CN.png)
 
 **说明：** 
 
