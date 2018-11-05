@@ -1,5 +1,7 @@
 # 配置SQL Server Writer {#concept_sdt_fb4_q2b .concept}
 
+本文为您介绍SQL Server Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+
 SQL Server Writer插件实现了写入数据到SQL Server主库的目标表的功能。在底层实现上， SQL Server Writer通过JDBC连接远程SQL Server数据库，并执行相应的`insert into...`的SQL语句将数据写入SQL Server，内部会分批次提交入库。
 
 SQL Server Writer面向ETL开发工程师，他们使用SQL Server Writer从数仓导入数据到SQL Server。同时SQL Server Writer可以作为数据迁移工具为DBA等用户提供服务。
@@ -50,7 +52,7 @@ SQL Server Writer针对SQL Server的类型转换列表，如下所示。
 
     配置同步任务的数据来源和数据去向。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16255/15368019398218_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16255/15413892308218_zh-CN.png)
 
     配置项说明如下：
 
@@ -63,13 +65,13 @@ SQL Server Writer针对SQL Server的类型转换列表，如下所示。
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16255/15368019398219_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16255/15413892308219_zh-CN.png)
 
     -   同行映射：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
     -   自动排版：可以根据相应的规律自动排版。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15368019397675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15413892307675_zh-CN.png)
 
     配置项说明如下：
 
