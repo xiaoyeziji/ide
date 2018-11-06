@@ -1,6 +1,6 @@
 # ODPS MR节点 {#concept_nxk_gz3_p2b .concept}
 
-MaxCompute提供MapReduce编程接口，您可以使用MapReduce提供的接口（Java API）编写MapReduce程序处理MaxCompute中的数据，您可以通过创建ODPS MR类型节点的方式在任务调度中使用。
+MaxCompute提供MapReduce编程接口。您可以通过创建ODPS MR类型节点并提交任务调度，使用MapReduce Java API编写MapReduce程序来处理MaxCompute中的数据。
 
 ODPS MR类型节点的编辑和使用方法，请参见MaxCompute文档示例[WordCount示例](https://www.alibabacloud.com/help/doc-detail/27886.htm)。
 
@@ -10,15 +10,15 @@ ODPS MR类型节点的编辑和使用方法，请参见MaxCompute文档示例[Wo
 
 1.  右键单击**数据开发**下的**业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16288/15404488847643_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16288/15414712397643_zh-CN.png)
 
 2.  右键单击**资源**，选择**新建资源** \> **jar**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404488847720_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15414712397720_zh-CN.png)
 
 3.  按照命名规则在新建资源对话框输入资源名称，并选择资源类型为jar，同时选择需要上传本机的Jar包（可以通过 Eclipse 的 Export 功能打包，也可以通过 ant 或其他工具生成）。本例中使用的示例[mapreduce\_example.jar](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/57148/cn_zh/1534313773021/mapreduce-examples.jar)。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404488847721_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15414712397721_zh-CN.png)
 
     **说明：** 
 
@@ -35,15 +35,15 @@ ODPS MR类型节点的编辑和使用方法，请参见MaxCompute文档示例[Wo
 
 1.  右键单击**数据开发**下的**业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15404488857651_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15414712397651_zh-CN.png)
 
 2.  右键单击**数据开发**，选择**新建数据开发节点** \> **ODPS MR**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404488857723_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15414712397723_zh-CN.png)
 
 3.  编辑节点代码。双击新建的ODPS MR节点，进入如下界面：
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404488857724_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15414712397724_zh-CN.png)
 
     编辑节点代码示例：
 

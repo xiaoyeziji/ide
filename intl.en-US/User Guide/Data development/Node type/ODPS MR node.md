@@ -10,24 +10,24 @@ To use an ODPSMR node, you must first upload and release the resource to be used
 
 1.  Right-click **Business Flow** under **Data Development**, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16288/15404466127643_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16288/15414712447643_en-US.png)
 
 2.  Right-click **Resource**, and select **Create Resource** \> **jar**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404466127720_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15414712457720_en-US.png)
 
-3.  Enter the resource name in the  New Resource according to the naming convention, set the resource type to jar, select a local jar package to the uploaded.
+3.  Enter the resource name in the  Create Resource according to the naming convention, set the resource type to jar and select a local jar package.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404466127721_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15414712457721_en-US.png)
 
     **Note:** 
 
-    -   If this jar package has been uploaded on the ODPS client, you must deselect **Uploaded as the ODPS resource. In this upload, the resource will also be uploaded to ODPS**. Otherwise, an error will be reported during the upload process.
+    -   If this jar package has been uploaded on the ODPS client, you must deselect **Uploaded to ODPS**. Otherwise, an error will be reported during the upload process.
     -   The resource name is not necessarily the same as the name of the uploaded file.
     -   Naming convention for a resource name: a string of 1 to 128 characters, including letters, numbers, underlines, and dots. The name is case insensitive. If the resource is a jar resource, the extension is .jar. If the resource is a Python resource, the extension is .py.
 4.  Click **Submit** to submit the resource to the development scheduling server.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404466127722_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15414712457722_en-US.png)
 
 5.  Publish a node task.
 
@@ -38,15 +38,15 @@ To use an ODPSMR node, you must first upload and release the resource to be used
 
 1.  Right-click **Business Flow** under **Data Development**, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15404466127651_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15414712457651_en-US.png)
 
 2.  Right-click **Data Development**, and select **Create Data Development Node** \> **ODPS MR**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404466127723_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15414712457723_en-US.png)
 
 3.  Edit the node code. Double click the new ODPS MR node and enter the following interface:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15404466137724_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15414712457724_en-US.png)
 
     Node code editing example:
 
