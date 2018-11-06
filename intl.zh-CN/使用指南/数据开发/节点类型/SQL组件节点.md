@@ -1,14 +1,16 @@
 # SQL组件节点 {#concept_s2b_53p_p2b .concept}
 
+SQL组件是一种带有多个输入参数和输出参数的SQL代码过程模板，SQL代码的处理过程一般是引入一到多个源数据表，通过过滤、连接和聚合等操作，加工出新的业务需要的目标表。
+
 ## 操作步骤 {#section_qhm_djp_p2b .section}
 
 1.  右键单击**数据开发**下的**业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15381258057651_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15414808417651_zh-CN.png)
 
 2.  右键单击**数据开发**，选择**新建数据开发节点** \> **SQL组件节点**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15381258057778_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15414808417778_zh-CN.png)
 
 3.  为提高开发效率，数据任务的开发者可以使用项目成员和租户成员贡献的组件来新建数据处理节点。
 
@@ -16,11 +18,11 @@
     -   租户成员创建的组件在公共组件下。
     新建节点时，选择节点类型为**SQL组件节点**类型，并为该节点指定名字。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15381258057777_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15414808417777_zh-CN.png)
 
     为选定的组件指定参数。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15381258057779_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15414808417779_zh-CN.png)
 
     输入参数名称后，选择参数类型为Table或String。
 
@@ -57,7 +59,7 @@
 
 ## 界面功能 {#section_h3p_32q_p2b .section}
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15381258057780_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15414808417780_zh-CN.png)
 
 界面功能说明如下：
 
