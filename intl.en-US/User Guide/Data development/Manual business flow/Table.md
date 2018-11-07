@@ -4,15 +4,15 @@
 
 1.  Click **Manual Business Flow**, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15367339817961_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15415715217961_en-US.png)
 
 2.  Right-click **Table** and select **Create Table**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15367339827962_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15415715217962_en-US.png)
 
 3.  Set basic attributes.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15367339827963_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15415715217963_en-US.png)
 
     -   Chinese Name: Chinese name of the table to be created.
     -   Level-1 Topic: Name of the level-1 target folder of the table to be created.
@@ -20,13 +20,13 @@
     -   Description: Description of the table to be created.
     -   Click **Create Topic**. On the displayed Topic Management page, create level-1 and level-2 topics.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15367339827965_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15415715217965_en-US.png)
 
 4.  Create a table in DDL mode
 
     Click **DDL Mode**. In the displayed dialog box, enter the standard table creation statements.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15367339827966_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15415715217966_en-US.png)
 
     After editing the table creation SQL statements, click **Generate Table Structure**. Information in the Basic Attributes, Physical Model Design, and Table Structure Design areas is automatically entered.
 
