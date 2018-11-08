@@ -4,11 +4,11 @@ To ensure that tasks can dynamically adapt to environment changes when running a
 
 -   No space can be added on either side of the equation mark "=" of a parameter. Correct: bizdate=$bizdate
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15371527977838_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15416457247838_en-US.png)
 
 -   Multiple parameters \(if any\) must be separated by spaces.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15371527977839_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15416457247839_en-US.png)
 
 
 ## System parameters {#section_dp4_2sq_p2b .section}
@@ -18,7 +18,7 @@ DataWorks provides two system parameters, which are defined as follows:
 -   $\{bdp.system.cyctime\}: It is defined as the scheduled run time of an instance. Default format: yyyymmddhh24miss.
 -   $\{bdp.system.bizdate\}: It is defined as the business date on which an instance is calculated. Default business data is one day before the running date, which is displayed in default format: yyyymmdd.
 
-According to the definitions, the formula for calculating the runtime and business date is as follows: `Runtime = Business date - 1`.
+According to the definitions, the formula for calculating the runtime and business date is as follows: `Runtime = Business date + 1`.
 
 To use the system parameters, directly reference '$\{bizdate\}' in the code without setting system parameters in the editing box, and the system will automatically replace the reference fields of system parameters in the code.
 
@@ -46,11 +46,11 @@ For example, for an ODPS SQL node, add $\{variable name\} in the code, and then 
 
 1.  For a parameter referenced in the code, you must add the resolved value during scheduling.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15371527987840_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15416457257840_en-US.png)
 
 2.  Values must be assigned to variables referenced in the code. The value assignment rule is variable name=parameter.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15371527987841_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15416457257841_en-US.png)
 
 
 ## Configure scheduling parameters for a Shell node {#section_slh_x1r_p2b .section}
@@ -61,13 +61,13 @@ For example, for a Shell node, the Shell syntax declaration in the code is: $1, 
 
 1.  For a parameter referenced in the code, you must add the resolved value during scheduling.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15371527987842_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15416457257842_en-US.png)
 
     **Note:** For a Shell node, when the number of parameters reaches 10, $\{10\} should be used to declare the variable.
 
 2.  Values must be assigned to variables referenced in the code. The value assignment rule is parameter 1 parameter 2 parameter 3....\( Replaced variables are resolved based on the parameter location, for example, $1 is resolved to parameter 1\).
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15371527987843_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15416457257843_en-US.png)
 
 
 ## The variable value is a fixed value {#section_a4l_gcr_p2b .section}
