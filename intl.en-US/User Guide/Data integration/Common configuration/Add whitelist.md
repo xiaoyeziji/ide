@@ -2,16 +2,16 @@
 
 This article describes how to add a corresponding whitelist and security group when you are using DataWorks in different regions.
 
-To make sure the security and stability of databases, you can add the IP addresses or IP segments used for accessing the database to the whitelist or [Add security group](reseller.en-US/User Guide/Data integration/Common configuration/Add security group.md#) of the target instance before using certain database instances. 
+To make sure the security and stability of databases, you can add the IP addresses or IP segments used for accessing the database to the whitelist or [Add security group](intl.en-US/User Guide/Data integration/Common configuration/Add security group.md#) of the target instance before using certain database instances. 
 
 ## Add a whitelist {#section_djc_kj5_q2b .section}
 
-1.  Enter the [DataWorks management console](https://partners-intl.aliyun.com)as a developer and navigate to the **project list** page.
+1.  Enter the [DataWorks management console](https://workbench.data.aliyun.com/console)as a developer and navigate to the **project list** page.
 2.  Select a project region.
 
     Currently, the supported regions are China East 2 \(Shanghai\), China South 1 \(Shenzhen\), Hong Kong, and Asia Pacific SOU 1 \(Singapore\). The default region is China East 2, and you can switch to other regions where your project is located, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16265/15415792328537_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16265/15417295558537_en-US.jpg)
 
 3.  Select the whitelist for your project region.
 
@@ -27,7 +27,7 @@ To make sure the security and stability of databases, you can add the IP address
         |China \(Shenzhen\)|100.106.46.0/24,100.106.49.0/24,10.152.27.0/24,10.152.28.0/24,11.192.91.0/24,11.192.96.0/24,11.193.103.0/24,100.64.0.0/8,120.76.104.0/24,120.76.91.0/24,120.78.45.0/24|
         |Hong Kong|10.152.162.0/24,11.192.196.0/24,11.193.11.0/24,100.64.0.0/8,11.192.196.0/24,47.89.61.0/24,47.91.171.0/24|
         |Singapore|100.106.10.0/24,100.106.35.0/24,10.151.234.0/24,10.151.238.0/24,10.152.248.0/24,11.192.153.0/24,11.192.40.0/24,11.193.8.0/24,100.64.0.0/8,100.106.10.0/24,100.106.35.0/24,10.151.234.0/24,10.151.238.0/24,10.152.248.0/24,11.192.40.0/24,47.88.147.0/24,47.88.235.0/24,11.193.162.0/24,11.193.163.0/24,11.193.220.0/24,11.193.158.0/24,47.74.162.0/24,47.74.203.0/24,47.74.161.0/24|
-        |China \(Beijing\)|100.106.48.0/24,10.152.167.0/24,10.152.168.0/24,11.193.50.0/24,11.193.75.0/24,11.193.82.0/24,11.193.99.0/24,100.64.0.0/8,47.93.110.0/24,47.94.185.0/24,47.95.63.0/24,11.197.231.0/24,11.195.172.0/24|
+        |China \(Beijing\)|100.106.48.0/24,10.152.167.0/24,10.152.168.0/24,11.193.50.0/24,11.193.75.0/24,11.193.82.0/24,11.193.99.0/24,100.64.0.0/8,47.93.110.0/24,47.94.185.0/24,47.95.63.0/24,11.197.231.0/24,11.195.172.0/24,47.94.49.0/24,182.92.144.0/24|
         |US West|10.152.160.0/24,100.64.0.0/8,47.89.224.0/24|
         |Asia Pacific SE 3 \(Malaysia\)|11.193.188.0/24,11.221.205.0/24,11.221.206.0/24,11.221.207.0/24,100.64.0.0/8,11.214.81.0/24,47.254.212.0/24|
         |Germany|11.192.116.0/24,11.192.168.0/24,11.192.169.0/24,11.192.170.0/24,11.193.106.0/24,100.64.0.0/8,11.192.116.14,11.192.116.142,11.192.116.160,11.192.116.75,11.192.170.27,47.91.82.22,47.91.83.74,47.91.83.93,47.91.84.11,47.91.84.110,47.91.84.82|
