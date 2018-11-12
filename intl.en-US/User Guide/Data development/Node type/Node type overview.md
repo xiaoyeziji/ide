@@ -20,11 +20,11 @@ For more information about the specific MaxCompute SQL syntax, see [SQL overview
 
 MaxCompute supports the MapReduce programming APIs, whose Java APIs can be used to compile MapReduce program for data processing in MaxCompute. You can create ODPS MR nodes and use them for task scheduling. For more information about the examples, see [ODPS MR node](reseller.en-US/User Guide/Data development/Node type/ODPS MR node.md#).
 
-## Shell task {#section_ewc_ld2_p2b .section}
+## PyODPS task {#section_ewc_ld2_p2b .section}
 
 MaxCompute provides the [Python SDK](https://www.alibabacloud.com/help/doc-detail/34615.htm), which can be used to operate MaxCompute.
 
-DataWorks also provides the PYODPS task type and integrates the Python SDK of MaxCompute. You can directly edit the Python code to operate MaxCompute on a PYODPS node of DataWorks. For more information, see [PyODPS node](reseller.en-US/User Guide/Data development/Node type/PyODPS node.md#).
+DataWorks also provides the PyODPS task type and integrates the Python SDK of MaxCompute. You can directly edit the Python code to operate MaxCompute on a PyODPS node of DataWorks. For more information, see [PyODPS node](reseller.en-US/User Guide/Data development/Node type/PyODPS node.md#).
 
 ## SQL component node {#section_aml_qd2_p2b .section}
 
