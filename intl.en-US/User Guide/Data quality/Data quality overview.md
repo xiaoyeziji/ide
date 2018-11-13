@@ -1,10 +1,10 @@
 # Data quality overview {#concept_zsz_44h_r2b .concept}
 
-**Note:** Currently, Data Quality Center service is in the internal beta stage. It can be activated only in Shanghai region.
+**Note:** Currently, Data Quality Center service is in the internal beta stage. It can be activated only in Shanghai, Hangzhou, Shenzhen, Beijing, UK, Malaysia region. Therefore, if you have related requirements, join DataWorks communication group 0 \(group number is 11718465\) to apply for service activation.
 
 DataWorks Data Quality Center \(DQC\) is a one-stop platform supporting multiple heterogeneous data sources quality check, notifications, and management services.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16388/15367417308743_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16388/15420903628743_en-US.png)
 
 Data Quality monitors DataSet. Currently, Data Quality supports monitoring of MaxCompute data tables and DataHub real-time data streams. When the offline MaxCompute data changes, the Data Quality verifies the data, and blocks the production links to avoid spread of data pollution. Furthermore, Data Quality provides verification of historical results. Thus, you can analyze and quantify data.
 
