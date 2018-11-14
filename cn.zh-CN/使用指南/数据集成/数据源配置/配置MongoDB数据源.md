@@ -8,14 +8,13 @@ MongoDB是文档型的NoSQL数据库，目前是全世界最受欢迎的文档�
 
 ## 操作步骤 {#section_jy4_q4v_42b .section}
 
-1.  以项目管理员身份进入[DataWorks管理控制台](https://workbench.data.aliyun.com/console)，单击对应项目操作栏中的**进入工作区**。
-2.  单击顶部菜单栏中的**数据集成**，导航至**数据源**页面。
-3.  单击**新增数据源**，弹出支持的数据源。
+1.  以项目管理员身份进入[DataWorks管理控制台](https://workbench.data.aliyun.com/console)，单击对应项目操作栏中的**进入数据集成**。
+2.  单击**数据源** \> **新增数据源**，弹出支持的数据源。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15408678677534_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15421905497534_zh-CN.png)
 
-4.  在新建数据源弹出框中，选择数据源类型为**MongoDB**。
-5.  配置MongoDB数据源的各个信息项。
+3.  在新建数据源弹出框中，选择数据源类型为**MongoDB**。
+4.  配置MongoDB数据源的各个信息项。
 
     MongoDB数据源类型分为**阿里云数据库**和**有公网IP的自建数据库**。
 
@@ -23,7 +22,7 @@ MongoDB是文档型的NoSQL数据库，目前是全世界最受欢迎的文档�
     -   有公网IP的自建数据库：一般使用的网络是公网，然而公网可能产生一定的费用。
     以新增**MongDB** \> **阿里云数据库**类型的数据源为例。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15408678677547_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15421905497547_zh-CN.png)
 
     配置项说明如下：
 
@@ -41,7 +40,7 @@ MongoDB是文档型的NoSQL数据库，目前是全世界最受欢迎的文档�
     -   用户名/密码：数据库对应的用户名和密码。
     以新增**MongDB** \> **有公网IP的自建数据库**类型的数据源为例。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15408678677548_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15421905497548_zh-CN.png)
 
     配置项说明如下：
 
@@ -52,8 +51,8 @@ MongoDB是文档型的NoSQL数据库，目前是全世界最受欢迎的文档�
     -   添加访问地址：添加访问地址，格式为host:port。
     -   数据库名：该数据源对应的数据库名称。
     -   用户名/密码：数据库对应的用户名和密码。
-6.  单击**测试连通性**。
-7.  测试连通性通过后，单击**确定**。
+5.  单击**测试连通性**。
+6.  测试连通性通过后，单击**确定**。
 
     **说明：** 
 
