@@ -4,20 +4,19 @@ FTP数据源提供了读取和写入FTP双向通道的能力，可以通过向�
 
 ## 操作步骤 {#section_jy4_q4v_42b .section}
 
-1.  以项目管理员身份进入[DataWorks管理控制台](https://workbench.data.aliyun.com/console)，单击对应项目操作栏中的**进入工作区**。
-2.  单击顶部菜单栏中的**数据集成**，导航至**数据源**页面。
-3.  单击**新增数据源**，弹出支持的数据源。
+1.  以项目管理员身份进入[DataWorks管理控制台](https://workbench.data.aliyun.com/console)，单击对应项目操作栏中的**进入数据集成**。
+2.  单击**数据源** \> **新增数据源**，弹出支持的数据源。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15368045707534_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15421908077534_zh-CN.png)
 
-4.  在新建数据源弹出框中，选择数据源类型为**FTP**。
-5.  配置FTP数据源的各个信息项。
+3.  在新建数据源弹出框中，选择数据源类型为**FTP**。
+4.  配置FTP数据源的各个信息项。
 
     新建FTP数据源时，有以下两种数据源类型，您可根据自身情况进行选择。
 
     -   有公网IP
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15368045707535_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15421908087535_zh-CN.png)
 
         配置项说明如下：
 
@@ -30,7 +29,7 @@ FTP数据源提供了读取和写入FTP双向通道的能力，可以通过向�
         -   用户名/密码：访问该FTP服务的账号密码。
     -   无公网IP
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15368045707536_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15421908087536_zh-CN.png)
 
         配置项说明如下：
 
@@ -42,8 +41,8 @@ FTP数据源提供了读取和写入FTP双向通道的能力，可以通过向�
         -   Host：对应FTP主机的IP地址。
         -   Port：若选择的是FTP协议，则端口默认为21。若选择的是SFTP协议，则端口默认为22。
         -   用户名/密码：访问该FTP服务的账号密码。
-6.  单击**测试连通性**。
-7.  测试连通性通过后，单击**确定**。
+5.  单击**测试连通性**。
+6.  测试连通性通过后，单击**确定**。
 
     提供测试连通性能力，可以判断输入的信息是否正确 。
 
