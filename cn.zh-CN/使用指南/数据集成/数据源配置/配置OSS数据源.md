@@ -9,16 +9,15 @@
 
 ## 操作步骤 {#section_jy4_q4v_42b .section}
 
-1.  以项目管理员身份进入[DataWorks管理控制台](https://workbench.data.aliyun.com/console)，单击对应项目操作栏中的**进入工作区**。
-2.  单击顶部菜单栏中的**数据集成**，导航至**数据源**页面。
-3.  单击**新增数据源**，弹出支持的数据源。
+1.  以项目管理员身份进入[DataWorks管理控制台](https://workbench.data.aliyun.com/console)，单击对应项目操作栏中的**进入数据集成**。
+2.  单击**数据源** \> **新增数据源**，弹出支持的数据源。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16209/15408682117559_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16209/15421913957559_zh-CN.png)
 
-4.  在新建数据源弹出框中，选择数据源类型为**OSS**。
-5.  配置OSS数据源的各个信息项。
+3.  在新建数据源弹出框中，选择数据源类型为**OSS**。
+4.  配置OSS数据源的各个信息项。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16209/15408682117560_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16209/15421913957560_zh-CN.png)
 
     配置项说明如下：
 
@@ -30,8 +29,8 @@
 
     -   Bucket：相应的OSS Bucket信息，存储空间，是用于存储对象的容器，可以创建一个或者多个存储空间，然后向每个存储空间中添加一个或多个文件。此处填写的存储空间将在数据同步任务里找到相应的文件，其他的Bucket没有添加的则不能搜索其中的文件。
     -   AccessID/AceessKey：[访问密匙](https://www.alibabacloud.com/help/doc-detail/53045.htm)（AccessKeyID和AccessKeySecret）相当于登录密码。
-6.  单击**测试连通性**。
-7.  测试连通性通过后，单击**确定**。
+5.  单击**测试连通性**。
+6.  测试连通性通过后，单击**确定**。
 
 **说明：** 在准备OSS数据时，注意如果数据为CSV文件，则必须为标准格式的CSV文件。例如：列内容如果在半角引号（"）内时，需要替换成两个半角引号（""），否则可能会造成文件被错误分割。
 
