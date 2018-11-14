@@ -6,16 +6,15 @@
 
 ## 操作步骤 {#section_jy4_q4v_42b .section}
 
-1.  以项目管理员身份进入[DataWorks管理控制台](https://workbench.data.aliyun.com/console)，单击对应项目操作栏中的**进入工作区**。
-2.  单击顶部菜单栏中的**数据集成**，导航至**数据源**页面。
-3.  单击**新增数据源**，弹出支持的数据源。
+1.  以项目管理员身份进入[DataWorks管理控制台](https://workbench.data.aliyun.com/console)，单击对应项目操作栏中的**进入数据集成**。
+2.  单击**数据源** \> **新增数据源**，弹出支持的数据源。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16204/15367208187542_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16204/15421909717542_zh-CN.png)
 
-4.  在新建数据源弹出框中，选择数据源类型为**MaxCompute（ODPS）**。
-5.  配置MaxCompute数据源的各个信息项。
+3.  在新建数据源弹出框中，选择数据源类型为**MaxCompute（ODPS）**。
+4.  配置MaxCompute数据源的各个信息项。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16204/15367208187543_zh-CN.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16204/15421909717543_zh-CN.jpg)
 
     配置项说明如下：
 
@@ -24,8 +23,8 @@
     -   ODPS Endpoint：默认只读，从系统配置中自动读取。
     -   ODPS项目名称：对应的MaxCompute Project标识。
     -   AccessID/AceessKey：[访问密匙](https://www.alibabacloud.com/help/zh/doc-detail/53045.htm)（AccessKeyID和AccessKeySecret）相当于登录密码。
-6.  单击**测试连通性**。
-7.  测试连通性通过后，单击**确定**。
+5.  单击**测试连通性**。
+6.  测试连通性通过后，单击**确定**。
 
     提供测试连通性能力，可以判断输入的Project/AK信息是否正确 。
 
