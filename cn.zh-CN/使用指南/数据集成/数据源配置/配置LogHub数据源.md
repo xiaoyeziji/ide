@@ -4,16 +4,15 @@ LogHub数据源作为数据中枢，提供了读取和写入LogHub双向通道�
 
 ## 操作步骤 {#section_jy4_q4v_42b .section}
 
-1.  以项目管理员身份进入[DataWorks管理控制台](https://workbench.data.aliyun.com/console)，单击对应项目操作栏中的**进入工作区**。
-2.  单击顶部菜单栏中的**数据集成**，导航至**数据源**页面。
-3.  单击**新增数据源**，弹出支持的数据源。
+1.  以项目管理员身份进入[DataWorks管理控制台](https://workbench.data.aliyun.com/console)，单击对应项目操作栏中的**进入数据集成**。
+2.  单击**数据源** \> **新增数据源**，弹出支持的数据源。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16203/15367207767540_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16203/15421908647540_zh-CN.png)
 
-4.  在新建数据源弹出框中，选择数据源类型为**LogHub**。
-5.  配置LogHub数据源的各个信息项。
+3.  在新建数据源弹出框中，选择数据源类型为**LogHub**。
+4.  配置LogHub数据源的各个信息项。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16203/15367207767541_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16203/15421908647541_zh-CN.png)
 
     配置项说明如下：
 
@@ -22,8 +21,8 @@ LogHub数据源作为数据中枢，提供了读取和写入LogHub双向通道�
     -   LogHub Endpoint：一般格式为http://cn-shanghai.log.aliyun.com。详情请参见[服务入口](https://www.alibabacloud.com/help/doc-detail/29008.htm)。
     -   Project：输入对应的Project。
     -   AccessID/AceessKey：[访问密匙](https://www.alibabacloud.com/help/doc-detail/53045.htm)（AccessKeyID和AccessKeySecret）相当于登录密码。
-6.  单击**测试连通性**。
-7.  测试连通性通过后，单击**确定**。
+5.  单击**测试连通性**。
+6.  测试连通性通过后，单击**确定**。
 
     提供测试连通性能力，可以判断输入的Project/AK信息是否正确 。
 
