@@ -4,20 +4,19 @@ Oracle关系型数据库数据源提供了读取和写入Oracle双向通道的�
 
 ## 操作步骤 {#section_jy4_q4v_42b .section}
 
-1.  以项目管理员身份进入[DataWorks管理控制台](https://workbench.data.aliyun.com/console)，单击对应项目操作栏中的**进入工作区**。
-2.  单击顶部菜单栏中的**数据集成**，导航至**数据源**页面。
-3.  单击**新增数据源**，弹出支持的数据源。
+1.  以项目管理员身份进入[DataWorks管理控制台](https://workbench.data.aliyun.com/console)，单击对应项目操作栏中的**进入数据集成**。
+2.  单击**数据源** \> **新增数据源**，弹出支持的数据源。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15367209667556_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15421910497556_zh-CN.png)
 
-4.  在新建数据源弹出框中，选择数据源类型为**Oracle**。
-5.  配置Oracle数据源的各个信息项。
+3.  在新建数据源弹出框中，选择数据源类型为**Oracle**。
+4.  配置Oracle数据源的各个信息项。
 
     Oracle数据源类型分为**有公网IP**和**无公网IP**，您可根据自身情况进行选择。
 
     以新增**Oracle** \> **有公网IP**类型的数据源为例。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15367209677557_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15421910497557_zh-CN.png)
 
     配置项说明如下：
 
@@ -28,7 +27,7 @@ Oracle关系型数据库数据源提供了读取和写入Oracle双向通道的�
     -   用户名/密码：数据库对应的用户名和密码。
     以新增**Oracle** \> **无公网IP**类型的数据源为例。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15367209677558_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15421910497558_zh-CN.png)
 
     配置项说明如下：
 
@@ -37,8 +36,8 @@ Oracle关系型数据库数据源提供了读取和写入Oracle双向通道的�
     -   数据源描述： 对数据源进行简单描述，不得超过80个字符。
     -   JDBC URL：JDBC连接信息，格式为jdbc:oracle:thin:@ServerIP:Port:Database。
     -   用户名/密码：数据库对应的用户名和密码。
-6.  单击**测试连通性**。
-7.  测试连通性通过后，单击**确定**。
+5.  单击**测试连通性**。
+6.  测试连通性通过后，单击**确定**。
 
 ## 测试连通性说明 {#section_eq3_lnb_p2b .section}
 
