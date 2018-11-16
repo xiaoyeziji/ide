@@ -6,19 +6,19 @@ ODPS SQL采用类似SQL的语法，适用于海量数据（TB级）但实时性�
 
     右键单击**数据开发**下的**业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15416605777651_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15423487087651_zh-CN.png)
 
 2.  新建ODPS SQL节点。
 
     右键单击**数据开发**，选择**新建数据开发节点** \> **ODPS SQL**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/15416605777679_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/15423487087679_zh-CN.png)
 
 3.  编辑节点代码。
 
-    ODPS SQL的具体语法请参见[MaxCompute SQL](https://www.alibabacloud.com/help/doc-detail/27860.htm)模块 。
+    编写符合语法的ODPS SQL代码，SQL语法请参见[MaxCompute SQL](https://help.aliyun.com/document_detail/27860.html)模块。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/15416605777680_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/15423487087680_zh-CN.png)
 
     示例：创建一张表并向表中插入数据，查询结果。
 
@@ -52,7 +52,7 @@ ODPS SQL采用类似SQL的语法，适用于海量数据（TB级）但实时性�
 
     4.  写好SQL，单击顶部的**运行**或单击**F8**，此时系统会将我们的SQL按照从上往下的顺序执行，并打印日志。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/154166057711262_zh-CN.jpg)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/154234870811262_zh-CN.jpg)
 
         **说明：** 当使用insert into语句时，日志中会提示：**!!!警告!!!** 。
 
@@ -68,27 +68,37 @@ ODPS SQL采用类似SQL的语法，适用于海量数据（TB级）但实时性�
 
     查询出的结果，会直接以电子表格的风格展示出来，您可以在DataWorks中执行操作，或者在电子表格中打开，也可自由复制内容粘贴在本地Excel中。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16335/15416605778260_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16335/15423487088260_zh-CN.png)
 
     -   隐藏列：选择隐藏其中的一列或多列，可以隐藏该列。
     -   复制该行：左侧选中需要复制的一行或多行后，单击复制该行。
     -   复制该列：顶部选中需要复制的一列或多列后，单击复制该列。
     -   复制：可以自由复制选中的内容。
     -   搜索：在查询结果的右上角会出现搜索框，方便对表中数据进行搜素。
-5.  节点调度配置。
+5.  成本估计
 
-    单击节点任务编辑在区域右侧的**调度配置**，即可进入节点调度配置页面，详情请参见[调度配置](intl.zh-CN/使用指南/数据开发/调度配置/基本属性.md#)模块。
+    您可以点击**成本估计**按钮估算本次SQL任务可能产生的费用。
 
-6.  提交节点任务。
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/154234870832188_zh-CN.png)
+
+    点击后会显示估算出的任务执行费用，如果预估费用一栏报错，您可以将鼠标悬停在**X**按钮上查看报错原因。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16293/154234870832189_zh-CN.png)
+
+6.  节点调度配置。
+
+    单击节点任务编辑在区域右侧的**调度配置**，即可进入节点调度配置页面，详情请参见[调度配置](cn.zh-CN/使用指南/数据开发/调度配置/基本属性.md#)模块。
+
+7.  提交节点任务。
 
     完成调度配置后，单击左上角的**保存**，提交（提交并解锁）到开发环境。
 
-7.  发布节点任务。
+8.  发布节点任务。
 
-    具体操作请参见[发布管理](intl.zh-CN/使用指南/数据开发/发布管理/任务发布.md#)。
+    具体操作请参见[发布管理](cn.zh-CN/使用指南/数据开发/发布管理/任务发布.md#)。
 
-8.  在生产环境测试。
+9.  在生产环境测试。
 
-    具体操作请参见[周期任务](intl.zh-CN/使用指南/运维中心/任务列表/周期任务.md#)。
+    具体操作请参见[周期任务](cn.zh-CN/使用指南/运维中心/任务列表/周期任务.md#)。
 
 
