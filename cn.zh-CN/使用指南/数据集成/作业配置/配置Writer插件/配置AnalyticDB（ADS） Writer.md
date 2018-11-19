@@ -56,7 +56,7 @@ AnalyticDB Writer支持AnalyticDB中以下数据类型。
 -   "partition":\["pt=1, ds=hangzhou"\] （读取表下面，一级分区pt=1下面，二级分区ds=hangzhou的数据）。
 
 |否|无|
-|writeMode|支持Load Data（批量导入）和Insert Ignore（实时插入）两种写入模式。如果在系统中已经有相同主键的记录，则当前INSERT IGNORE模式的语句执行能成功，但新记录将会被丢弃掉。|是|无|
+|writeMode|支持**Load Data（批量导入）**和**Insert Ignore（实时插入）**两种写入模式。如果在系统中已经有相同主键的记录，则当前INSERT IGNORE模式的语句执行能成功，但新记录将会被丢弃掉。|是|无|
 |column|目的表字段列表，可以为\["\*"\]，或者具体的字段列表，例如\["a", "b", "c"\]。|是|无|
 |overWrite|ADS写入是否覆盖当前写入的表，true为覆盖写入，false为不覆盖（追加）写入。当writeMode为Load时，该值才会生效。|是|无|
 |lifeCycle|ADS临时表生命周期。当writeMode为Load时，该值才会生效。|是|无|
@@ -73,7 +73,7 @@ AnalyticDB Writer支持AnalyticDB中以下数据类型。
 
     配置同步任务的数据来源和数据去向。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15411393637998_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15426196207998_zh-CN.png)
 
     配置项说明如下：
 
@@ -84,13 +84,13 @@ AnalyticDB Writer支持AnalyticDB中以下数据类型。
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15411393638002_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15426196208002_zh-CN.png)
 
     -   同行映射：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
     -   自动排版：可以根据相应的规律自动排版。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15411393637675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15426196207675_zh-CN.png)
 
     配置项说明如下：
 
@@ -148,4 +148,38 @@ AnalyticDB Writer支持AnalyticDB中以下数据类型。
     }
 }
 ```
+
+## 注意事项 {#section_apy_k3v_vfb .section}
+
+当您使用支持**Load Data（批量导入）模式**从[MaxCompute](intl.zh-CN/使用指南/数据集成/作业配置/配置Reader插件/配置MaxCompute  Reader.md#)向ADS导入数据时，请注意：
+
+-   ADS上的表必须是**批量表**（如果是实时表，请使用Insert Ignore模式进行导入）。
+-   在ADS上给`cloud-data-pipeline@aliyun-inner.com`账号至少授予表的[Load Data权限](https://help.aliyun.com/document_detail/26394.html)。
+-   需要在MaxCompute上对`garuda_build@aliyun.com` 与`garuda_data@aliyun.com` 授予describe和select权限。
+
+    ```
+    add user ALIYUN$garuda_build@aliyun.com;
+    add user ALIYUN$garuda_data@aliyun.com;
+    grant describe,select on table project_name.table_name to user ALIYUN$garuda_build@aliyun.com;
+    grant describe,select on tableproject_name.table_name to user ALIYUN$garuda_data@aliyun.com;
+    ```
+
+    ADS目前仅允许操作者将数据导入自身为Project Owner的MaxCompute Project中，或者操作者是MaxCompute表的Table Creator。
+
+
+**Insert Ignore（实时插入）**从[MaxCompute](intl.zh-CN/使用指南/数据集成/作业配置/配置Reader插件/配置MaxCompute  Reader.md#)向ADS导入数据时，请注意：
+
+-   ADS上的表必须是**实时表**。
+-   在ADS上给`cloud-data-pipeline@aliyun-inner.com`账号至少授予表的[Load Data权限](https://help.aliyun.com/document_detail/26394.html)。
+-   需要在MaxCompute上对`garuda_build@aliyun.com` 与`garuda_data@aliyun.com` 授予describe和select权限。
+
+    ```
+    add user ALIYUN$garuda_build@aliyun.com;
+    add user ALIYUN$garuda_data@aliyun.com;
+    grant describe,select on table project_name.table_name to user ALIYUN$garuda_build@aliyun.com;
+    grant describe,select on tableproject_name.table_name to user ALIYUN$garuda_data@aliyun.com;
+    ```
+
+    ADS目前仅允许操作者将数据导入自身为Project Owner的MaxCompute Project中，或者操作者是MaxCompute表的Table Creator。
+
 
