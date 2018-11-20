@@ -9,7 +9,7 @@ For more information about how to use the components, see [SQL Component node](r
 
 ## Interface functions {#section_cs2_wyf_q2b .section}
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16312/15396778567947_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16312/15427070267947_en-US.png)
 
 The interface functions are described below:
 
