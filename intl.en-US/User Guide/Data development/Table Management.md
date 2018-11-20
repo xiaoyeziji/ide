@@ -5,11 +5,11 @@
 1.  Click **Table Management** in the upper left corner of the page.
 2.  Select the **+** icon to create a table.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16332/15368243858220_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16332/15427072828220_en-US.png)
 
 3.  Enter the table name, only MaxCompute tables are supported currently, click **Submit**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16332/15368243858221_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16332/15427072828221_en-US.png)
 
 4.  Set basic attributes.
     -   Chinese Name: Chinese name of the table to be created.
@@ -18,7 +18,7 @@
     -   Description: Description of the table to be created.
     -   Click **Create Topic**. On the displayed Topic Management page, create level-1 and level-2 topics.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15368243857965_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15427072827965_en-US.png)
 
 5.  Create a table in DDL mode.
 
