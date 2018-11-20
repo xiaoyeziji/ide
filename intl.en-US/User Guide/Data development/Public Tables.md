@@ -2,7 +2,7 @@
 
 In the Public Table area, you can view tables created in all projects under the current tenant.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16331/15367344538216_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16331/15427072468216_en-US.png)
 
 -   Project: Project name. The prefix "odps." is added to each project name. For example, if a project name is "test", "odps.test" is displayed.
 -   Table Name: Name of the table in the project.
@@ -17,5 +17,5 @@ Click a table name to view the column and partition information of the table, an
 
 Similar to Table Management, Public Table supports the development and production environments. The current environment is displayed in blue. After you click an environment to be queried, the corresponding environment is displayed.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16331/15367344538217_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16331/15427072468217_en-US.png)
 
