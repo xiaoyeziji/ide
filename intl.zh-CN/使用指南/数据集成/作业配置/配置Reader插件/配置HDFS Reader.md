@@ -10,7 +10,7 @@ TextFile是Hive建表时默认使用的存储格式，数据不做压缩，本�
 
 **说明：** 数据同步需要使用Admin账号，并且有访问相应文件的读写权限。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16224/15428752797725_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16224/15428755687725_zh-CN.png)
 
 命令说明如下：
 
@@ -351,5 +351,35 @@ boolean captureRawRecord = true;
         ]
     }
 }
+```
+
+parquetSchema的HDFS Reader配置样例如下。
+
+**说明：** fileType配置项必须设置为parquet, 且column配置项不生效。
+
+```
+"reader": 
+    {
+        "name": "hdfsreader",
+        "parameter": 
+            {
+                "path": "/user/hive/warehouse/addata.db/dw_ads_rtb_monitor_minute/thedate=20170103/hour_id=22/*",
+                "defaultFS": "h10s010.07100.149:8020",
+                "column": [],
+                "fileType": "parquet",
+                "encoding": "UTF-8",
+                "parquetSchema": "message m {
+                                optional int32 minute_id;
+                                optional int32 dsp_id;
+                                optional int32 adx_pid;
+                                optional int64 req;
+                                optional int64 res;
+                                optional int64 suc;
+                                optional int64 imp;
+                                optional double revenue;
+                                }"
+            }
+
+    }
 ```
 
