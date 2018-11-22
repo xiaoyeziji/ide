@@ -1,10 +1,8 @@
 # Overview {#concept_pgt_1th_r2b .concept}
 
-**Note:** Data quality is currently in the internal test phase, and only Shanghai region is open.
-
 Data quality home page mainly includes ODPS Division I subscribe to, DataHub Topic I subscribe to, Current task alarm condition, Current task blocking situation, Task Alarm Situation Trend and Task Blocking Situation Trend Graph.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16392/15367418498762_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16392/15428573838762_en-US.png)
 
 The module is described below:
 
