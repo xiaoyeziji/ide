@@ -1,5 +1,7 @@
 # 配置OTS Reader {#concept_jkn_jhq_p2b .concept}
 
+本文为您介绍OTS Reader支持的数据类型、读取方式、字段映射和数据源等参数及配置举例。
+
 OTS Reader插件实现了从OTS读取数据，通过您指定抽取数据范围可方便地实现数据增量抽取的需求。目前支持以下三种抽取方式。
 
 -   全表抽取
@@ -28,7 +30,7 @@ OTS Reader会根据OTS的表范围，按照数据同步并发的数目N，将范
 
 |参数|描述|必选|默认值|
 |:-|:-|:-|:--|
-|endpoint|OTS Server的EndPoint（服务地址），详情请参见[访问控制](https://help.aliyun.com/document_detail/27296.html)。|是|无|
+|endpoint|OTS Server的EndPoint（服务地址），详情请参见[访问控制](https://www.alibabacloud.com/help/zh/faq-detail/27296.htm)。|是|无|
 |accessId|OTS的accessId。|是|无|
 |accessKey|OTS的accessKey。|是|无|
 |instanceName|OTS的实例名称，实例是您使用和管理OTS服务的实体。您在开通OTS服务后，需要通过管理控制台来创建实例，然后在实例内进行表的创建和管理。
