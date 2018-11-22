@@ -10,7 +10,7 @@ TextFile是Hive建表时默认使用的存储格式，数据不做压缩，本�
 
 **说明：** 数据同步需要使用Admin账号，并且有访问相应文件的读写权限。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16224/15408688977725_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16224/15428752797725_zh-CN.png)
 
 命令说明如下：
 
