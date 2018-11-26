@@ -48,7 +48,7 @@ MaxCompute Writer支持MaxCompute中以下数据类型。
 
     配置同步任务的数据来源和数据去向。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16247/15411409068125_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16247/15432255998125_zh-CN.png)
 
     配置项说明如下：
 
@@ -73,7 +73,7 @@ MaxCompute Writer支持MaxCompute中以下数据类型。
     -   自动排版：可以根据相应的规律自动排版。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15411409067675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15432255997675_zh-CN.png)
 
     配置项说明如下：
 
@@ -133,6 +133,17 @@ MaxCompute Writer支持MaxCompute中以下数据类型。
         ]
     }
 }
+```
+
+如果您需要指定MaxCompute 的[Tunnel Endpoint](../../../../intl.zh-CN/准备工作/配置Endpoint.md#)，可通过脚本模式手动配置数据源：将上述示例中的 `"datasource":"",`替换为数据源的具体参数，示例如下：
+
+```
+"accessId":"xxxxxxxxxxxxxxxxxxxxxxxx",
+ "accessKey":"*******************",
+ "endpoint":"http://service.eu-central-1.maxcompute.aliyun-inc.com/api",
+ "odpsServer":"http://service.eu-central-1.maxcompute.aliyun-inc.com/api", 
+"tunnelServer":"http://dt.eu-central-1.maxcompute.aliyun.com", 
+"project":"yyyyyyyy", 
 ```
 
 ## 补充说明 {#section_j3w_xrm_q2b .section}
