@@ -1,8 +1,8 @@
 # 配置AnalyticDB（ADS） Writer {#concept_bft_jyk_q2b .concept}
 
-本文为您介绍AnalyticDB（ADS） Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+本文将为您介绍AnalyticDB（ADS）Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
 
-AnalyticDB（ADS） Writer实现了两种向Analytic DB（ADS）导入数据的模式。
+AnalyticDB（ADS）Writer实现了两种向Analytic DB（ADS）导入数据的模式。
 
 -   Load Data（批量导入） 模式：数据中转落地导入方式。
     -   优点：当数据量较大（\>1KW）时，能够以较快速度进行导入。
@@ -73,30 +73,32 @@ AnalyticDB Writer支持AnalyticDB中以下数据类型。
 
     配置同步任务的数据来源和数据去向。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15426196207998_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15435625517998_zh-CN.png)
 
-    配置项说明如下：
+    |配置|说明|
+    |:-|:-|
+    |**数据源**|即上述参数说明中的datasource，一般填写您配置的数据源名称。|
+    |**表**|即上述参数说明中的table，选择需要同步的表。|
+    |**导入模式**|即上述参数说明中的writeMode，支持Load Data（批量导入）和Insert Ignore（实时插入）两种模式。|
 
-    -   数据源：即上述参数说明中的datasource，一般填写您配置的数据源名称。
-    -   表：即上述参数说明中的table，选择需要同步的表。
-    -   导入模式：即上述参数说明中的writeMode，支持Load Data（批量导入）和Insert Ignore（实时插入）两种模式。
 2.  字段映射，即上述参数说明中的column。
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15426196208002_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15435625518002_zh-CN.png)
 
-    -   同行映射：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
-    -   自动排版：可以根据相应的规律自动排版。
+    -   **同行映射**：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
+    -   **自动排版**：可以根据相应的规律自动排版。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15426196207675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15435625517675_zh-CN.png)
 
-    配置项说明如下：
+    |配置|说明|
+    |:-|:-|
+    |**DMU**|数据集成消耗资源（包括CPU、内存、网络等资源分配）的度量单位。一个DMU描述了一个数据集成作业最小运行能力，即在限定的CPU、内存、网络等资源情况下对于数据同步的处理能力。|
+    |**作业并发数**|可将此属性视为数据同步任务内，可从源并行读取或并行写入数据存储端的最大线程数。向导模式通过界面化配置并发数，指定任务所使用的并行度。|
+    |**错误记录数**|错误记录数，表示脏数据的最大容忍条数。|
 
-    -   DMU：数据集成消耗资源（包括CPU、内存、网络等资源分配）的度量单位。一个DMU描述了一个数据集成作业最小运行能力，即在限定的CPU、内存、网络等资源情况下对于数据同步的处理能力。
-    -   作业并发数：可将此属性视为数据同步任务内，可从源并行读取或并行写入数据存储端的最大线程数。向导模式通过界面化配置并发数，指定任务所使用的并行度
-    -   错误记录数：错误记录数，表示脏数据的最大容忍条数。
 
 ## 脚本开发介绍 {#section_cp2_wsh_p2b .section}
 
@@ -154,7 +156,7 @@ AnalyticDB Writer支持AnalyticDB中以下数据类型。
 当您使用支持**Load Data（批量导入）模式**从[MaxCompute](intl.zh-CN/使用指南/数据集成/作业配置/配置Reader插件/配置MaxCompute  Reader.md#)向ADS导入数据时，请注意：
 
 -   ADS上的表必须是**批量表**（如果是实时表，请使用Insert Ignore模式进行导入）。
--   在ADS上给`cloud-data-pipeline@aliyun-inner.com`账号至少授予表的[Load Data权限](https://help.aliyun.com/document_detail/26394.html)。
+-   在ADS上给`cloud-data-pipeline@aliyun-inner.com`账号至少授予表的Load Data权限。
 -   需要在MaxCompute上对`garuda_build@aliyun.com` 与`garuda_data@aliyun.com` 授予describe和select权限。
 
     ```
@@ -170,7 +172,7 @@ AnalyticDB Writer支持AnalyticDB中以下数据类型。
 **Insert Ignore（实时插入）**从[MaxCompute](intl.zh-CN/使用指南/数据集成/作业配置/配置Reader插件/配置MaxCompute  Reader.md#)向ADS导入数据时，请注意：
 
 -   ADS上的表必须是**实时表**。
--   在ADS上给`cloud-data-pipeline@aliyun-inner.com`账号至少授予表的[Load Data权限](https://help.aliyun.com/document_detail/26394.html)。
+-   在ADS上给`cloud-data-pipeline@aliyun-inner.com`账号至少授予表的Load Data权限。
 -   需要在MaxCompute上对`garuda_build@aliyun.com` 与`garuda_data@aliyun.com` 授予describe和select权限。
 
     ```
