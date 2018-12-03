@@ -1,9 +1,5 @@
 # Establish DQC {#concept_c3d_lsh_r2b .concept}
 
-**Note:** 
-
-DQC is in Closed Beta Test currently, and only Shanghai region is available.
-
 ## Procedure {#section_uyx_s5n_r2b .section}
 
 1.  Create an account.
