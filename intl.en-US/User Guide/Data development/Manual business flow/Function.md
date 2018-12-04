@@ -12,7 +12,7 @@ Currently, the Python and Java APIs support implementation of UDFs. To compile a
 
 1.  Click **Manual Business Flow** in the left-side navigation pane, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15415713807961_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15438896397961_en-US.png)
 
 2.  In the offline Java environment, edit the program, compress the program into a jar package, create a jar resource, and submit and release the program.
 
@@ -20,11 +20,11 @@ Currently, the Python and Java APIs support implementation of UDFs. To compile a
 
 3.  Select **Function** \> **Create Function**, enter the configuration of the new function, click **Submit**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16317/15415713807995_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16317/15438896397995_en-US.png)
 
 4.  Edit the function configuration.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16317/15415713807996_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16317/15438896397996_en-US.png)
 
     -   Class Name: name of the main class that implements the UDF. When the resource is Python, the typical style of writing is: Python resource name.Class name \('.py' is not needed in the resource name\).
     -   Resources: Name of the resource in the second step, if there are multiple resources, separate them using commas.
@@ -35,6 +35,6 @@ Currently, the Python and Java APIs support implementation of UDFs. To compile a
 
 6.  Release a node task
 
-    For more information about the operation, see [Publish management](reseller.en-US/User Guide/Data development/Console functions/Publish management.md#).
+    For more information about the operation, see [Publish a task](reseller.en-US/User Guide/Data development/Publish management/Publish a task.md#).
 
 
