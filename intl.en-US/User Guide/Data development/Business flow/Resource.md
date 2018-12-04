@@ -22,15 +22,15 @@ On DataWorks, the process of creating a resource is a process of adding a resour
 
 1.  Right-click **Business Flow** under **Data Development**, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15403747587651_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15438882677651_en-US.png)
 
 2.  Right-click **Resource**, and select **Create Resource** \> **jar**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15403747587720_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15438882677720_en-US.png)
 
 3.  The Create Resource dialog box is displayed. Enter the resource name according to the naming convention, set the resource type to jar, select a local jar package to the uploaded, and click **OK** to submit the package in the development environment.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15403747587721_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15438882677721_en-US.png)
 
     **Note:** 
 
@@ -39,10 +39,10 @@ On DataWorks, the process of creating a resource is a process of adding a resour
     -   Naming convention for a resource name: a string of 1 to 128 characters, including letters, numbers, underlines, and dots. The name is case insensitive. If the resource is a jar resource, the extension is .jar.
 4.  Click **OK** to submit the resource to the development scheduling server.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15403747587722_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15438882677722_en-US.png)
 
 5.  Release a node task.
 
-    For more information about the operation, see [Publish management](reseller.en-US/User Guide/Data development/Console functions/Publish management.md#).
+    For more information about the operation, see [Publish a task](intl.en-US/User Guide/Data development/Publish management/Publish a task.md#).
 
 
