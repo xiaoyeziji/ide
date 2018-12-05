@@ -4,7 +4,7 @@
 
 ## Function Studio 1.0 {#section_hgb_hz1_rfb .section}
 
-发布日期：2018-11-30
+发布日期：2018-12-11
 
 -   全新推出支持在线开发UDF\(Java\)的IDE产品。
 -   支持用户一站式开发UDF项目，编译发布UDF资源或函数。
