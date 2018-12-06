@@ -30,7 +30,7 @@ OTS Reader会根据OTS的表范围，按照数据同步并发的数目N，将范
 
 |参数|描述|必选|默认值|
 |:-|:-|:-|:--|
-|endpoint|OTS Server的EndPoint（服务地址），详情请参见[访问控制](https://www.alibabacloud.com/help/zh/faq-detail/27296.htm)。|是|无|
+|endpoint|OTS Server的EndPoint（服务地址），详情请参见[服务地址](https://www.alibabacloud.com/help/zh/faq-detail/52671.htm)。|是|无|
 |accessId|OTS的accessId。|是|无|
 |accessKey|OTS的accessKey。|是|无|
 |instanceName|OTS的实例名称，实例是您使用和管理OTS服务的实体。您在开通OTS服务后，需要通过管理控制台来创建实例，然后在实例内进行表的创建和管理。
