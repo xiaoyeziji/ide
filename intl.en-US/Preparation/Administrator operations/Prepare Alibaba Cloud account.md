@@ -25,12 +25,15 @@ To guarantee smooth processing of tasks in DataWorks, you must create an AccessK
 
 1.  Log on to the Alibaba Cloud official website, and click **accesskeys** under the username in the upper-right corner to enter the AccessKey Management page.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16174/15362020308934_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16174/15444937838934_en-US.png)
 
 2.  Click **Create an AccessKey** in the upper-right corner, and click **Agree and Create** in the dialog window that appears to create an AccessKey.
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16174/15444937838935_en-US.png)
+
 3.  When an AccessKey is successfully created, the system automatically jumps to the AccessKey Management page, where you can view the status of the AccessKey and disable or delete it.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16174/15362020308936_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16174/15444937838936_en-US.png)
 
     Once an AccessKey is disabled, services that use this AccessKey encounter operational failures and report errors. Therefore, if you change your AccessKeys, you must promptly make the corresponding changes for the products and services that use the affected AccessKeys.
 
