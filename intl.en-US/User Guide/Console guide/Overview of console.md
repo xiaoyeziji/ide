@@ -4,7 +4,7 @@ You can view the recently used projects on the Overview page, and enter the work
 
 Log on to the [DataWorks console](https://workbench.data.aliyun.com/console) page as an organization administrator \(main account\).
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16186/15373509078728_en-US.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16186/15446659518728_en-US.jpg)
 
 **Note:** The overview page updates the display based on your usage and creation time, displays only the three projects that you recently used or created.
 
@@ -23,4 +23,6 @@ Log on to the [DataWorks console](https://workbench.data.aliyun.com/console) pag
 -   If the sub-account is logged in without creating the corresponding project, you are prompted to contact your administrator, open project permissions.
 -   The sub-account displays up to two projects, and you can go to the **Project List** page to view all the projects.
 -   If the sub-account only has deployment privilege, you cannot enter the workspace.
+-   You can update your AK info[here](https://intl.data.aliyun.com/console/akinfo).
+
 
