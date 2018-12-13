@@ -36,7 +36,7 @@
     2.  勾选RAM用户安全设置页面中**自主管理AccessKey**的**允许**。
     3.  单击**确定**即可生效。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/15446650338949_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/15446672838949_zh-CN.png)
 
         该选项默认不勾选，故使用子账号的用户默认无法为自己创建AK并进行管理。启用允许自主管理AcessKey后，子账号登录阿里云官网后即可在管理控制台自行创建AK。
 
@@ -47,9 +47,9 @@
 
 如果您需要让子账号能够创建DataWorks项目，需要给子账号授予权限**AliyunDataWorksFullAccess**。如下图所示，您可以在**用户**页面选择需要授权的子账号，单击**添加权限授权**后搜索出授权名称。单击该权限，保证该权限到**已选择**栏中后，点击 **确定**进行授权。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/154466503313331_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/154466728313331_zh-CN.png)
 
-授权完毕后，子账号即可创建项目，并且自动成为该项目的项目管理员，项目owner为子账号对应的主账号。
+**说明：** 授权完毕后，子账号即可创建项目，并且自动成为该项目的项目管理员，项目owner为子账号对应的主账号。对于不是该子账号自己创建的项目，仍需主账号为该子账号进行项目授权
 
 ## 将子账号交付其他用户使用 {#section_sng_tzp_r2b .section}
 
