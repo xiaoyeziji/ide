@@ -10,11 +10,11 @@ Maxcompute提供了[Python SDK](https://www.alibabacloud.com/help/doc-detail/346
 
 1.  右键单击**数据开发**下的**业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15404508207651_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15447767217651_zh-CN.png)
 
 2.  右键单击**数据开发**，选择**新建数据开发节点** \> **PyODPS**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15404508207741_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15447767217741_zh-CN.png)
 
 3.  编辑PyODPS节点。
     1.  ODPS入口
@@ -72,19 +72,38 @@ Maxcompute提供了[Python SDK](https://www.alibabacloud.com/help/doc-detail/346
 
         **说明：** 在数据开发使用了自定义调度参数，页面上直接触发运行PyODPS节点时，需要写死时间，PyODPS节点无法像SQL一样直接替换。
 
-4.  节点调度配置。
 
-    单击节点任务编辑在区域右侧的**调度配置**，即可进入节点调度配置页面，详情请参见[调度配置](intl.zh-CN/使用指南/数据开发/调度配置/基本属性.md#)模块。
+## PyODPS节点参数与调度配置 {#section_okd_4mt_cgb .section}
 
-5.  提交节点任务。
+单击节点任务编辑在区域右侧的**调度配置**，即可进入节点调度配置页面。
 
-    完成调度配置后，单击左上角的**保存**，提交（提交并解锁）到开发环境。
+PYODPS节点使用调度参数需时，**系统定义的调度参数**，可以直接通过在页面赋值获取。
 
-6.  发布节点任务。
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154477672134264_zh-CN.png)
+
+在赋值完成后，提交节点并在运维中心进行**测试运行**，可查看赋值结果。
+
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154477672134265_zh-CN.png)
+
+对于**自定义参数**，您可以在调度配置页面的**基础属性**一栏配置。
+
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154477672134268_zh-CN.png)
+
+完成配置后提交节点并在运维中心进行**测试运行**，可查看赋值结果。
+
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154477672134289_zh-CN.png)
+
+## 后续操作 {#section_lkd_4mt_cgb .section}
+
+1.  提交节点任务。
+
+    完成调度配置后，单击左上角的**保存**，**提交（提交并解锁）**到开发环境。
+
+2.  发布节点任务。
 
     具体操作请参见[发布管理](intl.zh-CN/使用指南/数据开发/发布管理/任务发布.md#)。
 
-7.  在生产环境测试。
+3.  在生产环境测试。
 
     具体操作请参见[周期任务](intl.zh-CN/使用指南/运维中心/任务列表/周期任务.md#)。
 

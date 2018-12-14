@@ -10,13 +10,14 @@ MaxCompute provides the [Python SDK](https://www.alibabacloud.com/help/doc-detai
 
 1.  Right-click **Business Flow** under **Data Development**, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15404508257651_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15447767267651_en-US.png)
 
 2.  Right-click **Data Development**, and select **Create Data Development Node** \> **PyODPS**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15404508257741_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15447767267741_en-US.png)
 
 3.  Edit the PyODPS node.
+
     1.  ODPS portal
 
         On DataWorks, the PyODPS node contains a global variable odps or o, which is the ODPS entry.You do not need to manually define an ODPS entry.
@@ -71,6 +72,14 @@ MaxCompute provides the [Python SDK](https://www.alibabacloud.com/help/doc-detai
         ```
 
         **Note:** User-defined scheduling parameters are used in data development. If a PyODPS node is directly triggered on the page, the time must be clearly specified. The time of a PyODPS node cannot be directly replaced like that of an SQL node.
+
+    You can configure system parameters like this.
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154477672634264_en-US.png)
+
+    You can configure user-defined parameters like this.
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154477672734268_en-US.png)
 
 4.  Node scheduling configuration.
 
