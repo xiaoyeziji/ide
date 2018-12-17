@@ -4,17 +4,19 @@ DataWorks也提供PyODPS任务类型，集成了Maxcompute的Python SDK，您可
 
 Maxcompute提供了[Python SDK](https://www.alibabacloud.com/help/doc-detail/34615.htm)，您可以使用Python的SDK来操作Maxcompute。
 
-**说明：** 底层的Python版本为2.7。
+**说明：** PyODPS节点底层的Python版本为2.7。
+
+PyODPS节点获取到本地处理的数据**不能超过50MB**，节点运行时占用内存**不能超过1G**，否则节点任务会被系统Kill。
 
 ## 新建PyODPS节点 {#section_eyd_w3l_p2b .section}
 
 1.  右键单击**数据开发**下的**业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15447767217651_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15450134077651_zh-CN.png)
 
 2.  右键单击**数据开发**，选择**新建数据开发节点** \> **PyODPS**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15447767217741_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15450134077741_zh-CN.png)
 
 3.  编辑PyODPS节点。
     1.  ODPS入口
@@ -79,19 +81,19 @@ Maxcompute提供了[Python SDK](https://www.alibabacloud.com/help/doc-detail/346
 
 PYODPS节点使用调度参数需时，**系统定义的调度参数**，可以直接通过在页面赋值获取。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154477672134264_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154501340734264_zh-CN.png)
 
 在赋值完成后，提交节点并在运维中心进行**测试运行**，可查看赋值结果。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154477672134265_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154501340734265_zh-CN.png)
 
 对于**自定义参数**，您可以在调度配置页面的**基础属性**一栏配置。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154477672134268_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154501340734268_zh-CN.png)
 
 完成配置后提交节点并在运维中心进行**测试运行**，可查看赋值结果。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154477672134289_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154501340734289_zh-CN.png)
 
 ## 后续操作 {#section_lkd_4mt_cgb .section}
 

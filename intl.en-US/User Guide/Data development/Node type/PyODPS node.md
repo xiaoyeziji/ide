@@ -4,17 +4,17 @@ DataWorks also provides the PyODPS task type and integrates the Python SDK of Ma
 
 MaxCompute provides the [Python SDK](https://www.alibabacloud.com/help/doc-detail/34615.htm), which can be used to operate MaxCompute.
 
-**Note:** Python 2.7 is used at the underlying layer.
+**Note:** Python 2.7 is used at the underlying layer. The size of data that PyODPS nodes process should not exceed 50MB, while the memory they occupiy should not exceed 1GB.
 
 ## Create a PyODPS node {#section_eyd_w3l_p2b .section}
 
 1.  Right-click **Business Flow** under **Data Development**, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15447767267651_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15450134127651_en-US.png)
 
 2.  Right-click **Data Development**, and select **Create Data Development Node** \> **PyODPS**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15447767267741_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15450134127741_en-US.png)
 
 3.  Edit the PyODPS node.
 
@@ -75,11 +75,11 @@ MaxCompute provides the [Python SDK](https://www.alibabacloud.com/help/doc-detai
 
     You can configure system parameters like this.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154477672634264_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154501341234264_en-US.png)
 
     You can configure user-defined parameters like this.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154477672734268_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154501341234268_en-US.png)
 
 4.  Node scheduling configuration.
 
