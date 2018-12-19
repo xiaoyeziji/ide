@@ -7,7 +7,7 @@ When the default scheduling resource is unable to connect to your complex networ
 **Note:** 
 
 -   Currently only East China 2 support odps\_sql/odps\_MR/Shell/ synchronization tasks by using costum sheduling resources. In other regions only syschronization task support costum sheduling resources.
--   Admin permission is required to customize some files running on a resource group, for example, calling shell files, SQL on custom ECs in a shell script task that you write yourself documents, etc.
+-   Admin permission is required to customize some files running on a resource group, for example, calling shell files, SQL on custom ECS in a shell script task that you write yourself documents, etc.
 
 ## An ECS instance must be used to import commands. {#section_rp5_qp5_q2b .section}
 
@@ -64,8 +64,8 @@ You can go to the**cloud server ECS** \> **instance** page to view the ECS host 
     2.  Execute the following command:
 
         ```
+        chown admin:admin /opt/taobao
         wget https://alisaproxy.shuju.aliyun.com/install.sh --no-check-certificate
-        
         sh install.sh --user_name=xxxxxxxxxx19d --password=yyyyyygh1bm --enable_uuid=false
         ```
 
