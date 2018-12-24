@@ -12,13 +12,13 @@ To create a PyODPS node, perform the following steps:
 
     Click **Manual Business Flow** in the left-side navigation pane, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15382083657961_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15389922417961_en-US.png)
 
 2.  Create a PyODPS node.
 
     Right-click **Data Development**, and select **Create Data Development Node** \> **PyODPS**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16322/15382083658036_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16322/15389922418036_en-US.png)
 
 3.  Edit the PyODPS node.
     1.  ODPS portal
@@ -78,7 +78,7 @@ To create a PyODPS node, perform the following steps:
 
 4.  Node scheduling configuration.
 
-    Click the **Schedule** on the right of the node task editing area to go to the node scheduling configuration page. For more information, see [Scheduling configuration](intl.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
+    Click the **Schedule** on the right of the node task editing area to go to the node scheduling configuration page. For more information, see [Scheduling configuration](reseller.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
 
 5.  Submit the node.
 
@@ -90,6 +90,6 @@ To create a PyODPS node, perform the following steps:
 
 7.  Test in the production environment.
 
-    For more information about the operation, see [Manual tasks](intl.en-US/User Guide/Operation center/Task list/Manual task.md#).
+    For more information about the operation, see [Manual tasks](reseller.en-US/User Guide/Operation center/Task list/Manual task.md#).
 
 

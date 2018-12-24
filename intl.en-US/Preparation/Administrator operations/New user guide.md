@@ -12,7 +12,7 @@ If you are using the DTplus products for the first time, log on by using your Al
 
 2.  Create an AccessKey.
 
-    To assure smooth processing of tasks of data in DataWorks, you must create an AccessKey. Similar to the way you use the account name and password to log on, an AccessKey is primarily used to access permission verification between various Alibaba Cloud products and services. For more information, see [Prepare Alibaba Cloud account](intl.en-US/Preparation/Administrator operations/Prepare Alibaba Cloud account.md#).
+    To assure smooth processing of tasks of data in DataWorks, you must create an AccessKey. Similar to the way you use the account name and password to log on, an AccessKey is primarily used to access permission verification between various Alibaba Cloud products and services. For more information, see [Prepare Alibaba Cloud account](reseller.en-US/Preparation/Administrator operations/Prepare Alibaba Cloud account.md#).
 
     An AccessKey comprises of an AccessKey ID and an AccessKeySecret. Generally, the AccessKey is secured and kept confidential. Once the AccessKey is disabled, the services that use this AccessKey fail to run and report exceptions to users. If an AccessKey information changes, it can impact the products and services that use this AccessKey. Therefore, you must keep a close eye on such changes and take appropriate actions on time.
 

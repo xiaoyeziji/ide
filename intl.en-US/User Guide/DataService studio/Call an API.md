@@ -4,7 +4,7 @@ This section describes how to call an API after this API is released on API Gate
 
 API Gateway provides API authorization and the SDK for calling APIs. You can authorize yourself, your associates, or third parties to use APIs. If you want to call an API, perform the following operations.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16413/15368070828815_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16413/15390830618815_en-US.png)
 
 ## Three elements for calling an API {#section_gdj_xk3_r2b .section}
 

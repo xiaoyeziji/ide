@@ -23,15 +23,15 @@ DataWorks is a big data research and development platform, using MaxCompute as t
 
 ## Data Collection {#section_a4v_rps_s2b .section}
 
-For more information on data acquisition, see [Data acquisition: Log data upload](intl.en-US/Best Practices/Workshop/Data acquisition: log data upload.md#).
+For more information on data acquisition, see [Data acquisition: log data upload](reseller.en-US/Best Practices/Workshop/Data acquisition: log data upload.md#).
 
 ## Data Processing {#section_b4v_rps_s2b .section}
 
-For details on data processing, see [Data processing: user portraits](intl.en-US/Best Practices/Workshop/Data processing: user portraits.md#).
+For details on data processing, see [Data processing: user portraits](reseller.en-US/Best Practices/Workshop/Data processing: user portraits.md#).
 
 ## Data quality {#section_c4v_rps_s2b .section}
 
-For more information on data quality, see [Data quality monitoring](intl.en-US/Best Practices/Workshop/Data quality monitoring.md#).
+For more information on data quality, see [Data quality monitoring](reseller.en-US/Best Practices/Workshop/Data quality monitoring.md#).
 
 ## Learning to answer questions {#section_d4v_rps_s2b .section}
 

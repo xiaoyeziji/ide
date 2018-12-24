@@ -10,7 +10,7 @@
 
 -   Q: What is the difference between a wizard-created API and a script-created API?
 
-    A: The script mode provides more powerful functions. For more information, see [Create an API by writing a script](intl.en-US/User Guide/DataService studio/Generate API/Generate API in Script Mode.md#).
+    A: The script mode provides more powerful functions. For more information, see [Generate API in Script Mode](reseller.en-US/User Guide/DataService studio/Generate API/Generate API in Script Mode.md#).
 
 -   Q: What is an API group in Data Service? Is it the same as an API group in API Gateway?
 

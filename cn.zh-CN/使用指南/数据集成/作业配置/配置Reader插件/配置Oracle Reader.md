@@ -1,6 +1,6 @@
 # 配置Oracle Reader {#concept_t3p_vvp_p2b .concept}
 
-Oracle Reader插件实现了从Oracle读取数据。在底层实现上，Oracle Reader通过JDBC连接远程Oracle数据库，并执行相应的SQL语句将数据从Oracle库中SELECT出来。
+Oracle Reader插件实现了从Oracle读取数据。在底层实现上，Oracle Reader通过JDBC连接远程Oracle数据库，并执行相应的SQL语句将数据从Oracle库中SELECT出来。本文为您介绍Oracle Reader支持的数据类型、字段映射和数据源等参数及配置举例。
 
 公共云上RDS/DRDS不提供Oracle存储引擎，Oracle Reader目前更多用于专有云数据迁移、数据集成项目。
 
@@ -70,7 +70,7 @@ Oracle Reader针对Oracle类型的转换列表，如下所示。
 
     配置同步任务的数据来源和数据去向。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16228/15367217487790_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16228/15408844607790_zh-CN.png)
 
     配置项说明如下：
 
@@ -87,7 +87,7 @@ Oracle Reader针对Oracle类型的转换列表，如下所示。
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16228/15367217487791_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16228/15408844617791_zh-CN.png)
 
     -   同行映射：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
     -   自动排版：可以根据相应的规律自动排版。
@@ -100,7 +100,7 @@ Oracle Reader针对Oracle类型的转换列表，如下所示。
     -   如果您输入的值无法解析，则类型显示为未识别。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15367217497675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15408844617675_zh-CN.png)
 
     配置项说明如下：
 

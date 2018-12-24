@@ -23,15 +23,15 @@ You can double-click any created solution to switch from the development area to
 
 1.  Go to the DataStudio page and create a solution.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16287/15367305777601_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16287/15389887427601_en-US.jpg)
 
 2.  Select the business flow to be viewed from the created solution.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16287/15367305777604_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16287/15389887427604_en-US.jpg)
 
 3.  Right-click **View All Business Flows** to view the nodes of the selected business flow or modify the solution.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16287/15367305777603_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16287/15389887427603_en-US.jpg)
 
 4.  Go to another page.
 

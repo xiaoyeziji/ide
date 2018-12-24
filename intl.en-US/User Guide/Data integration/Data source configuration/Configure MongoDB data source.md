@@ -4,7 +4,7 @@ MongoDB, as a NoSQL database, is one of the world's most popular document-based 
 
 **Note:** To add a MongoDB data source, please set up a white list in the MongoDB administration console, IP White List fill in the address as follows \(addresses are separated by a comma in English \):
 
-10.152.69.0/24,10.153.136.0/24,10.143.32.0/24,120.27.160.26,10.46.67.156,120.27.160.81,10.46.64.81,121.43.110.160,10.117.39.238,121.43.112.137,10.117.28.203,118.178.84.74,10.27.63.41,118.178.56.228,10.27.63.60,118.178.59.233,10.27.63.38,118.178.142.154,10.27.63.15,100.64.0.0/8,10.151.99.0/24
+11.192.97.82,11.192.98.76,10.152.69.0/24,10.153.136.0/24,10.143.32.0/24,120.27.160.26,10.46.67.156,120.27.160.81,10.46.64.81,121.43.110.160,10.117.39.238,121.43.112.137,10.117.28.203,118.178.84.74,10.27.63.41,118.178.56.228,10.27.63.60,118.178.59.233,10.27.63.38,118.178.142.154,10.27.63.15,100.64.0.0/8
 
 ## Procedure {#section_jy4_q4v_42b .section}
 
@@ -12,7 +12,7 @@ MongoDB, as a NoSQL database, is one of the world's most popular document-based 
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New source** to pop up the supported data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15408678727534_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15430562367534_en-US.png)
 
 4.  In the new data source pop-up box, select the data source type as **MongoDB**.
 5.  Complete the configuration items for the MongoDB data source.
@@ -23,7 +23,7 @@ MongoDB, as a NoSQL database, is one of the world's most popular document-based 
     -   User-created databases with public IPs: These databases generally use public networks, which may cause a certain cost.
     Consider a data source with a new **MongDB** \> **Ali cloud database** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15408678727547_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15430562367547_en-US.png)
 
     Configurations:
 
@@ -41,7 +41,7 @@ MongoDB, as a NoSQL database, is one of the world's most popular document-based 
     -   Username/Password: The user name and password used to connect to the database.
     Consider a data source with a new **MongDB** \> **self-built database with public network IP** as an example.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15408678727548_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15430562367548_en-US.png)
 
     Configurations:
 

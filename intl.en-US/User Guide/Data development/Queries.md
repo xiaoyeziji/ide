@@ -6,11 +6,11 @@ Temporary query facilitates you to use the editing code, test whether the actual
 
 1.  Click the **Queries** in the left-hand navigation bar, select **folder**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16313/15368048347948_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16313/15427070657948_en-US.png)
 
 2.  Enter the folder name, select the folder directory, and click **Submit**. 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16313/15368048347949_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16313/15427070657949_en-US.png)
 
     **Note:** A multi-level folder directory is supported. Therefore, you can store the folder in another folder that has been created.
 
@@ -19,11 +19,11 @@ Temporary query facilitates you to use the editing code, test whether the actual
 
 Temporary query only supports the SHELL and SQL nodes.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16313/15368048347950_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16313/15427070657950_en-US.png)
 
 Take the new ODPS SQL node as an example, right-click the folder name and select **Create Node** \> **ODPS SQL**.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16313/15368048357951_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16313/15427070657951_en-US.png)
 
 |No.|Function|Description|
 |:--|:-------|:----------|

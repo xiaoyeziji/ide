@@ -4,11 +4,11 @@
 
 1.  Right-click **Business Flow** under **Data Development**, select **Create Business Flow**
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15381258087651_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15389902597651_en-US.png)
 
 2.  Right-click **Data Development**, and select **Create Data Development Node** \> **SQL Component Node**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15381258087778_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15389902607778_en-US.png)
 
 3.  To improve the development efficiency, data task developers can use components contributed by project members and tenant members to create data processing nodes.
 
@@ -16,11 +16,11 @@
     -   Components created by tenant members are located under Public Components.
     When create a node, set the node type to the **SQL Component node** type, and specify the name of the node.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15381258087777_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15389902607777_en-US.png)
 
     Specify parameters for the selected component.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15381258087779_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15389902607779_en-US.png)
 
     Enter the parameter name, and set the parameter type to Table or String.
 
@@ -30,7 +30,7 @@
 
 4.  Node scheduling configuration.
 
-    Click the **Scheduling Configuration** on the right of the node task editing area to go to the node scheduling configuration page. For more information, see [Scheduling configuration](intl.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
+    Click the **Scheduling Configuration** on the right of the node task editing area to go to the node scheduling configuration page. For more information, see [Scheduling configuration](reseller.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
 
 5.  Submit a node.
 
@@ -42,7 +42,7 @@
 
 7.  Test in a production environment.
 
-    For more information about the operation, see [Cyclic task](intl.en-US/User Guide/Operation center/Task list/Cyclic task.md#).
+    For more information about the operation, see [Cyclic task](reseller.en-US/User Guide/Operation center/Task list/Cyclic task.md#).
 
 
 ## Upgrade the version of an SQL Component node. {#section_tmq_qdq_p2b .section}
@@ -57,7 +57,7 @@ To upgrade an SQL Component node developed based on the component template, you 
 
 ## Interface functions {#section_h3p_32q_p2b .section}
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15381258087780_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15389902607780_en-US.png)
 
 The interface features are described below:
 

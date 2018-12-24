@@ -9,7 +9,7 @@ You can select the following two data sources to perform the related operations.
     Click the corresponding partition expression on the right to enter the rule configuration interface.
 
     1.  Click **Subscribed** in the corresponding partition expression action bar to cancel the subscription.
-    2.  Click **Last check results** to go to the task query interface. For more information, see Configure MaxCompute data source rules. See for details [Rules configuration for ODPS data source](intl.en-US/User Guide/Data quality/Rule Configuration/Rules configuration for ODPS data source.md#).
+    2.  Click **Last check results** to go to the task query interface. For more information, see Configure MaxCompute data source rules. See for details [Rules configuration for ODPS data source](reseller.en-US/User Guide/Data quality/Rule Configuration/Rules configuration for ODPS data source.md#).
 -   Select DataHub data source
     1.  Select DataHub data source Click **Unsubscribe** in the corresponding Topic action bar to cancel the subscription.
     2.  Click Topic name to enter the rule configuration interface. For more information, see Configure DataHub data source rules.

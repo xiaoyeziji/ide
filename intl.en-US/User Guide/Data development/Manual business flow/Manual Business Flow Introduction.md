@@ -2,7 +2,7 @@
 
 In a Manual Business Flow, all created nodes must be manually triggered and cannot be executed by means of scheduling. Therefore, it is unnecessary to configure the parent node dependency and local node output for nodes in a manual business flow.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16316/15367338607957_en-US.png) 
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16316/15389913117957_en-US.png) 
 
 The functions of the manual business flow interface are described below:
 

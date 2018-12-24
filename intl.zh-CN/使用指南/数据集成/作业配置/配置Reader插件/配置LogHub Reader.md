@@ -1,5 +1,7 @@
 # 配置LogHub Reader {#concept_ihy_fvq_p2b .concept}
 
+本文为您介绍LogHub Reader支持的数据类型、读取方式、字段映射和数据源等参数及配置举例。
+
 日志服务（Log Service，简称LOG/原SLS）是针对实时数据的一站式服务，在阿里集团经历大量大数据场景锤炼而成。提供日志类数据采集、消费、投递及查询分析功能，全面提升海量日志处理/分析能力。LogHub Reader是使用日志服务的Java SDK消费LogHub中的实时日志数据，并将日志数据转换为数据集成传输协议传递给Writer。
 
 ## 实现原理 {#section_ig1_4vq_p2b .section}
@@ -81,7 +83,7 @@ LogHub Reader针对LogHub类型的转换列表，如下所示。
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16233/15367219357879_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16233/15408847967879_zh-CN.png)
 
     -   同行映射：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
     -   自动排版：可以根据相应的规律自动排版。
@@ -94,7 +96,7 @@ LogHub Reader针对LogHub类型的转换列表，如下所示。
     -   如果您输入的值无法解析，则类型显示为未识别。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15367219357675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15408847967675_zh-CN.png)
 
     配置项说明如下：
 

@@ -11,7 +11,7 @@ Go to Operation center, you can create new data sources.  You can configure the
 
     Select DataHub data source, you can see all topics in this data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16395/15368265398777_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16395/15390822578777_en-US.png)
 
 
 ## Monitor rules configuration {#section_qp2_myh_r2b .section}

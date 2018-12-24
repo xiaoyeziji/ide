@@ -16,7 +16,7 @@ The Operation center offers four modules described as follows:
 
 -   Alarm
 
-    [Alarm](intl.en-US/User Guide/Operation center/Alarm/Alarm overview.md#) monitors the running status of tasks. If a monitored task does not run as scheduled or fails, an alarm is generated and a notification is sent to the added contact.
+    [Alarm](reseller.en-US/User Guide/Operation center/Alarm/Alarm overview.md#) monitors the running status of tasks. If a monitored task does not run as scheduled or fails, an alarm is generated and a notification is sent to the added contact.
 
 
 ## Use cases {#section_fdp_bbd_r2b .section}

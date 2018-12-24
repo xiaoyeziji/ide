@@ -21,7 +21,7 @@
 
 DataWorks + AnalyticDB + MaxCompute
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16169/15362006288914_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16169/15389843488914_en-US.png)
 
 ## Weather queries and advertisement business log analysis {#section_q51_p3p_r2b .section}
 
@@ -44,7 +44,7 @@ DataWorks + AnalyticDB + MaxCompute
 
 DataWorks + Data Integration + AnalyticDB + Quick BI + MaxCompute
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16169/15362006288916_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16169/15389843488916_en-US.png)
 
 ## Detail-oriented operations {#section_uvc_v3p_r2b .section}
 
@@ -65,5 +65,5 @@ DataWorks + Data Integration + AnalyticDB + Quick BI + MaxCompute
 
 DataWorks + Data integration + Quick BI + MaxCompute
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16169/15362006288917_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16169/15389843488917_en-US.png)
 

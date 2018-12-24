@@ -6,13 +6,13 @@ ODPS SQL adopts the syntax similar to that of SQL, and is applicable to the dist
 
     Click **Manual Business Flow** in the left-side navigation pane, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15367340437961_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15389922157961_en-US.png)
 
 2.  Create ODPS SQL node.
 
     Right-click **Data Development**, and select **Create Data Development Node** \> **ODPS SQL**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16321/15367340448022_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16321/15389922158022_en-US.png)
 
 3.  Edit the node code.
 
@@ -20,7 +20,7 @@ ODPS SQL adopts the syntax similar to that of SQL, and is applicable to the dist
 
 4.  Node scheduling configuration.
 
-    Click the **Schedule** on the right of the node task editing area to go to the node scheduling configuration page. For more information, see [Scheduling configuration](intl.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
+    Click the **Schedule** on the right of the node task editing area to go to the node scheduling configuration page. For more information, see [Scheduling configuration](reseller.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
 
 5.  Submit the node.
 
@@ -28,10 +28,10 @@ ODPS SQL adopts the syntax similar to that of SQL, and is applicable to the dist
 
 6.  Publish a node task.
 
-    For more information about the operation, see [Release management](intl.en-US/User Guide/Data development/Publish management.md#).
+    For more information about the operation, see Release management.
 
 7.  Test in the production environment.
 
-    For more information about the operation, see [Manual tasks](intl.en-US/User Guide/Operation center/Task list/Manual task.md#).
+    For more information about the operation, see [Manual tasks](reseller.en-US/User Guide/Operation center/Task list/Manual task.md#).
 
 

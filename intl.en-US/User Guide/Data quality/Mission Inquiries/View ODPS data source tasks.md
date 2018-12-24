@@ -5,13 +5,13 @@ The task query module allows you to query and view rule verification results. Ru
 1.  Visit the Data Quality Center, click **Mission Inquiries**, and enter the query page.
 2.  Select the **ODPS data source** and, according to the search box, enter content to locate exactly the table you want to find.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16399/15368276558828_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16399/15390823658828_en-US.png)
 
     -   Display the task running state
 
         You can view the task execution status, number of rules, and number of exceptional rules in the task list. By clicking the hyperlinks on the right side, you can go to the relevant pages, and view details and make modifications.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16399/15368276558830_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16399/15390823658830_en-US.png)
 
     -   View Details of the partition expression
 
@@ -20,11 +20,11 @@ The task query module allows you to query and view rule verification results. Ru
         -   Click **More** to view information about the data source, app name, node ID, and owner.
         -   Click **view history** after the corresponding field to view the running records after each schedule.
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16399/15368276558832_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16399/15390823658832_en-US.png)
 
     -   Viewing rule configurations
 
-        Click **Rules** after the corresponding task to jump to the rule configuration page. On this page, you can view and modify existing partition expressions and rules. See for details [Rules configuration for ODPS data source](intl.en-US/User Guide/Data quality/Rule Configuration/Rules configuration for ODPS data source.md#).
+        Click **Rules** after the corresponding task to jump to the rule configuration page. On this page, you can view and modify existing partition expressions and rules. See for details [Rules configuration for ODPS data source](reseller.en-US/User Guide/Data quality/Rule Configuration/Rules configuration for ODPS data source.md#).
 
     -   View log
 

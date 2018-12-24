@@ -11,7 +11,7 @@ Using the wizard mode to generate data, the API is simple and easy to get starte
 1.  Navigate to the **API Service list** \> **Generate API**.
 2.  Click **Wizard Mode**to fill in the API basics.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368285628791_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15390829168791_en-US.png)
 
     Note the settings for the API grouping during configuration. An API group includes a collection of APIs that are used for a specific scenario. It is the minimum management unit in API Gateway. In the Alibaba Cloud API Market, each API group corresponds to a specific API product.
 
@@ -39,7 +39,7 @@ Using the wizard mode to generate data, the API is simple and easy to get starte
 
     Click **Edit** in the upper-right corner of the request and return parameter lists to enter the parameter information Edit page, sets the name of the parameter, sample value, default, mandatory, fuzzy match \(only string type is supported\) settings\) and the description. The optional and description fields are required.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368285628794_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15390829168794_en-US.png)
 
 
 You need to pay attention to the settings that return result paging during the configuration process.
@@ -71,13 +71,13 @@ When the configuration of the API parameters is complete, click **Next** to ente
 
 After completing configuration of API parameters, you can start the API test.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368285628797_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15390829178797_en-US.png)
 
 Set parameters and click **Start Test** to send the API request online. The API request details and response are displayed on the right. If the test fails, read the error message carefully and make the appropriate adjustments to test your API again.
 
 You need to note the settings for the normal return example during the configuration process. When testing an API, the system automatically generates exception examples and error codes. However, normal response examples are not automatically generated. After the test succeeds, you need to click **Save as Normal Response Sample** to save the current test result as the normal response sample. If sensitive data is included in the response, you can manually edit it.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368285628799_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15390829178799_en-US.png)
 
 **Note:** 
 
@@ -90,5 +90,5 @@ After completing the API test, click **Finish**. The data API is successfully cr
 
 Back on the API service list page, click **details** in the Action column to view the details of the API. This page displays detailed information about an API from the view of a caller.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368285628800_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15390829178800_en-US.png)
 

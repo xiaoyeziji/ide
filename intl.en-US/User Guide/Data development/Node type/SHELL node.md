@@ -6,18 +6,18 @@ SHELL tasks support standard SHELL syntax but not interactive syntax. SHELL task
 
 1.  Right-click **Business Flow** under **Data Development**, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15381220857651_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15389902367651_en-US.png)
 
 2.  Right-click **Data Development**, and select **Create Data Development Node** \> **SHELL**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16296/15381220857752_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16296/15389902367752_en-US.png)
 
 3.  Set the node type to SHELL, enter the node name, select the target folder, and click **Submit**.
 4.  Edit the node code.
 
     Go to the SHELL node code editing page and edit the code.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16296/15381220867753_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16296/15389902367753_en-US.png)
 
     If you want to call the System Scheduling Parameters in a SHELL statement, compile the SHELL statement as follows:
 
@@ -25,11 +25,11 @@ SHELL tasks support standard SHELL syntax but not interactive syntax. SHELL task
     echo "$1 $2 $3"
     ```
 
-    **Note:** Parameter 1 Parameter 2... Multiple parameters are separated by spaces. For more information on the usage of system scheduling parameters, see [Parameter configuration](intl.en-US/User Guide/Data development/Scheduling Configuration/Parameter configuration.md#).
+    **Note:** Parameter 1 Parameter 2... Multiple parameters are separated by spaces. For more information on the usage of system scheduling parameters, see [Parameter configuration](reseller.en-US/User Guide/Data development/Scheduling Configuration/Parameter configuration.md#).
 
 5.  Node scheduling configuration.
 
-    Click the **Scheduling Configuration** on the right of the node task editing area to go to the  node scheduling configuration page. For more information, see [Scheduling configuration](intl.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
+    Click the **Scheduling Configuration** on the right of the node task editing area to go to the  node scheduling configuration page. For more information, see [Scheduling configuration](reseller.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
 
 6.  Submit the node.
 
@@ -41,7 +41,7 @@ SHELL tasks support standard SHELL syntax but not interactive syntax. SHELL task
 
 8.  Test in the production environment.
 
-    For more information about the operation, see [Cyclic task](intl.en-US/User Guide/Operation center/Task list/Cyclic task.md#).
+    For more information about the operation, see [Cyclic task](reseller.en-US/User Guide/Operation center/Task list/Cyclic task.md#).
 
 
 ## Use cases {#section_vlg_w1p_p2b .section}

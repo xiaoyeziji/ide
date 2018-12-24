@@ -1,5 +1,7 @@
 # 配置RDBMS Reader {#concept_otk_h4k_q2b .concept}
 
+本文为您介绍RDBMS Reader支持的数据类型、读取方式、字段映射和数据源等参数及配置举例。
+
 RDBMS Reader插件实现了从RDBMS读取数据。在底层实现上，RDBMS Reader通过JDBC连接远程RDBMS数据库，并执行相应的SQL语句将数据从RDBMS库中SELECT出来。目前支持达梦、DB2、PPAS、Sybase数据库的读取。RDBMS Reader是一个通用的关系数据库读插件，您可以通过注册数据库驱动等方式增加任意多样的关系数据库读支持。
 
 简而言之，RDBMS Reader通过JDBC连接器连接到远程的RDBMS数据库，并根据您配置的信息生成查询SQL语句并发送到远程RDBMS数据库，并将该SQL执行返回的结果，使用DataX自定义的数据类型拼装为抽象的数据集，并传递给下游Writer处理。

@@ -9,7 +9,7 @@ You can register currently available APIs in Data Service. These APIs can be man
 1.  You can go to the registration API page by selecting the **Register API** in the API Service list.
 2.  Configure the API basic information.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16409/15368069538806_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16409/15390829658806_en-US.png)
 
     Parameters:
 
@@ -31,7 +31,7 @@ You can register currently available APIs in Data Service. These APIs can be man
 
 After configuring the basic API information, you can configure the API parameters. including the request parameters, response example, and error code of the API.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16409/15368069538807_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16409/15390829658807_en-US.png)
 
 -   Request Parameters:
     -   Parameter location: The options include Path, Header, Query, and Body. Different request methods support different optional parameter locations. You can select the options as required.
@@ -50,13 +50,13 @@ After configuring the basic API information, you can configure the API parameter
 
 After completing configuration of API parameters, you can start the API test.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368069538797_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15390829658797_en-US.png)
 
 Set parameters and click **Start Test** to send the API request online. The API request details and response are displayed on the right. If the test fails, read the error message carefully and make the appropriate adjustments to test your API again.
 
 You need to note the settings for the normal return example during the configuration process. When testing an API, the system automatically generates exception examples and error codes. However, normal response examples are not automatically generated. After the test succeeds, you need to click **Save as Normal Response Sample** to save the current test result as the normal response sample. If sensitive data is included in the response, you can manually edit it.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15368069538799_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15390829658799_en-US.png)
 
 **Note:** 
 

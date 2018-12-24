@@ -2,7 +2,7 @@
 
 In the organization, to search for the data tables \(of multiple projects\) you must log on to the **Data Management** \> **All Data** page. Search for the tables by selecting the filter conditions and entering the table name in the search box on the All Data page.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16344/15368062148454_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16344/15390825408454_en-US.png)
 
 You can follow any of the following three ways:
 

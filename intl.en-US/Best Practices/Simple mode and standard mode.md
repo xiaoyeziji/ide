@@ -22,5 +22,5 @@ When creating a project, select **project mode** as the standard mode, fill in t
 
 **Note:** The MaxCompute access identity of the production environment cannot be modified to a personal account, otherwise, the data security of the production environment cannot be guaranteed.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16418/15370604989027_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16418/15390840799027_en-US.png)
 

@@ -12,15 +12,15 @@ To use an ODPS MR node, you must first upload and release the resource to be use
 
     Click **Manual Business Flow** in the left-side navigation pane, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15372474977961_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15389925287961_en-US.png)
 
 2.  Right-click **Resource**, and select **Create Resource** \> **jar**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16324/15372474978082_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16324/15389925288082_en-US.png)
 
 3.  Enter the resource name in the Create Resource according to the naming convention, set the resource type to jar, select a local jar package to the uploaded.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15372474977721_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15389925287721_en-US.png)
 
     **Note:** 
 
@@ -29,11 +29,11 @@ To use an ODPS MR node, you must first upload and release the resource to be use
     -   Naming convention for a resource name: a string of 1 to 128 characters, including letters, numbers, underlines, and dots. The name is case insensitive. If the resource is a jar resource, the extension is .jar. If the resource is a Python resource, the extension is .py.
 4.  Click **Submit** to submit the resource to the development scheduling server.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15372474977722_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15389925287722_en-US.png)
 
 5.  Publish a node task.
 
-    For more information about the operation, see [Release management](intl.en-US/User Guide/Data development/Publish management.md#).
+    For more information about the operation, see Release management.
 
 
 ## Create an ODPS MR node {#section_erm_dpm_q2b .section}
@@ -42,17 +42,17 @@ To use an ODPS MR node, you must first upload and release the resource to be use
 
     Click **Manual Business Flow** in the left-side navigation pane, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15372474977961_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15389925287961_en-US.png)
 
 2.  Create an ODPS MR node.
 
     Right-click **Data Development**, and select **Create Data Development Node** \> **ODPS MR**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16324/15372474978086_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16324/15389925288086_en-US.png)
 
-3.  Edit the node code.Double click the new ODPS MR node and enter the following interface：
+3.  Edit the node code.Double click the new ODPS MR node and enter the following interface.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15372474977724_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16294/15389925287724_en-US.png)
 
     Node code editing example:
 
@@ -72,7 +72,7 @@ To use an ODPS MR node, you must first upload and release the resource to be use
 
 4.  Node scheduling configuration.
 
-    Click the **Schedule** on the right of the node task editing area to go to the node scheduling configuration page. For more information, see [Scheduling configuration](intl.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
+    Click the **Schedule** on the right of the node task editing area to go to the node scheduling configuration page. For more information, see [Scheduling configuration](reseller.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
 
 5.  Submit the node.
 
@@ -80,10 +80,10 @@ To use an ODPS MR node, you must first upload and release the resource to be use
 
 6.  Publish a node task.
 
-    For more information about the operation, see [Release management](intl.en-US/User Guide/Data development/Publish management.md#).
+    For more information about the operation, see Release management.
 
 7.  Test in the production environment.
 
-    For more information about the operation, see [Manual tasks](intl.en-US/User Guide/Operation center/Task list/Manual task.md#).
+    For more information about the operation, see [Manual tasks](reseller.en-US/User Guide/Operation center/Task list/Manual task.md#).
 
 
