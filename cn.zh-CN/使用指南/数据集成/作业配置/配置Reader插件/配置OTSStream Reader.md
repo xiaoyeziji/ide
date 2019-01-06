@@ -70,7 +70,7 @@ Table Store会根据每种操作生成对应的增量数据记录，Reader插件
 -   对于主键为（pk1\_V3， pk2\_V3）的一行，包含两个操作，分别是删除整行、写入col\_a列的一个版本。
 
 
-目前OTSStream Reader支持所有的OTS类型，其针对OTS类型的转换列表，如下所示。
+目前OTSStream Reader支持所有的Table Store类型，其针对Table Store类型的转换列表，如下所示。
 
 |类型分类|OTSStream数据类型|
 |:---|:------------|
