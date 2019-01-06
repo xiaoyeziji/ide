@@ -2,24 +2,24 @@
 
 本文为您介绍OTSReader-Internal支持的数据类型、读取方式、字段映射和数据源等参数及配置举例。
 
-表格存储（Table Store，简称OTS）是构建在阿里云飞天分布式系统之上的NoSQL数据库服务，提供海量结构化数据的存储和实时访问。OTS以实例和表的形式组成数据，通过数据分片和负载均衡技术，实现规模上的无缝扩展。
+表格存储（Table Store，简称OTS）是构建在阿里云飞天分布式系统之上的NoSQL数据库服务，提供海量结构化数据的存储和实时访问。Table Store以实例和表的形式组成数据，通过数据分片和负载均衡技术，实现规模上的无缝扩展。
 
 OTSReader-Internal主要用于OTS Internal模型的表数据导出，而另外一个插件OTS Reader则用于OTS Public模型的数据导出。
 
 OTS Internal模型支持多版本列，所以该插件也提供两种模式数据的导出。
 
--   多版本模式：因为OTS本身支持多版本，特此提供一个多版本模式，将多版本的数据导出。
+-   多版本模式：因为Table Store本身支持多版本，特此提供一个多版本模式，将多版本的数据导出。
 
-    导出方案：Reader插件将OTS的一个Cell展开为一个一维表的4元组，分别是主键（PrimaryKey，包含1-4列）、ColumnName、Timestamp和Value（原理和HBase Reader的多版本模式类似），将这个4元组作为Datax record中的4个Column传输给消费端（Writer）。
+    导出方案：Reader插件将Table Store的一个Cell展开为一个一维表的4元组，分别是主键（PrimaryKey，包含1-4列）、ColumnName、Timestamp和Value（原理和HBase Reader的多版本模式类似），将这个4元组作为Datax record中的4个Column传输给消费端（Writer）。
 
 -   普通模式：和HBase Reader普通模式一致，只需导出每行数据中每列的最新版本的值，详情请参见[配置HBase Reader](intl.zh-CN/使用指南/数据集成/作业配置/配置Reader插件/配置HBase Reader.md#)中HBase Reader支持的normal模式内容。
 
-简而言之，OTS Reader通过OTS官方Java SDK连接到OTS服务端，并通过SDK读取数据。OTS Reader本身对读取过程做了很多优化，包括读取超时重试、异常读取重试等Feature。
+简而言之，OTS Reader通过Table Store官方Java SDK连接到OTS服务端，并通过SDK读取数据。OTS Reader本身对读取过程做了很多优化，包括读取超时重试、异常读取重试等Feature。
 
-目前OTS Reader支持所有OTS类型，OTSReader-Internal针对OTS类型的转换列表，如下所示。
+目前OTS Reader支持所有Table Store类型，OTSReader-Internal针对Table Store类型的转换列表，如下所示。
 
-|数据集成内部类型|OTS数据类型|
-|:-------|:------|
+|数据集成内部类型|Table Store数据类型|
+|:-------|:--------------|
 |Long|Integer|
 |Double|Double|
 |String|String|
@@ -32,12 +32,12 @@ OTS Internal模型支持多版本列，所以该插件也提供两种模式数�
 |:-|:-|:-|:--|
 |mode|插件的运行方式，支持normal和multiVersion，分别表示普通模式和多版本模式。|是|无|
 |endpoint|OTS Server的EndPoint（服务地址）。|是|无|
-|accessId|OTS的accessId|是|无|
-|accessKey|OTS的AccessKey|是|无|
-|instanceName|OTS的实例名称，实例是您使用和管理OTS服务的实体。您在开通OTS服务后，需要通过管理控制台来创建实例，然后在实例内进行表的创建和管理。实例是OTS资源管理的基础单元，OTS对应用程序的访问控制和资源计量都在实例级别完成。
+|accessId|Table Store的accessId|是|无|
+|accessKey|Table Store的AccessKey|是|无|
+|instanceName|Table Store的实例名称，实例是您使用和管理Table Store服务的实体。您在开通Table Store服务后，需要通过管理控制台来创建实例，然后在实例内进行表的创建和管理。实例是Table Store资源管理的基础单元，Table Store对应用程序的访问控制和资源计量都在实例级别完成。
 
 |是|无|
-|table|选取的需要抽取的表名称，这里有且只能填写一张表。在OTS中不存在多表同步的需求。|是|无|
+|table|选取的需要抽取的表名称，这里有且只能填写一张表。在Table Store中不存在多表同步的需求。|是|无|
 |range|导出的范围，读取的范围是\[begin,end\)，左闭右开的区间。-   begin小于end，表示正序读取数据。
 -   begin大于end，表示反序读取数据。
 -   begin和end不能相等。
