@@ -7,7 +7,7 @@ Oracle关系型数据库数据源提供了读取和写入Oracle双向通道的�
 1.  以项目管理员身份进入[DataWorks管理控制台](https://workbench.data.aliyun.com/console)，单击对应项目操作栏中的**进入数据集成**。
 2.  单击**数据源** \> **新增数据源**，弹出支持的数据源。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15421910497556_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15469262417556_zh-CN.png)
 
 3.  在新建数据源弹出框中，选择数据源类型为**Oracle**。
 4.  配置Oracle数据源的各个信息项。
@@ -16,26 +16,28 @@ Oracle关系型数据库数据源提供了读取和写入Oracle双向通道的�
 
     以新增**Oracle** \> **有公网IP**类型的数据源为例。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15421910497557_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15469262427557_zh-CN.png)
 
-    配置项说明如下：
+    |配置|说明|
+    |:-|:-|
+    |**数据源类型**|有公网IP。|
+    |**数据源名称**|数据源名称必须以字母、数字、下划线组合，且不能以数字和下划线开头。|
+    |**数据源描述**|对数据源进行简单描述，不得超过80个字符。|
+    |**JDBC URL**|JDBC连接信息，格式为jdbc:oracle:thin:@ServerIP:Port:Database。|
+    |**用户名/密码**|数据库对应的用户名和密码。|
 
-    -   数据源类型：有公网IP。
-    -   数据源名称：由英文字母、数字、下划线组成且需以字符或下划线开头，长度不超过60个字符。
-    -   数据源描述：对数据源进行简单描述，不得超过80个字符。
-    -   JDBC URL：JDBC连接信息，格式为jdbc:oracle:thin:@ServerIP:Port:Database。
-    -   用户名/密码：数据库对应的用户名和密码。
     以新增**Oracle** \> **无公网IP**类型的数据源为例。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15421910497558_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15469262427558_zh-CN.png)
 
-    配置项说明如下：
+    |配置|说明|
+    |:-|:-|
+    |**数据源类型**|无公网IP，此种类型的数据源需要使用自定义调度资源才能进行同步，可单击**帮助手册**进行查看。|
+    |**数据源名称**|数据源名称必须以字母、数字、下划线组合，且不能以数字和下划线开头。|
+    |**数据源描述**|对数据源进行简单描述，不得超过80个字符。|
+    |**JDBC URL**|JDBC连接信息，格式为jdbc:oracle:thin:@ServerIP:Port:Database。|
+    |**用户名/密码**|数据库对应的用户名和密码。|
 
-    -   数据源类型：无公网IP，此种类型的数据源需要使用自定义调度资源才能进行同步，可单击**帮助手册**进行查看。
-    -   数据源名称： 由英文字母、数字、下划线组成且需以字符或下划线开头，长度不超过60个字符。
-    -   数据源描述： 对数据源进行简单描述，不得超过80个字符。
-    -   JDBC URL：JDBC连接信息，格式为jdbc:oracle:thin:@ServerIP:Port:Database。
-    -   用户名/密码：数据库对应的用户名和密码。
 5.  单击**测试连通性**。
 6.  测试连通性通过后，单击**确定**。
 
