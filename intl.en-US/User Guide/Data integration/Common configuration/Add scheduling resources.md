@@ -6,16 +6,16 @@ When the default scheduling resource is unable to connect to your complex networ
 
 **Note:** 
 
--   Currently only East China 2 support odps\_sql/odps\_MR/Shell/ synchronization tasks by using costum sheduling resources. In other regions only syschronization task support costum sheduling resources.
+-   Sheduling resources added in Data Integration can only used for data integration.
 -   Admin permission is required to customize some files running on a resource group, for example, calling shell files, SQL on custom ECS in a shell script task that you write yourself documents, etc.
 
-## An ECS instance must be used to import commands. {#section_rp5_qp5_q2b .section}
+## Purchase the ECS cloud server {#section_rp5_qp5_q2b .section}
 
 Purchase the ECS cloud server.
 
 **Note:** 
 
--   centos6、centos7 or aliyunos is recommended.
+-   centos6、centos7 or AliyunOD is recommended.
 -   If the added ECS instance needs to run MaxCompute or synchronization tasks, verify whether the current Python version of the ECS instance is 2.6 or 2.7 \(The Python version of CentOS 5 is 2.4 while those of other operating systems are later than 2.6\).
 -   Ensure that the ECS instance has a public IP address.
 -   The configuration of the ECS is recommended for the 8-core 16g.
@@ -37,7 +37,7 @@ You can go to the**cloud server ECS** \> **instance** page to view the ECS host 
 
 ## Add scheduling resources { .section}
 
-1.  Enter the dataworks management console as a developer, and click **Enter workspace** in the corresponding project action bar.
+1.  Enter the DataWorks management console as a developer, and click **Enter workspace** in the corresponding project action bar.
 2.  Click **data integration** in the top menu bar to navigate to **resource management** \> **new resource groups**.
 3.  Click **Next** to **add the purchased ECS** cloud server to the Resource Group in the Add Server dialog box.
 
@@ -47,7 +47,7 @@ You can go to the**cloud server ECS** \> **instance** page to view the ECS host 
         -   Classic network: IP addresses are allocated in a unified manner by Alibaba Cloud, featuring easy configuration and convenient use. This network type is suitable for users who require high ease-of-use of operations and need to use ECS quickly.
         -   This type refers to logically isolated private networks. Users can customize network topology and IP addresses, and the network supports leased line connections. VPC is suitable for users familiar with network management.
     -   Server name
-        -   Alibaba cloud Classic Network: log in to ECs, execute the hostname command, and get the return value.
+        -   Alibaba cloud Classic Network: log in to ECS, execute the hostname command, and get the return value.
         -   Private Network: log in to ECS, execute `dmidecode | grep UUID`, and get the return value.
     -   Maximum concurrency
         -   Count concurrency: The concurrency count calculator is based on the CPU number and memory size.
