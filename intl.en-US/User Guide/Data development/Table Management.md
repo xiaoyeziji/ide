@@ -5,11 +5,11 @@
 1.  Click **Table Management** in the upper left corner of the page.
 2.  Select the **+** icon to create a table.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16332/15471857578220_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16332/15471874278220_en-US.png)
 
 3.  Enter the table name, only MaxCompute tables are supported currently, click **Submit**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16332/15471857578221_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16332/15471874278221_en-US.png)
 
 4.  Set basic attributes.
     -   Chinese Name: Chinese name of the table to be created.
@@ -18,7 +18,7 @@
     -   Description: Description of the table to be created.
     -   Click **Create Topic**. On the displayed Topic Management page, create level-1 and level-2 topics.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15471857577965_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15471874277965_en-US.png)
 
 5.  Create a table in DDL mode.
 
@@ -56,7 +56,7 @@
 
             -   0 Allowed: If it is selected, the field value can be zero. This option is applicable only to bigint and double fields.
             -   Negative Value Allowed: If it is selected, the field value can be a negative number. This option is applicable only to bigint and double fields.
-            -   The security level is 0-4. The higher the number, the higher the security requirement. If your security level does not meet the digital requirements, you cannot access the corresponding fields in the form.
+            -   Security Level：The security level is 0-4. The higher the number, the higher the security requirement. If your security level does not meet the digital requirements, you cannot access the corresponding fields in the form.
             -   Unit: Unit of the amount, which can be dollar or cent. This option is not required for fields unrelated to the amount.
             -   Lookup Table Name/Kay Value: It is applicable to enumerated value-type fields, such as the member type and status. You can enter the name of the dictionary table \(or dimension table\) corresponding to the field. For example, the name of the dictionary table corresponding to the member status is dim\_user\_status. If you use a globally unique dictionary table, enter the corresponding key\_type of the field in the dictionary table. For example, the corresponding key value of the member status is AOBAO\_USER\_STATUS.
             -   Value Range: The maximum and minimum values of the current field. It is applicable only to bigint and double fields..
