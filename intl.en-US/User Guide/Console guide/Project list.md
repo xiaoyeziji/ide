@@ -8,7 +8,7 @@ In the Alibaba Cloud DTplus console, you can view all the projects under the cur
 2.  Click **DataWorks console** to enter the console overview page.
 3.  Navigate to the **Project List** page to view all the projects under the current account.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15446659958729_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15471985758729_en-US.jpg)
 
 
 ## Create Project {#section_jhg_s4g_r2b .section}
@@ -17,19 +17,19 @@ In the Alibaba Cloud DTplus console, you can view all the projects under the cur
 
     The new project is created under the current region. You may need to purchase related services for the region. The data development, O&M center, and data management are selected by default.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15446659958730_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15471985758730_en-US.png)
 
     -   Choose Calculation Engine Services
         -   MaxCompute: MaxCompute is a big data processing platform developed by Alibaba independently. It is mainly used for batch structural data storage and processing, which can provide massive data warehouse solution and big data modeling service. For more information, see  [MaxCompute documentation](https://www.alibabacloud.com/product/maxcompute).
         -   Machine learning PAI: Machine learning refers to a machine that uses statistical algorithms to learn a large amount of historical data to generate empirical models, and use empirical models to guide businesses.
     -   Choose DataWorks services
-        -   Data integration: A data synchronization platform that provides stable, efficient, and elastically scalable services. The Data Integration is designed to implement fast and stable data movement and synchronization between multiple heterogeneous data sources in complex network environments. For more information, see [Data Integration Overview](intl.en-US/User Guide/Data integration/Data integration introduction/Data Integration Overview.md#).
-        -   Data development: The data development helps you to design data computing processes according to your business demands and make mutually dependent tasks be automatically run in the scheduling system. For more information, see [Data Development Overview](intl.en-US/User Guide/Data development/Solution.md#).
-        -   O&M center: The O&M center is a place where tasks and instances are displayed and operated. You can view all your tasks in Task List and perform such operations on the displayed tasks.  For more information, see [Operation center overview](intl.en-US/User Guide/Operation center/Operation center overview.md#).
-        -   Data management: The data management module of the Alibaba Cloud DTplus platform displays the global data view and metadata details of an organization, and enables operations such as divided permission management, data lifecycle management, and approval and management of data table/resource/function permissions.  For more information, see [data management overview](intl.en-US/User Guide/Data management/Introduction.md#).
+        -   Data integration: A data synchronization platform that provides stable, efficient, and elastically scalable services. The Data Integration is designed to implement fast and stable data movement and synchronization between multiple heterogeneous data sources in complex network environments. For more information, see [Data Integration Overview](reseller.en-US/User Guide/Data integration/Data integration introduction/Data Integration Overview.md#).
+        -   Data development: The data development helps you to design data computing processes according to your business demands and make mutually dependent tasks be automatically run in the scheduling system. For more information, see [Data Development Overview](reseller.en-US/User Guide/Data development/Solution.md#).
+        -   O&M center: The O&M center is a place where tasks and instances are displayed and operated. You can view all your tasks in Task List and perform such operations on the displayed tasks.  For more information, see [Operation center overview](reseller.en-US/User Guide/Operation center/Operation center overview.md#).
+        -   Data management: The data management module of the Alibaba Cloud DTplus platform displays the global data view and metadata details of an organization, and enables operations such as divided permission management, data lifecycle management, and approval and management of data table/resource/function permissions.  For more information, see [data management overview](reseller.en-US/User Guide/Data management/Introduction.md#).
 2.  Configure the basic information and advanced settings for the new project.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15446659958731_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15471985758731_en-US.png)
 
     -   Basic configuration
         -   project name: The length of the project name is between 3 and 27 characters.
@@ -46,13 +46,13 @@ In the Alibaba Cloud DTplus console, you can view all the projects under the cur
 
 When the project is created successfully, the project list displays the corresponding content.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15446659958732_en-US.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15471985758732_en-US.jpg)
 
 -   Project Status: the project is generally divided into normal, initialization, initialization failure, deleting and deleted five states. Creating a project is initially display initialized state, and then generally show the results of initialization failure or normal.
 
     After the project is created successfully, you can perform the disable and delete operations. After the project is disabled, you can also activate and delete the project, and the project is normal after it is activated.
 
--   Subscribe to a service: Your mouse moves on to the service, and all the services you have opened are displayed. Generally, the normal service icon displays blue, the arrears service icon is red and there is corresponding arrears sign, if the arrears service have been deleted, it is displayed in gray, and the arrears service is deleted automatically after 7 days.
+-   Subscribe to a service: Your mouse moves on to the service, and all the services you have opened are displayed. Generally, the normal service icon displays blue, the outstanding payment service icon is red and there is corresponding outstanding payment sign, if the outstanding payment service have been deleted, it is displayed in gray, and the outstanding payment service is deleted automatically after 7 days.
 
 **Note:** 
 
@@ -65,19 +65,19 @@ You can configure some basic and advanced attributes of the current project by c
 
 Click **Configuration** for the project to be configured.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15446659958733_en-US.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15471985758733_en-US.jpg)
 
 ## Enter Project {#section_odk_gtg_r2b .section}
 
 Click **Enter Project** to configure a project, go to the Data Development page for specific operations.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15446659958734_en-US.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15471985758734_en-US.jpg)
 
 ## Change the calculation services {#section_kb2_rtg_r2b .section}
 
 Changing services is generally the operation of calculation services and DataWorks services. First, you must purchase a service, and then you can choose a corresponding service to modify it. The mode of payment is automatically displayed based on your purchase. You can recharge, upgrade, downgrade, and renew your MaxCompute.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15446659958735_en-US.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15471985758735_en-US.jpg)
 
 -   Recharge: You can recharge your services when the services receive an overdue warning.
 -   Upgrade/Downgrade: If your Pay-As-You-Go resource of MaxCompute is unable to meet your business demand, you can upgrade the resource by purchasing more services. to upgrade the resource.
@@ -92,7 +92,7 @@ Changing services is generally the operation of calculation services and DataWor
 
 Click **More** after the corresponding item name to delete and disable the item.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15446659958736_en-US.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15471985758736_en-US.jpg)
 
 -   Delete a project
 
@@ -102,12 +102,12 @@ Click **More** after the corresponding item name to delete and disable the item.
 
     -   The verification code is not changed.
     -   The delete project operation is irreversible, use it carefully.
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15446659958737_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15471985768737_en-US.jpg)
 
 -   Disable a project
 
     Once a project is disabled, the cycle scheduling task in the project stops generating instances. The instances which are generated before the status changes to disabled, run normally. However you cannot log on to the project to view their corresponding status.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15446659958738_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16187/15471985768738_en-US.jpg)
 
 
