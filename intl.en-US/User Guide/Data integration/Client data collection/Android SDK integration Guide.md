@@ -1,6 +1,6 @@
 # Android SDK integration Guide {#concept_onv_rdb_r2b .concept}
 
-This document describes how to use DTplus data acquisition \(App Usertrack\) Android SDK.
+This document describes how to use DTplus data acquisition \(app Usertrack\) Android SDK.
 
 App Usertrack Android SDK is a kind of DTplus data statistics and monitoring service on Android platform for mobile developers. The SDK enables developers to easily track data in their own apps to monitor daily business data and network performance data, and observe the corresponding data report display in the DTplus console. In addition, you can customize the data chart display by setting custom data parsing rules.
 
