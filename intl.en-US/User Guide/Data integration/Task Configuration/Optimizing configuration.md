@@ -88,7 +88,7 @@ After the beta phase of Data Integration has ended, throttling is disabled by de
 
 -   Note: When the throttling parameter is set to false, throttling is disabled, and you do not need to configure the mbps parameter.
 -   The traffic measured value is a Data Integration metric and does not represent the actual NIC traffic. Generally, the NIC traffic is two to three times of the channel traffic, which depends on the serialization of the data storage system.
--   A semi-structured Single file does not have the concept of cutting keys, multiple files can set the maximum job rate to increase the speed of synchronization, however, the maximum job rate is related to the number of files. For example, there are n files with maximum job rate limit set to nmb/s, if you set n + 1 Mb/s or sync at nmb/s speed, if set to n-1mb/s, synchronization is performed at n-1mb/s speed.
+-   A semi-structured Single file does not have the concept of cutting keys, multiple files can set the maximum job rate to increase the speed of synchronization, however, the maximum job rate is related to the number of files. For example, there are n files with maximum job rate limit set to n mb/s, if you set n + 1 Mb/s or sync at n mb/s speed, if set to n-1 mb/s, synchronization is performed at n-1 mb/s speed.
 -   Only when a maximum job rate and a splitting key are configured for a relational database, table splitting can be performed according to the set maximum job rate. Relational databases only support numeric splitting keys, but Oracle databases support both numeric and string splitting keys.
 
 ## Cases of slow data synchronization {#section_tx3_zyc_p2b .section}
