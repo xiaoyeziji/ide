@@ -4,17 +4,17 @@ DataWorks also provides the PyODPS task type and integrates the Python SDK of Ma
 
 MaxCompute provides the [Python SDK](https://www.alibabacloud.com/help/doc-detail/34615.htm), which can be used to operate MaxCompute.
 
-**Note:** Python 2.7 is used at the underlying layer. The size of data that PyODPS nodes process should not exceed 50MB, while the memory they occupiy should not exceed 1GB.
+**Note:** Python 2.7 is used at the underlying layer. The size of data that PyODPS nodes process should not exceed 50 MB, while the memory they occupiy should not exceed 1 GB.
 
 ## Create a PyODPS node {#section_eyd_w3l_p2b .section}
 
 1.  Right-click **Business Flow** under **Data Development**, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15451266807651_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15472738687651_en-US.png)
 
 2.  Right-click **Data Development**, and select **Create Data Development Node** \> **PyODPS**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15451266807741_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15472738687741_en-US.png)
 
 3.  Edit the PyODPS node.
 
@@ -75,15 +75,15 @@ MaxCompute provides the [Python SDK](https://www.alibabacloud.com/help/doc-detai
 
     You can configure system parameters like this.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154512668034264_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154727386834264_en-US.png)
 
     You can configure user-defined parameters like this.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154512668034268_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154727386834268_en-US.png)
 
 4.  Node scheduling configuration.
 
-    Click the **Schedule** on the right of the node task editing area to go to the node scheduling configuration page. For more information, see [Scheduling configuration](intl.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
+    Click the **Schedule** on the right of the node task editing area to go to the node scheduling configuration page. For more information, see [Scheduling configuration](reseller.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
 
 5.  Submit the node.
 
@@ -95,6 +95,6 @@ MaxCompute provides the [Python SDK](https://www.alibabacloud.com/help/doc-detai
 
 7.  Test in the production environment.
 
-    For more information about the operation, see [Cyclic task](intl.en-US/User Guide/Operation center/Task list/Cyclic task.md#).
+    For more information about the operation, see [Cyclic task](reseller.en-US/User Guide/Operation center/Task list/Cyclic task.md#).
 
 
