@@ -6,14 +6,14 @@ In this article, we use creation of the tables bank\_data and result\_table as a
 
 **Create a table called bank\_data**
 
-1.  After [Create a project](../../../../reseller.en-US/Preparation/Administrator operations/Create a project.md#) , click **Enter workspace**in the corresponding project.
+1.  After [Create a project](../../../../../intl.en-US/Preparation/Administrator Operations/Create a project.md#) , click **Enter workspace**in the corresponding project.
 2.  Go to the Data Studio \(original data development\) page and select **new** \> **table**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15389844488972_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15475231918972_en-US.png)
 
 3.  Fill in the name of the table in the **new table** dialog box.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15389844488973_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15475231918973_en-US.png)
 
 4.  Click **Submit**.
 5.  Enter the new table page, and select the **DDL mode**.
@@ -21,7 +21,7 @@ In this article, we use creation of the tables bank\_data and result\_table as a
 
     For more SQL syntax for creating tables, see [creating/viewing/deleting tables](https://www.alibabacloud.com/help/doc-detail/27808.htm).
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15389844488974_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15475231918974_en-US.png)
 
     The statements used for table creation in this example are as follows:
 
@@ -54,18 +54,18 @@ In this article, we use creation of the tables bank\_data and result\_table as a
 
 7.  After the table structure is generated, enter the Chinese name of the table and click **Submit to development environment**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15389844498976_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15475231918976_en-US.png)
 
 8.  After the creation is successful, you can search it by entering the table name in the left-hand navigation **table management**, view table information.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15389844498977_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15475231918977_en-US.png)
 
 
 **Create result\_table**
 
 1.  Go to the DataStudio page and select **new** \> **table**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15389844488972_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15475231918972_en-US.png)
 
 2.  Fill in the name of the table in the **new table** dialog box and click **Submit**.
 3.  Enter the new table page, and select the **DDL mode**.
@@ -98,19 +98,19 @@ For example, import local file [banking.txt](https://docs-aliyun.cn-hangzhou.oss
 
 1.  Click **Import** to select **import local data**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15389844498978_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15475231918978_en-US.png)
 
 2.  Select a local data file, configure the import information, and click **Next**,
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15389844498979_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15475231918979_en-US.png)
 
 3.  Enter at least two letters to search for the table by name. Select the table to which the data is to be imported, for example, bank\_data.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15389844498980_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15475231918980_en-US.png)
 
 4.  Select the field matching method \("Match by Position" is used in this example\), and click **Import**,
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15389844498981_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15475231928981_en-US.png)
 
 
 After the file is imported, the system returns the number of lines that were successful in your data import or an exception that failed.
@@ -121,13 +121,13 @@ After the file is imported, the system returns the number of lines that were suc
 
     This method applies to saving RDS, MySQL, SQL Server, PostgreSQL, MaxCompute, OSS, DRDs, OSS data from a variety of data sources such as, Oracle, FTP, DM, HDFS, and MongoDB.
 
-    For details on creating a data synchronization task with Dataworks, see [creating a data synchronization task](reseller.en-US/Quick Start/Step 3: Create a synchronization task.md#).
+    For details on creating a data synchronization task with Dataworks, see [creating a data synchronization task](intl.en-US/Quick Start/Step 3: Create a synchronization task.md#).
 
 -   Local file uploads
 
     Ci fang shi yong yu wen jian great&small bu chao guo 10m、 wen jian lei xing wei .txt he .csv data, the target supports partition tables and non-partition tables, but does not support Chinese as a partition.
 
-    For local file upload via DataWorks, see local data upload to bank\_data above for details.
+    For local file upload by DataWorks, see local data upload to bank\_data above for details.
 
 -   Upload files using tunnel command
 
@@ -138,5 +138,5 @@ After the file is imported, the system returns the number of lines that were suc
 
 ## Next steps {#section_jvs_vgr_s2b .section}
 
-You have learned know how to create a table and upload data now. You can go to the next tutorial which will show you how to create a flow for further data analysis and computing in the project space. For more information, see [creating a business process](reseller.en-US/Quick Start/Step 2: Create a Business Flow.md#).
+You have learned know how to create a table and upload data now. You can go to the next tutorial which will show you how to create a flow for further data analysis and computing in the project space. For more information, see [creating a business process](intl.en-US/Quick Start/Step 2: Create a Business Flow.md#).
 
