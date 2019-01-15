@@ -144,7 +144,7 @@ The format of the configuration file is as follows:
 
 | No|skip|
 |walFlag|Description: When committing data to the RegionServer in the cluster \(Put/Delete operation\), the HBase client writes the WAL \(Write Ahead Log, which is an HLog shared by all Regions on a RegionServer\). The HBase client writes data into MemStore only after it successfully writes data into WAL. In this case, the client is notified that the data is successfully committed. In case of failure to write the WAL, HBase Client is notified that the commit is failed. Disable walFlag \(false\) to stop writing the WAL so as to improve the performance of data writing.|No|false|
-|writeBufferSize|Description: Set the buffer size \(in byte\) of the HBase client. Use it with autoflush.autoflush：
+|writeBufferSize|Description: Set the buffer size \(in byte\) of the HBase client. Use it with autoflush.autoflush:
 
 -   autoflush: If it is set to true, the HBase client performs an update operation for each put request. I
 -   If it is set to false, the HBase client initiates a write request to the HBase server only when the client write buffer is filled up with the put requests.
