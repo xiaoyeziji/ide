@@ -1,106 +1,71 @@
 # 配置AnalyticDB Writer {#concept_bft_jyk_q2b .concept}
 
-本文将为您介绍AnalyticDB Writer支持的数据类型、写入方式、字段映射和数据源等参数及配置举例。
+本文将为您介绍AnalyticDB Writer支持的数据源、数据类型、字段映射、参数配置以及一个完整的导入数据操作示例。
 
-AnalyticDB Writer实现了两种向Analytic DB导入数据的模式。
+数据集成通过实时导入的方式将数据导入AnalyticDB中，要求您必须提前在AnalyticDB中创建好实时表（普通表）。实时导入方式效率高，且流程简单。
 
--   Load Data（批量导入）模式：数据中转落地导入方式。
-    -   优点：当数据量较大（\>1KW）时，能够以较快速度进行导入。
-    -   缺点：需要三方系统授权。
--   Insert Ignore（实时插入）模式：向ADS直接写入的方式。
-    -   优点：小批量数据写入能够较快完成（<1KW）。
-    -   缺点：大数据导入较慢，不适合大批量数据写入。
+如果数据源来源是RDS for SQLServer，详细的导入操作，请参见[使用数据集成迁移](https://help.aliyun.com/document_detail/98790.html)。
 
-开始配置AnalyticDB Writer插件前，请首先配置好数据源，详情请参见[配置AnalyticDB数据源](intl.zh-CN/使用指南/数据集成/数据源配置/配置AnalyticDB数据源.md#)。
+开始配置AnalyticDB Writer插件前，请首先配置好数据源，详情请参见[配置AnalyticDB数据源](cn.zh-CN/使用指南/数据集成/数据源配置/配置AnalyticDB数据源.md#)。
 
-AnalyticDB Writer支持AnalyticDB中以下数据类型。
+## AnalyticDB Writer支持的AnalyticDB数据类型 {#section_rtq_nyr_lgb .section}
 
 |类型|AnalyticDB数据类型|
 |:-|:-------------|
-|整数类|int、tinyint、smallint和bigint|
-|浮点类|float和double|
+|整数类|int、tinyint、smallint、bigint|
+|浮点类|float、double|
 |字符串类|varchar|
-|日期时间类|date和timestamp|
+|日期时间类|date、timestamp|
 |布尔类|boolean|
 
-## 前提条件 {#section_iv2_mzk_q2b .section}
-
--   当只有Load Data模式导入一个来源表是MaxCompute表时，需要在MaxCompute中将表Describe和Select权限授权给AnalyticDB的导入账号。
-
-    公共云账号为garuda\_build@aliyun.com以及garuda\_data@aliyun.com（两个都需要授权）。各个专有云的导入账号名请参见专有云的相关配置文档，一般为test1000000009@aliyun.com。
-
-    授权命令如下所示。
-
-    ```
-    USE projectname; --表所属MaxCompute project
-    ADD USER ALIYUN$xxxx@aliyun.com;--输入正确的云账号（首次添加时）。
-    GRANT Describe,Select ON TABLE table_name TO USER ALIYUN$xxxx@aliyun.com;--输入需要赋权的表和正确的云账号
-    ```
-
-    另外为了保护您的数据安全，AnalyticDB目前仅允许导入操作者为Proejct Owner的MaxCompute Project的数据，或者操作者为MaxCompute表的owner。
-
-
-## 参数说明 {#section_jn2_gqh_p2b .section}
-
-|参数|描述|必选|默认值|
-|:-|:-|:-|:--|
-|连接url|AnalyticDB连接信息，格式为Address:Port。|是|无|
-|数据库|AnalyticDB的数据库名称。|是|无|
-|Access Id|AnalyticDB对应的Access Id。|是|无|
-|Access Key|AnalyticDB对应的Access Key。|是|无|
-|datasource|数据源名称，脚本模式支持添加数据源，此配置项填写的内容必须与添加的数据源名称保持一致。|是|无|
-|table|目标表的表名称。|是|无|
-|partition|目标表的分区名称，当目标表为分区表，需要指定该字段。如果Reader为MaxCompute，且AnalyticDB Writer写入模式为Load模式时，MaxCompute的partition仅支持如下三种配置方式（以两级分区为例）。-   "partition":\["pt=\*, ds=\*"\] （读取表所有分区的数据）。
--   "partition":\["pt=1, ds=\*"\] （读取表下面，一级分区pt=1下面的所有二级分区）。
--   "partition":\["pt=1, ds=hangzhou"\] （读取表下面，一级分区pt=1下面，二级分区ds=hangzhou的数据）。
-
-|否|无|
-|writeMode|支持**Load Data（批量导入）**和**Insert Ignore（实时插入）**两种写入模式。如果在系统中已经有相同主键的记录，则当前INSERT IGNORE模式的语句执行能成功，但新记录将会被丢弃掉。|是|无|
-|column|目的表字段列表，可以为\["\*"\]，或者具体的字段列表，例如\["a", "b", "c"\]。|是|无|
-|overWrite|AnalyticDB写入是否覆盖当前写入的表，true为覆盖写入，false为不覆盖（追加）写入。当writeMode为Load时，该值才会生效。|是|无|
-|lifeCycle|AnalyticDB临时表生命周期。当writeMode为Load时，该值才会生效。|是|无|
-|suffix|AnalyticDB url配置项的格式为ip:port，实际在AnalyticDB数据库访问时，会变成JDBC数据库连接串，此部分为您定制的连接串，可选参数（请参见MySQL支持的JDBC控制参数）。例如配置suffix为autoReconnect=true&failOverReadOnly=false&maxReconnects=10。|否|无|
-|opIndex|AnalyticDB对端存储对应的操作类型列的下标，从0开始。当writeMode为stream时，该值才会生效。|writeMode为stream时，为必选。|无|
-|batchSize|AnalyticDB提交数据写的批量条数，当writeMode为insert时，该值才会生效。|writeMode为insert时，为必选。|无|
-|bufferSize|DataX数据收集缓冲区大小，缓冲区的目的是攒一个较大的Buffer，源头的数据首先进入到此Buffer中进行排序，排序完成后再提交到AnalyticDB。排序是根据AnalyticDB的分区列模式进行的，排序的目的是数据顺序对AnalyticDB服务端更友好（出于性能考虑）。BufferSize缓冲区中的数据会经过batchSize批量提交到ADB中，一般如果要设置bufferSize，设置bufferSize为batchSize数量的多倍。当writeMode为insert时，该值才会生效。
-
-|writeMode为insert时，为必选。|默认不配置不开启此功能。|
-
-## 向导开发介绍 {#section_bp2_wsh_p2b .section}
+## 通过向导模式实时导入数据至AnalyticDB {#section_bp2_wsh_p2b .section}
 
 1.  选择数据源
 
-    配置同步任务的数据来源和数据去向。
+    配置同步任务的**数据来源**和**数据去向**。
 
-    ![选择数据源](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15451913717998_zh-CN.png)
+    ![选择数据源](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15475283767998_zh-CN.png)
 
-    |配置|说明|
-    |:-|:-|
-    |**数据源**|即上述参数说明中的datasource，一般填写您配置的数据源名称。|
-    |**表**|即上述参数说明中的table，选择需要同步的表。|
-    |**导入模式**|即上述参数说明中的writeMode，支持Load Data（批量导入）和Insert Ignore（实时插入）两种模式。|
+    |配置项|说明|
+    |:--|:-|
+    |**数据源**|导入数据的数据来源。|
+    |**表**|选择需要同步的表。|
+    |**数据过滤**|同步数据的筛选条件，暂时不支持limit关键字过滤。|
+    |**切分键**|选择数据源中的主键作为切分键。|
+
+    |配置项|说明|
+    |:--|:-|
+    |**数据源**|选择ADS，系统将自动关联[配置AnalyticDB数据源](https://help.aliyun.com/document_detail/100590.html)时设置的数据源名称。|
+    |**表**|选择AnalyticDB中的一张表，将Reader数据库中的数据同步至该表中。|
+    |**切分键**|根据AnalyticDB中表的更新方式设置导入模式，此处为实时导入。|
 
 2.  字段映射，即上述参数说明中的column。
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15451913718002_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15475283768002_zh-CN.png)
 
-    -   **同行映射**：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
-    -   **自动排版**：可以根据相应的规律自动排版。
+    |配置项|说明|
+    |:--|:-|
+    |**同行映射**|自动将同一行的数据设置映射关系。单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。|
+    |**自动排版**|设置完映射关系后，字段排序展示。|
+
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15451913717675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15475283767675_zh-CN.png)
 
-    |配置|说明|
-    |:-|:-|
+    |配置项|说明|
+    |:--|:-|
     |**DMU**|数据集成消耗资源（包括CPU、内存、网络等资源分配）的度量单位。一个DMU描述了一个数据集成作业最小运行能力，即在限定的CPU、内存、网络等资源情况下对于数据同步的处理能力。|
-    |**作业并发数**|可将此属性视为数据同步任务内，可从源并行读取或并行写入数据存储端的最大线程数。向导模式通过界面化配置并发数，指定任务所使用的并行度。|
+    |**作业并发数**|配置的时候会结合读取端指定的切分建，将数据分成多个Task，多个Task同时运行，以达到提速的效果。|
+    |**同步速率**|设置同步速率可保护读取端数据库，以避免抽取速度过大，给源库造成太大的压力。同步速率建议限流，结合源库的配置，请合理配置抽取速率。|
     |**错误记录数**|错误记录数，表示脏数据的最大容忍条数。|
-    |**任务资源组**|任务运行的机器，如果任务数比较多，使用默认资源组出现等待资源的情况，建议添加自定义资源组（目前只有华东1，华东2支持添加自定义资源组），详情请参见[新增调度资源](intl.zh-CN/使用指南/数据集成/常见配置/新增调度资源.md#)。|
+    |**任务资源组**|任务运行的机器，如果任务数比较多，使用默认资源组出现等待资源的情况，建议添加自定义资源组（目前只有华东1，华东2支持添加自定义资源组），详情请参见[新增调度资源](cn.zh-CN/使用指南/数据集成/常见配置/新增调度资源.md#)。|
 
+4.  单击**保存**和**提交**，配置任务需要的其他信息，例如基础属性、时间属性、调度依赖以及节点上下文。
+5.  完成同步任务的配置后，先**保存**和**提交**节点，再单击**运行**，开始导入操作。
 
-## 脚本开发介绍 {#section_cp2_wsh_p2b .section}
+## 通过脚本模式实时导入数据至AnalyticDB {#section_cp2_wsh_p2b .section}
 
 ```
 {
@@ -151,37 +116,20 @@ AnalyticDB Writer支持AnalyticDB中以下数据类型。
 }
 ```
 
-## 注意事项 {#section_apy_k3v_vfb .section}
+|参数|描述|必选|默认值|
+|:-|:-|:-|:--|
+|连接url|AnalyticDB连接信息，格式为Address:Port。|是|无|
+|数据库|AnalyticDB的数据库名称。|是|无|
+|Access Id|AnalyticDB对应的AccessKey Id。|是|无|
+|Access Key|AnalyticDB对应的AccessKey Secret。|是|无|
+|datasource|数据源名称，脚本模式支持添加数据源，此配置项填写的内容必须与添加的数据源名称保持一致。|是|无|
+|table|目标表的表名称。|是|无|
+|partition|目标表的分区名称，当目标表为普通表，需要指定该字段。|否|无|
+|writeMode|**Insert Ignore（实时插入）**模式，如果系统中已经有相同主键的记录，则当前INSERT IGNORE模式下新记录会被丢弃掉。|是|无|
+|column|目的表字段列表，可以为\["\*"\]，或者具体的字段列表，例如\["a", "b", "c"\]。|是|无|
+|suffix|AnalyticDB url配置项的格式为ip:port，实际在AnalyticDB数据库访问时，会变成JDBC数据库连接串，此部分为您定制的连接串，可选参数（请参见MySQL支持的JDBC控制参数）。例如配置suffix为autoReconnect=true&failOverReadOnly=false&maxReconnects=10。|否|无|
+|batchSize|AnalyticDB提交数据写的批量条数，当writeMode为insert时，该值才会生效。|writeMode为insert时，为必选。|无|
+|bufferSize|DataX数据收集缓冲区大小，缓冲区的目的是攒一个较大的Buffer，源头的数据首先进入到此Buffer中进行排序，排序完成后再提交到AnalyticDB。排序是根据AnalyticDB的分区列模式进行的，排序的目的是数据顺序对AnalyticDB服务端更友好（出于性能考虑）。BufferSize缓冲区中的数据会经过batchSize批量提交到ADB中，一般如果要设置bufferSize，设置bufferSize为batchSize数量的多倍。当writeMode为insert时，该值才会生效。
 
-当您使用支持**Load Data（批量导入）模式**从[MaxCompute](intl.zh-CN/使用指南/数据集成/作业配置/配置Reader插件/配置MaxCompute  Reader.md#)向ADB导入数据时，请注意：
-
--   AnalyticDB上的表必须是**批量表**（如果是实时表，请使用Insert Ignore模式进行导入）。
--   在AnalyticDB上给`cloud-data-pipeline@aliyun-inner.com`账号至少授予表的Load Data权限。
--   需要在MaxCompute上对`garuda_build@aliyun.com` 与`garuda_data@aliyun.com` 授予describe和select权限。
-
-    ```
-    add user ALIYUN$garuda_build@aliyun.com;
-    add user ALIYUN$garuda_data@aliyun.com;
-    grant describe,select on table project_name.table_name to user ALIYUN$garuda_build@aliyun.com;
-    grant describe,select on tableproject_name.table_name to user ALIYUN$garuda_data@aliyun.com;
-    ```
-
-    AnalyticDB目前仅允许操作者将数据导入自身为Project Owner的MaxCompute Project中，或者操作者是MaxCompute表的Table Creator。
-
-
-**Insert Ignore（实时插入）**从[MaxCompute](intl.zh-CN/使用指南/数据集成/作业配置/配置Reader插件/配置MaxCompute  Reader.md#)向AnalyticDB导入数据时，请注意：
-
--   AnalyticDB上的表必须是**实时表**。
--   在AnalyticDB上给`cloud-data-pipeline@aliyun-inner.com`账号至少授予表的Load Data权限。
--   需要在MaxCompute上对`garuda_build@aliyun.com` 与`garuda_data@aliyun.com` 授予describe和select权限。
-
-    ```
-    add user ALIYUN$garuda_build@aliyun.com;
-    add user ALIYUN$garuda_data@aliyun.com;
-    grant describe,select on table project_name.table_name to user ALIYUN$garuda_build@aliyun.com;
-    grant describe,select on tableproject_name.table_name to user ALIYUN$garuda_data@aliyun.com;
-    ```
-
-    ADB目前仅允许操作者将数据导入自身为Project Owner的MaxCompute Project中，或者操作者是MaxCompute表的Table Creator。
-
+|writeMode为insert时，为必选。|默认不配置不开启此功能。|
 
