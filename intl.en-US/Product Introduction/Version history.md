@@ -6,11 +6,12 @@ Release Version: DataWorks V2.0
 
 -   Release time July 25, 2018
 -   Release scope: East China 2 deployment only
--   Release: DataWorks V2.0 adds business processes and components on the basis of DataWorks V2.0, it also improved the data R&D system, supports dual projects, isolated development and production, and ensures data development specifications to reduce error codes..
+-   Release: DataWorks V2.0 adds business processes and components on the basis of DataWorks V2.0, it also improved the data R&D system, supports dual projects, isolated development and production, and ensures data development specifications to reduce error codes.
+-   **You can watch videos to learn more about DataWorks V2.0: [DataWorks V2.0 FAQs and Difficulty Analysis](https://www.alibabacloud.com/help/doc-detail/97879.htm).**
 
 ## Regions that support Dataworks 2.0 {#section_pgk_hjj_ggb .section}
 
-Regions that support Dataworks 2.0：
+Regions that support Dataworks 2.0:
 
 -   East China 1
 -   East China 2
@@ -35,7 +36,7 @@ Regions that support Dataworks 2.0：
 4.  Other features: optimized new features to take care of user pain points in detail.
 
  |
-|SQL R&D|Write SQL code on the page in the form of a single task or workflow and test run it.|Provides a more intelligent SQL editor with **code highlighting**, **formatting**, **intelligent supplement**, **error tips**, **table structure display** and other user-friendly functions. At the same time, you can see the SQL internal **structure** visually in the graphical form.|
+|SQL R&D|Write SQL code on the page in the form of a single task or WorkFlow and test run it.|Provides a more intelligent SQL editor with **code highlighting**, **formatting**, **intelligent supplement**, **error tips**, **table structure display** and other user-friendly functions. At the same time, you can see the SQL internal **structure** visually in the graphical form.|
 |Node configuration|Combine Business code through single nodes and workflow modes.|Introduces the **business process** concept of a a **workflow**. You can combine tasks in a business process, and manage different resources in business processes based on their needs \(all tasks, tables, resources, and functions must belong to a business process\). You can also consolidate business processes in one step through a solution, unifying business process management with strong relevance.|
 |Cycle configuration|The workflow overall cycle configuration affects the periodic configuration of individual tasks.|All nodes can be configured separately and the scheduling cycle type is not affected by upstream and downstream nodes.|
 |Dependency attributes|The dependencies between workflows are limited.|Task nodes in different business processes can be dependencies, and do not need to be dependencies of the business processes.|
@@ -45,7 +46,7 @@ Regions that support Dataworks 2.0：
 |Table query|Overall function|Shows alltables under the MaxCompute project, with the ability to preview the content, reference, and representation.|Same|
 |Table Management \(new\)|Overall function|None|For developers to manage their own tables, life cycle settings, and table management. Supports table management features include modifying the category, description, field, partition, hide or show table , delete table, and more.|
 |Temporary query \(new\)|Overall function|None|Used to test if the code matches expectations. Does not contain the following features: submit, publish, set schedule, and parameters function.|
-|Component Management \(new\)|Overall function|None|Abstracts a large number of similar and reusable SQL code in SQL code blocks or node tasks, you can configure input and output parameters, and apply it to a variety of practical businesses.|
+|Component Management \(new\)|Overall function|None|Abstracts a large number of similar and reusable SQL code in SQL code blocks or node tasks, you can configure input and output arguments, and apply it to a variety of practical businesses.|
 |Run history \(new\)|Overall function|None|Displays all task records that were run locally in the last three days, you can also view the task run results and provide simple filtering capabilities.|
 |Results filter \(new\)|Overall function|None|Provides SQL results integrating the Excel component, allows users to obtain expected results by filtering, and ordering after the page prints the results.|
 |Recycle Bin \(new\)|Overall function|None|Prevents business losses caused by mis-deleting user tasks, you can see all deleted nodes under the current item in the recycle bin and provide recovery capabilities.|
