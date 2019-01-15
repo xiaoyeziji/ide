@@ -4,11 +4,11 @@ To ensure that tasks can dynamically adapt to environment changes when running a
 
 -   No space can be added on either side of the equation mark "=" of a parameter. Correct: bizdate=$bizdate
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15416457247838_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15475235547838_en-US.png)
 
 -   Multiple parameters \(if any\) must be separated by spaces.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15416457247839_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15475235557839_en-US.png)
 
 
 ## System parameters {#section_dp4_2sq_p2b .section}
@@ -46,11 +46,11 @@ For example, for an ODPS SQL node, add $\{variable name\} in the code, and then 
 
 1.  For a parameter referenced in the code, you must add the resolved value during scheduling.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15416457257840_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15475235557840_en-US.png)
 
 2.  Values must be assigned to variables referenced in the code. The value assignment rule is variable name=parameter.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15416457257841_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15475235557841_en-US.png)
 
 
 ## Configure scheduling parameters for a Shell node {#section_slh_x1r_p2b .section}
@@ -61,13 +61,13 @@ For example, for a Shell node, the Shell syntax declaration in the code is: $1, 
 
 1.  For a parameter referenced in the code, you must add the resolved value during scheduling.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15416457257842_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15475235557842_en-US.png)
 
     **Note:** For a Shell node, when the number of parameters reaches 10, $\{10\} should be used to declare the variable.
 
 2.  Values must be assigned to variables referenced in the code. The value assignment rule is parameter 1 parameter 2 parameter 3....\( Replaced variables are resolved based on the parameter location, for example, $1 is resolved to parameter 1\).
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15416457257843_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15475235557843_en-US.png)
 
 
 ## The variable value is a fixed value {#section_a4l_gcr_p2b .section}
@@ -117,7 +117,7 @@ $gmtdate: current date in the format of yyyymmdd. The value of this parameter is
 
 Custom parameter $\{…\} Parameter description:
 
--   Time format customized based on $bizdate, where yyyy indicates the 4-digit year, yy indicates the 2-digit month, mm indicates the month, and dd indicates the day. The parameter can be combined as desired, for example, $\{yyyy\}, $\{yyyymm\}, $\{yyyymmdd\}, and $\{yyyy-mm-dd\}.
+-   Time format customized based on $bizdate, where yyyy indicates the 4-digit year, yy indicates the 2-digit month, mm indicates the month, and dd indicates the day. The parameter can be combined as expected, for example, $\{yyyy\}, $\{yyyymm\}, $\{yyyymmdd\}, and $\{yyyy-mm-dd\}.
 -   $bizdate is accurate to year, month, and day. Therefore, the custom parameter $\{……\} can only represent the year, month, or day.
 -   Methods for obtaining the period before or after a certain duration:
 
@@ -179,7 +179,7 @@ After the instance runs, right-click the node to **check the node attribute**. C
 
 Result after the parameter value is replaced by the scheduled time minus one hour.
 
-## FAQs {#section_rvd_tfr_p2b .section}
+## FAQ {#section_rvd_tfr_p2b .section}
 
 -   Q: The table partition format is pt=yyyy-mm-dd hh24:mi:ss, but spaces are not allowed in scheduling parameters. How should I configure the format of $\[yyyy-mm-dd hh24:mi:ss\]?
 
