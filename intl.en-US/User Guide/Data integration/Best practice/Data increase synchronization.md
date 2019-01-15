@@ -16,7 +16,7 @@ In the example, the task test date is 11/14/2016, full synchronization is perfor
 
 This scenario allows you to partition easily based on the data generation pattern because the data remains unchanged after being generated. Typically, you can partition by date, such as creating one partition on a daily basis.
 
-**Data preparation**
+Data preparation
 
 ```
 drop table if exists oplog;
@@ -32,7 +32,7 @@ Insert into oplog values ("2016-11-12 ', '% Y-% m-% d''),' hanmm ', 'desc ', "su
 
 The two data entries as the historical data are available. Perform full data synchronization first to synchronize the historical data to the partition created yesterday.
 
-**Procedure**
+Procedure
 
 1.  Create a MaxCompute table.
 
@@ -60,7 +60,7 @@ The two data entries as the historical data are available. Perform full data syn
 
 4.  Configure a task to synchronize the incremental data.
 
-    **Note:** Note: If you configure the “Data Filtering”, all the data added to the source table on November 14 is retrieved and synchronized to the incremental partition in the target table during the synchronization on the early morning the next day, which is November 15.
+    **Note:** If you configure the “Data Filtering”, all the data added to the source table on November 14 is retrieved and synchronized to the incremental partition in the target table during the synchronization on the early morning the next day, which is November 15.
 
 5.  View synchronization results.
 
@@ -73,7 +73,7 @@ For data in personnel or order tables that is subject to changes, full data sync
 
 In actual scenarios, daily incremental synchronization may be required. Because MaxCompute does not support changing data with the Update statement, you must take other measures to implement the synchronization.  The following describes how to implement full and incremental synchronization.
 
-**Data preparation**
+Data preparation
 
 ```
 drop table if exists user ;
@@ -98,7 +98,7 @@ delete from user where uid = 5;
 insert into user(uid,uname,deptno,gender,optime) values (6,'Lucy',105,'F',CURRENT_TIME);
 ```
 
-**Daily full synchronization**
+Daily full synchronization
 
 1.  Create a MaxCompute table
 
@@ -124,11 +124,11 @@ insert into user(uid,uname,deptno,gender,optime) values (6,'Lucy',105,'F',CURREN
     To query the data results, set `where ds = '20161114'` to retrieve the full data.
 
 
-**Daily incremental synchronization**
+Daily incremental synchronization
 
-This mode is not recommended except in specific scenarios.  Because the delete statement is not supported in specific scenarios, deleted data cannot be retrieved by filtering conditions of SQL statements.  Generally, enterprises’ codes are deleted logically, in which case the update statement is applied instead of the delete statement. Now that there are some inapplicable scenarios, using this sync method might cause data inconsistency when some special condition is encountered. Another drawback is that you must merge new data and historical data after the synchronization.
+This mode is not recommended except in specific scenarios.  Because the delete statement is not supported in specific scenarios, deleted data cannot be retrieved by filtering conditions of SQL statements.  Generally, enterprises’ codes are deleted logically, in which case the update statement is applied instead of the delete statement. Now that there are some inapplicable scenarios, using this sync method may cause data inconsistency when some special condition is encountered. Another drawback is that you must merge new data and historical data after the synchronization.
 
-**Data preparation**
+Data preparation
 
 Create two tables, one of which is for writing latest data and the other is for writing incremental data.
 
