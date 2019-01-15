@@ -63,15 +63,14 @@ Troubleshooting:
 
 -   Then, run another SQL statement:
 
-```
-select **index**,plaid,plarm,fget,fot,havm,coer,ines,oumes from
-          xxx
-```
+    ```
+    select **index**,plaid,plarm,fget,fot,havm,coer,ines,oumes from
+              xxx
+    ```
 
-If you look at the results, there will also be corresponding errors.
+    If you look at the results, there will also be corresponding errors.
 
 -   If the field contains the keyword index, you can add single quotes or modify the field to resolve the problem.
-
 
 **The log reports that an error occurred while running the SQL statement \(the table name is in single quotes within double quotes\)**
 
@@ -107,9 +106,7 @@ An error occurred while connecting to the database. Database connection string: 
 Troubleshooting:
 
 -   When the exception message Access denied for... is reported, it generally indicates certain problems of the information you entered. Check that information.
-
 -   Check whether the whitelist or your account has the permission to access the database. You can add the required whitelist and permissions in the RDS console.
-
 
 **The routing policy has some problems. The running pool are OXS and ECS clusters.**
 
@@ -125,18 +122,14 @@ An error occurred while connecting to the database. Check your account, password
 The error message "java.lang.Exception: DataX" indicates that the corresponding database cannot be connected for the following reasons:
 
 -   the IP/port/database/JDBC you configured is incorrect and cannot be connected.
-
 -   the user name/password you configured is incorrect, and authentication is unsuccessful. Confirm with DBA whether the connection information of the database is correct.
-
 
 Troubleshooting:
 
 Scenario 1:
 
 -   To synchronize RDS-PostgreSQL data sources from Oracle, you can click **Run** directly. The tasks cannot be performed by the scheduler, because different pools are required.
-
 -   You can add data sources in the form of JDBC to RDS, then the RDS-PostgreSQL data sources can be synchronized from Oracle.
-
 
 Scenario 2:
 
@@ -152,7 +145,7 @@ Error Details:
 
 The value of the parameter you entered is invalid.
 
-**Hbase writer does not support this type: Date**. The types currently supported are: \[string，boolean，short，int，long，float，double\].
+**Hbase writer does not support this type: Date**. The types currently supported are: \[string, boolean, short, int, long, float, double\].
 
 Troubleshooting:
 
@@ -173,7 +166,7 @@ Error Details:
 
 The DataX engine encountered an error when running. For details, see the error diagnostic information after DataX stops running
 
-java.lang.ClassCastException：com.alibaba.fastjson. Jsonobject cannot be cast to  java.lang.String
+java.lang.ClassCastException: com.alibaba.fastjson. Jsonobject cannot be cast to  java.lang.String
 
 Troubleshooting:
 
