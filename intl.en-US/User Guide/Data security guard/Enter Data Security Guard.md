@@ -1,22 +1,22 @@
 # Enter Data Security Guard {#concept_stk_vr3_r2b .concept}
 
-## Enter the boot page {#section_u54_ct3_r2b .section}
+## Enter the start page {#section_u54_ct3_r2b .section}
 
 When you first enter the Data Security Guard, the Guide page appears, which introduces you to the core features and usage process of the data umbrella, help you get a basic understanding of the Data Security Guard.
 
 Click **Try now** to enter the Data Security Guard authorization page \(if the tenant Administrator has been authorized, then direct access to the Data Security Guard Home page \).
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17054/15390831898841_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17054/15475229138841_en-US.png)
 
 ## Enter the authorization page {#section_p4q_5t3_r2b .section}
 
 Only the tenant Administrator can authorize the provision of Data Security Guard.
 
-## Login Data Security Guard {#section_tvp_353_r2b .section}
+## Logon Data Security Guard {#section_tvp_353_r2b .section}
 
 Log in to the Data Security Guard, as shown in the following page:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17054/15390831898850_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17054/15475229138850_en-US.png)
 
 Note:
 
@@ -31,5 +31,5 @@ Note:
 -   The amount of discovery and completion of all risks for nearly one week, nearly one month, and nearly three months.
 
  |
-|5|boot page switch|Click **boot page** to switch to the boot page to view the product introduction information.|
+|5|start page switch|Click **start page** to switch to the start page to view the product introduction information.|
 
