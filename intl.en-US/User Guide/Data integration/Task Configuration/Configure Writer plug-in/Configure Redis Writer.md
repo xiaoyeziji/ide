@@ -1,12 +1,12 @@
 # Configure Redis Writer {#concept_fdm_sxn_q2b .concept}
 
-Redis Writer is a Redis writing plug-in based on the Data Integration framework. It can import data from a data warehouse or other data sources to a Redis instance. Redis Writer interacts with Redis Server via Jedis. As a preferred Java client development kit provided by Redis, Jedis has almost all Redis features.
+Redis Writer is a Redis writing plug-in based on the Data Integration framework. It can import data from a data warehouse or other data sources to a Redis instance. Redis Writer interacts with Redis Server by Jedis. As a preferred Java client development kit provided by Redis, Jedis has almost all Redis features.
 
 Redis \(Remote Dictionary Server\) is a high-performance persistent log-based key-value storage system supporting network and based on memory, which can be used as a database, high-speed cache, and message queue \(MQ\) proxy. Redis supports diverse types of storage values, including string, list, set, zset \(sorted set\), and hash. For details about Redis, see [redis.io](http://redis.io/).
 
 **Note:** 
 
--   Configure the data source before configuring a Redis Writer plug-in. For details, see [Configure Redis data source](reseller.en-US/User Guide/Data integration/Data source configuration/Configure Redis data source.md#)Configure the Redis Data Source.
+-   Configure the data source before configuring a Redis Writer plug-in. For details, see [Configure Redis data source](intl.en-US/User Guide/Data integration/Data source configuration/Configure Redis data source.md#)Configure the Redis Data Source.
 -   When data is written to a Redis instance through Redis Writer, if values are lists, the result of the re-run synchronization task is not idempotent. So if the value type is list, you must manually clear the corresponding data on Redis when re-running the synchronization task.
 
 ## Parameter description​ {#section_jn2_gqh_p2b .section}
