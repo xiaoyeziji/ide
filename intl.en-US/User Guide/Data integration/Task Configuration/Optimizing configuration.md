@@ -122,7 +122,7 @@ After the beta phase of Data Integration has ended, throttling is disabled by de
 
 -   Solution
 
-    To launch multiple tasks to write data to the same database at the same time, pay attention to the followings:
+    To start multiple tasks to write data to the same database at the same time, pay attention to the followings:
 
     -   Ensure that the load capacity of the destination database is sufficient to prevent improper running.
     -   When you configure workflow tasks, select a single task node and configure database or table sharding tasks, or set multiple nodes to run concurrently in the same workflow.
