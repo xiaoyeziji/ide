@@ -4,14 +4,14 @@
 
 The steps for the data security administrator are as follows:
 
-1.  Login Data Protection Platform.
+1.  Logon Data Protection Platform.
 2.  Navigate to **Rules Setting** \> **identification**, and click **New**.
-3.  Complete the basic information in the pop-up box, and click **Next**.Configurations:
+3.  Complete the basic information in the dialog box, and click **Next**.Configurations:
     -   Data Type: that is, the classification to which the rule belongs, which supports adding by template or custom adding.
     -   Data name: 11 Sensitive data identification definition templates are built into the system, ID card, banking card number, mailbox, mobile phone number, IP, MAC address, fixed phone, license plate number, identification of company, address and name, user-defined rules are also provided.
     -   Owner: the rule sets the person information.
     -   Note: set additional information descriptions for this rule.
-4.  Complete the configuration rules in the pop-up box, and click **Next**.
+4.  Complete the configuration rules in the dialog box, and click **Next**.
 
     Configurations:
 
