@@ -9,16 +9,16 @@ Object Storage Service \(OSS\) is a massive, secure, and highly reliable cloud s
 
 ## Procedure {#section_jy4_q4v_42b .section}
 
-1.  Log on to the [DataWorks console](https://partners-intl.aliyun.com) as an administrator and click **Enter Workspace** in the actions column of the relevant project in the Project List.
+1.  Log on to the [DataWorks console](https://workbench.data.aliyun.com/console) as an administrator and click **Enter Workspace** in the actions column of the relevant project in the Project List.
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New source** to pop up the supported data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16209/15408682157559_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16209/15476016567559_en-US.png)
 
-4.  In the new data source pop-up box, select the data source type as **OSS**.
+4.  In the new data source dialog box, select the data source type as **OSS**.
 5.  Fill in configuration items for the OSS data source to be created.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16209/15408682157560_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16209/15476016567560_en-US.png)
 
     Configurations:
 
@@ -29,7 +29,7 @@ Object Storage Service \(OSS\) is a massive, secure, and highly reliable cloud s
         **Note:** The correct filling format for Endpoint is`http://oss.aliyuncs.com`, but add the bucket value before the OSS to connect`http://oss.aliyuncs.com` in the form of a point number, for example`http://xxx.oss.aliyuncs.com`, test connectivity can pass, but synchronization will report errors.
 
     -   Bucket: The bucket of the OSS instance. The bucket is a storage space and serves as the container for storing objects. You can create one or more buckets and add one or more files to each bucket. The bucket entered here searches for corresponding files in the data synchronization task, and file searching is unavailable for non-added buckets.
-    -   AccessID/AceessKey: the [access key](https://www.alibabacloud.com/help/doc-detail/53045.htm) \(AccessKeyID and AccessKeySecret\) is equivalent to the login password.
+    -   AccessID/AceessKey: the [access key](https://www.alibabacloud.com/help/doc-detail/53045.htm) \(AccessKeyID and AccessKeySecret\) is equivalent to the logon password.
 6.  Click **Test Connectivity**
 7.  When the connectivity test is passed, click **Complete**.
 
@@ -40,5 +40,5 @@ Object Storage Service \(OSS\) is a massive, secure, and highly reliable cloud s
 
 ## Next step {#section_bbg_jnb_p2b .section}
 
-Now you have learned how to configure the OSS data source. The document explains how to configure the OSS Writer plug‑in later. For more information, see [Configure OSS Writer](reseller.en-US/User Guide/Data integration/Task Configuration/Configure Writer plug-in/Configure OSS Writer.md#).
+Now you have learned how to configure the OSS data source. The document explains how to configure the OSS Writer plug‑in later. For more information, see [Configure OSS Writer](intl.en-US/User Guide/Data integration/Task Configuration/Configure Writer plug-in/Configure OSS Writer.md#).
 
