@@ -40,7 +40,7 @@ The start time and the end time must cover the time period for operating Table S
 
     |Configuration|Description|
     |:------------|:----------|
-    |**Data Source**|Select OTS stream and enter the OTS stream data source name.|
+    |**Data Source**|Select OTSStream and enter the OTSStream data source name.|
     |**Table**|The name of the table from which incremental data is exported. You must enable the Stream feature on the table when creating the table or using the UpdateTable operation after the creation.|
     |**Start Time**|The start time \(included\) in milliseconds of the incremental data. The format is yyyyMMddHHmmss.|
     |**End time**|The end time \(excluded\) in milliseconds of the incremental data. The format is yyyyMMddHHmmss.|
