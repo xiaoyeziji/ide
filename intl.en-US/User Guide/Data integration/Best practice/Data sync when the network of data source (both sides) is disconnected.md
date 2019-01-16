@@ -47,7 +47,7 @@ Configure the Data Source
     Resource group: The machine on which the target agent is deployed. The target agent is for pulling data to the local device.  To add source group, see [Add scheduling resources](intl.en-US/User Guide/Data integration/Common configuration/Add scheduling resources.md#).
 
 
-## **Select the script mode** {#section_qbk_hx1_r2b .section}
+## Select the script mode {#section_qbk_hx1_r2b .section}
 
 1.  Click Data Integration from the upper menu, and go to Sync Tasks page.
 2.  Choose **New** \> **Script Mode** on the page.
@@ -62,7 +62,7 @@ Configure the Data Source
 
 4.  Configure a synchronization task.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16272/15435669118574_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16272/15476206438574_en-US.png)
 
     -   Because machine 1 cannot access the public network, an machine 2 that is in the same network segment as machine 1 and has the ability to access the public network is required for agent deployment.
     -   Set machine 2 as the scheduling resource group, and run the synchronization task on the machine.
@@ -95,10 +95,10 @@ Configure the Data Source
             -   ODPS endpoint: defaults to read-only. The value is automatically read from the system configuration.
             -   ODPS project name: the corresponding MaxCompute project indicator.
             -   Access Id: the Access ID corresponding to the MaxCompute project owner's cloud account.
-            -   Access Key: The Access Key of the MaxCompute Project Owner cloud account, used in combination with the Access ID. The access key is equivalent to the login password.
+            -   Access Key: The Access Key of the MaxCompute Project Owner cloud account, used in combination with the Access ID. The access key is equivalent to the logon password.
             -   Connectivity test: the connectivity test is supported.
 
-**Configure a synchronization task**
+## Configure a synchronization task {#section_dck_hx1_r2b .section}
 
 1.  Select the source.
 
