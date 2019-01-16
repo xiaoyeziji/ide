@@ -30,7 +30,7 @@ For the complex network environments where either the data source or the data ta
 
 The data synchronization method in this scenario is shown in the following figure:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16272/15435667348568_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16272/15476216648568_en-US.png)
 
 -   Because ECS2 server cannot access the public network, an ECS1 machine that is in the same network segment as ECS2 and has the ability to access the public network is required for agent deployment.
 -   Set ECS1 as the resource group, and run the synchronization task on the machine.
@@ -49,7 +49,7 @@ The user-created data source synchronization task on ECS2 runs in the custom res
 
 The data synchronization method in this scenario is shown in the following figure:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16272/15435667348574_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16272/15476216648574_en-US.png)
 
 -   Because machine 1 cannot access the public network, an machine 2 that is in the same network segment as machine 1 and has the ability to access the public network is required for agent deployment.
 -   Set machine 2 as the scheduling resource group, and run the synchronization task on the machine.
@@ -82,7 +82,7 @@ Configure the Data Source
             -   ODPS endpoint: defaults to read-only. The value is automatically read from the system configuration.
             -   ODPS project name: the corresponding MaxCompute project indicator.
             -   Access ID: the Access ID corresponding to the MaxCompute project owner's cloud account.
-            -   Access Key: The Access Key of the MaxCompute Project Owner cloud account, used in combination with the Access ID. The access key is equivalent to the login password.
+            -   Access Key: The Access Key of the MaxCompute Project Owner cloud account, used in combination with the Access ID. The access key is equivalent to the logon password.
             -   Connectivity test: the connectivity test is supported.
 
 **Configure a synchronization task**
