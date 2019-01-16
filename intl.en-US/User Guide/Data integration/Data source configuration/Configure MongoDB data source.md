@@ -8,13 +8,13 @@ MongoDB, as a NoSQL database, is one of the world's most popular document-based 
 
 ## Procedure {#section_jy4_q4v_42b .section}
 
-1.  Log on to the [DataWorks console](https://partners-intl.aliyun.com) as an administrator and click **Enter Workspace** in the actions column of the relevant project in the Project List.
+1.  Log on to the [DataWorks console](https://workbench.data.aliyun.com/console) as an administrator and click **Enter Workspace** in the actions column of the relevant project in the Project List.
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New source** to pop up the supported data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15430562367534_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15476029597534_en-US.png)
 
-4.  In the new data source pop-up box, select the data source type as **MongoDB**.
+4.  In the new data source dialog box, select the data source type as **MongoDB**.
 5.  Complete the configuration items for the MongoDB data source.
 
     MongoDB data source types are divided into **Alibaba cloud database** and **public network IP self-built database**.
@@ -23,7 +23,7 @@ MongoDB, as a NoSQL database, is one of the world's most popular document-based 
     -   User-created databases with public IPs: These databases generally use public networks, which may cause a certain cost.
     Consider a data source with a new **MongDB** \> **Ali cloud database** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15430562367547_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15476029597547_en-US.png)
 
     Configurations:
 
@@ -41,7 +41,7 @@ MongoDB, as a NoSQL database, is one of the world's most popular document-based 
     -   Username/Password: The user name and password used to connect to the database.
     Consider a data source with a new **MongDB** \> **self-built database with public network IP** as an example.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15430562367548_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15476029597548_en-US.png)
 
     Configurations:
 
@@ -62,5 +62,5 @@ MongoDB, as a NoSQL database, is one of the world's most popular document-based 
 
 ## Next step {#section_dqv_5d1_p2b .section}
 
-Now you have learned how to configure the MongoDB data source. The document explains how to configure the MongoDB Writer plug‑in later. For more information, see [Configure MongoDB Writer](reseller.en-US/User Guide/Data integration/Task Configuration/Configure Writer plug-in/Configure MongoDB Writer.md#).
+Now you have learned how to configure the MongoDB data source. The document explains how to configure the MongoDB Writer plug‑in later. For more information, see [Configure MongoDB Writer](intl.en-US/User Guide/Data integration/Task Configuration/Configure Writer plug-in/Configure MongoDB Writer.md#).
 
