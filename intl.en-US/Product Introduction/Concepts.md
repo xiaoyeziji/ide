@@ -2,32 +2,32 @@
 
 ## Business flow {#section_udp_k4y_s2b .section}
 
-Business flows: for business entities, the concept of business flows is abstract, enable users to organize data code development from a business perspective to improve task management efficiency. Business flows can be used repeatedly in different solutions.
+This topic describes DataWorks business flows, solutions, components, tasks, instances, submissions, script development, resources, functions, and output name concepts.
 
 Advantages:
 
--   Helps organize codes from business perspectives in a clearer way. Supports the code organization based on task types and multi-level sub-directories \(no more than four levels\).
--   Views the overall work flows from business perspectives for optimization.
--   Provides dashboards of business flows for efficient development.
--   Organize the release and maintenance according to business flows.
+-   Helps organize data codes from business perspectives supports code organization based on task types and multi-level sub-directories \(Alibaba Cloud recommends no more than four levels\).
+-   Provides work flow overview from business perspectives to facilitate optimization.
+-   Provides business flow dashboards for efficient development.
+-   Organizes release and maintenance based on business flows.
 
 ## Solution {#section_srl_n4y_s2b .section}
 
-Solution: You can customize and combine some business flows into a solution in a self-defining manner.
+DataWorks offers customizable and integrable business flow solutions.
 
 Advantages:
 
 -   Multiple business flows
--   Reusable business flows in different solutions
--   Complete solutions for immersive development
+-   Reusable business flows for different solutions
+-   Comprehensive solutions for immersive development
 
 ## Component {#section_hgj_p4y_s2b .section}
 
-A component is a SQL code procedure template with multiple input and output parameters, SQL code procedures are generally handled by introducing one or more source data tables through filtering, connect, aggregate, and other operations to process target tables for new business needs. The common logic in SQL can be abstract into components to enhance code reuse.
+A component is a SQL code procedure template with multiple input and output parameters, SQL code procedures are generally handled by introducing one or more data table sources through filtering, connect, aggregate, and other operations to process target tables for new business needs. The common logic in SQL can be abstract components to enhance code reuse.
 
 ## Task {#section_pdk_12p_r2b .section}
 
-A task is used to perform various operations on data. The following describes the uses of various tasks:
+A task performs various data operations . The following describes various task applications:
 
 -   A data synchronization node task is used to copy data from RDS to MaxCompute.
 -   A MaxCompute SQL node task is used to run MaxCompute SQL for data conversion.
@@ -37,21 +37,21 @@ Each task uses zero or more data tables \(data sets\) as an input, and generates
 
 Tasks are divided into node tasks, flow tasks, and inner nodes. See the relationships between these tasks in the following figure:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16168/15389843408911_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16168/15476087288911_en-US.png)
 
--   A node task is an operation performed on data. It can be configured to be dependent on other node tasks and flow tasks to form a Directed Acyclic Graph \(DAG\).
--   A flow task is formed by a group of inner nodes that are processing a small business. We recommend using less than 10 flow tasks. Inner nodes of a flow task cannot depend on by other flow or node tasks. A flow task can be configured to be dependent on other flow and node tasks to form a DAG.
--   An inner node is a node inside a flow task. It basically provides the same capabilities as a node task. Its scheduling frequency is inherited from the scheduling frequency of the flow task, and cannot be configured independently. The dependency can only be dragged.
+-   A node task is a data operation. It can be configured to be dependent on other node tasks and flow tasks to form a Directed Acyclic Graph \(DAG\).
+-   A flow task is formed by a group of inner nodes that process a a work flow task. We recommend using less than 10 flow tasks. Inner nodes of a flow task cannot be dependencies of other flow or node tasks. A flow task can be configured to be a dependency of other flow and node tasks to form a DAG.
+-   An inner node is a node within a flow task. It basically has the same capabilities as a node task. Its scheduling cycle is inherited from the flow task scheduling frequency and cannot be configured independently. The dependency can only be dragged.
 
-Data execution can be selected as an operation type, see [Node type overview](../../../../reseller.en-US/User Guide/Data development/Node type/Node type overview.md#).
+Data execution can be selected from an operation type, see [Node type overview](../../../../../reseller.en-US/User Guide/Data development/Node type/Node type overview.md#).
 
-For details about task scheduling parameter configuration, see [Scheduling configuration](../../../../reseller.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
+For details about task scheduling parameter configurations, see [Scheduling configuration](../../../../../reseller.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
 
 ## Instance {#section_dg5_w2p_r2b .section}
 
-When a task is scheduled by the system or triggered manually, an instance is generated. An instance is a snapshot that runs by a task at a certain moment. The instance contains the task operating time, operating status, operating logs, and other information. For example:
+An instance is generated when a task is scheduled by the system or triggered manually. An instance is a snapshot that runs by a task at a certain time. The instance contains the task operating time, operating status, operating logs, and other information. For example:
 
-Assume that Task 1 is configured to run at 02:00 each day. In this case, the scheduling system automatically generates a snapshot at the time predefined by the periodic node task at 23:30 each day. That is, the instance of Task 1 to be run at 02:00 the next day. When it is detected that the upstream task is complete, the system automatically runs the Task 1 instance at 02:00 the next day.
+Assume that Task 1 is configured to run at 02:00 each day. In this case, the scheduling system automatically generates a snapshot at the time predefined by the periodic node task at 23:30 each day. That is, the instance of Task 1 will run at 02:00 the next day. If the system detects the upstream task is complete, the system automatically runs the Task 1 instance at 02:00 the next day.
 
 **Note:** 
 
@@ -59,25 +59,25 @@ You can query task instance information on the **O&M Center** \> **Task O&M**pag
 
 ## Submit {#section_un1_tfp_r2b .section}
 
-Commit refers to the process of developing node tasks, work flow tasks from developing environments to publish to scheduling systems. After a task is submitted, its code and scheduling configuration are synchronized to the scheduling system, which schedules the task according to the configuration.
+Submit refers to the node task development process, and the work flow tasks from developing environments that are published to the scheduling systems. After a task is submitted, its code and scheduling configuration are synchronized to the scheduling system, which schedules the task according to the configuration.
 
-**Note:** Node tasks and flow tasks that are not submitted do not enter the scheduling system.
+**Note:** Unsubmitted node tasks and flow tasks do not enter the scheduling system.
 
 ## Script {#section_z14_wfp_r2b .section}
 
-A script is a code storage space that is provided for data analysis. The script code cannot be released to the scheduling system, and its scheduling parameters cannot be configured. It can only be used for data query and analysis.
+A script is a code storage space for data analysis. The script code cannot be released to the scheduling system, and its scheduling parameters cannot be configured. It can only be used for data query and analysis.
 
 ## Resources and functions {#section_lj3_ggp_r2b .section}
 
 Resources and functions are both MaxCompute concepts. For details, see [MaxCompute resources](https://www.alibabacloud.com/help/doc-detail/27822.htm) and [MaxCompute functions](https://www.alibabacloud.com/help/doc-detail/27823.htm).
 
-In DataWorks, you can use interfaces for resource and function management. Resources and functions that are managed through other MaxCompute methods, cannot be queried in DataWorks.
+In DataWorks, interfaces are used for resource and function management. Resources and functions managed through other MaxCompute methods cannot be queried in DataWorks.
 
 ## Output name {#section_phs_cnh_y2b .section}
 
-The output name is the name of each task's output point, it is when a user sets dependencies within a single tenant \(Alibaba Cloud account. A virtual entity that connects two tasks upstream and downstream.
+The output name is the name of each task's output point. If users set dependencies within a Alibaba Cloud account single tenant, a virtual entity that connects upstream and downstream tasks. .
 
-When the user is setting up a task to form upstream-downstream dependencies with other tasks, the setting must be done based on the output name \(not the node name or node ID\). The output name of the task is also used as the input name for its downstream node.
+If a task is set to form upstream and downstream dependencies with other tasks, the setting must be based on the output name. The task output name is also the input name for the downstream node.
 
-**Note:** Similar to the ID of the task, the output name can also be a unique conceptual object for a task that is different from other tasks in the same tenant. Users can also add custom output names to a task, note, however, that the output node name is not allowed to repeat within the tenant.
+**Note:** Similar to a task ID, the output name can be a unique conceptual object for a task that is different from other tasks in the same tenant. You can also add custom output names to a task, however, the output node name must be unique within the tenant.
 
