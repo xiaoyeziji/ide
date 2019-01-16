@@ -4,13 +4,13 @@ Redis is a document-based NoSQL database that provides persistent memory databas
 
 ## Procedure {#section_jy4_q4v_42b .section}
 
-1.  Log on to the [DataWorks console](https://partners-intl.aliyun.com) as an administrator and click **Enter Workspace** in the actions column of the relevant project in the Project List.
+1.  Log on to the [DataWorks console](https://workbench.data.aliyun.com/console) as an administrator and click **Enter Workspace** in the actions column of the relevant project in the Project List.
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New Source** to pop up the supported data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16212/15396618507592_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16212/15476022657592_en-US.png)
 
-4.  In the new data source pop-up box, select a data source type of **Redis**.
+4.  In the new data source dialog box, select a data source type of **Redis**.
 5.  Complete the configuration items for the Redis data source.
 
     The data source types of redis are divided into **Alibaba cloud database** and **public network IP self-built database**.
@@ -19,7 +19,7 @@ Redis is a document-based NoSQL database that provides persistent memory databas
     -   User‑created databases with public IPs: These databases generally use public networks, which may cause a certain cost.
     Consider a data source that adds a new **Redis** \> **Ali cloud database** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16212/15396618507593_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16212/15476022657593_en-US.png)
 
     Configurations:
 
@@ -34,7 +34,7 @@ Redis is a document-based NoSQL database that provides persistent memory databas
     -   Redis access password: the access password for the Redis Server, and does not fill in if not.
     Consider a data source that adds a new **Redis** \> **Alibaba cloud database** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16212/15396618507594_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16212/15476022657594_en-US.png)
 
     Configurations:
 
@@ -49,5 +49,5 @@ Redis is a document-based NoSQL database that provides persistent memory databas
 
 ## Next step { .section}
 
-Now you have learned how to configure the Redis data source. The document explains how to configure the Redis Writer-plug in later. For more information, see [Configure Redis Writer](reseller.en-US/User Guide/Data Integration/Task Configuration/Configure Writer plug-in/Configure Redis Writer.md#).
+Now you have learned how to configure the Redis data source. The document explains how to configure the Redis Writer-plug in later. For more information, see [Configure Redis Writer](intl.en-US/User Guide/Data integration/Task Configuration/Configure Writer plug-in/Configure Redis Writer.md#).
 
