@@ -4,20 +4,20 @@ The Oracle data source allows you to read data from and write data to Oracle, an
 
 ## Procedure {#section_jy4_q4v_42b .section}
 
-1.  Log on to the [DataWorks console](https://partners-intl.aliyun.com) as an administrator and click **Enter Workspace** in the actions column of the relevant project in the Project List.
+1.  Log on to the [DataWorks console](https://workbench.data.aliyun.com/console) as an administrator and click **Enter Workspace** in the actions column of the relevant project in the Project List.
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New source** to pop up the supported data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15389852547556_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15476033857556_en-US.png)
 
-4.  In the new data source pop-up box, select the data source type as **Oracle**.
+4.  In the new data source dialog box, select the data source type as **Oracle**.
 5.  Configure each item of information for the Oracle data source.
 
     Oracle Data source types are divided into **public network IP** and **non-public network IP**, and you can choose according to your own situation.
 
     Consider a data source that adds a new **Oracle** \> **network IP** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15389852547557_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15476033857557_en-US.png)
 
     Configurations:
 
@@ -28,7 +28,7 @@ The Oracle data source allows you to read data from and write data to Oracle, an
     -   Username/Password: The user name and password used to connect to the database.
     Consider a data source that adds a new **Oracle** \> **network IP** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15389852557558_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15476033867558_en-US.png)
 
     Configurations:
 
@@ -47,5 +47,5 @@ The Oracle data source allows you to read data from and write data to Oracle, an
 
 ## Next step {#section_bbg_jnb_p2b .section}
 
-Now you have learned how to configure the Oralce data source. The document explains how to configure the Oralce Writer plug‑in later. For more information, see [Configuring Oracle Writer](reseller.en-US/User Guide/Data Integration/Task Configuration/Configure Writer plug-in/Configuring Oracle Writer.md#).
+Now you have learned how to configure the Oralce data source. The document explains how to configure the Oralce Writer plug‑in later. For more information, see [Configuring Oracle Writer](intl.en-US/User Guide/Data integration/Task Configuration/Configure Writer plug-in/Configuring Oracle Writer.md#).
 
