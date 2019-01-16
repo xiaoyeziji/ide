@@ -4,16 +4,16 @@ HDFS, as a distributed file system, allows you to read data from and write data 
 
 ## Procedure {#section_jy4_q4v_42b .section}
 
-1.  Log on to the [DataWorks console](https://partners-intl.aliyun.com) as an administrator and click **Enter Workspace** from the Actions column of the relevant project in the Project List.
+1.  Log on to the [DataWorks console](https://workbench.data.aliyun.com/console) as an administrator and click **Enter Workspace** from the Actions column of the relevant project in the Project List.
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New source** to pop up the supported data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16202/15389851247538_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16202/15476031197538_en-US.png)
 
-4.  In the new data source pop-up box, select the data source type **HDFS**.
+4.  In the new data source dialog box, select the data source type **HDFS**.
 5.  Configure individual information items for HDFS data sources.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16202/15389851247539_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16202/15476031197539_en-US.png)
 
     Configurations:
 
@@ -33,5 +33,5 @@ HDFS, as a distributed file system, allows you to read data from and write data 
 
 ## Next step {#section_dqv_5d1_p2b .section}
 
-Now you have learned how to configure the HDFS data source. The document explains how to configure the HDFS Writer plug-in later. For more information, see [Configure HDFS Writer](reseller.en-US/User Guide/Data Integration/Task Configuration/Configure Writer plug-in/Configure HDFS Writer.md#).
+Now you have learned how to configure the HDFS data source. The document explains how to configure the HDFS Writer plug-in later. For more information, see [Configure HDFS Writer](intl.en-US/User Guide/Data integration/Task Configuration/Configure Writer plug-in/Configure HDFS Writer.md#).
 
