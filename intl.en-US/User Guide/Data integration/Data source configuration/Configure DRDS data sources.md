@@ -4,16 +4,16 @@ The DRDS data source allows you to read data from and write data to DRDS, and su
 
 ## Procedure {#section_jy4_q4v_42b .section}
 
-1.  Log on to the [DataWorks console](https://partners-intl.aliyun.com) as an administrator and click **Enter Workspace** in the actions column of the relevant project in the Project List.
+1.  Log on to the [DataWorks console](https://workbench.data.aliyun.com/console) as an administrator and click **Enter Workspace** in the actions column of the relevant project in the Project List.
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New source** to pop up the supported data source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16200/15438252057532_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16200/15476083197532_en-US.png)
 
-4.  In the new data source pop-up box, select the data source type as **DRDS**.
+4.  In the new data source dialog box, select the data source type as **DRDS**.
 5.  Fill in configuration items for the DRDS data source to be created.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16200/15438252057533_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16200/15476083197533_en-US.png)
 
     Configurations:
 
@@ -34,5 +34,5 @@ The DRDS data source allows you to read data from and write data to DRDS, and su
 
 ## Next step {#section_dqv_5d1_p2b .section}
 
-Now you have learned how to configure the DRDS data source. The document explains how to configure the DRDS Writer plug‑in later. For more information, see [Configure DRDS Writer](reseller.en-US/User Guide/Data integration/Task Configuration/Configure Writer plug-in/Configure DRDS Writer.md#).
+Now you have learned how to configure the DRDS data source. The document explains how to configure the DRDS Writer plug‑in later. For more information, see [Configure DRDS Writer](intl.en-US/User Guide/Data integration/Task Configuration/Configure Writer plug-in/Configure DRDS Writer.md#).
 
