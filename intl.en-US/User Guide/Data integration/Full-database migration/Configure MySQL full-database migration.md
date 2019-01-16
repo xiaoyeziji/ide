@@ -2,7 +2,7 @@
 
 This article demonstrates how to migrate a full MySQL database to MaxCompute with the full-database migration feature.
 
-The full-database migration is a fast tool for improving user efficiency and reducing user usage costs, it can quickly upload all the tables in the MySQL database to MaxCompute, for a detailed introduction to the whole library migration, see [Full-database migration overview](reseller.en-US/User Guide/Data Integration/Full-database migration/Full-database migration overview.md#).
+The full-database migration is a fast tool for improving user efficiency and reducing user usage costs, it can quickly upload all the tables in the MySQL database to MaxCompute, for a detailed introduction to the whole library migration, see [Full-database migration overview](intl.en-US/User Guide/Data integration/Full-database migration/Full-database migration overview.md#).
 
 ## Procedure {#section_fn2_s1v_q2b .section}
 
@@ -19,7 +19,7 @@ The full-database migration is a fast tool for improving user efficiency and red
 5.  Click **Advanced Settings** to select conversion rules based on specific requirements. For example, the prefix ods\_ was added consistently when the MaxCompute table was built.
 6.  In the control area of the migration mode and concurrency, select Daily Incremental as the synchronization mode and set gmt\_modified for the incremental field. Data Integration generates a where condition of incremental extraction for each task based on the selected incremental field by default and defines a daily data extraction condition by working with a DataWorks scheduling parameter such as $\{bdp.system.bizdate\},
 
-    Data integration is used to extract data from a MySQL library table to connect to a remote MySQL database via JDBC, and execute the corresponding SQL statement to select the data from the MySQL library. Since it is a standard SQL extraction statement, you can configure the WHERE clause to control the scope of data. Here you can view where conditions for incremental extraction are as follows:
+    Data integration is used to extract data from a MySQL library table to connect to a remote MySQL database by JDBC, and execute the corresponding SQL statement to select the data from the MySQL library. Since it is a standard SQL extraction statement, you can configure the WHERE clause to control the scope of data. Here you can view where conditions for incremental extraction are as follows:
 
     ```
     STR_TO_DATE('${bdp.system.bizdate}', '%Y%m%d') <= gmt_modified AND gmt_modified < DATE_ADD(STR_TO_DATE('${bdp.system.bizdate}', '%Y%m%d'), interval 1 day)
