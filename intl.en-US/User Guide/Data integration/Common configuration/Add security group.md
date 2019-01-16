@@ -2,7 +2,7 @@
 
 This article describes how to add a corresponding security group when you are using DataWorks \(formerly Data IDE\) in different regions.
 
-To ascertain the security and stability of databases, you must add the IP addresses or IP segments used for accessing the database to the [Add whitelist](reseller.en-US/User Guide/Data Integration/Common configuration/Add whitelist.md#) or security group of the target instance before using certain database instances. This article describes how to add a corresponding security group when you are using DataWorks \(formerly Data IDE\) in different regions 
+To ascertain the security and stability of databases, you must add the IP addresses or IP segments used for accessing the database to the [Add whitelist](intl.en-US/User Guide/Data integration/Common configuration/Add whitelist.md#) or security group of the target instance before using certain database instances. This article describes how to add a corresponding security group when you are using DataWorks \(formerly Data IDE\) in different regions.
 
 ## Add a security group {#section_djc_kj5_q2b .section}
 
@@ -14,9 +14,10 @@ To ascertain the security and stability of databases, you must add the IP addres
     |China \(Hangzhou\)|sg-bp13y8iuj33uqpqvgqw2|1156529087455811|
     |China \(Shanghai\)|sg-uf6ir5g3rlu7thymywza|1156529087455811|
     |China \(Shenzhen\)|sg-wz9ar9o9jgok5tajj7ll|1156529087455811|
-    |Singapore|sg-t4n222njci99ik5y6dag|1156529087455811|
+    |Asia Pacific SE 1\(Singapore\)|sg-t4n222njci99ik5y6dag|1156529087455811|
     |Hong Kong|Sg-j6c28uqpqb27yc3tjmb6|1156529087455811|
-    |US \(Silicon Valley\)|sg-rj9bowpmdvhyl53lza2j|1156529087455811|
+    |US West 1 \(Silicon Valley\)|sg-rj9bowpmdvhyl53lza2j|1156529087455811|
+    |US East 1|sg-0xienf2ak8gs0puz68i9|1156529087455811|
     |China \(Beijing\)|sg-2ze3236e8pcbxw61o9y0|1156529087455811|
 
     **Note:** ECS in VPC environment does not support adding the above security groups.
@@ -29,6 +30,6 @@ To ascertain the security and stability of databases, you must add the IP addres
 3.  Select the target region.
 4.  Locate the security group where you want to configure authorization rules, and click the **configuration rule** that is listed in the action.
 5.  Click **Security Groups** and click **Add Rules**.
-6.  Sets the parameters in the pop-up dialog box.
+6.  Sets the parameters in the dialog dialog box.
 7.  Click **Confirm**.
 
