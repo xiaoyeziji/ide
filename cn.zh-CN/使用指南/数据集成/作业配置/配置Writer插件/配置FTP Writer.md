@@ -42,7 +42,7 @@ FTP Writer实现了从数据集成协议转为FTP文件功能，FTP文件本身�
 |dateFormat|日期类型的数据序列化到文件中时的格式，例如"dateFormat":"yyyy-MM-dd"。|否|无|
 |fileFormat|文件写出的格式，包括csv和text两种，csv是严格的csv格式，如果待写数据包括列分隔符，则会按照csv的转义语法转义，转义符号为双引号。text格式是用列分隔符简单分割待写数据，对于待写数据包括列分隔符情况下不做转义。|否|text|
 |header|txt写出时的表头，例如\['id', 'name', 'age'\]。|否|无|
-|markDoneFileName|标档文件名，同步任务结束后生成标档文件，根据此标档文件可以判断同步任务是否成功。|否|无|
+|markDoneFileName|标档文件名，同步任务结束后生成标档文件，根据此标档文件可以判断同步任务是否成功。此处应配置为绝对路径。|否|无|
 
 ## 向导开发介绍 {#section_bp2_wsh_p2b .section}
 
@@ -50,7 +50,7 @@ FTP Writer实现了从数据集成协议转为FTP文件功能，FTP文件本身�
 
     配置同步任务的数据来源和数据去向。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15411404277697_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15476311167697_zh-CN.png)
 
     配置项说明如下：
 
@@ -66,13 +66,13 @@ FTP Writer实现了从数据集成协议转为FTP文件功能，FTP文件本身�
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15411404277701_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15476311167701_zh-CN.png)
 
     同行映射：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
 
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15411404287704_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15476311167704_zh-CN.png)
 
     配置项说明如下：
 
