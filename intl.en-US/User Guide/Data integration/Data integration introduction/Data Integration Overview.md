@@ -16,7 +16,7 @@ Data Integration provides extensive options for data sources shown as follows:
 -   Big data \(MaxCompute/AnalyticDB/HDFS\),
 -   MPP database \(HybridDB for MySQL\).
 
-For more information, see [Supported data sources](intl.en-US/User Guide/Data Integration/Data source configuration/Supported data sources.md#).
+For more information, see [Supported data sources](intl.en-US/User Guide/Data integration/Data source configuration/Supported data sources.md#).
 
 **Note:** The configuration information of different data sources varies dramatically from each other, and the parameter configuration information needs to be queried in detail based on the actual use case. For this reason, detailed description of parameters is available on the data source configuration and job configuration pages, which can be queried and used as needed.
 
@@ -44,9 +44,9 @@ See classic network and VPC Frequently Asked Questions for questions related to 
 
 Note:
 
--   Public network access is supported - just select the classic network as the network type. Note the speed of the public network bandwidth and relevant network traffic charges when using this type of network. It is not recommended except for special cases.
+-   Public network access is supported - only select the classic network as the network type. Note the speed of the public network bandwidth and relevant network traffic charges when using this type of network. It is not recommended except for special cases.
 -   Network connections are planned for data synchronization, you can use the locally added resource + Script Mode scheme for synchronous data transfer, you can also use the shell + datax scheme.
--   The Virtual Private Cloud \(VPC\) creates an isolated network environment and allows you to customize the IP address range, network segments, and gateways. VPC applications expand as the VPC security improves, and thus Data Integration provides RDS for MySQL, RDS for SQL Server, and RDS for PostgreSQL and eliminates the need to purchase extra ECSs that reside on the same network as the VPC. Instead, the system ensures interconnectivity by detecting devices automatically through the reverse proxy. The support for other Alibaba Cloud databases including PPAS, OceanBase, Redis, MongoDB, Memcache, TableStore, and HBase will also be available in the future. For any non-RDS data sources, an ECS on the same network is required for configuring data integration synchronization tasks on the VPC network and ensuring interconnectivity.
+-   The Virtual Private Cloud \(VPC\) creates an isolated network environment and allows you to customize the IP address range, network segments, and gateways. VPC applications expand as the VPC security improves, and thus Data Integration provides RDS for MySQL, RDS for SQL Server, and RDS for PostgreSQL and eliminates the need to purchase extra ECSs that reside on the same network as the VPC. Instead, the system guarantees interconnectivity by detecting devices automatically through the reverse proxy. The support for other Alibaba Cloud databases including PPAS, OceanBase, Redis, MongoDB, Memcache, TableStore, and HBase is also be available in the future. For any non-RDS data sources, an ECS on the same network is required for configuring data integration synchronization tasks on the VPC network and ensuring interconnectivity.
 
 ## Limits {#section_isw_gw5_42b .section}
 
@@ -59,6 +59,6 @@ Note:
 
 ## References {#section_q1q_hw5_42b .section}
 
--   For a detailed description of the data synchronization task configuration, see [creating a data synchronization task](intl.en-US/User Guide/Data Integration/Task Configuration/Configure Reader plug-in/Wizard mode configuration.md#).
+-   For a detailed description of the data synchronization task configuration, see [creating a data synchronization task](intl.en-US/User Guide/Data integration/Task Configuration/Configure Reader plug-in/Wizard mode configuration.md#).
 -   For a detailed introduction to processing unstructured data such as OSS, see [accessing OSS unstructured data](https://www.alibabacloud.com/help/doc-detail/45389.html).
 
