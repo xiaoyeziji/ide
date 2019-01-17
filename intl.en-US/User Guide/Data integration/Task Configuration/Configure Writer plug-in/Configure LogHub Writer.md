@@ -27,10 +27,10 @@ LogHub Writer supports LogHub type conversion, as shown in the following table:
 
 |Attribute|Description| Required|Default Value|
 |:--------|:----------|:--------|:------------|
-|endpoint|sls address|Yes|None|
+|endpoint|Log Service address|Yes|None|
 |accessKeyId|Description: AccessKeyID for accessing the Log Service instance.|Yes|None|
 |accessKeySecret|Description: AccessKeySecret for accessing the Log Service instance.|Yes|None|
-|project|Description: Project name of target SLS| Yes|None|
+|project|Description: Project name of target Log Service.| Yes|None|
 |logstore|Name of the Logstore of the target Log Service instance.|Yes|None|
 |topic|Description: Select a topic|No|Null string|
 |batchSize|Description: Number of data entries that can be pushed at a time.|Required: No. The default value is 1024.|None|
