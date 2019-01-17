@@ -2,15 +2,15 @@
 
 Scheduling dependency is the foundation of constructing orderly business process. Only by correctly configuring dependencies between tasks, business data can be produced effectively and timely.
 
-DataWorks V2.0 provides three dependency configuration modes: automatic recommendation, automatic parsing and custom configuration. Refer to [Best practices for setting scheduling dependencies](../../../../../intl.en-US/Best Practices/Best practices for setting scheduling dependencies.md#) for an example of the actual operation of dependencies.
+DataWorks V2.0 provides three dependency configuration modes: automatic recommendation, automatic parsing and custom configuration. See [Best practices for setting scheduling dependencies](../../../../../intl.en-US/Best Practices/Best practices for setting scheduling dependencies.md#) for an example of the actual operation of dependencies.
 
 **Note:** **You can watch videos to learn more about dependencies: [DataWorks V2.0 FAQs and Difficulty Analysis](https://www.alibabacloud.com/help/doc-detail/97879.htm).**
 
 The scheduling dependency configuration page is shown in the following figure:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/15476908217925_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/15477013597925_en-US.png)
 
-Overall scheduling logic: The downstream scheduling can be started only when the upstream scheduling is successfully implemented. Therefore, all workflow nodes must have at least one parent node. Scheduling dependency is used to set the parent-child relationship. The principle and configuration of scheduling dependency configuration are described in detail below.
+Overall scheduling logic: The downstream scheduling can be started only when the upstream scheduling is successfully implemented. Therefore, all workflow nodes must have at least one parent node. Scheduling dependency is used to set the parent-child relationship. The principle and configuration of scheduling dependency configuration are described in detail as follows.
 
 **Note:** If there is a need for interdependence between standard mode and simple mode projects, please apply for a bill of lading.
 
@@ -29,13 +29,13 @@ Overall scheduling logic: The downstream scheduling can be started only when the
 
 -   Introduction to the standard development process
 
-    In the normalized development process, multiple SQL tasks are established to form a dependency between upstream and downstream, and it is recommended to follow:
+    In the normalized development process, multiple SQL tasks are established to form a dependency between upstream and downstream, and we recommended to follow:
 
     -   The input table for the downstream task must be the output table for the upstream task.
     -   The same table is output by only one task.
     The purpose is to quickly configure complex dependencies through "Auto Parse" when business processes are inflated.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082113593_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770135913593_en-US.jpg)
 
     In the figure above, each task and its code are as follows.
 
@@ -84,9 +84,9 @@ Overall scheduling logic: The downstream scheduling can be started only when the
 
 Upstream node: Specifies the parent node that the current node depends on.
 
-Here, it is required to fill in the output name of upstream node \(one node may have multiple output names at the same time, just fill in one\), rather than the upstream node name. You can manually search for the output name of upstream node to add, or you can parse it through the SQL blood code.
+Here, it is required to enter the output name of upstream node \(one node may have multiple output names at the same time, only enter one\), rather than the upstream node name. You can manually search for the output name of upstream node to add, or you can parse it through the SQL blood code.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/15476908227926_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/15477013597926_en-US.png)
 
 **Note:** If added by search, the searcher searches according to the output name of the node that has been submitted to the scheduling system.
 
@@ -94,17 +94,17 @@ Here, it is required to fill in the output name of upstream node \(one node may 
 
     You can construct a dependency by searching for the output name of a node and configuring it as the upstream dependency of the current node.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213932_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136013932_en-US.png)
 
 -   Search by entering the table name of the parent node's output name
 
     This method must ensure that one of the output names of the parent node is the table name after INSERT or CREATE in the SQL code of the node, such as "projectname.tablename" \(such output name can generally be obtained through automatic parsing\).
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213933_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136013933_en-US.png)
 
     After the submission is executed, the output name can be searched by other nodes by searching the table name.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213934_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136013934_en-US.png)
 
 
 ## Current node output {#section_cfq_cty_p2b .section}
@@ -126,24 +126,24 @@ DataWorks can parse different dependencies according to the actual SQL content i
 
 **Note:** If you upgrade from DataWorks V1.0 to DataWorks V2.0, the output name of the current node is "projectname.nodename".
 
-If there are multiple INSERTs and FROMs, multiple output and input names will be parsed.
+If multiple INSERT and FROM statements are displayed, multiple output and input names will be parsed.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213595_en-US.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136013595_en-US.jpg)
 
 If you construct multiple tasks with dependencies, and these tasks satisfy the condition that all input tables of downstream tasks come from the output tables of upstream tasks, the fast configuration of full workflow dependencies can be achieved by automatic parsing.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213935_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136013935_en-US.png)
 
 **Note:** 
 
--   To increase the flexibility of task, it is recommended that a task contain only one output point, so that you can flexibly assemble SQL business processes for decoupling purpose.
+-   To increase the flexibility of task, we recommended that a task contain only one output point, so that you can flexibly assemble SQL business processes for decoupling purpose.
 -   If a table name in an SQL statement is both an output table and a referenced table \(a dependent table\), it will only be parsed as an output table.
 -   If a table name in an SQL statement is referenced or output many times, only one scheduling dependency is parsed.
 -   If there is a temporary table in the SQL code \(for example, a table beginning with "t\_" is specified as a temporary table in the [Project configuration](intl.en-US/User Guide/Data development/Configuration management/Project configuration.md#)\), the table will not be resolved to a scheduling dependency.
 
 Under the premise of automatic parsing, you can avoid/increase the characters in some SQL statements to be automatically parsed into output name/input name by manually setting add/delete and input/output.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213937_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136013937_en-US.png)
 
 Selecting the table name and right-clicking, you can add or delete the output and input of all the table names that appear in the SQL statement. After the operation, the characters added to be input will be parsed as the output name of parent node , and the characters added to be output will be parsed as the output of the corrent node, otherwise the deletion of the operation will not be resolved.
 
@@ -158,9 +158,9 @@ Selecting the table name and right-clicking, you can add or delete the output an
 
 ## Customize Adding Dependencies {#section_kjs_2y5_2gb .section}
 
-When the dependencies between nodes can not be accurately resolved through the SQL blood relationship, you can choose "no" in the figure below to self-configure dependencies.
+When the dependencies between nodes cannot be accurately resolved through the SQL blood relationship, you can choose "no" in the following figure to self-configure dependencies.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082221179_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136021179_en-US.png)
 
 When auto-parsing column is set to "No", you can click **Automatic recommended** to enable the auto-recommended upstream dependency function. The system will recommend all other SQL node tasks that output the current node input table for you based on the SQL blood relationship of the project. You can select one or more tasks in the recommended list on demand and configure as the current node's upstream dependency tasks.
 
@@ -176,64 +176,64 @@ In custom mode, you can configure dependencies in two ways.
 -   Manually add dependent upstream nodes
     1.  Create three new nodes and the system will configure one output name for each of them by default.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213938_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136013938_en-US.png)
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213939_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136013939_en-US.png)
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213940_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136013940_en-US.png)
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313941_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136013941_en-US.png)
 
     2.  Configure the upstream node task\_1 to depend on the root node of the project, and click Save.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313942_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136113942_en-US.png)
 
     3.  Configure task\_2 to depend on the output name of task\_1, and click Save.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313943_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136113943_en-US.png)
 
     4.  Configure task\_3 to depend on the output name of task\_2, click Save.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313944_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136113944_en-US.png)
 
     5.  After the configuration is complete, click Submit to determine whether the dependency relationship is correct. If the submission is successful, the dependency configuration is correct.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313945_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136113945_en-US.png)
 
 -   Construct dependencies by dragging and dropping
     1.  Create three nodes: task\_1, task\_2, task\_3, and configure the upstream task\_1 to depend on the root node, then click Save.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313942_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136113942_en-US.png)
 
     2.  Connect the three tasks by dragging and pulling.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313947_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136113947_en-US.png)
 
     3.  Check the dependency configuration of task\_2 and task\_3, you can see the dependent parent node output name that has been automatically generated.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313948_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136113948_en-US.png)
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313949_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136113949_en-US.png)
 
     4.  After the configuration is complete, click Submit to determine whether the dependency relationship is correct. If the submission is successful, the dependency configuration is correct.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313945_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136113945_en-US.png)
 
 
 ## FAQ {#section_sg1_kxy_p2b .section}
 
 Q: After automatic parsing, the submission fails. Error: Dependent parent node output MaxCompute\_DOC.tb\_3 does not exist and cannot submit this node. Please submit parent node task\_2 first.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313952_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154770136113952_en-US.png)
 
-A: There are two reasons for this.
+A: This can be caused by the following e are two reasons for this.
 
 -   The upstream node is not submitted, and you can try again after submission.
 -   The upstream node has been submitted, but the output name of the upstream node is not MaxCompute\_DOC.tb\_3.
 
 **Note:** Usually, the parent node output name and the current node output name that automatically parsed are obtained according to the table name after INSERT/CREATE/FROM. Make sure that the configuration is consistent with the way described in the section "Auto-parsing dependencies".
 
-Q: In the output of the current node, the downstream node name and downstream node ID are all empty and cannot be entered. So what should I do?
+Q: In the output of the current node, the downstream node name and downstream node ID are all empty and cannot be entered.
 
 A: If there is no sub-node for downstream of the current node, there is no content. After the sub-node is configured for downstream of the current node, the content is automatically parsed.
 
@@ -261,7 +261,7 @@ Q: Why did I search for the output name of the node B that does not exist when s
 
 A: Because the search function is based on the submitted node information. If the output name of node B is deleted after the successful submission of node B and not submitted to the scheduling system, then the deleted output name of node B can still be found on node A.
 
-Q: There are three tasks A, B, and C. How do I implement the task flow of A-\>B-\>C once an hour \(After A is completed, execute B, after B is completed, execute C\)?
+Q: If I have three tasks A, B, and C, how do I implement the task flow of A-\>B-\>C once an hour \(After A is completed, execute B, after B is completed, execute C\)?
 
 A: The dependency of A, B, and C is set to the output of A as the input of B, the output of B is the input of C, also the scheduling periods of A, B, and C are set to hours.
 
