@@ -8,7 +8,7 @@ DataWorks V2.0 provides three dependency configuration modes: automatic recommen
 
 The scheduling dependency configuration page is shown in the following figure:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/15475189997925_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/15476908217925_en-US.png)
 
 Overall scheduling logic: The downstream scheduling can be started only when the upstream scheduling is successfully implemented. Therefore, all workflow nodes must have at least one parent node. Scheduling dependency is used to set the parent-child relationship. The principle and configuration of scheduling dependency configuration are described in detail below.
 
@@ -35,7 +35,7 @@ Overall scheduling logic: The downstream scheduling can be started only when the
     -   The same table is output by only one task.
     The purpose is to quickly configure complex dependencies through "Auto Parse" when business processes are inflated.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751899913593_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082113593_en-US.jpg)
 
     In the figure above, each task and its code are as follows.
 
@@ -86,7 +86,7 @@ Upstream node: Specifies the parent node that the current node depends on.
 
 Here, it is required to fill in the output name of upstream node \(one node may have multiple output names at the same time, just fill in one\), rather than the upstream node name. You can manually search for the output name of upstream node to add, or you can parse it through the SQL blood code.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/15475189997926_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/15476908227926_en-US.png)
 
 **Note:** If added by search, the searcher searches according to the output name of the node that has been submitted to the scheduling system.
 
@@ -94,17 +94,17 @@ Here, it is required to fill in the output name of upstream node \(one node may 
 
     You can construct a dependency by searching for the output name of a node and configuring it as the upstream dependency of the current node.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751899913932_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213932_en-US.png)
 
 -   Search by entering the table name of the parent node's output name
 
     This method must ensure that one of the output names of the parent node is the table name after INSERT or CREATE in the SQL code of the node, such as "projectname.tablename" \(such output name can generally be obtained through automatic parsing\).
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751899913933_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213933_en-US.png)
 
     After the submission is executed, the output name can be searched by other nodes by searching the table name.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751899913934_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213934_en-US.png)
 
 
 ## Current node output {#section_cfq_cty_p2b .section}
@@ -113,7 +113,7 @@ Output: Specifies output of the current node.
 
 Each node is assigned a default output name ending with ".out", and you can also add a custom output name or get an output name through automatic parsing.
 
-**Note:** The name of the output node is globally unique and no duplication is allowed in the entire Aliyun account system.
+**Note:** The name of the output node is globally unique and no duplication is allowed in the entire Alibaba Cloud account system.
 
 ## Auto-parsing dependencies {#section_f1f_2d5_2gb .section}
 
@@ -128,11 +128,11 @@ DataWorks can parse different dependencies according to the actual SQL content i
 
 If there are multiple INSERTs and FROMs, multiple output and input names will be parsed.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900013595_en-US.jpg)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213595_en-US.jpg)
 
 If you construct multiple tasks with dependencies, and these tasks satisfy the condition that all input tables of downstream tasks come from the output tables of upstream tasks, the fast configuration of full workflow dependencies can be achieved by automatic parsing.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900013935_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213935_en-US.png)
 
 **Note:** 
 
@@ -143,7 +143,7 @@ If you construct multiple tasks with dependencies, and these tasks satisfy the c
 
 Under the premise of automatic parsing, you can avoid/increase the characters in some SQL statements to be automatically parsed into output name/input name by manually setting add/delete and input/output.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900013937_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213937_en-US.png)
 
 Selecting the table name and right-clicking, you can add or delete the output and input of all the table names that appear in the SQL statement. After the operation, the characters added to be input will be parsed as the output name of parent node , and the characters added to be output will be parsed as the output of the corrent node, otherwise the deletion of the operation will not be resolved.
 
@@ -160,7 +160,7 @@ Selecting the table name and right-clicking, you can add or delete the output an
 
 When the dependencies between nodes can not be accurately resolved through the SQL blood relationship, you can choose "no" in the figure below to self-configure dependencies.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900021179_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082221179_en-US.png)
 
 When auto-parsing column is set to "No", you can click **Automatic recommended** to enable the auto-recommended upstream dependency function. The system will recommend all other SQL node tasks that output the current node input table for you based on the SQL blood relationship of the project. You can select one or more tasks in the recommended list on demand and configure as the current node's upstream dependency tasks.
 
@@ -176,55 +176,55 @@ In custom mode, you can configure dependencies in two ways.
 -   Manually add dependent upstream nodes
     1.  Create three new nodes and the system will configure one output name for each of them by default.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900013938_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213938_en-US.png)
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900013939_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213939_en-US.png)
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900013940_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082213940_en-US.png)
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900013941_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313941_en-US.png)
 
     2.  Configure the upstream node task\_1 to depend on the root node of the project, and click Save.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900013942_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313942_en-US.png)
 
     3.  Configure task\_2 to depend on the output name of task\_1, and click Save.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900013943_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313943_en-US.png)
 
     4.  Configure task\_3 to depend on the output name of task\_2, click Save.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900013944_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313944_en-US.png)
 
     5.  After the configuration is complete, click Submit to determine whether the dependency relationship is correct. If the submission is successful, the dependency configuration is correct.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900013945_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313945_en-US.png)
 
 -   Construct dependencies by dragging and dropping
     1.  Create three nodes: task\_1, task\_2, task\_3, and configure the upstream task\_1 to depend on the root node, then click Save.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900013942_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313942_en-US.png)
 
     2.  Connect the three tasks by dragging and pulling.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900113947_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313947_en-US.png)
 
     3.  Check the dependency configuration of task\_2 and task\_3, you can see the dependent parent node output name that has been automatically generated.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900113948_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313948_en-US.png)
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900113949_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313949_en-US.png)
 
     4.  After the configuration is complete, click Submit to determine whether the dependency relationship is correct. If the submission is successful, the dependency configuration is correct.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900013945_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313945_en-US.png)
 
 
 ## FAQ {#section_sg1_kxy_p2b .section}
 
 Q: After automatic parsing, the submission fails. Error: Dependent parent node output MaxCompute\_DOC.tb\_3 does not exist and cannot submit this node. Please submit parent node task\_2 first.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154751900113952_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16303/154769082313952_en-US.png)
 
 A: There are two reasons for this.
 
@@ -247,7 +247,7 @@ A: Yes. If a downstream node references an output name from the current node \(a
 
 Q: Can multiple nodes have the same "output name"?
 
-A: No. The "output name" of each node must be unique in Aliyun account system. If multiple nodes output data to the same MaxCompute table, we recommend that you use "table name\_partition ID" as the output of these nodes.
+A: No. The "output name" of each node must be unique in Alibaba Cloud account system. If multiple nodes output data to the same MaxCompute table, we recommend that you use "table name\_partition ID" as the output of these nodes.
 
 Q: How do I not parse to an middle table when using auto-parsing dependencies?
 
