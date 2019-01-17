@@ -2,24 +2,24 @@
 
 In this article we will show you the data types and parameters supported by OTSReader-Internal and how to configure Reader in script mode
 
-Table Store \(originally known as OTS\) is a NoSQL database service built upon Alibaba Cloud's Apsara distributed system, enabling you to store and access massive structured data in real time. OTS organizes data into instances and tables. Using data partition and server load balancing technology, it provides seamless scaling.
+Table Store \(originally known as OTS\) is a NoSQL database service built upon Alibaba Cloud's Apsara distributed system, enabling you to store and access massive structured data in real time. Table Store organizes data into instances and tables. Using data partition and server load balancing technology, it provides seamless scaling.
 
-OTSReader-Internal is used to export table data for OTS Internal model while OTS Reader is used to export data for OTS Public model.
+OTSReader-Internal is used to export table data for Table Store Internal model while OTS Reader is used to export data for OTS Public model.
 
-OTS Internal model supports multi-version columns, so OTSReader-Internal also provides two data export modes:
+Table Store Internal model supports multi-version columns, so OTSReader-Internal also provides two data export modes:
 
--   Multi-version mode: Because OTS supports multiple versions, a multi-version mode is provided to export data of multiple versions.
+-   Multi-version mode: Because Table Store supports multiple versions, a multi-version mode is provided to export data of multiple versions.
 
-    Export solution: The Reader plug-in expands a cell of OTS into a one-dimensional table consisting of four tuples: PrimaryKey \(column 1-4\), ColumnName, Timestamp, and Value \(the principle is similar to the multi-version mode of HBase Reader\). The four tuples are passed in to the Writer as four columns in Datax record.
+    Export solution: The Reader plug-in expands a cell of Table Store into a one-dimensional table consisting of four tuples: PrimaryKey \(column 1-4\), ColumnName, Timestamp, and Value \(the principle is similar to the multi-version mode of HBase Reader\). The four tuples are passed in to the Writer as four columns in Datax record.
 
--   Normal Mode: consistent with the normal mode of the hbase reader, simply export the latest version of each column in each row of data, for more information, see [Configure HBase Reader](reseller.en-US/User Guide/Data integration/Task Configuration/Configure Reader plug-in/Configure HBase Reader.md#)the normal mode content that is supported by the hbase reader in.
+-   Normal Mode: consistent with the normal mode of the hbase reader, simply export the latest version of each column in each row of data, for more information, see [Configure HBase Reader](intl.en-US/User Guide/Data integration/Task Configuration/Configure Reader plug-in/Configure HBase Reader.md#)the normal mode content that is supported by the hbase reader in.
 
-In short, OTS Reader connects to OTS server and reads data through OTS official Java SDK. OTS Reader optimizes the read process using features such as read timeout retry and exceptional read retry.
+In short, OTS Reader connects to Table Stor server and reads data through Table Store official Java SDK. OTS Reader optimizes the read process using features such as read timeout retry and exceptional read retry.
 
-Currently, OTS Reader supports all OTS types. The conversion of OTS types in the OTSReader-Internal is as follows:
+Currently, OTS Reader supports all Table Store types. The conversion of Table Store types in the OTSReader-Internal is as follows:
 
-|Data integration internal types|OTS data model|
-|:------------------------------|:-------------|
+|Data integration internal types|Table Store data model|
+|:------------------------------|:---------------------|
 |Long|Integer|
 |Double|Double|
 |String|String|
@@ -30,18 +30,18 @@ Currently, OTS Reader supports all OTS types. The conversion of OTS types in the
 
 |Attribute|Description|Required|Default Value|
 |:--------|:----------|:-------|:------------|
-|mode|- Description: The operation mode of the plug-in, supporting normal and multiVersion, which refers to normal mode and multi-version mode respectively.|Yes|N/A|
-|endpoint|- Description: The EndPoint of OTS Server.|Yes|N/A|
-|accessId|Access Sid for OTS|Yes|N/A|
-|accessKey|Accesskey for OTS|Yes|N/A|
-|Instance name|Description: The name of OTS instance. The instance is an entity for using and managing OTS service.After you enable the OTS service, you can create an instance in the Console to create and manage tables. The instance is the basic unit for OTS resource management. All access control and resource measurement done by the OTS for applications are completed at the instance level.
+|mode|Description: The operation mode of the plug-in, supporting normal and multiVersion, which refers to normal mode and multi-version mode respectively.|Yes|N/A|
+|endpoint|Description: The EndPoint of Table Stor Server.|Yes|N/A|
+|accessId|Access ID for Table Store|Yes|N/A|
+|accessKey|Access key for Table Store|Yes|N/A|
+|Instance name|Description: The name of Table Store instance. The instance is an entity for using and managing Table Store service.After you enable the Table Store service, you can create an instance in the Console to create and manage tables. The instance is the basic unit for Table Store resource management. All access control and resource measurement done by the Table Store for applications are completed at the instance level.
 
 |Yes|N/A|
-|table|Description: The name of the table to be extracted. Only one table can be filled in. Multi-table synchronization is not required for OTS.|Yes|N/A|
-|Range|Description: The export range: \[begin,end\).-   - Begin is less than end, which means reading data in positive sequence.
--   - Begin \> end, which means reading data in inverted sequence.
+|table|Description: The name of the table to be extracted. Only one table can be filled in. Multi-table synchronization is not required for Table Store.|Yes|N/A|
+|Range|Description: The export range: \[begin,end\).-   Begin is less than end, which means reading data in positive sequence.
+-   Begin \> end, which means reading data in inverted sequence.
 -   Begin and end cannot be equal.
--   - The following types are supported: string, int, and binary. Binary data is passed in as Base64 strings in binary format. INF\_MIN represents an infinitely small value and INF\_MAX represents an infinitely large value.
+-   The following types are supported: string, int, and binary. Binary data is passed in as Base64 strings in binary format. INF\_MIN represents an infinitely small value and INF\_MAX represents an infinitely large value.
 
 |No|Reads from the beginning of the table to the end of the table|
 |range: \{"begin "\}|The starting range that is exported, and the value can be an empty array, a PK prefix, or a complete PK. When reading data in positive order, the default fill PK suffix is inf\_min, and the reverse order is inf\_max, as shown in the example below.If your table has two PrimaryKeys in the type of string and int, the data of the table can be entered in the following three methods:
@@ -74,7 +74,7 @@ Run the preceding code, and then the inputValue of "aGVsbG8=" can be obtained.
 Finally, write the value into the configuration: \{"type":"binary","value" : "aGVsbG8="\}.
 
 |No|Read to end of table|
-|range: \{"split "\}|- Description: If too much data needs to be exported, you can enable concurrent export. Split can split the data in the current range into multiple concurrent tasks according to split points.**Note:** 
+|range: \{"split "\}|Description: If too much data needs to be exported, you can enable concurrent export. Split can split the data in the current range into multiple concurrent tasks according to split points.**Note:** 
 
 -   The value entered in split must be in the first column of PrimaryKey \(partition key\) and the value type must be consistent with that of PartitionKey.
 -   The range of values must be between begin and end.
