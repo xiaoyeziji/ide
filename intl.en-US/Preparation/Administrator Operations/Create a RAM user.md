@@ -1,6 +1,6 @@
 # Create a RAM user {#concept_j4w_qnp_r2b .concept}
 
-If you are the only user of this product, skip this section. To create your own account, see [Prepare Alibaba Cloud account](intl.en-US/Preparation/Administrator Operations/Alibaba Cloud Account Preparations.md#). To invite other users to use this product, you can create and manage RAM user accounts through the Resource Access Management \(RAM\) console.
+If you are the only user of this product, skip this section. To create your own account, see [Alibaba Cloud Account Preparations](reseller.en-US/Preparation/Administrator Operations/Alibaba Cloud Account Preparations.md#). To invite other users to use this product, you can create and manage RAM user accounts through the Resource Access Management \(RAM\) console.
 
 ## Create a sub-account {#section_v3r_xxp_r2b .section}
 
@@ -37,7 +37,7 @@ The AccessKey facilitates smooth operation of the tasks created in DataWorks. Th
 
 If you want to create projects with your RAM account, you may need **AliyunDataWorksFullAccess** policy permission.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/154761910213331_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/154804175913331_en-US.png)
 
 ## Delivery RAM account to other users {#section_sng_tzp_r2b .section}
 
