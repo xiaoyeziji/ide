@@ -9,13 +9,13 @@ MySQL Reader supports table and view reading. In table field, you can specify al
 MySQL Reader supports the following MySQL data types.
 
 |Type Classification|MySQL data type|
-|-------------------|---------------|
-|Integer|int，tinyint，smallint，mediumint，int，bigint|
-|Floating point|float，double，decimal|
-|String|varchar，char，tinytext，text，mediumtext，longtext|
-|Date and time|date，datetime，timestamp，time，year|
-|Boolean|bit，bool|
-|Binary|tinyblob，mediumblob，blob，longblob，varbinary|
+|:------------------|:--------------|
+|Integer|int, tinyint, smallint, mediumint, int, bigint|
+|Floating point|float, double, decimal|
+|String|varchar, char, tinytext, text, mediumtext, longtext|
+|Date and time|date, datetime, timestamp, time, year|
+|Boolean|bit, bool|
+|Binary|tinyblob, mediumblob, blob, longblob, varbinary|
 
 **Note:** 
 
@@ -28,12 +28,12 @@ MySQL Writer converts the MySQL data types as follows:
 
 |Type Classification|MySQL data type|
 |:------------------|:--------------|
-|Integer|Int、Tinyint、Smallint、Mediumint和Bigint|
-|Float|Float、Double and Decimal|
-|String type|Varchar, Char, Tinytext, Text, Mediumtext, and LongText|
-|Date and time type| Date、Datetime、Timestamp、Time and Year|
+|Integer|Int, Tinyint, Smallint, Mediumint, Bigint|
+|Float|Float, Double, Decimal|
+|String type|Varchar, Char, Tinytext, Text, Mediumtext, LongText|
+|Date and time type| Date, Datetime, Timestamp, Time, Year|
 |boolean|Bool|
-|Binary|Tinyblob, Mediumblob, Blob, LongBlob and Varbinary|
+|Binary|Tinyblob, Mediumblob, Blob, LongBlob, Varbinary|
 
 ## Parameter description​ {#section_jn2_gqh_p2b .section}
 
@@ -43,7 +43,7 @@ MySQL Writer converts the MySQL data types as follows:
 |table.|You select a table name that requires synchronization, and a data integration Job can only synchronize one table.|Yes|N/A|
 |column|Description: The column name set to be synchronized in the configured table. Field information is described with arrays in JSON. \[ \* \] indicates all columns by default.-   Column pruning is supported, which means you can select some columns to export.
 -   Change of column order is supported, which means you can export the columns in an order different from the schema order of the table.
--   Constant configuration is supported. You must follow the MySQL SQL syntax format, for example `["id", "table", "1", "'mingya.wmy'", "'null'", "to_char(a + 1)", "2.3" , "true"]`.
+-   Constant configuration is supported. You must follow the MySQL SQL syntax format, for example `["id", "table", "1", "'mingya.wmy'", "'null'", "to_char(a + 1)", "2.3", "true"]`.
     -   ID is normal column name
     -   Table is a column name that contains Reserved Words
     -   1 for plastic digital Constants
@@ -64,8 +64,8 @@ MySQL Writer converts the MySQL data types as follows:
 -   You cannot specify where condition as limit 10, which does not conform to requirements for MySQL SQL where clause.
 
 |No|N/A|
-|querySql\(advanced mode, wizard mode not available\)|In some business scenarios, the where condition is insufficient for filtration. In such cases, the user can customize a filter SQL using this configuration item. When this item is configured, the data synchronization system filters data using this configuration item directly instead of such configuration items as table and column. For example, for data synchronization after multi-table join, use `select a,b from table_a join table_b on table_a.id = table_b.id`. When querySql is configured, MySQL Reader directly ignores the configuration of table, column, where, and splitPk conditions. The priority of querySql is higher than table, column, WHERE, and splitPk. The datasource uses it to parse out information such as a user name and password.|No|N/A|
-|Singleormulti \(applies only to split-up tables\)|Represents a sub-library table, and the wizard mode is converted into Script Mode to actively generate this configuration `"singleOrMulti": "multi"`, but the configuration script task template does not directly generate this configuration must be added manually, otherwise, only the first data source is recognized. Singleormulti is just a front-end, and the back-end does not use this as a split-Table judgment.|Yes|  multi|
+|querySql\(advanced mode, wizard mode not available\)|In some business scenarios, the where condition is insufficient for filtration. In such cases, the user can customize a filter SQL using this configuration item. When this item is configured, the data synchronization system filters data using this configuration item directly instead of such configuration items as table and column. For example, for data synchronization after multi-table join, use `select a, b from table_a join table_b on table_a.id = table_b.id`. When querySql is configured, MySQL Reader directly ignores the configuration of table, column, where, and splitPk conditions. The priority of querySql is higher than table, column, WHERE, and splitPk. The datasource uses it to parse out information such as a user name and password.|No|N/A|
+|Singleormulti \(applies only to split-up tables\)|Represents a sub-library table, and the wizard mode is converted into Script Mode to actively generate this configuration `"singleOrMulti": "multi"`, but the configuration script task template does not directly generate this configuration must be added manually, otherwise, only the first data source is recognized. Singleormulti is just a frontend, and the back-end does not use this as a split-Table judgment.|Yes|  multi|
 
 ## Development in wizard mode {#section_bp2_wsh_p2b .section}
 
@@ -73,7 +73,7 @@ MySQL Writer converts the MySQL data types as follows:
 
     Configure the source and destination of the data for the synchronization task.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16227/15408843377781_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16227/15480397657781_en-US.png)
 
     Configurations:
 
@@ -90,7 +90,7 @@ MySQL Writer converts the MySQL data types as follows:
 
     The source table field on the left and the target table field on the right are one-to-one relationships, click **Add row** to add a single field and click **Delete** to delete the current field.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16227/15408843387782_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16227/15480397657782_en-US.png)
 
     -   Peer mapping: Click **peer mapping** to establish a corresponding mapping relationship in the peer, note that match the data type.
     -   Automatic formatting: The fields are automatically sorted based on corresponding rules.
@@ -103,7 +103,7 @@ MySQL Writer converts the MySQL data types as follows:
     -   If the value you entered cannot be parsed, the type is displayed as Not identified.
 3.  Control the tunnel
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15408843387675_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15480397667675_en-US.png)
 
     Configurations:
 
@@ -128,7 +128,7 @@ A script sample for a Single-library single-table, for example, can be found in 
                     "id",
                 ],
                 "connection": [
-                    {
+                    {   "querysql":["select a,b from join1 c join join2 d on c.id = d.id;"],
                         "datasource": "", // Data Source
                         "table": [// table name
                             "xxx"
