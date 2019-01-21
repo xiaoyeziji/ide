@@ -12,7 +12,7 @@ Now, DataWorks [officially supports branch nodes](../../../../../reseller.en-US/
 
 On the Data Development page, you can see the various **control nodes** currently supported by DataWorks, including assignment nodes, branch nodes, merge nodes and so on.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804569637235_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804635537235_en-US.png)
 
 The functions of various types of control nodes:
 
@@ -37,7 +37,7 @@ The functions of various types of control nodes:
 
 From the figure below, you can see the logical relationship of the dependency tree in the presence of a branch node.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804569637237_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804635537237_en-US.png)
 
 -   **ASN**: an [assignment node](../../../../../reseller.en-US/User Guide/Data development/Node type/Assignment node.md#), which is used to calculate more complex situations to prepare for branch node conditional selection.
 -   **X/Y**: branch nodes, they are downstream of the assignment node ASN, and make branch selection according to the output of the assignment node. As shown in the green line in the figure, the node X selects the left branch, the node Y selects the two branches on the left:
@@ -62,7 +62,7 @@ First you need to define a set of task dependencies:
 2.  The branch node defines the branch according to the output of assignment node.
 3.  The two shell nodes are hung under the branch node and perform different branch logic.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804569637238_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804635537238_en-US.png)
 
 **Define assignment nodes**
 
@@ -75,11 +75,11 @@ In this article, the Python type is used as the code for the assignment node, an
 
 -   The code is as follows:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804569637241_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804635537241_en-US.png)
 
 -   Schedule configuration
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804569737242_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804635637242_en-US.png)
 
 
 **Define branches**
@@ -88,15 +88,15 @@ Branch nodes can define conditions with simple Python syntax expressions, each o
 
 -   Schedule configuration
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804569737243_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804635637243_en-US.png)
 
 -   Branch configuration
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804569737244_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804635637244_en-US.png)
 
 -   Schedule configuration generates output of conditional bindings
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804569737245_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804635637245_en-US.png)
 
 
 **Hang the execution task nodes under different branches**
@@ -105,11 +105,11 @@ Finally, it is important to note when setting dependencies on the nodes that act
 
 -   Node dependencies performed on the last day of each month
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804569737246_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804635637246_en-US.png)
 
 -   Node dependencies performed at other times of each month
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804569737247_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804635637247_en-US.png)
 
 
 **Result verification**
@@ -120,7 +120,7 @@ Once completing all of the above configuration, you can submit and publish the t
 
 -   Branch selection results of branch node
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804569737248_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804635637248_en-US.png)
 
 -   The node "RunOnLast" is executed normally.
 -   The node "RunExceptLast" is set to run empty.
@@ -129,7 +129,7 @@ Once completing all of the above configuration, you can submit and publish the t
 
 -   Branch selection results of branch node
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804569737252_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/103578/154804635637252_en-US.png)
 
 -   The node "RunOnLast" is set to run empty.
 -   The node "RunExceptLast" is executed normally.
