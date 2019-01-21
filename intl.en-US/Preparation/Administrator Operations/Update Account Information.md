@@ -8,16 +8,16 @@ The critical AccessKey information of the primary account is associated with the
 
 1.  Log on to the DTplus consoleand click **Personal Information**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/15480519208956_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/15480520578956_en-US.png)
 
 2.  On the Personal Information page, you can view and modify the AccessKey information.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/15480519208957_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/15480520578957_en-US.png)
 
 3.  You must confirm the preceding AccessKey is consistent with the valid AccessKey, and is enabled and displayed in the DTplus console.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/15480519208958_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/15480520578958_en-US.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/15480519208959_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/15480520578959_en-US.png)
 
 

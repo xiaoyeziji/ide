@@ -10,20 +10,20 @@
 
 1.  登录数加控制台概览页面，单击**个人信息**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/15480519168956_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/15480520528956_zh-CN.png)
 
     您也可以直接在**数据开发**页面点击右上角您的用户名，在弹框中点击**用户信息**进入。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/154805191637759_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/154805205237759_zh-CN.png)
 
 2.  进入个人信息页面后，即可对AccessKey等信息进行查看和修改。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/15480519168957_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/15480520528957_zh-CN.png)
 
 3.  定期确认上述AK是否显示**已启用**，如果AK被禁用或删除将直接影响您的DataWorks中各类任务正常运行。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/15480519168958_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/15480520528958_zh-CN.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/15480519168959_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16178/15480520538959_zh-CN.png)
 
 
