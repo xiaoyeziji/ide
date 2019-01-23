@@ -52,43 +52,85 @@ MongoDB Writer针对MongoDB类型的转换列表，如下所示。
     "type":"job",
     "version":"2.0",//版本号
     "steps":[
-        {
-            "stepType":"hdfs",//插件名
-            "parameter":{
-                "path":"",//路径
-                "datasource":"",//数据源
+            "reader": {
+            "plugin": "mongodb", //插件名称
+            "parameter": {
+                "datasource": "datasourceName", //数据源名称
+                "collectionName": "tag_data", //集合名称
                 "query":"",
-                "column":[
-                    {
-                        "index":0,//序列号
-                        "type":"string"//字段类型
-                    },
-                    {
-                        "index":1,
-                        "type":"long"
-                    },
-                    {
-                        "index":2,
-                        "type":"double"
-                    },
-                    {
-                        "index":3,
-                        "type":"boolean"
-                    },
-                    {
-                        "format":"yyyy-MM-dd HH:mm:ss",//日期格式
-                        "index":4,
-                        "type":"date"
-                    }
-                ],
-                "fieldDelimiter":",",//列分隔符
-                "encoding":"UTF-8",//编码格式
-                "fileType":"text"//文件类型
-            },
-            "name":"Reader",
-            "category":"reader"
+                "column": [
+                         {
+                              "name": "unique_id", //字段名称
+                              "type": "string"  //字段类型
+                          },
+                          {
+                              "name": "sid",
+                              "type": "string"
+                          },
+                          {
+                              "name": "user_id",
+                              "type": "string"
+                          },
+                          {
+                              "name": "auction_id",
+                              "type": "string"
+                          },
+                          {
+                              "name": "content_type",
+                              "type": "string"
+                          },
+                          {
+                              "name": "pool_type",
+                              "type": "string"
+                          },
+                          {
+                              "name": "frontcat_id",
+                              "type": "Array",
+                              "spliter": ""
+                          },
+                          {
+                              "name": "categoryid",
+                              "type": "Array",
+                              "spliter": ""
+                          },
+                          {
+                              "name": "gmt_create",
+                              "type": "string"
+                          },
+                          {
+                              "name": "taglist",
+                              "type": "Array",
+                              "spliter": " "
+                          },
+                          {
+                              "name": "property",
+                              "type": "string"
+                          },
+                          {
+                              "name": "scorea",
+                              "type": "int"
+                          },
+                          {
+                              "name": "scoreb",
+                              "type": "int"
+                          },
+                          {
+                              "name": "scorec",
+                              "type": "int"
+                          },
+			 {
+                            "name": "a.b",
+                            "type": "document.int"
+                          },
+                          {
+                            "name": "a.b.c",
+                            "type": "document.array",
+                            "splitter": " "
+                          }
+                ]
+            }
         },
-        { //下面是关于Writer的模板，可以找相应的写插件文档
+        { //下面是关于Writer的模板，可以参考相应的写插件文档
             "stepType":"stream",
             "parameter":{},
             "name":"Writer",
