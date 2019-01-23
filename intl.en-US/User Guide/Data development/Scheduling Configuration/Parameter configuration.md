@@ -4,11 +4,11 @@ To ensure that tasks can dynamically adapt to environment changes when running a
 
 -   No space can be added on either side of the equation mark "=" of a parameter. Correct: bizdate=$bizdate
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15475235547838_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15482163717838_en-US.png)
 
 -   Multiple parameters \(if any\) must be separated by spaces.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15475235557839_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15482163717839_en-US.png)
 
 
 ## System parameters {#section_dp4_2sq_p2b .section}
@@ -46,11 +46,11 @@ For example, for an ODPS SQL node, add $\{variable name\} in the code, and then 
 
 1.  For a parameter referenced in the code, you must add the resolved value during scheduling.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15475235557840_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15482163717840_en-US.png)
 
 2.  Values must be assigned to variables referenced in the code. The value assignment rule is variable name=parameter.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15475235557841_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15482163717841_en-US.png)
 
 
 ## Configure scheduling parameters for a Shell node {#section_slh_x1r_p2b .section}
@@ -61,13 +61,13 @@ For example, for a Shell node, the Shell syntax declaration in the code is: $1, 
 
 1.  For a parameter referenced in the code, you must add the resolved value during scheduling.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15475235557842_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15482163717842_en-US.png)
 
     **Note:** For a Shell node, when the number of parameters reaches 10, $\{10\} should be used to declare the variable.
 
 2.  Values must be assigned to variables referenced in the code. The value assignment rule is parameter 1 parameter 2 parameter 3....\( Replaced variables are resolved based on the parameter location, for example, $1 is resolved to parameter 1\).
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15475235557843_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15482163717843_en-US.png)
 
 
 ## The variable value is a fixed value {#section_a4l_gcr_p2b .section}
@@ -167,9 +167,9 @@ Example: \(Assume $cyctime=20140515103000\)
 -   $\[yyyy\] = 2014, $\[yy\] = 14, $\[mm\] = 05, $\[dd\] = 15, $\[yyyy-mm-dd\] = 2014-05-15, $\[hh24:mi:ss\] = 10:30:00, $\[yyyy-mm-dd hh24:mi:ss\] = 2014-05-1510:30:00
 -   $\[hh24:mi:ss - 1/24\] = 09:30:00
 -   $\[yyyy-mm-dd hh24:mi:ss -1/24/60\] = 2014-05-1510:29:00
--   $\[yyyy-mm-dd hh24:mi:ss -1/24\] = 2014-05-1509:30:00
--   $\[add\_months\(yyyymmdd,-1\)\] = 2014-04-15
--   $\[add\_months\(yyyymmdd,-12\*1\)\] = 2013-05-15
+-   $\[yyyy-mm-dd hh24:mi:ss -1/24\] = 2014-05-15 09:30:00
+-   $\[add\_months\(yyyymmdd,-1\)\] = 20140415
+-   $\[add\_months\(yyyymmdd,-12\*1\)\] = 20130515
 -   $\[hh24\] =10
 -   $\[mi\] =30
 
