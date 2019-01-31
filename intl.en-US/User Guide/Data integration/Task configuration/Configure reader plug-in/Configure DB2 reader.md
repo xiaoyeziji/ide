@@ -24,11 +24,11 @@ DB2 Reader converts DB2 data types as follows:
 
 |Attribute|Description|Required|Default Value|
 |:--------|:----------|:-------|:------------|
-|datasource|The data source name. It must be identical to the added data source name. Adding data source is supported in script mode.|Yes|N/A|
-|jdbcUrl|Information of the JDBC connection to the DB2 database. In accordance with the DB2 official specification, jdbcUrl in the DB2 format is jdbc:db2://ip:port/database, and you can enter the connection accessory control information.|Yes|N/A|
-|username|User name for the data source.|Yes|N/A|
-|password|Password corresponding to the specified data source user name.|Yes|N/A|
-|table|The table you select for synchronization. Each operation only supports one table synchronization.|Yes|N/A|
+|datasource|The data source name. It must be identical to the added data source name. Adding data source is supported in script mode.|Yes|None|
+|jdbcUrl|Information of the JDBC connection to the DB2 database. In accordance with the DB2 official specification, jdbcUrl in the DB2 format is jdbc:db2://ip:port/database, and you can enter the connection accessory control information.|Yes|None|
+|username|User name for the data source.|Yes|None|
+|password|Password corresponding to the specified data source user name.|Yes|None|
+|table|The table you select for synchronization. Each operation only supports one table synchronization.|Yes|None|
 |column|The configured table requires a collection of column names synchronized using a JSON array to describe the field information. By default, all column configurations such as \[\*\] are used.-   Column pruning is supported, which means you can select columns for export.
 -   Changing column order is supported, which means the column export order can be different from the table schema order.
 -   Constant configuration is supported. You must follow the DB2 SQL syntax format. For example:`["id", "1", "'const name'", "null", "upper('abc_lower')", "2.3" , "true"]`, 
@@ -41,15 +41,15 @@ DB2 Reader converts DB2 data types as follows:
     -   True is a Boolean Value
 -   Column must contain the specified column set to be synchronized and it cannot be blank.
 
-|Yes|N/A|
+|Yes|None|
 |SplitPk|If you specify the splitPk when using the RDBMSReader to extract data, it means fields represented by splitPk are used for data sharding. Then DataX starts concurrent tasks to synchronize data, which greatly improves the data synchronization efficiency.-   We recommend you use the tables primary keys for splitPk because the primary keys are typically even and less likely to generate data hot spots during data sharding.
 -   Currently, splitPk only supports data sharding for integer data types. Other types such as floating point, string, and date are not supported. If you specify an unsupported data type, DB2 Reader reports an error.
 
 |No|Null|
-|where|A filtering condition. The DB2 Reader concatenates an SQL command based on the specified column, table, and where conditions. It extracts data according to the SQL statement. In business scenarios, data from the current day are usually required for synchronization. You can specify the where condition as gmt\_create \> $bizdate. The where condition can be used to synchronize incremental business data effectively. If the value is null, it means synchronizing all the information in the table.|No|N/A|
+|where|A filtering condition. The DB2 Reader concatenates an SQL command based on the specified column, table, and where conditions. It extracts data according to the SQL statement. In business scenarios, data from the current day are usually required for synchronization. You can specify the where condition as gmt\_create \> $bizdate. The where condition can be used to synchronize incremental business data effectively. If the value is null, it means synchronizing all the information in the table.|No|None|
 |QuerySql|In some business scenarios, the where condition is not sufficient for filtering. In this case, you can customize a filter SQL using Querysql. When Querysql is configured, the data synchronization system filters data with Querysql instead of other configuration items, such as tables and columns.For example, data synchronization after multi-table join, can use `select a,b from table_a join table_b on table_a.id = table_b.id`. When query SQL is configured, DB2 Reader ignores table, column, and where condition configurations.
 
-|No|N/A|
+|No|None|
 |Fetchsize|Defines the batch data pieces that the plug-in and database servers can fetch each time. The value determines the number of network interactions between the data synchronization system and the server, which greatly improves data extraction performance.**Note:** A value greater than 2048 may cause out-of-memory\(OOM\) during data synchronization.
 
 |No|1,024|
