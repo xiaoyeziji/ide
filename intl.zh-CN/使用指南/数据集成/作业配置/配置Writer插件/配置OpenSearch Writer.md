@@ -79,5 +79,34 @@ OpenSearch的批量插入并非原子操作，有可能会部分成功，部分�
 
 配置写入OpenSearch的数据同步作业。
 
-\{ "type": "job", "version": "1.0", "configuration": \{ "reader": \{\}, "writer": \{ "plugin": "opensearch", "parameter": \{ "accessId": "\*\*\*\*\*\*\*\*\*", "accessKey": "\*\*\*\*\*\*\*\*", "host": "http://yyyy.aliyuncs.com", "indexName": "datax\_xxx", "table": "datax\_yyy", "column": \[ "appkey", "id", "title", "gmt\_create", "pic\_default" \], "batchSize": 500, "writeMode": add, "version":"v2", "ignoreWriteError": false \} \} \} \}
+```language-json
+{
+    "type": "job",
+    "version": "1.0",
+    "configuration": {
+        "reader": {},
+        "writer": {
+            "plugin": "opensearch",
+            "parameter": {
+                "accessId": "*********",
+                "accessKey": "********",
+                "host": "http://yyyy.aliyuncs.com",
+                "indexName": "datax_xxx",
+                "table": "datax_yyy",
+                "column": [
+                "appkey",
+                "id",
+                "title",
+                "gmt_create",
+                "pic_default"
+                ],
+                "batchSize": 500,
+                "writeMode": add,
+                "version":"v2",
+                "ignoreWriteError": false
+            }
+        }
+    }
+}
+```
 
