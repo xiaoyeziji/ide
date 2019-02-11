@@ -31,14 +31,14 @@ MaxCompute Reader supports the following data types in MaxCompute.
 |This configuration is required for partition tables, but can be left empty for non-partition tables.|None|
 |column|The MaxCompute source table column information. For example, the fields of a table named “test” are id, name, and age.-   To read the fields in turn, configure it to `"column":["id","name","age"]` or `"column":["*"]`. 
 
-**Note:** We do not recommend configuring the extracted field with an asterisk\(\*\), because it indicates every table field is read sequentially. If you change the order or table field types, add or delete some table fields. It is likely the source table columns cannot be aligned with the target table columns, causing errors or even exceptions.
+**Note:** We do not recommend configuring the extracted field with an asterisk \(\*\) because it indicates every table field is read sequentially. If you change the order or table field types, add or delete some table fields. It is likely the source table columns cannot be aligned with the target table columns, causing errors or even exceptions.
 
 -   To read name and id sequentially, configure it to: `"coulumn":["name","id"]`. 
--   To add a constant field in the fields extracted from the source table to match the field order of the target table. For example, if the data values you want to extract are values of age, name, constant date "1988-08-08 08:08:08", and id columns, configure it to: `"column":["age","name","'1988-08-08 08:08:08'","id"]`, with the constant value enclosed by `'`. In internal implementation, any field enclosed by `'` is considered as a constant field, and its value is the content in the `'`.
+-   To add a constant field in the fields extracted from the source table to match the target table field order. For example, if the data values you want to extract are values of age, name, constant date "1988-08-08 08:08:08", and id columns, configure it to: `"column":["age","name","'1988-08-08 08:08:08'","id"]`, with the constant value enclosed by `'`. In internal implementation, any field enclosed by `'` is considered a constant field, and its value is the content in the `'`.
 
 **Note:** 
 
-    -   MaxCompute Reader does not use Select SQL statements for extracting table data. Therefore, you cannot specify functions in fields.
+    -   MaxCompute Reader does not use Select SQL statements for extracting table data. Therefore, you cannot specify field functions.
     -   The column must contain the specified synchronized column set and cannot be blank.
 
  |Yes|None|
@@ -49,23 +49,23 @@ MaxCompute Reader supports the following data types in MaxCompute.
 
     Configure the synchronization task data source and destination.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16225/15489046517759_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16225/15498531987759_en-US.png)
 
     Configurations:
 
     -   Data source: The datasource in the preceding parameter description. Enter the configured data source name.
     -   Table: The table in the preceding parameter description. Select the table for synchronization.
-    **Note:** If you specify all columns, you can configure them in column. For example, "column ": \[""\]. Partition supports configuration methods that configure multiple partitions and wildcard characters.
+    **Note:** If you specify all columns, you can configure them in the column. For example, "column ": \[""\]. Partition supports configuration methods that configure multiple partitions and wildcard characters.
 
-    -   `"partition": "pt=20140501/ds=*"`: Reads the data from all partitions in ds. 
+    -   `"partition": "pt=20140501/ds=*"`: Reads data from all partitions in ds. 
     -   `"partition":"pt=top?"` The question mark \(?\) means whether the preceding character exists. This configuration specifies the two partitions with pt=top and pt=to.
-    You can enter partition columns for synchronization, such as partition columns with pt. Example: Assuming that the value of each MaxCompute partition is pt=$\{bdp.system.bizdate\}, add the partition name pt to a field in the source table, ignore the unrecognized mark if any, and proceed with the next step. To synchronize all partitions, configure the partition value to pt=$\{\*\}. To synchronize a certain partition, select a partition time value.
+    You can enter partition columns for synchronization, such as partition columns with pt. Example: Assuming that the value of each MaxCompute partition is pt=$\{bdp.system.bizdate\}, add the partition name pt to a source table field, ignore the unrecognized mark if any, and proceed to the next step. To synchronize all partitions, configure the partition value to pt=$\{\*\}. To synchronize a certain partition, select a partition time value.
 
 2.  Field mapping: The column in the preceding parameter description.
 
     The Source Table Field on the left maps with the Target Table Field on the right. Click **Add Line** to add a field. To delete a line, move the mouse cursor over a line and click **Delete**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16225/15489046527760_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16225/15498531987760_en-US.png)
 
     -   In-row mapping: You can click **Enable Same-Line Mapping** to create a mapping for the same row. Note that the data type must be consistent.
     -   Automatic formatting: The fields are automatically sorted by rules.
@@ -78,7 +78,7 @@ MaxCompute Reader supports the following data types in MaxCompute.
     -   If the value you entered cannot be parsed, the type is displayed as 'Unidentified'.
 3.  Control the tunnel
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15489046527675_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15498531987675_en-US.png)
 
     Configurations:
 
