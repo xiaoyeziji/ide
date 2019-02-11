@@ -81,7 +81,7 @@ The remote FTP file itself does not provide data types, which are defined by Dat
 
     Configure the data source and destination for the synchronization task.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15498533777697_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15498534477697_en-US.png)
 
     Configurations:
 
@@ -96,13 +96,13 @@ The remote FTP file itself does not provide data types, which are defined by Dat
 
     The source table field on the left and the target table field on the right are one-to-one correspondences, click **Add row** to add a single field and click **Delete** to delete the current field.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15498533777701_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15498534477701_en-US.png)
 
     -   In-row mapping: You can click **Enable Same-Line Mapping** to create a mapping for the same row. Note that the data type must be consistent.
     -   Manually edit source table field: Manually edit the fields, and each line indicates a field. The first and end blank lines are ignored.
 3.  Channel control
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15498533777704_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15498534487704_en-US.png)
 
     Configurations:
 
