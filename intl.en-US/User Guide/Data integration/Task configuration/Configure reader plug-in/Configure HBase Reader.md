@@ -1,6 +1,6 @@
 # Configure HBase Reader {#concept_i2s_xgj_p2b .concept}
 
-The HBase Reader plug in provides the ability to read data from HBase. At the underlying implementation level, HBase Reader connects to the remote HBase service with HBase’s Java client, reads data within the rowkey range you specified by means of Scan, then assembles data into an abstract dataset using custom Data Integration data type , and passes dataset to the downstream Writer for processing.
+The HBase Reader plug-in provides the ability to read data from HBase. At the underlying implementation level, HBase Reader connects to the remote HBase service with HBase’s Java client, reads data within the rowkey range you specified by means of Scan, then assembles data into an abstract dataset using custom Data Integration data type, and passes dataset to the downstream Writer for processing.
 
 ## Supported features { .section}
 
@@ -70,9 +70,9 @@ The HBase Reader plug in provides the ability to read data from HBase. At the un
         2 row(s) in 0.0260 seconds }
         ```
 
-        The data read from the table \(in four columns\)
+        Data read from the table \(in four columns\):
 
-        |rowKey|column:qualifier|timestamp|value|
+        |rowKey|Column:qualifier|Timestamp|Value|
         |:-----|:---------------|:--------|:----|
         |lisi|address:city|1457101972764|beijing|
         |lisi|address:contry|1457102773908|china|
@@ -101,21 +101,21 @@ HBase Reader supports HBase data types and converts HBase data types as follows:
 
 ## Parameter description​ {#section_jn2_gqh_p2b .section}
 
-|Attribute|Description| Required|Default Value|
+|Attribute|Description| Required|Default value|
 |:--------|:----------|:--------|:------------|
 |haveKerberos|If haveKerberos is true, the HBase cluster must use Kerberos for authentication. **Note:** 
 
--   NOTE: If the value is true, the following five parameters related to Kerberos authentication must be configured: kerberosKeytabFilePath, kerberosPrincipal, hbaseMasterKerberosPrincipal, hbaseRegionserverKerberosPrincipal, and hbaseRpcProtection.
+-   If the value is true, the following five parameters related to Kerberos authentication must be configured: kerberosKeytabFilePath, kerberosPrincipal, hbaseMasterKerberosPrincipal, hbaseRegionserverKerberosPrincipal, and hbaseRpcProtection.
 -   If the HBase cluster is not authenticated with Kerberos, these six parameters are not required.
 
-|No|false|
-|hbaseConfig|Description: The configuration information provided by each HBase cluster for the Data Integration client connection is stored in hbase-site.xml. Contact your HBase PE for the configuration information and convert it into JSON. In addition, more HBase client configurations can be added, for example, to configure the cache and batch scan to optimize the interaction with servers.|Yes|N/A|
-|mode|Description: Read modes of HBase. “normal” and “multiVersionFixedColumn” are supported.|Yes|N/A|
-|table|Description: The name of HBase table to be read and is case sensitive.|Yes|N/A|
-|encoding|Description: Encoding method \(UTF-8 or GBK\). This is used when HBase byte\[\] stored in binary form is converted into String.|No|UTF-8|
-|column|Description: HBase field to be read. This item is required in both normal and multiVersionFixedColumn modes.-   **In normal mode:**
+|No|False|
+|hbaseConfig|The configuration information provided by each HBase cluster for the Data Integration client connection is stored in hbase-site.xml. Contact your HBase PE for configuration information and convert the configuration into JSON format. Multiple HBase client configurations can be added, for example, you can configure the cache and batch scan to optimize the interaction with servers.|Yes|N/A|
+|mode|Read modes of HBase. “normal” and “multiVersionFixedColumn” are supported.|Yes|N/A|
+|table|The name of HBase table to be read and is case sensitive.|Yes|N/A|
+|encoding|Encoding method \(UTF-8 or GBK\). This is used when HBase byte\[\] stored in binary form is converted into String.|No|UTF-8|
+|column|HBase field to be read. This item is required in both normal and multiVersionFixedColumn modes.-   **In normal mode:**
 
-Except for rowkey, the HBase columns specified by “name” for reading must be in the format of column family:column name. “type” specifies the data source type . “format” specifies the date format; “value” specifies the current type as a constant. The system does not read HBase data , but generates corresponding columns based on “value”. The configuration format is shown as follows.
+Except for rowkey, the HBase columns specified by “name” for reading must be in the format of column family:column name. “type” specifies the data source type. “format” specifies the date format; “value” specifies the current type as a constant. The system does not read HBase data, but generates corresponding columns based on “value”. The configuration format is shown as follows.
 
     ```
 "column": 
@@ -131,7 +131,7 @@ Except for rowkey, the HBase columns specified by “name” for reading must be
 ]
     ```
 
-In normal mode, for the specified Column information, you must enter type and select one from name or value.
+In normal mode, for the specified Column information, you must enter type and select one information from name or value.
 
 -   **In multiVersionFixedColumn mode**
 
@@ -153,8 +153,8 @@ Except for rowkey, the HBase columns specified by the item name for reading must
 
 
 |Yes|N/A|
-|maxVersion|Description: Specify the number of data versions read by HBase Reader in multi-version mode, which can only be -1 \(to read all versions\) or a number larger than 1. |Required: This is required in multiVersionFixedColumn mode.|N/A|
-|range|Specifies the rowkey range that the hbase reader reads.-   startRowkey: Specifies start rowkey.
+|maxVersion|Specify the number of data versions read by HBase Reader in multi-version mode. The specified number must be -1 to read all versions or a number larger than 1. |Required: This is required in multiVersionFixedColumn mode.|N/A|
+|range|Specifies the read rowkey range of the hbase reader.-   startRowkey: Specifies start rowkey.
 -   endRowkey: Specifies end rowkey.
 -   sBinaryRowkey: Specifies the method for converting configured startRowkey and endRowkey to byte\[\]. By default, this parameter is false. If the parameter is true, Bytes.toBytesBinary\(rowkey\) is called for conversion. If the parameter is false, Bytes.toBytes\(rowkey\) is called. The configuration format is shown as follows.
 
@@ -168,16 +168,16 @@ Except for rowkey, the HBase columns specified by the item name for reading must
 
 
 |No|N/A|
-|scanCacheSize|Description: Number of lines read by the HBase client from the server every time when RPC is performed.|No|256|
-|scanBatchSize|Description: Number of columns read by the HBase client from the server every time when RPC is performed. |No|1,000|
+|scanCacheSize|The number of lines read by the HBase client from the server every time when RPC is performed.|No|256|
+|scanBatchSize|The number of columns read by the HBase client from the server every time when RPC is performed. |No|1,000|
 
 ## Development in wizard mode {#section_bp2_wsh_p2b .section}
 
-Currently, Development in wizard mode is not supported.
+Currently, development in wizard mode is not supported.
 
 ## Development in script mode {#section_cp2_wsh_p2b .section}
 
-Configure a job to extract data from HBase to the local machine under normal mode.
+Configure a job to extract data from the HBase to the local machine under normal mode.
 
 ```
 {
