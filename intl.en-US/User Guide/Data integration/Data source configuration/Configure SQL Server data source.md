@@ -2,7 +2,7 @@
 
 This topic describes how to configure SQL server data source. The SQL server data source allows you to read and write data to SQL server instances, and supports configuring synchronization tasks in wizard and script mode.
 
-**Note:** If the SQL server is in a VPC environment, please take note of the following issues:
+**Note:** Now we only support SQL Server 2005 or higher versions. If the SQL server is in a VPC environment, please take note of the following issues:
 
 -   Create an SQL server data source
     -   Although, test connectivity is not supported, synchronization of task configuration is supported. You can synchronize task configurations by clicking **confirm** when creating the data source.
@@ -18,7 +18,7 @@ This topic describes how to configure SQL server data source. The SQL server dat
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New source** in the supported data source pop up window.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15483979867595_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15499637257595_en-US.png)
 
 4.  In the new data source dialog box, select the data source type **SQL Server**.
 5.  Configure SQL Server data source information individually.
@@ -27,7 +27,7 @@ This topic describes how to configure SQL server data source. The SQL server dat
 
     Consider the new data source of **SQL Server** \> **Alibaba Cloud database \(RDS\)** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15483979867596_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15499637257596_en-US.png)
 
     Configurations:
 
@@ -36,18 +36,18 @@ This topic describes how to configure SQL server data source. The SQL server dat
     -   Description: A brief description of the data source that cannot exceed 80 characters in length.
     -   RDS instance ID: You can view the RDS instance ID in the RDS console.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15483979867597_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15499637267597_en-US.png)
 
     -   RDS instance buyer ID: You can view the buyer's information under RDS console security settings.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15483979867598_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15499637267598_en-US.png)
 
     -   Username and password: The user name and password for database connection.
     **Note:** You need to add an RDS whitelist before connecting to the database.
 
     Consider a data source with a new **SQL Server** \> **public network IP address** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15483979867599_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15499637267599_en-US.png)
 
     Configurations:
 
@@ -58,14 +58,14 @@ This topic describes how to configure SQL server data source. The SQL server dat
     -   Username and password: The user name and password used to connect to the database.
     Consider a data source with a new**SQL Server** \> **public network IP** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15483979867600_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15499637267600_en-US.png)
 
     Configurations:
 
     -   Type: A data source without a public IP address.
     -   Name: The name must start with a letter or underline \(\_\) and can be 1 to 60 characters in length. it can contain letters, numbers, or underlines \(\_\).
     -   Description: A brief description of the data source and can be 1 to 80 characters.
-    -   Resource Group: It is used to run synchronization tasks, and generally multiple machines can be bound when you add a resource group. For more information, see [Add scheduling resources](reseller.en-US/User Guide/Data integration/Common Configuration/Add scheduling resources.md#).
+    -   Resource Group: It is used to run synchronization tasks, and generally multiple machines can be bound when you add a resource group. For more information, see [Add task resources](reseller.en-US/User Guide/Data integration/Common Configuration/Add task resources.md#).
     -   JDBC URL: JDBC connection information in the form of jdbc:sqlserver://ServerIP:Port;DatabaseName=Database.
     -   Username and Password: The user name and password used to connect to the database.
 6.  Click **Test Connectivity**.
@@ -78,5 +78,5 @@ This topic describes how to configure SQL server data source. The SQL server dat
 
 ## Next step {#section_jb1_tyb_p2b .section}
 
-Now you have learned how to configure a SQL Server data source. For more information on how to configure the SQL server writer plug‑in, see [Configure SQL Server Writer](reseller.en-US/User Guide/Data integration/Task configuration/Configure Writer plug-in/Configure SQL Server Writer.md#).
+Now you have learned how to configure a SQL Server data source. For more information on how to configure the SQL server writer plug‑in, see [Configure SQL Server Writer](reseller.en-US/User Guide/Data integration/Task configuration/Configure writer plug-in/Configure SQL Server Writer.md#).
 
