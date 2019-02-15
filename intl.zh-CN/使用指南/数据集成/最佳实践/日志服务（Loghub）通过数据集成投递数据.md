@@ -64,13 +64,13 @@
 2.  进入**同步资源管理** \> **数据源**页面，单击右上角的**新增数据源**。
 3.  选择数据源类型为**LogHub**，填写新增LogHub数据源对话框中的配置。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/154441207014350_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155020796914350_zh-CN.png)
 
     |配置|说明|
     |:-|:-|
-    |**数据源名称**|由英文字母、数字、下划线组成且需以字符或下划线开头，长度不超过60个字符。|
+    |**数据源名称**|数据源名称必须以字母、数字、下划线组合，且不能以数字和下划线开头。|
     |**数据源描述**|对数据源进行简单描述，不得超过80个字符。|
-    |**LogHub Endpoint**|LogHub的Endpoint，格式为http://yyy.com。|
+    |**LogHub Endpoint**|LogHub的Endpoint，格式为`http://yyy.com`。|
     |**Project**| 详情请参见[服务入口](https://www.alibabacloud.com/help/doc-detail/29008.htm)。
 
  |
@@ -85,7 +85,7 @@
 2.  填写新建数据同步节点对话框中的配置，单击**提交**，进入数据同步任务配置页面。
 3.  选择数据来源。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/154441207014351_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155020796914351_zh-CN.png)
 
     |配置|说明|
     |:-|:-|
@@ -103,7 +103,7 @@
 
     选择MaxCompute数据源及目标表ok。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/154441207014352_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155020796914352_zh-CN.png)
 
     |配置|说明|
     |:-|:-|
@@ -120,13 +120,13 @@
 
     选择字段的映射关系。需对字段映射关系进行配置，左侧源头表字段和右侧目标表字段为一一对应的关系。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/154441207014353_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155020797014353_zh-CN.png)
 
 6.  通道控制。
 
     配置作业速率上限和脏数据检查规则。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/154441207014354_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155020797014354_zh-CN.png)
 
     |配置|说明|
     |:-|:-|
@@ -136,7 +136,7 @@
     |**作业并发数**|配置时会结合读取端指定的切分建，将数据分成多个Task，多个Task同时运行，以达到提速的效果。|
     |**同步速率**|设置同步速率可保护读取端数据库，以避免抽取速度过大，给源库造成太大的压力。同步速率建议限流，结合源库的配置，请合理配置抽取速率。|
     |**错误记录数超过**|脏数据，类似源端是Varchar类型的数据，写到Int类型的目标列中，导致因为转换不合理而无法写入的数据。同步脏数据的设置，主要在于控制同步数据的质量问题。建议根据业务情况，合理配置脏数据条数。|
-    |**任务资源组**|配置同步任务时，指定任务运行所在的资源组，默认运行在默认资源组上。当项目调度资源紧张时，也可以通过新增自定义资源组的方式来给调度资源进行扩容，然后将同步任务指定在自定义资源组上运行，新增自定义资源组的操作请参见[新增调度资源](intl.zh-CN/使用指南/数据集成/常见配置/新增调度资源.md#)。您可根据数据源网络情况、项目调度资源情况和业务重要程度，进行合理配置。
+    |**任务资源组**|配置同步任务时，指定任务运行所在的资源组，默认运行在默认资源组上。当项目调度资源紧张时，也可以通过新增自定义资源组的方式来给调度资源进行扩容，然后将同步任务指定在自定义资源组上运行，新增自定义资源组的操作请参见[新增任务资源](intl.zh-CN/使用指南/数据集成/常见配置/新增任务资源.md#)。您可根据数据源网络情况、项目调度资源情况和业务重要程度，进行合理配置。
 
 |
 
@@ -148,7 +148,7 @@
 
         单击任务上方的**运行**按钮，将直接在数据集成页面运行任务，运行之前需要配置自定义参数的具体数值。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/154441207014355_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155020797014355_zh-CN.png)
 
         如上图所示，代表同步10:10到17:30这段时间的LogHub记录到MaxCompute。
 
@@ -156,7 +156,11 @@
 
         单击**提交**按钮，将同步任务提交到调度系统中，调度系统会按照配置属性在从第二天开始自动定时执行。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/154441207014356_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155020797038844_zh-CN.png)
+
+        如上图，设置开始时间和结束时间：startTime=$\[yyyymmddhh24miss-10/24/60\]系统前10分钟到 endTime=$\[yyyymmddhh24miss-5/24/60\]系统前5分钟时间。
+
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155020798014356_zh-CN.png)
 
         如上图所示，设置按分钟调度，从00：00到23:59每5分钟调度一次。
 
@@ -165,7 +169,7 @@
 
 如果您需要通过脚本模式配置此任务，单击工具栏中的转换脚本，选择**确认**即可进入脚本模式。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24565/154441207114347_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24565/155020798014347_zh-CN.png)
 
 您可根据自身进行配置，示例脚本如下。
 
