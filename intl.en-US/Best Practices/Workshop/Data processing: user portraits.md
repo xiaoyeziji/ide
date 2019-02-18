@@ -15,20 +15,22 @@ You can refer to [Data acquisition: log data upload](reseller.en-US/Best Practic
 
         ```
         CREATE TABLE IF NOT EXISTS ods_log_info_d (
-          IP string comment 'IP address',
+          ip string comment 'IP address',
           uid STRING COMMENT 'User ID',
-          Time string comment 'time:yyyymmddhh:mi:ss',
-          Status string comment 'server return status code',
-          Bytes string comment 'the number of bytes returned to the Client',
-          Region string comment 'region,get from IP',
-          Method string comment 'HTTP request type ',
-          URL string comment 'url',
-          Protocol string comment 'HTTP Protocol version number',
-          Referer string comment 'source ures',
-          Device string comment 'terminal type',
-          Identity string comment 'Access type crawler feed user unknown'
+          time string comment 'time:yyyymmddhh:mi:ss',
+          status string comment 'server return status code',
+          bytes string comment 'the number of bytes returned to the Client',
+          region string comment 'region,get from IP',
+          method string comment 'HTTP request type ',
+          url string comment 'url',
+          protocol string comment 'HTTP Protocol version number',
+          referer string comment 'source ures',
+          device string comment 'terminal type',
+          identity string comment 'Access type crawler feed user unknown'
         )
         PARTITIONED BY (
+          dt STRING
+        );
           dt STRING
         );
         ```
@@ -45,16 +47,16 @@ You can refer to [Data acquisition: log data upload](reseller.en-US/Best Practic
       gender STRING COMMENT 'Gender',
       age_range STRING COMMENT 'Age range',
       zodiac STRING COMMENT 'Zodiac sign'
-      Region string comment 'region, get from IP ',
-      Device string comment 'terminal type ',
-      Identity string comment 'Access type crawler feed user unknown',
-      Method string comment 'HTTP request type',
-      URL string comment 'url',
-      Referer string comment 'source url',
-      Time string comment 'time:yyyymmddhh:mi:ss'
+      region string comment 'region, get from IP ',
+      device string comment 'terminal type ',
+      identity string comment 'Access type crawler feed user unknown',
+      method string comment 'HTTP request type',
+      url string comment 'url',
+      referer string comment 'source url',
+      time string comment 'time:yyyymmddhh:mi:ss'
     )
     PARTITIONED BY (
-      DT string
+      dt string
     );
     ```
 
@@ -66,15 +68,15 @@ You can refer to [Data acquisition: log data upload](reseller.en-US/Best Practic
     -- Create a copy table
     Create Table if not exists rpt_user_info_d(
       uid STRING COMMENT 'User ID',
-      Region string comment ', get' from IP',
-      Device string comment 'terminal type',
-      PV bigint comment 'cv',
+      region string comment 'region, get' from IP',
+      device string comment 'terminal type',
+      pv bigint comment 'pv',
       gender STRING COMMENT 'Gender',
       age_range STRING COMMENT 'Age range',
       zodiac STRING COMMENT 'Zodiac sign'
     )
     PARTITIONED BY (
-      DT string
+      dt string
     );
     ```
 
@@ -83,34 +85,34 @@ You can refer to [Data acquisition: log data upload](reseller.en-US/Best Practic
 
 Open the Workshop Business Flow and drag three ODPS SQL nodes amed as "ods\_log\_info\_d、dw\_user\_info\_all\_d、rpt\_user\_info\_d" into the canvas, n, and configure dependencies.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544409175_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686549175_en-US.png)
 
 ## Creating user-defined functions { .section}
 
 1.  Download [ip2region.jar](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/85298/cn_zh/1532163718650/ip2region.jar).
 2.  Right-click **Resource**, and select **Create Resource** \> **jar**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544409176_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686549176_en-US.png)
 
 3.  Click **Select File**, select ip2region. jar that has been downloaded locally, and click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544409177_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686559177_en-US.png)
 
 4.  After the resource has been uploaded to dataworks, click **Submit**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544409178_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686559178_en-US.png)
 
 5.  Right-click a **function** and select **Create Function**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544409179_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686559179_en-US.png)
 
 6.  Enter the function name getregion, select the Business Flow to which you want to belong, and click **Submit**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544409180_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686559180_en-US.png)
 
 7.  Enter the function configuration in the Registry Function dialog box, specify the class name, description, command format, and parameter description.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544409181_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686559181_en-US.png)
 
     Parameters:
 
@@ -127,7 +129,7 @@ Open the Workshop Business Flow and drag three ODPS SQL nodes amed as "ods\_log\
 -   Configure ods\_log\_info\_d Node
     1.  Double-click the ods\_log\_info\_d node to go to the node configuration page and write the processing logic.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544409182_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686559182_en-US.png)
 
         The SQL logic is as follows:
 
@@ -135,30 +137,30 @@ Open the Workshop Business Flow and drag three ODPS SQL nodes amed as "ods\_log\
         INSERT OVERWRITE TABLE ods_log_info_d PARTITION (dt=${bdp.system.bizdate})
         SELECT ip
           , uid
-          , Time
-          , Status
-          , Bytes-use a custom UDF to get a locale over IP
-          , Getregion (IP) as region -- the request difference is divided into three fields through the regular
-          , Regexp_substr (request, '(^ [^] +)') as Method
-          ), Regexp_extract (request, '^ [^] + (. *) [^] + $ ') as URL
-          ), FIG (request, '([^] + $ )') as protocol -- get more precise URLs with regular clear refer
-          , (Referer, '^ [^/] +: /([^/] +) {1 }') as Referer -- Get terminal information and access form through agent
-          , Case
-            When tolower (agent) rlike 'android 'then 'android'
+          , time
+          , status
+          , bytes -- use a custom UDF to get a locale over IP
+          , getregion (IP) as region -- the request difference is divided into three fields through the regular
+          , regexp_substr(request, '(^[^ ]+ )') AS method
+          , regexp_extract(request, '^[^ ]+ (.*) [^ ]+$') AS url
+          , regexp_substr(request, '([^ ]+$)') AS protocol -- get more precise urls with regular clear refer
+          , regexp_extract(referer, '^[^/]+://([^/]+){1}') AS referer -- Get terminal information and access form through agent
+          , CASE
+        WHEN TOLOWER(agent) RLIKE 'android' THEN 'android'
             WHEN TOLOWER(agent) RLIKE 'iphone' THEN 'iphone'
             WHEN TOLOWER(agent) RLIKE 'ipad' THEN 'ipad'
             WHEN TOLOWER(agent) RLIKE 'macintosh' THEN 'macintosh'
             WHEN TOLOWER(agent) RLIKE 'windows phone' THEN 'windows_phone'
             WHEN TOLOWER(agent) RLIKE 'windows' THEN 'windows_pc'
             ELSE 'unknown'
-          End as Device
-          , Case
+          END AS device
+          , CASE
             WHEN TOLOWER(agent) RLIKE '(bot|spider|crawler|slurp)' THEN 'crawler'
             WHEN TOLOWER(agent) RLIKE 'feed'
-            OR regexp_extract(request, '^[^ ]+ (. *) [^ ]+$') RLIKE 'feed' THEN 'feed'
+            OR regexp_extract(request, '^[^ ]+ (.*) [^ ]+$') RLIKE 'feed' THEN 'feed'
             WHEN TOLOWER(agent) NOT RLIKE '(bot|spider|crawler|feed|slurp)'
             AND agent RLIKE '^[Mozilla|Opera]'
-            AND regexp_extract(request, '^[^ ]+ (. *) [^ ]+$') NOT RLIKE 'feed' THEN 'user'
+            AND regexp_extract(request, '^[^ ]+ (.*) [^ ]+$') NOT RLIKE 'feed' THEN 'user'
             ELSE 'unknown'
           END AS identity
           FROM (
@@ -168,16 +170,16 @@ Open the Workshop Business Flow and drag three ODPS SQL nodes amed as "ods\_log\
             , SPLIT(col, '##@@')[3] AS request
             , SPLIT(col, '##@@')[4] AS status
             , SPLIT(col, '##@@')[5] AS bytes
-            , Split (cola, '# @') [6] As Referer
+            , SPLIT(col, '##@@')[6] AS referer
             , SPLIT(col, '##@@')[7] AS agent
           FROM ods_raw_log_d
-          Where dt = $ {BDP. system. Date}
+          WHERE dt = ${bdp.system.bizdate}
         ) a;
         ```
 
     2.  Click **Save**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544409183_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686559183_en-US.png)
 
 -   Configure dw\_user\_info\_all\_d Node
     1.  Double-click the dw\_user\_info\_all\_d node to go to the node configuration page and write the processing logic.
@@ -189,7 +191,7 @@ Open the Workshop Business Flow and drag three ODPS SQL nodes amed as "ods\_log\
         SELECT COALESCE(a.uid, b.uid) AS uid
           , b.gender
           , b.age_range
-          , B. flavdiac
+          , b.zodiac
           , a.region
           , a.device
           , a.identity
@@ -199,7 +201,7 @@ Open the Workshop Business Flow and drag three ODPS SQL nodes amed as "ods\_log\
           , a.time
         FROM (
           SELECT *
-          From fig
+          FROM ods_log_info_d
           WHERE dt = ${bdp.system.bizdate}
         ) a
         LEFT OUTER JOIN (
@@ -207,8 +209,7 @@ Open the Workshop Business Flow and drag three ODPS SQL nodes amed as "ods\_log\
           FROM ods_user_info_d
           WHERE dt = ${bdp.system.bizdate}
         ) b
-        ON a.uid = b.uid;  WHERE dt = ${bdp.system.bizdate}
-        ) a;
+        ON a.uid = b.uid;
         ```
 
     2.  Click **Save**.
@@ -218,7 +219,7 @@ Open the Workshop Business Flow and drag three ODPS SQL nodes amed as "ods\_log\
         The SQL logic is as follows:
 
         ```
-        INSERT OVERWRITE TABLE rpt_user_info_d PARTITION (dt='${bdp.system.bizdate}')
+        IINSERT OVERWRITE TABLE rpt_user_info_d PARTITION (dt='${bdp.system.bizdate}')
         SELECT uid
           , MAX(region)
           , MAX(device)
@@ -228,8 +229,7 @@ Open the Workshop Business Flow and drag three ODPS SQL nodes amed as "ods\_log\
           , MAX(zodiac)
         FROM dw_user_info_all_d
         WHERE dt = ${bdp.system.bizdate}
-        GROUP BY uid;p.system.bizdate}
-        ) a;
+        GROUP BY uid;
         ```
 
     2.  Click **Save**.
@@ -239,29 +239,29 @@ Open the Workshop Business Flow and drag three ODPS SQL nodes amed as "ods\_log\
 1.  Click **Submit** to submit the node tasks that have been configured in the Business Flow.
 2.  Select the nodes that need to be submitted in the Submitdialog box, and check the **Ignore Warnings on I/O Inconsistency**, click **Submit**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544419186_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686559186_en-US.png)
 
 
 ## Running Business Flows {#section_inw_mpt_s2b .section}
 
 1.  Click **Run** to verify the code logic.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544419187_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686559187_en-US.png)
 
 2.  Click **Queries** in the left-hand navigation bar.
 3.  Select **New** \> **ODPS SQL**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504544419169_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504686559169_en-US.png)
 
 4.  Write and execute SQL statements, Query Task for results, and confirm data output.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544419188_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686559188_en-US.png)
 
     The query statement is as follows:
 
     ```
     --- View the data in the data box
-    Select * From glaswhere DT ''business day'' limit 10;
+    Select * From glaswhere dt ''business day'' limit 10;
     ```
 
 
@@ -271,7 +271,7 @@ After the Business Flow is submitted, it indicates that the task has entered the
 
 1.  Click **Publish** To Go To The publish page.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544419189_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686559189_en-US.png)
 
 2.  Select the task to publish and click **Add To Be-Published List**.
 3.  Enter the list of pending releases, and click **Pack and publish all**.
@@ -282,21 +282,21 @@ After the Business Flow is submitted, it indicates that the task has entered the
 1.  After the task has been published successfully, click **Operation center**.
 2.  Select Workshop Business Flows in the **Task List**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544419193_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686559193_en-US.png)
 
 3.  Right-click the workshop\_start node in the DAG graph and select **Patch Data** \> **Current and downstream nodes**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544429194_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686569194_en-US.png)
 
 4.  Check the task that needs to fill the data, enter the business date, and click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544429195_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686569195_en-US.png)
 
     When you click **OK**, you automatically jump to the patch data task instance page.
 
 5.  Click **Refresh** until the SQL task runs successfully.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504544429196_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504686669196_en-US.png)
 
 
 ## Next step {#section_fwr_pd5_s2b .section}
