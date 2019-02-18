@@ -83,34 +83,34 @@ You can refer to [Data acquisition: log data upload](reseller.en-US/Best Practic
 
 Open the Workshop Business Flow and drag three ODPS SQL nodes amed as "ods\_log\_info\_d、dw\_user\_info\_all\_d、rpt\_user\_info\_d" into the canvas, n, and configure dependencies.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788589175_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795159175_en-US.png)
 
 ## Creating user-defined functions { .section}
 
 1.  Download [ip2region.jar](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/85298/cn_zh/1532163718650/ip2region.jar).
 2.  Right-click **Resource**, and select **Create Resource** \> **jar**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788589176_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795159176_en-US.png)
 
 3.  Click **Select File**, select ip2region. jar that has been downloaded locally, and click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788589177_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795159177_en-US.png)
 
 4.  After the resource has been uploaded to dataworks, click **Submit**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788589178_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795159178_en-US.png)
 
 5.  Right-click a **function** and select **Create Function**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788589179_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795159179_en-US.png)
 
 6.  Enter the function name getregion, select the Business Flow to which you want to belong, and click **Submit**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788589180_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795159180_en-US.png)
 
 7.  Enter the function configuration in the Registry Function dialog box, specify the class name, description, command format, and parameter description.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788589181_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795159181_en-US.png)
 
     Parameters:
 
@@ -127,7 +127,7 @@ Open the Workshop Business Flow and drag three ODPS SQL nodes amed as "ods\_log\
 -   Configure ods\_log\_info\_d Node
     1.  Double-click the ods\_log\_info\_d node to go to the node configuration page and write the processing logic.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788589182_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795159182_en-US.png)
 
         The SQL logic is as follows:
 
@@ -177,7 +177,7 @@ Open the Workshop Business Flow and drag three ODPS SQL nodes amed as "ods\_log\
 
     2.  Click **Save**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788589183_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795169183_en-US.png)
 
 -   Configure dw\_user\_info\_all\_d Node
     1.  Double-click the dw\_user\_info\_all\_d node to go to the node configuration page and write the processing logic.
@@ -217,7 +217,7 @@ Open the Workshop Business Flow and drag three ODPS SQL nodes amed as "ods\_log\
         The SQL logic is as follows:
 
         ```
-        IINSERT OVERWRITE TABLE rpt_user_info_d PARTITION (dt='${bdp.system.bizdate}')
+        INSERT OVERWRITE TABLE rpt_user_info_d PARTITION (dt='${bdp.system.bizdate}')
         SELECT uid
           , MAX(region)
           , MAX(device)
@@ -237,23 +237,23 @@ Open the Workshop Business Flow and drag three ODPS SQL nodes amed as "ods\_log\
 1.  Click **Submit** to submit the node tasks that have been configured in the Business Flow.
 2.  Select the nodes that need to be submitted in the Submitdialog box, and check the **Ignore Warnings on I/O Inconsistency**, click **Submit**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788599186_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795169186_en-US.png)
 
 
 ## Running Business Flows {#section_inw_mpt_s2b .section}
 
 1.  Click **Run** to verify the code logic.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788599187_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795169187_en-US.png)
 
 2.  Click **Queries** in the left-hand navigation bar.
 3.  Select **New** \> **ODPS SQL**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504788599169_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504795169169_en-US.png)
 
 4.  Write and execute SQL statements, Query Task for results, and confirm data output.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788599188_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795169188_en-US.png)
 
     The query statement is as follows:
 
@@ -269,7 +269,7 @@ After the Business Flow is submitted, it indicates that the task has entered the
 
 1.  Click **Publish** To Go To The publish page.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788599189_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795169189_en-US.png)
 
 2.  Select the task to publish and click **Add To Be-Published List**.
 3.  Enter the list of pending releases, and click **Pack and publish all**.
@@ -280,21 +280,21 @@ After the Business Flow is submitted, it indicates that the task has entered the
 1.  After the task has been published successfully, click **Operation center**.
 2.  Select Workshop Business Flows in the **Task List**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788599193_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795169193_en-US.png)
 
 3.  Right-click the workshop\_start node in the DAG graph and select **Patch Data** \> **Current and downstream nodes**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788599194_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795169194_en-US.png)
 
 4.  Check the task that needs to fill the data, enter the business date, and click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788599195_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795169195_en-US.png)
 
     When you click **OK**, you automatically jump to the patch data task instance page.
 
 5.  Click **Refresh** until the SQL task runs successfully.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504788599196_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16422/15504795169196_en-US.png)
 
 
 ## Next step {#section_fwr_pd5_s2b .section}
