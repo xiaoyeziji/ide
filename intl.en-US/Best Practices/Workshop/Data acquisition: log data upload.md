@@ -15,7 +15,7 @@ Before you begin this lab, you need to make sure you have an Alibaba Cloud accou
 1.  Log in to the [Alibaba Cloud website](https://www.alibabacloud.com/), click **Log in** in the upper-right corner to fill in your Alibaba Cloud account and password.
 2.  Select **Products** \> **Analytics & Big Data** \> **MaxComputute** and go to the MaxCompute product details page.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175929063_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800579063_en-US.png)
 
 3.  Click **Start now**.
 4.  Select **Pay-As-You-Go**, click **Buy Now**.
@@ -26,7 +26,7 @@ Before you begin this lab, you need to make sure you have an Alibaba Cloud accou
 2.  You can create a MaxCompute project in two ways.
     -   On the console overview page, go to **Common Functions****Create Project**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175929071_en-US.jpg)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800579071_en-US.jpg)
 
 3.  Fill in the configuration items in the Create Project dialog box. Select a region and a calculation engine service.
 
@@ -34,7 +34,7 @@ Before you begin this lab, you need to make sure you have an Alibaba Cloud accou
 
 4.  Configure the basic information and advanced settings for the new project, and click **Create project**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175929076_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800579076_en-US.png)
 
     **Note:** 
 
@@ -42,7 +42,7 @@ Before you begin this lab, you need to make sure you have an Alibaba Cloud accou
     -   The project name is globally unique, it is recommended that you use your own easy-to-distinguish name as the project space name for this lab.
 5.  Once the project has been created successfully, you can select the Project List page to **Data Studio** after viewing the project space.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175929079_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800579079_en-US.png)
 
 
 ## Create data source {#section_fml_m1t_s2b .section}
@@ -52,11 +52,11 @@ Before you begin this lab, you need to make sure you have an Alibaba Cloud accou
 -   Create a new OSS data source
     1.  Select the **Data Integration** \> **Data Source** Page, and click **Add Data Source**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175929086_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800579086_en-US.png)
 
     2.  Select the data source type as OSS, with other configuration items as follows.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175929088_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800579088_en-US.png)
 
         Parameters:
 
@@ -72,7 +72,7 @@ Before you begin this lab, you need to make sure you have an Alibaba Cloud accou
     1.  Select the **Data Integration** \> **Data Source**Page, and click **Add Data Source**.
     2.  Select the data source type as MySQL, and fill in the configuration information.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175929103_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800579103_en-US.png)
 
         Parameters:
 
@@ -90,23 +90,23 @@ Before you begin this lab, you need to make sure you have an Alibaba Cloud accou
 1.  Right-click **Business Flow** under **Data Development**, select **Create Business Flow**.
 2.  Fill in the Business Flow name and description.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175929124_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800579124_en-US.png)
 
 3.  Click **Create**to complete the creation of the Business Flow.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175929125_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800579125_en-US.png)
 
 4.  Enter the Business Flow Development Panel and drag a virtual node and two data sync nodes \(oss\_datasync and rds\_datasync\) into the Panel.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175929128_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800579128_en-US.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175939131_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800579131_en-US.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175939132_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800589132_en-US.png)
 
 5.  Drag the connection to set the workshop\_start node to the upstream of both data synchronization nodes.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/154751759312038_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/155048005812038_en-US.png)
 
 
 ## Configure workshop\_start task {#section_xvm_jht_s2b .section}
@@ -115,32 +115,32 @@ Since the new version sets the input and output nodes for each node, you need to
 
 You can configure it by clicking**Schedule**. When the task configuration is complete, click **Save**.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175939137_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800589137_en-US.png)
 
 ## Create Table {#section_oth_h3t_s2b .section}
 
 1.  Right-click **Table** and choose **Create Table**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/154751759311961_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/155048005811961_en-US.png)
 
 2.  Type in **Table Name**\(ods\_raw\_log\_d and ods\_user\_info\_d\) for oss logs and RDS respectively.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/154751759311969_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/155048005811969_en-US.png)
 
 3.  Type in your **Table Alias** and choose **Partitioned Table**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/154751759311978_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/155048005811978_en-US.png)
 
 4.  Type in the field and partition information,click **Submit to Development Environment** and **Submit to Production Environment**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/154751759311992_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/155048005811992_en-US.png)
 
     You can also click **DDL Mode**, use the following SQL statements to create tables.
 
     ```
-    //Creates a target table for oss logs
+    //Create a target table for oss logs
     CREATE TABLE IF NOT EXISTS  ods_raw_log_d (
-      Col_string
+      col_string
     )
     PARTITIONED BY (
       dt STRING
@@ -160,7 +160,7 @@ You can configure it by clicking**Schedule**. When the task configuration is com
 
 5.  Click **Submit to Development Environment** and **Submit to Production Environment**. You can configure both of the tables in this way.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/154751759312023_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/155048005812023_en-US.png)
 
 
 ## Configure the data synchronization task {#section_vfl_dkt_s2b .section}
@@ -171,7 +171,7 @@ You can configure it by clicking**Schedule**. When the task configuration is com
 
         Select the data source as the maid in the oss data source.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175939142_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800589142_en-US.png)
 
         Parameters:
 
@@ -182,15 +182,15 @@ You can configure it by clicking**Schedule**. When the task configuration is com
 
         Select the data destination is ods\_raw\_log\_d in the odps\_first data source. Both partition information and cleanup rules take the system default, the default configuration of the partition is $\{bizdate\}.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175939144_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800589144_en-US.png)
 
     4.  Configure the field mapping, connect the fields that you want to synchronize.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175939145_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800589145_en-US.png)
 
     5.  Configure **Transmission Rate** with a maximum operating rate of 10 Mb/s.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175939146_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800589146_en-US.png)
 
     6.  Verify that the current task is configured and can be modified. After the confirmation is correct, click **Save** in the upper left corner.
     7.  Closes the current task and returns to the Business Flow configuration panel.
@@ -200,25 +200,25 @@ You can configure it by clicking**Schedule**. When the task configuration is com
 
         Select the data source that is located in the MySQL data source rds\_workshop\_log, and the table is named as ods\_user\_info\_d, the split key uses the default to generate columns.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175939148_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800589148_en-US.png)
 
     3.  Select data destination
 
         Select the data destination ods\_user\_info\_d in the data source named odps\_first. Both partition information and cleanup rules take the system default, the default configuration of the partition is $\{bizdate\}.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175949149_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800589149_en-US.png)
 
     4.  Configure the field mapping, default in association with the name mapping.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175949151_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800589151_en-US.png)
 
     5.  Configure **Transmission Rate** with a maximum operating rate of 10 Mb/s.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175939146_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800589146_en-US.png)
 
     6.  Verify that the current task is configured and can be modified. After the confirmation is correct, click **Save** in the upper left corner.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175949157_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800599157_en-US.png)
 
     7.  Closes the current task and returns to the Business Flow configuration panel.
 
@@ -231,7 +231,7 @@ You can configure it by clicking**Schedule**. When the task configuration is com
 
 1.  Click **Run**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175949163_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800599163_en-US.png)
 
     During a task run, you can view the run status.
 
@@ -244,11 +244,11 @@ You can configure it by clicking**Schedule**. When the task configuration is com
 1.  Click **temporary query** in the left-hand navigation bar.
 2.  Select **New** \> **ODPS SQL**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175949169_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800599169_en-US.png)
 
 3.  Write and execute SQL statement to check the entries imported into ods\_raw\_log\_d.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15475175949170_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16421/15504800599170_en-US.png)
 
 4.  Also write and execute SQL statements to view the number of imported ods\_user\_info\_d records.
 
@@ -263,5 +263,5 @@ You can configure it by clicking**Schedule**. When the task configuration is com
 
 ## Next step {#section_agb_rrt_s2b .section}
 
-Now that you've learned how to synchronize the log data, complete the data acquisition, you can continue with the next tutorial. In this tutorial, you will learn how to calculate and analyze the collected data. For more information, see [Data processing: user portraits](intl.en-US/Best Practices/Workshop/Data processing: user portraits.md#).
+Now that you've learned how to synchronize the log data, complete the data acquisition, you can continue with the next tutorial. In this tutorial, you will learn how to calculate and analyze the collected data. For more information, see [Data processing: user portraits](reseller.en-US/Best Practices/Workshop/Data processing: user portraits.md#).
 
