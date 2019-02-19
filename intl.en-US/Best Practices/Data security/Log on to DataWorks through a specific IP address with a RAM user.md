@@ -10,11 +10,11 @@ First, you need to refer to [Create a RAM user](../../../../../reseller.en-US/Pr
 
 Log on to the [RAM console](../../../../../reseller.en-US/Product Introduction/What is RAM?.md#), click **Create Policy** in the **Policies** column to enter the edit page. In this case, the policy name is **dataworksIPlimit1**.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/125807/155056624538914_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/125807/155056722538914_en-US.png)
 
 Select **Script** for the option of configuration mode, and enter your custom policy.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/125807/155056624538925_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/125807/155056722538925_en-US.png)
 
 The complete content of the custom policy is shown in the following figure. "acs: SourceIp" is the IP address that you allow access to Dataworks. In this example, it is 100.1.1.1/32. After entering the information, click **OK** to create the authorization.
 
@@ -41,15 +41,15 @@ The complete content of the custom policy is shown in the following figure. "acs
 
 On the RAM console, click **Identities** \> **Users**, choose the RAM user you want to control, and click**Add Permissions**.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/125807/155056624538926_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/125807/155056722538926_en-US.png)
 
 Select **Custom Policy**, add the custom policy you just created to the **Selected**, and click**OK**.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/125807/155056624538928_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/125807/155056722538928_en-US.png)
 
 ## Verification {#section_ymz_21f_4gb .section}
 
 Log on to the DataWorks console using an IP addresse different from 100.1.1.1/32 and find that the login failed.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/125807/155056624538934_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/125807/155056722538934_en-US.png)
 
