@@ -7,7 +7,7 @@ Release Version: DataWorks V2.0
 -   Release time July 25, 2018
 -   Release scope: East China 2 deployment only
 -   Release: DataWorks V2.0 adds business processes and components on the basis of DataWorks V2.0, it also improved the data R&D system, supports dual projects, isolated development and production, and ensures data development specifications to reduce error codes.
--   **You can watch videos to learn more about DataWorks V2.0: <object data="[http://cloud.video.taobao.com/play/u/3926817755/p/1/e/6/t/1/218052866154.mp4](http://cloud.video.taobao.com/play/u/3926817755/p/1/e/6/t/1/218052866154.mp4)" width="768px" height="432px"/\>**
+-   **You can watch videos to learn more about DataWorks V2.0:**
 
 ## Regions that support Dataworks 2.0 {#section_pgk_hjj_ggb .section}
 
