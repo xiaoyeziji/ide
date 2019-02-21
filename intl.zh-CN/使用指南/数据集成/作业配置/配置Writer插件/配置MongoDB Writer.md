@@ -44,6 +44,7 @@ MongoDB Writer针对MongoDB类型的转换列表，如下所示。
 -   replaceKey：replaceKey指定了每行记录的业务主键，用来做覆盖时使用（不支持replaceKey为多个键，一般是指Monogo中的主键）。
 
 |否|无|
+|preSql|支持清空集合的preSql配置："preSql":\{"type":"remove"\}|否|无|
 
 ## 向导开发介绍 {#section_bp2_wsh_p2b .section}
 
