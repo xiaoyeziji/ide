@@ -54,70 +54,75 @@ Currently, development in wizard mode is unavailable.
 
 To configure data synchronization jobs written to MongoDB, please refer to the above parameter descriptions for details.
 
-```
+```language-json
 {
     "type": "job",
-    "version": 2.0 ", // version number
-    "steps":[
-        {//The following is a reader template. You can find the corresponding reader plug-in documentations.
-            "stepType":"stream",
-            "parameter":{},
-            "name": "Reader ",
-            "category":"reader"
+    "version": "2.0本号
+    "steps"件文档
+        {
+            "stepType": "stream",
+            "parameter": {},
+            "name": "Reader",
+            "category": "reader"
         },
         {
-            "stepType":"hdfs",//plug-in name
+            "stepType":godb",//插件名
             "parameter": {
-                "path": "", //path
-                "fileName": "ww",//File name
-                "compress": "", // File compression type
-                "datasource": "", // Data Source
-                "column":[
+                "date": "",//数据源名
+                "column": [
                     {
-                        "name": "col1", // field name
-                        "type": "string" // Field Type
+                       me": "name",//列名
+                       ": "string"//数据类型
                     },
                     {
-                        "name": "col2 ",
+                        "name": "age",
                         "type": "int"
                     },
                     {
-                        "name":"col3",
-                        "type":"double"
+                        "name": "id",
+                        "type": "long"
                     },
                     {
-                        "name":"col4",
-                        "type":"boolean"
+                        "name": "wealth",
+                        "type": "double"
                     },
                     {
-                        "name":"col5",
+                        "name": "hobby",
+                        "type": "array",
+                        "splitter": " "
+                    },
+                    {
+                        "name": "valid",
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "date_of_join",
+                        "format": "yyyy-MM-dd HH:mm:ss",
                         "type": "date"
                     }
-                ],
-                "writeMode": "insert",//Write mode
-                "fieldDelimiter": "," //Delimiter of each column
-                "encoding": "UTF-8", // encoding format
-                "fileType": "// text type
+          ],
+                "writeMode": {//写入模式
+                    "isReplace": "true",
+                    "replaceKey": "id"
+                              "collectionName": "datax_test"//连接名称
             },
-            "name":"Writer",
-            "category":"writer"
-        }
+            "name": "Writer",
+            "category": "writer"
+   
     ],
-    "setting":{
-        "errorLimit": {
-            "record": "0"//Number of error records
+    "setting": {
+        "errorLimit": {//错误记录数
+            "record": "0"
         },
         "speed": {
-            "throttle":false,//False indicates that the traffic is not throttled and the following throttling speed is invalid. True indicates that the traffic is throttled.
-            "concurrent": 1, // Number of job concurrency
-            "dmu": 1 // DMU Value
-        }
+            "jvm            "throttle": true,代表不限流，下面的限流的速度不生效，true代表         "concurrent": 1,//作业并发数
+            "mbp       }
     },
-    "order":{
-        "hops":[
+    "order": {
+        "hops": [//从reader同步writer
             {
-                "from":"Reader",
-                "to":"Writer"
+                "from": "Reader",
+                "to": "Writer"
             }
         ]
     }

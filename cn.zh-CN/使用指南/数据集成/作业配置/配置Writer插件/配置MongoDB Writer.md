@@ -48,76 +48,85 @@ MongoDB Writer针对MongoDB类型的转换列表，如下所示。
 
 ## 向导开发介绍 {#section_bp2_wsh_p2b .section}
 
-暂时没有向导开发模式。
+暂不支持向导开发模式。
 
 ## 脚本开发介绍 {#section_cp2_wsh_p2b .section}
 
 配置写入MongoDB的数据同步作业，详情请参见上述参数说明。
 
-```
+```language-json
 {
-    "type":"job",
-    "version":"2.0",//版本号
-    "steps":[
-        { //下面是关于Reader的模板，可以找相应的读插件文档
-            "stepType":"stream",
-            "parameter":{},
-            "name":"Reader",
-            "category":"reader"
+    "type": "job",
+    "version": "2.0",//版本号
+    "steps": [//下面是关于Reader的模板，可以找相应的读插件文档
+        {
+            "stepType": "stream",
+            "parameter": {},
+            "name": "Reader",
+            "category": "reader"
         },
         {
-            "stepType":"hdfs",//插件名
-            "parameter":{
-                "path":"",//路径
-                "fileName":"",//文件名
-                "compress":"",//文件压缩类型
-                "datasource":"",//数据源
-                "column":[
+            "stepType": "mongodb",//插件名
+            "parameter": {
+                "datasource": "",//数据源名
+                "column": [
                     {
-                        "name":"col1",//字段名
-                        "type":"string"//字段类型
+                        "name": "name",//列名
+                        "type": "string"//数据类型
                     },
                     {
-                        "name":"col2",
-                        "type":"int"
+                        "name": "age",
+                        "type": "int"
                     },
                     {
-                        "name":"col3",
-                        "type":"double"
+                        "name": "id",
+                        "type": "long"
                     },
                     {
-                        "name":"col4",
-                        "type":"boolean"
+                        "name": "wealth",
+                        "type": "double"
                     },
                     {
-                        "name":"col5",
-                        "type":"date"
+                        "name": "hobby",
+                        "type": "array",
+                        "splitter": " "
+                    },
+                    {
+                        "name": "valid",
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "date_of_join",
+                        "format": "yyyy-MM-dd HH:mm:ss",
+                        "type": "date"
                     }
                 ],
-                "writeMode":"",//写入模式
-                "fieldDelimiter":",",//列分隔符
-                "encoding":"",//编码格式
-                "fileType":""//文本类型
+                "writeMode": {//写入模式
+                    "isReplace": "true",
+                    "replaceKey": "id"
+                },
+                "collectionName": "datax_test"//连接名称
             },
-            "name":"Writer",
-            "category":"writer"
+            "name": "Writer",
+            "category": "writer"
         }
     ],
-    "setting":{
-        "errorLimit":{
-            "record":"0"//错误记录数
+    "setting": {
+        "errorLimit": {//错误记录数
+            "record": "0"
         },
-        "speed":{
-            "throttle":false,//false代表不限流，下面的限流的速度不生效，true代表限流
-            "concurrent":1,.//作业并发数
-            "dmu":1//DMU值
+        "speed": {
+            "jvmOption": "-Xms1024m -Xmx1024m",
+            "throttle": true,//false代表不限流，下面的限流的速度不生效，true代表限流
+            "concurrent": 1,//作业并发数
+            "mbps": "1"//限流的速度
         }
     },
-    "order":{
-        "hops":[
+    "order": {
+        "hops": [//从reader同步writer
             {
-                "from":"Reader",
-                "to":"Writer"
+                "from": "Reader",
+                "to": "Writer"
             }
         ]
     }
