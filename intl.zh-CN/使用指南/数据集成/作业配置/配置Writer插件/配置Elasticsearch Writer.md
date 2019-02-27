@@ -6,7 +6,7 @@ Elasticsearch是一个基于Lucene的搜索和数据分析工具，它提供了�
 
 ```
 Relational DB(实例) -> Databases(数据库) -> Tables(表) -> Rows(一行数据) -> Columns(一行数据的一列)
-Elasticsearch       -> Index             -> Types      -> Documents    -> Fields
+Elasticsearch -> Index  -> Types -> Documents -> Fields
 ```
 
 Elasticsearch中可以有多个索引（index）/（数据库），每个索引可以包含多个类型（type）/（表），每个类型可以包含多个文档（document）行，然后每个文档可以包含多个字段（Field）（列）。Elasticsearch Writer插件使用Elasticsearch的Rest API接口，批量把从Reader读入的数据写入Elasticsearch中。
@@ -108,7 +108,7 @@ Elasticsearch中可以有多个索引（index）/（数据库），每个索引�
 ```
 
 |是|无|
-|dynamic|如果为true，则不使用datax的mappings，使用ES自己的自动mappings。|否|false|
+|dynamic|如果为true，则不使用datax的mappings，使用Elasticsearch的自动mappings。|否|false|
 
 ## 脚本开发介绍 {#section_pcz_fh4_q2b .section}
 
