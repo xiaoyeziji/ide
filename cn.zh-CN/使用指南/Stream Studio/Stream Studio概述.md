@@ -11,8 +11,8 @@ Stream Studio是您开发实时计算作业的理想平台，核心功能特性�
 -   支持DAG模式，通过可视化拖拽即可实现实时计算作业开发。
 -   支持[Flink SQL](../../../../../cn.zh-CN/使用指南/Flink SQL/Flink SQL概述.md#)模式，您可以选择单纯通过SQL开发实时计算作业。
 -   支持DAG与Flink SQL互转，方便查看SQL的算子结构。
--   支持Function Studio在线开发UDF，支持一键发布UDF（仅[独享模式](../../../../../cn.zh-CN/产品简介/独享模式系统架构.md#)支持）。
+-   支持Function Studio在线开发UDF，支持一键发布UDF（仅独享模式支持）。
 -   支持作业智能诊断，方便排查线上作业问题。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/129837/155123627839369_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/129837/155134189839369_zh-CN.png)
 
