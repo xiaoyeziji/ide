@@ -50,7 +50,7 @@ The following two features are not supported for the time being.
 
     Configuration item descriptions:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15501079407697_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15514320307697_en-US.png)
 
     Parameters:
 
@@ -66,20 +66,20 @@ The following two features are not supported for the time being.
 
     The source table field on the left and the target table field on the right are one-to-one relationships, click **Add Line** to add a single field and click **Delete** to delete the current field.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15501079407701_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15514320307701_en-US.png)
 
     In-row mapping: You can click In-row mapping to create a mapping for the same row. Note that the data type must be consistent.
 
 3.  Channel control
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15501079407704_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15514320307704_en-US.png)
 
     Parameters:
 
     -   DMU: A unit which measures the resources consumed during data integration, including CPU, memory, and network bandwidth. One DMU represents the minimum amount of resources used for a data synchronization task.
     -   Concurrent job count: Maximum number of threads used to concurrently read or write data into the data storage media in a data synchronization task. In wizard mode, configure a concurrency for the specified task on the wizard page.
     -   The maximum number of errors means the maximum number of dirty data records.
-    -   Task resource group: The machine on which the task runs. If the number of tasks is large, the default Resource Group is used to wait for a resource. We recommend you add a Custom Resource Group \(currently only East China 1 and East China 2 supports adding custom resource groups\). For more information, see [Add scheduling resources](reseller.en-US/User Guide/Data integration/Common Configuration/Add task resources.md#).
+    -   Task resource group: The machine on which the task runs. If the number of tasks is large, the default Resource Group is used to wait for a resource. We recommend you add a Custom Resource Group \(currently only East China 1 and East China 2 supports adding custom resource groups\). For more information, see [Add scheduling resources](reseller.en-US/User Guide/Data integration/Common configuration/Add task resources.md#).
 
 ## Development in script mode {#section_cp2_wsh_p2b .section}
 
