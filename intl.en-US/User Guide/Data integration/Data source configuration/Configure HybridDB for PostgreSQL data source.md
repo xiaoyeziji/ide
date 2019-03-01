@@ -35,7 +35,7 @@ You can configure synchronization tasks in [Wizard mode configuration](reseller.
     -   Description: A brief description of the data source that cannot exceed 80 characters in length.
     -   Instance ID: You can go to the HybridDB for PostgreSQL console to view the relevant instance ID.
     -   Master account ID: You can view the relevant information in the security settings of the HybridDB for PostgreSQL console.
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62183/155142300532076_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62183/155143113032076_en-US.png)
 
 6.  Click **Test Connectivity**.
 7.  When the test connection is completed, click **OK**.
