@@ -99,11 +99,11 @@ When a connectivity test fails, you need to verify the data source region, netwo
 
 -   The Database Password is invalid as follows:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16196/15514224977520_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16196/15514304407520_en-US.png)
 
 -   The network connection failed as follows:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16196/15514224977521_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16196/15514304407521_en-US.png)
 
 -   The network disconnected during synchronization or because of other conditions.
 
