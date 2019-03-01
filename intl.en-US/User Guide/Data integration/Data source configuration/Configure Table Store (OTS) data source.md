@@ -11,12 +11,12 @@ This topic describes how to configure Table Store \(OTS\) data source. Table Sto
 3.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 4.  Click **New Source** on the supported data source pop-up window.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16210/15514229037569_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16210/15514310317569_en-US.png)
 
 5.  Select the data source type **Table Store \(OTS\)** in the new dialog box.
 6.  Complete the Table Store data source configuration.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16210/15514229037571_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16210/15514310317571_en-US.png)
 
     Configurations:
 
