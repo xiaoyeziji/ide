@@ -13,7 +13,7 @@ SQL Server Reader支持大部分SQL Server类型，但也存在部分类型没�
 
 SQL Server Reader针对SQL Server的类型转换列表，如下所示。
 
-|类型分类|PostgreSQL数据类型|
+|类型分类|SQL Server数据类型|
 |:---|:-------------|
 |整数类|Bigint、Int、Smallint和Tinyint|
 |浮点类|Float、Decimal、Real和Numeric|
@@ -50,7 +50,7 @@ SQL Server Reader针对SQL Server的类型转换列表，如下所示。
 -   where条件为空，视作同步全表所有的信息。
 
 |否|无|
-|querySql|使用格式：`"querysql" : "查询statement",` 在部分业务场景中，where配置项不足以描述所筛选的条件，您可以通过该配置型来自定义筛选SQL。当配置此项后，数据同步系统就会忽略tables、columns配置项，直接使用这项配置的内容对数据进行筛选，例如需要进行多表join后同步数据，使用`select a,b from table_a join table_b on table_a.id = table_b.id`。当您配置querySql时，SQL Server Reader直接忽略table、column、where条件的配置。|否|无|
+|querySql|使用格式：`"querysql" : "查询statement",`在部分业务场景中，where配置项不足以描述所筛选的条件，您可以通过该配置型来自定义筛选SQL。当配置此项后，数据同步系统就会忽略tables、columns配置项，直接使用这项配置的内容对数据进行筛选，例如需要进行多表join后同步数据，使用`select a,b from table_a join table_b on table_a.id = table_b.id`。当您配置querySql时，SQL Server Reader直接忽略table、column、where条件的配置。|否|无|
 |fetchSize|该配置项定义了插件和数据库服务器端每次批量数据获取条数，该值决定了数据集成和服务器端的网络交互次数，能够较大的提升数据抽取性能。**说明：** fetchSize值过大（\>2048）可能造成数据同步进程OOM。
 
 |否|1024|
@@ -61,19 +61,20 @@ SQL Server Reader针对SQL Server的类型转换列表，如下所示。
 
     配置同步任务的数据来源和数据去向。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16232/15434562067861_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16232/15514078457861_zh-CN.png)
 
-    配置项说明如下：
+    |配置|说明|
+    |:-|:-|
+    |**数据源**|即上述参数说明中的datasource，一般填写您配置的数据源名称。|
+    |**表**|即上述参数说明中的table，选择需要同步的表。|
+    |**数据过滤**|您将要同步数据的筛选条件，暂时不支持limit关键字过滤。SQL语法与选择的数据源一致。|
+    |**切分键**|您可以将源数据表中某一列作为切分键，建议使用主键或有索引的列作为切分键。|
 
-    -   数据源：即上述参数说明中的datasource，一般填写您配置的数据源名称。
-    -   表：即上述参数说明中的table，选择需要同步的表。
-    -   数据过滤：您将要同步数据的筛选条件，暂时不支持limit关键字过滤。SQL语法与选择的数据源一致。
-    -   切分键：您可以将源数据表中某一列作为切分键，建议使用主键或有索引的列作为切分键。
 2.  字段映射，即上述参数说明中的column。
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16232/15434562067862_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16232/15514078467862_zh-CN.png)
 
     -   同行映射：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
     -   自动排版：可以根据相应的规律自动排版。
@@ -86,14 +87,17 @@ SQL Server Reader针对SQL Server的类型转换列表，如下所示。
     -   如果您输入的值无法解析，则类型显示为未识别。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15434562067675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15514078467675_zh-CN.png)
 
-    配置项说明如下：
+    |配置|说明|
+    |:-|:-|
+    |**DMU**|数据集成消耗资源（包括CPU、内存、网络等资源分配）的度量单位。一个DMU描述了一个数据集成作业最小运行能力，即在限定的CPU、内存、网络等资源情况下对于数据同步的处理能力。|
+    |**作业并发数**|可将此属性视为数据同步任务内，可从源并行读取或并行写入数据存储端的最大线程数。向导模式通过界面化配置并发数，指定任务所使用的并行度。
 
-    -   DMU：数据集成消耗资源（包括CPU、内存、网络等资源分配）的度量单位。一个DMU描述了一个数据集成作业最小运行能力，即在限定的CPU、内存、网络等资源情况下对于数据同步的处理能力。
-    -   作业并发数：可将此属性视为数据同步任务内，可从源并行读取或并行写入数据存储端的最大线程数。向导模式通过界面化配置并发数，指定任务所使用的并行度
-    -   错误记录数：错误记录数，表示脏数据的最大容忍条数。
-    -   任务资源组：任务运行的机器，如果任务数比较多，使用默认资源组出现等待资源的情况，建议添加自定义资源组（目前只有华东1，华东2支持添加自定义资源组），详情请参见[新增调度资源](cn.zh-CN/使用指南/数据集成/常见配置/新增调度资源.md#)。
+|
+    |**错误记录数**|错误记录数，表示脏数据的最大容忍条数。|
+    |**任务资源组**|任务运行的机器，如果任务数比较多，使用默认资源组出现等待资源的情况，建议添加自定义资源组（目前只有华东1，华东2支持添加自定义资源组），详情请参见[新增任务资源](intl.zh-CN/使用指南/数据集成/常见配置/新增任务资源.md#)。|
+
 
 ## 脚本开发介绍 {#section_cp2_wsh_p2b .section}
 
