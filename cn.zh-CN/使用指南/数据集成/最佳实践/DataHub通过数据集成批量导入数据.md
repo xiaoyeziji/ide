@@ -6,11 +6,11 @@
 
 ## 准备工作 {#section_ght_gnw_pfb .section}
 
-1.  [准备阿里云账号](../../../../cn.zh-CN/准备工作/管理员使用云账号/准备阿里云账号.md#)，并创建账号的访问秘钥，即AccessID和AccessKey。
+1.  [准备阿里云账号](../../../../../cn.zh-CN/准备工作/管理员使用云账号/准备阿里云账号.md#)，并创建账号的访问秘钥，即AccessID和AccessKey。
 2.  开通MaxCompute，这样会自动产生一个默认的MaxCompute数据源，并使用主账号登录DataWorks。
-3.  [创建项目](../../../../cn.zh-CN/准备工作/管理员使用云账号/创建项目.md#)。您可以在项目中协作完成工作流，共同维护数据和任务等，因此使用DataWorks之前需要先创建一个项目。
+3.  [创建工作空间](../../../../../cn.zh-CN/准备工作/管理员使用云账号/创建工作空间.md#)。您可以在项目中协作完成工作流，共同维护数据和任务等，因此使用DataWorks之前需要先创建一个项目。
 
-    **说明：** 如果您想通过子账号创建数据集成任务，可以赋予其相应的权限。详情请参见[准备RAM子账号](../../../../cn.zh-CN/准备工作/管理员使用云账号/准备RAM子账号.md#)和[成员管理](cn.zh-CN/使用指南/项目管理/成员管理.md#)。
+    **说明：** 如果您想通过子账号创建数据集成任务，可以赋予其相应的权限。详情请参见[准备RAM子账号](../../../../../cn.zh-CN/准备工作/管理员使用云账号/准备RAM子账号.md#)和[成员管理](cn.zh-CN/使用指南/项目管理/成员管理.md#)。
 
 
 ## 操作步骤 {#section_myv_r4w_pfb .section}
@@ -22,11 +22,11 @@
 3.  填写新建节点对话框中的配置，单击**提交**，进入数据同步任务配置页面。
 4.  单击新建同步节点右上角的**转换脚本**，选择**确认**即可进入脚本模式。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24565/154078539414347_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24565/155142065514347_zh-CN.png)
 
 5.  单击工具栏中的**导入模板**，填写导入模板对话框中的配置。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/40315/154078539421027_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/40315/155142065521027_zh-CN.png)
 
     |配置|说明|
     |:-|:-|
