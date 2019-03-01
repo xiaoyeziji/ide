@@ -29,6 +29,8 @@ MongoDB Writer针对MongoDB类型的转换列表，如下所示。
 |布尔型|Bool|
 |二进制类|Bytes|
 
+**说明：** 此处Date类型，写入到MongoDB后即为Datetime类型。
+
 ## 参数说明 {#section_jn2_gqh_p2b .section}
 
 |参数|描述|是否必选|默认值|
