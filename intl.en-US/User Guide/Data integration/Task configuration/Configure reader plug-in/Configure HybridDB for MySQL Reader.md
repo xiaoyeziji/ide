@@ -71,7 +71,7 @@ However, the task script configuration template does not automatically generate 
 
 Configure the source and destination of data for a synchronization task.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62192/155142993532098_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62192/155143152432098_en-US.png)
 
 |Parameter|Description|
 |:--------|:----------|
