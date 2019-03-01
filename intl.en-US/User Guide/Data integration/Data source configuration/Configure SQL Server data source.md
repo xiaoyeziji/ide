@@ -18,7 +18,7 @@ This topic describes how to configure SQL server data source. The SQL server dat
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New Source** in the supported data source pop-up window.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15514305617595_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15514306337595_en-US.png)
 
 4.  Select the data source type **SQL Server** in the new dialog box.
 5.  Configure the SQL Server data source information separately.
@@ -27,7 +27,7 @@ This topic describes how to configure SQL server data source. The SQL server dat
 
     Consider the new data source of **SQL Server** \> **Alibaba Cloud Database \(RDS\)** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15514305617596_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15514306337596_en-US.png)
 
     Configurations:
 
@@ -36,18 +36,18 @@ This topic describes how to configure SQL server data source. The SQL server dat
     -   Description: A brief description of the data source that cannot exceed 80 characters in length.
     -   RDS instance ID: You can view the RDS instance ID in the RDS console.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15514305617597_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15514306337597_en-US.png)
 
     -   RDS instance buyer ID: You can view the buyer's information under the RDS console security settings.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15514305617598_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15514306337598_en-US.png)
 
     -   Username and password: The user name and password for database connection.
     **Note:** You need to add a RDS whitelist before connecting to the database.
 
     Consider a data source with a new **SQL Server** \> **Public Network IP Address** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15514305627599_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15514306337599_en-US.png)
 
     Configurations:
 
@@ -58,7 +58,7 @@ This topic describes how to configure SQL server data source. The SQL server dat
     -   Username and password: The user name and password used to connect to the database.
     Consider a data source with a new**SQL Server** \> **Public Network IP Address** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15514305627600_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16213/15514306337600_en-US.png)
 
     Configurations:
 
