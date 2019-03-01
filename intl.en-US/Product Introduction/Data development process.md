@@ -2,7 +2,7 @@
 
 The data development process comprises data generation, data collection and storage, data analysis and processing, data extraction, and data presentation and sharing. See the following graphical process representation .
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16170/15476087738922_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16170/15514201088922_en-US.png)
 
 **Note:** 
 
