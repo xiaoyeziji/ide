@@ -8,12 +8,12 @@ This topic describes how to configure an AnalyticDB \(ADS\) data source. ADS all
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New Source** in the supported data source pop-up window.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16197/15514225257524_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16197/15514304987524_en-US.png)
 
 4.  In the Create Data Source dialog box, set the data source type to AnalyticDB \(ADS\).
 5.  Complete the AnalyticDB data source configuration items.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16197/15514225257525_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16197/15514304987525_en-US.png)
 
     -   [Configure the DM Data Source](https://www.alibabacloud.com/help/faq-detail/74294.htm)
     -   [Configure the DM Data Source](https://www.alibabacloud.com/help/faq-detail/74294.htm)
