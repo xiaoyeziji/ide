@@ -33,21 +33,21 @@ After confirming the target data source is supported by Data Integration, you ca
 1.  Enter the [DataWorks management console](https://partners-intl.aliyun.com) as a developer, and click **Data Development** in the corresponding project Action bar.
 2.  Click **Data Development** in the left-side navigation pane to open the Business Process .
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15514231287629_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15514312197629_en-US.png)
 
 3.  Right-click **Business Flow** in the left-side navigation pane to create **Data Integration** \> **Data Sync**, and enter the synchronization Task Name.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15514231287630_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15514312197630_en-US.png)
 
 4.  After creating the synchronization node, click the **Switch to Script Mode** in the upper-right corner of the new synchronization node. Select **OK** to enter the Script Mode.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15514231287631_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15514312197631_en-US.png)
 
     **Note:** Script Mode supports more features, such as synchronous task editing if the network is not up-to-date.
 
 5.  Click **Import Template** in the upper-right corner of the script pattern. Select the data source type for read/write respectively in the pop-up window, and then click **OK** to generate the initial script.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15514231287632_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15514312197632_en-US.png)
 
 
 ## Configure the synchronization task reader {#section_nz2_jlc_p2b .section}
