@@ -2,25 +2,25 @@
 
 This topic describes how to add a corresponding whitelist and security group when you use DataWorks in different regions.
 
-To ensure the databases security and stability, you can add IP addresses or IP segments for accessing the database to the whitelist or [Add security group](intl.en-US/User Guide/Data integration/Common configuration/Add security group.md#) of the target instance before using certain database instances. 
+To ensure the database security and stability, you can add IP addresses or IP segments for database access to the whitelist or [Add security group](reseller.en-US/User Guide/Data integration/Common configuration/Add security group.md#) of the target instance before using certain database instances. 
 
-**Note:** You can only add whitelists for Data Integration tasks. For other kinds of tasks, adding whitelists are not supported.
+**Note:** You can only add whitelists for Data Integration tasks. Adding whitelists in other types of tasks are not supported.
 
-## Add a whitelist {#section_djc_kj5_q2b .section}
+## Add whitelist {#section_djc_kj5_q2b .section}
 
-1.  Enter the [DataWorks management console](https://workbench.data.aliyun.com/console)as a developer and go to the **project list** page.
+1.  Enter the [DataWorks management console](https://partners-intl.aliyun.com)as a developer and go to the **Project List** page.
 2.  Select a project region.
 
     Currently, the supported regions are China East 2 \(Shanghai\), China South 1 \(Shenzhen\), Hong Kong, and Asia Pacific SOU 1 \(Singapore\). The default region is China East 2, and you can switch to other regions where your project is located, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16265/15507268338537_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16265/15514338898537_en-US.jpg)
 
 3.  Select the whitelist for your project region.
 
-    Some data sources currently have whitelist restrictions and require adding Data Integration IP addressesto whitelists. Common data sources, such as RDS, MongoDB, and Redis, need to add IP addresses to whitelists in their consoles. The following are two scenarios for adding a whitelist:
+    Some data sources have whitelist restrictions and require adding Data Integration IP addresses to whitelists. Common data sources, such as RDS, MongoDB, and Redis, require adding IP addresses to whitelists in their consoles. The following are two scenarios for adding a whitelist:
 
-    -   When a sync task is running on the custom resource group. You must authorize machines for the custom resource group, and add the machine intranet IP addresses and extranet IP addresses to the data source whitelist.
-    -   The whitelist entries differs among regions. Select the selected region whitelist from the following table.
+    -   When a sync task is running on the custom resource group, you must authorize machines for the custom resource group, and add the machine intranet IP addresses and Internet IP addresses to the data source whitelist.
+    -   Each region has different whitelist entries, and select the region whitelist from the following table.
 
         |Region|Whitelist|
         |:-----|:--------|
@@ -44,22 +44,22 @@ To ensure the databases security and stability, you can add IP addresses or IP s
 
 ## Add an RDS whitelist {#section_nwx_mm5_q2b .section}
 
-The RDS data source can be configured with the following two methods.
+The RDS data source can be configured with the following two methods:
 
 -   RDS instance
 
-    In this case, a data source is created using an RDS instance. Currently, the connectivity test, including the RDS in VPC environments are supported. If the connectivity test fails, you can try adding the data source with JDBC URL.
+    In this case, a data source is created using an RDS instance. Currently, the connectivity test including the RDS in the VPC environments are supported. If the connectivity test fails, you can try adding the data source with JDBC URL.
 
 -   JDBC URL
 
-    For the IP address in the JDBC URL, enter either an intranet IP address or an Internet IP address, if the intranet IP address is unavailable. The intranet IP address features quicker synchronization because the address is relevant to Alibaba Cloud data centers, while the synchronization speed of the Internet IP address is dependent on bandwidth.
+    For the IP address in the JDBC URL, enter either an intranet IP address or an Internet IP address \(if the intranet IP address is unavailable\). The intranet IP address features faster synchronization because the address is relevant to Alibaba Cloud data centers, while the Internet IP address synchronization speed depends on the bandwidth.
 
 
 RDS whitelist configuration
 
-When Data Integration is connected to the RDS for data synchronization, the database standard protocol must be connected to the database. The RDS allows all IP address connections by default. If you specify an IP whitelist during RDS configuration, you must add an IP whitelist of the Data Integration execution nodes. If no whitelists are specified then none are provided for Data Integration.
+When Data Integration is connected to the RDS for data synchronization, the database standard protocol must be connected to the database. By default, the RDS allows all IP address connections. If you specify an IP whitelist during RDS configuration, you must add an IP whitelist of the Data Integration execution nodes. If no whitelists are specified then none are provided for Data Integration.
 
-If you have set up an IP white list for your RDS, go to the RDS [Management Console](https://account.alibabacloud.com/login/login.htm), and navigate to **security control** to make the whitelist settings based on the preceding [whitelist](https://www.alibabacloud.com/help/doc-detail/26198.htm) configurations..
+If you have configured an IP whitelist for your RDS, go to the RDS [Management Console](https://account.alibabacloud.com/login/login.htm), and go to **Security Control** to configure the whitelist settings based on the preceding [Whitelist](https://www.alibabacloud.com/help/doc-detail/26198.htm) configurations.
 
-**Note:** If you use a custom resource group to schedule the RDS data synchronization task, you must add the IP address of the computer host of the custom resource group to the RDS whitelist.
+**Note:** If you use a custom Resource Group to schedule the RDS data synchronization task, you must add the IP address of the computer host of the custom Resource Group to the RDS whitelist.
 
