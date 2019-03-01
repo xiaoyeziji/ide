@@ -73,7 +73,7 @@ MySQL Writer converts the MySQL data types as follows:
 
     Configure the data source and destination of the synchronization task.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16227/15498532857781_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16227/15514296187781_en-US.png)
 
     Configurations:
 
@@ -90,7 +90,7 @@ MySQL Writer converts the MySQL data types as follows:
 
     The source table field on the left and the target table field on the right are one-to-one correspondence, click **Add row** to add a single field and click **Delete** to delete the current field.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16227/15498532857782_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16227/15514296187782_en-US.png)
 
     -   Peer mapping: Click **peer mapping** to establish a corresponding mapping relationship in the peer, and take special note of the data type match.
     -   Automatic formatting: The fields are automatically sorted based on corresponding rules.
@@ -103,14 +103,14 @@ MySQL Writer converts the MySQL data types as follows:
     -   If the value entered cannot be parsed, the type is displayed as unidentified.
 3.  Control the tunnel
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15498532857675_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15514296187675_en-US.png)
 
     Configurations:
 
     -   DMU: A unit which measures the resources including CPU, memory, and network bandwidth consumed during data integration. One DMU represents the minimum amount of resources used for a data synchronization task.
     -   Concurrent job count: The maximum number of threads used to concurrently read or write data into the data storage media in a data synchronization task. In wizard mode, configure a concurrency for the specified task on the wizard page.
     -   The maximum number of errors indicates the maximum number of dirty data records.
-    -   Task Resource Group: The machine on which the task runs, if the number of tasks is large, the default Resource Group is used to wait for a resource. We recommend that you add a Custom Resource Group. Currently, only East China 1 and East China 2 supports adding custom resource groups. For more information, see [Add scheduling resources](intl.en-US/User Guide/Data integration/Common Configuration/Add task resources.md#).
+    -   Task Resource Group: The machine on which the task runs, if the number of tasks is large, the default Resource Group is used to wait for a resource. We recommend that you add a Custom Resource Group. Currently, only East China 1 and East China 2 supports adding custom resource groups. For more information, see [Add scheduling resources](reseller.en-US/User Guide/Data integration/Common configuration/Add task resources.md#).
 
 ## Development in script mode {#section_cp2_wsh_p2b .section}
 
