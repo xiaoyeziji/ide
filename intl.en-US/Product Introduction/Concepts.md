@@ -37,15 +37,15 @@ Each task uses zero or more data tables \(data sets\) as an input, and generates
 
 Tasks are divided into node tasks, flow tasks, and inner nodes. See the relationships between these tasks in the following figure:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16168/15476087288911_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16168/15514200648911_en-US.png)
 
 -   A node task is a data operation. It can be configured to be dependent on other node tasks and flow tasks to form a Directed Acyclic Graph \(DAG\).
 -   A flow task is formed by a group of inner nodes that process a a work flow task. We recommend using less than 10 flow tasks. Inner nodes of a flow task cannot be dependencies of other flow or node tasks. A flow task can be configured to be a dependency of other flow and node tasks to form a DAG.
 -   An inner node is a node within a flow task. It basically has the same capabilities as a node task. Its scheduling cycle is inherited from the flow task scheduling frequency and cannot be configured independently. The dependency can only be dragged.
 
-Data execution can be selected from an operation type, see [Node type overview](../../../../../reseller.en-US/User Guide/Data development/Node type/Node type overview.md#).
+Data execution can be selected from an operation type, see [Node type overview](../../../../../intl.en-US/User Guide/Data development/Node type/Node type overview.md#).
 
-For details about task scheduling parameter configurations, see [Scheduling configuration](../../../../../reseller.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
+For details about task scheduling parameter configurations, see [Scheduling configuration](../../../../../intl.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
 
 ## Instance {#section_dg5_w2p_r2b .section}
 
