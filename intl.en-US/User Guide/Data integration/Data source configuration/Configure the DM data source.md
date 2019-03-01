@@ -1,51 +1,51 @@
 # Configure the DM data source {#concept_kyt_jsv_42b .concept}
 
-The DM relational database data source provides the ability to read data from and write data to DM databases, and supports configuring synchronization tasks in wizard and script modes.
+This topic describes how to configure the DM data source. The DM relational database data source provides the capability to read/write data to DM databases, and supports configuring synchronization tasks in wizard and script modes.
 
 ## Procedure {#section_jy4_q4v_42b .section}
 
-1.  Log on to the [DataWorks console](https://workbench.data.aliyun.com/console) as an administrator and click **Enter Workspace** from the Actions column of the relevant project in the Project List.
+1.  Log on to the [DataWorks console](https://partners-intl.aliyun.com) as an administrator \(primary account\) and click **Enter Workspace** from the Actions column of the relevant project in the Project List.
 2.  Select **Data Integration** in the top navigation bar. Click **Data Source** from the left-side navigation pane.
-3.  Click **New source** to pop up the supported data source.
+3.  Click **New Source** in the supported data source window.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16199/15475243427528_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16199/15514226267528_en-US.png)
 
-4.  In the new data source dialog box, select a data source type of **dream**.
-5.  Configure the information items of the DM data source.
+4.  In the new dialog box, select the **DM** data source type.
+5.  Complete the DM data source information items configurations.
 
-    Select either of the following data source types as needed when creating a DM data source:
+    Select either of the following data source types as required when creating a DM data source:
 
-    -   With public IP address
+    -   The New DM Data Sources with public IP address
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16199/15475243427529_en-US.png)
-
-        Parameters:
-
-        -   Type: With a public IP address.
-        -   Name: It is a combination of letters, numbers, and underlines It must begin with a letter or underline and cannot exceed 60 characters.
-        -   Description: It is a brief description of the data source with no more than 80 characters.
-        -   JDBC URL: In the format of jdbc:mysql://ServerIP:Port/Database.
-        -   Username/Password: The user name and password used to connect to the database.
-    -   Without public IP address
-
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16199/15475243427530_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16199/15514226267529_en-US.png)
 
         Parameters:
 
-        -   Type: No public network IP, selecting a data source of this type requires the use of custom scheduling resources for synchronization, you can click **Help manual** for details.
-        -   Name: It is a combination of letters, numbers, and underlines It must begin with a letter or underline and cannot exceed 60 characters.
-        -   Description: It is a brief description of the data source with no more than 80 characters.
-        -   Resource Group: It is used to run synchronization tasks, and generally multiple machines can be bound when you add a resource group. For more information, see[Add scheduling resources](intl.en-US/User Guide/Data integration/Common configuration/Add scheduling resources.md#).
+        -   Type: DM Data Sources with a public IP address.
+        -   Name: The name must start with a letter or underscore \(\_\) and cannot exceed 60 characters in length. It can contain letters, numbers, and underscores \(\_\).
+        -   Description: A brief description of the data source that cannot exceed 80 characters in length.
         -   JDBC URL: In the format of jdbc:mysql://ServerIP:Port/Database.
-        -   Username/Password: The user name and password used to connect to the database.
-6.  \(Optional\).Click **Test Connectivity**to test the connectivity after entering all the required information in the relevant fields.
-7.  When the connectivity test is passed, click **Complete**.
+        -   Username and password: The user name and password used for connecting to the database.
+    -   New DM Data Sources without public IP address
 
-    Provides the ability to test connectivity to determine if the information entered is correct.
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16199/15514226267530_en-US.png)
+
+        Parameters:
+
+        -   Type: DM data sources without public network IP address. Selecting this data source type requires the use of custom scheduling resources for synchronization. You can click **Help manual** for details.
+        -   Name: The name must start with a letter or underscore \(\_\) and cannot exceed 60 characters in length. It can contain letters, numbers, and underscores \(\_\).
+        -   Description: A brief description of the data source that does not exceed 80 characters in length.
+        -   Resource Group: It is used to run synchronization tasks, and generally you can bound multiple machines when adding a resource group. For more information, see[Add task resources](reseller.en-US/User Guide/Data integration/Common configuration/Add task resources.md#).
+        -   JDBC URL: In the format of jdbc:mysql://ServerIP:Port/Database.
+        -   Username and password: The user name and password to connect to the database.
+6.  \(Optional\) Click **Test Connectivity**to test the connectivity after entering all the required field information.
+7.  When the connectivity has passed the test, click **Complete**.
+
+    Provides test connectivity capability to determine if the information entered is correct.
 
 
 ## Connectivity test description { .section}
 
--   The connectivity test is available in the classic network arrangement, to identify whether the input JDBC URL, user name, and password are correct.
--   Currently, connectivity test is not supported for the VPC and without-public-IP-address data source types. Thus, click **Confirm** directly.
+-   The connectivity test is available in the classic network to identify whether the entered JDBC URL, user name, and password are correct.
+-   Currently, VPC and data source types without public IP addresses do not support connectivity tests. As a result, click **Confirm**.
 
