@@ -10,7 +10,7 @@ By default, the TextFile is the storage format for creating Hive tables without 
 
 **Note:** Data synchronization requires an admin account and files read/write permissions.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16224/15514232277725_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16224/15514313147725_en-US.png)
 
 Usage:
 
