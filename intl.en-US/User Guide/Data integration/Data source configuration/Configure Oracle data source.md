@@ -8,7 +8,7 @@ This topic describes how to configure an Oracle data source. The Oracle data sou
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New Source** on the supported data source pop-up window.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15514228547556_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15514309827556_en-US.png)
 
 4.  Select the data source type **Oracle** in the new data source dialog box.
 5.  Configure each Oracle data source information item.
@@ -17,7 +17,7 @@ This topic describes how to configure an Oracle data source. The Oracle data sou
 
     For example, a data source that adds a new **Oracle** \> **Network IP Address** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15514228547557_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15514309827557_en-US.png)
 
     Configurations:
 
@@ -28,7 +28,7 @@ This topic describes how to configure an Oracle data source. The Oracle data sou
     -   Username and password: The user name and password used for connecting to the database.
     Consider a data source that adds a new **Oracle** \> **Network IP Address** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15514228547558_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16208/15514309827558_en-US.png)
 
     Configurations:
 
