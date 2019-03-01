@@ -33,7 +33,7 @@ You can configure synchronization tasks in [Wizard mode](reseller.en-US/User Gui
     -   Instance ID: You can go to the HybridDB for MySQL console to view the related instance ID.
     -   Master account ID: You can view the related information in the security settings of the HybridDB for MySQL console.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62182/155142298132071_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62182/155143110532071_en-US.png)
 
     -   Username and password: The user name and password used for database connection.
 6.  Click **Test Connectivity**.
