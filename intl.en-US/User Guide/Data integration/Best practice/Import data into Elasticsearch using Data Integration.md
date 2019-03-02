@@ -2,19 +2,19 @@
 
 This topic describes how to offline import data into Elasticsearch by using Data Integration.
 
-[Data Integration](intl.en-US/User Guide/Data integration/Data integration introduction/Data Integration Overview.md#) is a data synchronization platform provided by Alibaba Group. Data Integration is a reliable, secure, cost-effective, elastic, scalable data synchronization platform. Data Integration can be used across heterogeneous data storage systems and provides offline \(full/incremental\) data synchronization channels in different network environments for more than 20 types of data sources. For more information about data source types, see [Supported data sources](intl.en-US/User Guide/Data integration/Data source configuration/Supported data sources.md#).
+[Data Integration](intl.en-US/User Guide/Data integration/Data integration introduction/Data integration overview.md#) is a data synchronization platform provided by Alibaba Group. Data Integration is a reliable, secure, cost-effective, elastic, scalable data synchronization platform. Data Integration can be used across heterogeneous data storage systems and provides offline \(full/incremental\) data synchronization channels in different network environments for more than 20 types of data sources. For more information about data source types, see [Supported data sources](intl.en-US/User Guide/Data integration/Data source configuration/Supported data sources.md#).
 
 ## Prerequisites {#section_s33_q52_4fb .section}
 
 Before importing data using Data Integration, you must:
 
--   [Prepare Alibaba Cloud account](../../../../intl.en-US/Preparation/Administrator operations/Prepare Alibaba Cloud account.md#)Sign up for an Alibaba Cloud account and create AccessKeys for this account.
+-   [Prepare Alibaba Cloud account](../../../../../intl.en-US/Preparation/Administrator Operations/Alibaba Cloud Account Preparations.md#)Sign up for an Alibaba Cloud account and create AccessKeys for this account.
 -   Activate MaxCompute, and then a default MaxCompute data source is automatically created.
--   [Create a project](../../../../intl.en-US/Preparation/Administrator operations/Create a project.md#) with the Alibaba Cloud account.
+-   [Create a project](../../../../../intl.en-US/Preparation/Administrator Operations/Create Workspace.md#) with the Alibaba Cloud account.
 
     To use DataWorks, first create a project. Then, you can complete the workflow and maintain data and tasks through collaboration within the project.
 
-    **Note:** You can grant RAM users the permissions to create Data Integration tasks. For more information, see [Create a sub-account](../../../../intl.en-US/Preparation/Administrator operations/Create a sub-account.md#) and [Member management](intl.en-US/User Guide/Project management/Member management.md#).
+    **Note:** You can grant RAM users the permissions to create Data Integration tasks. For more information, see [Create a sub-account](../../../../../intl.en-US/Preparation/Administrator Operations/Create a RAM user.md#) and [Member management](intl.en-US/User Guide/Project management/User management.md#).
 
 -   Configure data sources. For more information, see [Data source config](https://www.alibabacloud.com/help/faq-list/72788.htm).
 
