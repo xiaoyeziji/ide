@@ -64,7 +64,7 @@ If you want to create a Data Integration task using account B to synchronize Log
 2.  Choose **Sync Resources** \> **Data Source** and click **Add Data Source** in the upper-right corner.
 3.  Select **LogHub** as the data source type, and then configure the data source in the Add Data Source LogHub dialog box.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155150938333924_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155151062133924_en-US.png)
 
     |Configuration|Description|
     |:------------|:----------|
@@ -85,7 +85,7 @@ If you want to create a Data Integration task using account B to synchronize Log
 2.  Set up configurations in the Create Node dialog box and click **Submit**. Then, the configuration page of the data synchronization task appears.
 3.  Select a source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155150938314351_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155151062114351_en-US.png)
 
     |Configuration|Description|
     |:------------|:----------|
@@ -103,7 +103,7 @@ If you want to create a Data Integration task using account B to synchronize Log
 
     Select a MaxCompute destination and select a table. In this example, select the ok table.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155150938314352_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155151062114352_en-US.png)
 
     |Configuration|Description|
     |:------------|:----------|
@@ -120,13 +120,13 @@ If you want to create a Data Integration task using account B to synchronize Log
 
     Map the fields in source and destination tables. Fields in the source table \(left\) have a one to one correspondence with fields in the destination table. Select **Enable Same Line Mapping**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155150938314353_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155151062114353_en-US.png)
 
 6.  Configure channel control policies.
 
     Configure the maximum transmission rate and dirty data check rules.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155150938314354_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155151062114354_en-US.png)
 
     |Configuration|Description|
     |:------------|:----------|
@@ -157,7 +157,7 @@ If you want to create a Data Integration task using account B to synchronize Log
 
 To configure this task in script mode, click **Switch to Script Mode** in the tool bar and click **OK**.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155150938333929_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155151062133929_en-US.png)
 
 Script mode allows you to set up configurations as needed. An example script is as follows.
 
