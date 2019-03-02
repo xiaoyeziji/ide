@@ -81,7 +81,7 @@ The remote FTP file itself does not provide data types, which are defined by Dat
 
     Configure the data source and destination for the synchronization task.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15498534477697_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15515084577697_en-US.png)
 
     Configurations:
 
@@ -96,20 +96,20 @@ The remote FTP file itself does not provide data types, which are defined by Dat
 
     The source table field on the left and the target table field on the right are one-to-one correspondences, click **Add row** to add a single field and click **Delete** to delete the current field.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15498534477701_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15515084577701_en-US.png)
 
     -   In-row mapping: You can click **Enable Same-Line Mapping** to create a mapping for the same row. Note that the data type must be consistent.
     -   Manually edit source table field: Manually edit the fields, and each line indicates a field. The first and end blank lines are ignored.
 3.  Channel control
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15498534487704_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15515084577704_en-US.png)
 
     Configurations:
 
     -   DMU: A unit which measures the resources, including CPU, memory, and network bandwidth consumed during data integration. It represents a unit of data synchronization processing capability given limited CPU, memory, and network resources.
     -   Concurrent job count: Maximum number of threads used to concurrently read data from or write data into the data storage media in a data synchronization task. In wizard mode, configure a concurrency for the specified task on the wizard page.
     -   The maximum number of errors indicates the maximum number of dirty data records.
-    -   Task resource group: The machine on which the task runs. If the number of tasks is large, the default Resource Group is used to wait for a resource, it is recommended that you add a Custom Resource Group currently only East China 1 and East China 2 supports adding custom resource groups. For more information, see [Add scheduling resources](reseller.en-US/User Guide/Data integration/Common Configuration/Add task resources.md#).
+    -   Task resource group: The machine on which the task runs. If the number of tasks is large, the default Resource Group is used to wait for a resource, it is recommended that you add a Custom Resource Group currently only East China 1 and East China 2 supports adding custom resource groups. For more information, see [Add scheduling resources](reseller.en-US/User Guide/Data integration/Common configuration/Add task resources.md#).
 
 ## Development in script mode {#section_cp2_wsh_p2b .section}
 
