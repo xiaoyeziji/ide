@@ -49,7 +49,7 @@ MaxCompute Reader supports the following data types in MaxCompute.
 
     Configure the synchronization task data source and destination.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16225/15514313367759_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16225/15515082367759_en-US.png)
 
     Configurations:
 
@@ -65,7 +65,7 @@ MaxCompute Reader supports the following data types in MaxCompute.
 
     The Source Table Field on the left maps with the Target Table Field on the right. Click **Add Line** to add a field. To delete a line, move the mouse cursor over a line and click **Delete**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16225/15514313367760_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16225/15515082367760_en-US.png)
 
     -   In-row mapping: You can click **Enable Same-Line Mapping** to create a mapping for the same row. Note that the data type must be consistent.
     -   Automatic formatting: The fields are automatically sorted by rules.
@@ -78,7 +78,7 @@ MaxCompute Reader supports the following data types in MaxCompute.
     -   If the value you entered cannot be parsed, the type is displayed as 'Unidentified'.
 3.  Control the tunnel
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15514313377675_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15515082367675_en-US.png)
 
     Configurations:
 
