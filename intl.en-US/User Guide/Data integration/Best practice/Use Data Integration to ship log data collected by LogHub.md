@@ -64,7 +64,7 @@ If you want to create a Data Integration task using account B to synchronize Log
 2.  Choose **Sync Resources** \> **Data Source** and click **Add Data Source** in the upper-right corner.
 3.  Select **LogHub** as the data source type, and then configure the data source in the Add Data Source LogHub dialog box.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/154441207733924_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155150938333924_en-US.png)
 
     |Configuration|Description|
     |:------------|:----------|
@@ -85,7 +85,7 @@ If you want to create a Data Integration task using account B to synchronize Log
 2.  Set up configurations in the Create Node dialog box and click **Submit**. Then, the configuration page of the data synchronization task appears.
 3.  Select a source.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/154441207714351_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155150938314351_en-US.png)
 
     |Configuration|Description|
     |:------------|:----------|
@@ -103,7 +103,7 @@ If you want to create a Data Integration task using account B to synchronize Log
 
     Select a MaxCompute destination and select a table. In this example, select the ok table.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/154441207714352_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155150938314352_en-US.png)
 
     |Configuration|Description|
     |:------------|:----------|
@@ -120,13 +120,13 @@ If you want to create a Data Integration task using account B to synchronize Log
 
     Map the fields in source and destination tables. Fields in the source table \(left\) have a one to one correspondence with fields in the destination table. Select **Enable Same Line Mapping**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/154441207714353_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155150938314353_en-US.png)
 
 6.  Configure channel control policies.
 
     Configure the maximum transmission rate and dirty data check rules.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/154441207714354_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155150938314354_en-US.png)
 
     |Configuration|Description|
     |:------------|:----------|
@@ -136,7 +136,7 @@ If you want to create a Data Integration task using account B to synchronize Log
     |**Number of Concurrent Jobs**|When you configure Synchronization Concurrency, the data records are split into several tasks based on the specified reader splitting key. These tasks run simultaneously to improve the transmission rate.|
     |**Transmission Rate**|Setting a transmission rate protects the source database from excessive read activity and heavy load. We recommend that you throttle the transmission rate and configure the transmission rate properly based on the source database configurations.|
     |**If there are more than**|The number of dirty data entries. For example, if varchar type data in the source is to be written into a destination column of the int type, a data conversion exception occurs and the data cannot be written into the destination column. You can set an upper limit for the dirty data entries to control the quality of synchronized data. Set an appropriate upper limit based on your business requirements.|
-    |**Task's Resource Group**|The resource group used for running the synchronization task. By default, the task runs with the default resource group. When the project has insufficient resources, you can add a custom resource group and run the synchronization task using the custom resource group. For more information about how to add custom resource groups, see [Add scheduling resources](reseller.en-US/User Guide/Data integration/Common configuration/Add scheduling resources.md#).Choose an appropriate resource group based on your data source network conditions, project resources, and business importance.
+    |**Task's Resource Group**|The resource group used for running the synchronization task. By default, the task runs with the default resource group. When the project has insufficient resources, you can add a custom resource group and run the synchronization task using the custom resource group. For more information about how to add custom resource groups, see [Add scheduling resources](reseller.en-US/User Guide/Data integration/Common configuration/Add task resources.md#).Choose an appropriate resource group based on your data source network conditions, project resources, and business importance.
 
 |
 
@@ -157,7 +157,7 @@ If you want to create a Data Integration task using account B to synchronize Log
 
 To configure this task in script mode, click **Switch to Script Mode** in the tool bar and click **OK**.
 
-![](images/33929_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24566/155150938333929_en-US.png)
 
 Script mode allows you to set up configurations as needed. An example script is as follows.
 
