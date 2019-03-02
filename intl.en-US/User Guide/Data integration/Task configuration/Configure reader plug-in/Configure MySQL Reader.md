@@ -73,7 +73,7 @@ MySQL Writer converts the MySQL data types as follows:
 
     Configure the data source and destination of the synchronization task.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16227/15514314037781_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16227/15515083437781_en-US.png)
 
     Configurations:
 
@@ -90,7 +90,7 @@ MySQL Writer converts the MySQL data types as follows:
 
     The source table field on the left and the target table field on the right are one-to-one correspondence, click **Add row** to add a single field and click **Delete** to delete the current field.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16227/15514314047782_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16227/15515083437782_en-US.png)
 
     -   Peer mapping: Click **peer mapping** to establish a corresponding mapping relationship in the peer, and take special note of the data type match.
     -   Automatic formatting: The fields are automatically sorted based on corresponding rules.
@@ -103,7 +103,7 @@ MySQL Writer converts the MySQL data types as follows:
     -   If the value entered cannot be parsed, the type is displayed as unidentified.
 3.  Control the tunnel
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15514314047675_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15515083437675_en-US.png)
 
     Configurations:
 
