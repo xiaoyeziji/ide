@@ -1,12 +1,12 @@
 # 配置Redis Writer {#concept_fdm_sxn_q2b .concept}
 
-Redis Writer是基于数据集成框架实现的Redis写入插件，可以借助Redis Writer从数仓或者其它数据源导入数据到Redis。Redis Writer与Redis Server之间的交互是基于Jedis实现的，Jedis是Redis官方首选的Java客户端开发包，几乎实现了 Redis 的所有功能。
+Redis Writer是基于数据集成框架实现的Redis写入插件，可以借助Redis Writer从数仓或者其它数据源导入数据到Redis。Redis Writer与Redis Server之间的交互是基于Jedis实现的，Jedis是Redis官方首选的Java客户端开发包，几乎实现了Redis的所有功能。
 
 Redis（REmote DIctionary Server）是一个支持网络、可基于内存也可持久化的日志型、高性能的key-value存储系统，可用作数据库、高速缓存和消息队列代理。Redis支持较丰富的存储value类型，包括String （字符串）、List（链表） 、Set（集合） 、ZSet（sorted set 有序集合）和 Hash（哈希类型）。Redis详情请参见[redis.io](http://redis.io/)。
 
 **说明：** 
 
--   在开始配置Redis Writer插件前，请首先配置好数据源，详情请参见[配置Redis数据源](intl.zh-CN/使用指南/数据集成/数据源配置/配置Redis数据源.md#)。
+-   开始配置Redis Writer插件前，请首先配置好数据源，详情请参见[配置Redis数据源](intl.zh-CN/使用指南/数据集成/数据源配置/配置Redis数据源.md#)。
 -   使用Redis Writer向Redis写入数据时，如果value类型是list，重跑同步任务同步结果不是幂等的。因此如果value类型是list ，重跑同步任务时，需要您手动清空Redis上相应的数据。
 
 ## 参数说明 {#section_jn2_gqh_p2b .section}
@@ -28,178 +28,117 @@ Redis（REmote DIctionary Server）是一个支持网络、可基于内存也可
 |否|0（0表示永久有效）|
 |timeout|写入Redis的超时时间，单位为毫秒。|否|30000（即可以cover住30秒的网络断连时间）|
 |dateFormat|写入Redis时，Date的时间格式为"yyyy-MM-dd HH:mm:ss"。|否|无|
+|writeMode|Redis的一大亮点是支持丰富的value类型，包括字符串（string）、字符串列表（list）、字符串集合（set）、有序字符串集合（zset）和哈希（hash）。Redis Writer也支持该五种类型的写入，根据不同的value类型，writeMode配置会略有差异，writeMode详细配置如下。**说明：** 您在配置Redis Writer时，只能配置以下五种类型中的一种。
 
-|参数|描述|参数类型|配置项说明|必选|默认值|
-|type|mode|valueFieldDelimiter|
-|:-|:-|:---|:----|:-|:--|
-|:---|:---|:------------------|
-|writeMode|Redis 一大亮点是支持丰富的 value 类型，包括：字符串（string），字符串列表（list），字符串集合（set），有序字符串集合（zset），哈希（hash）。Redis Writer 也支持该五种类型的写入，根据不同的 value 类型，writeMode 配置会略有差异，writeMode 详细配置如下，您在配置 Redis Writer 时，只能配置以下五种类型中的一种。|字符串（string）```
+-   字符串（string）
+
+    ```
 "writeMode":{
    "type": "string",
    "mode": "set",
    "valueFieldDelimiter": "\u0001"
 }
-```
+    ```
 
-|描述|value 类型：string|value 是 string 类型时，写入的模式|该配置项是考虑了当源数据每行超过两列的情况（如果您的源数据只有两列即 key 和 value 时，那么可以忽略该配置项，不用填写），value 类型是 string 时，value 之间的分隔符，比如 value1\\u0001value2\\u0001value3。|否|默认值：string|
-|必选|是|是，可选值：set（存储这个数据，如果已经存在则覆盖）|否|
-|默认值|-|-|\\u0001|
-|字符串列表（list）```
+配置项说明：
+
+    -   type
+        -   描述：value为string类型
+        -   必选：是
+    -   mode
+        -   描述：value为string类型时，写入的模式
+        -   必选：是，可选值为set（存储这个数据，如果已经存在则覆盖）
+    -   valueFieldDelimiter
+        -   描述：该配置项是考虑了当源数据每行超过两列的情况（如果您的源数据只有两列即key和value时，则可忽略该配置项，不用填写），value类型为string时，value之间的分隔符，比如 value1\\u0001value2\\u0001value3。
+        -   必选：否
+        -   默认值：\\u0001
+-   字符串列表（list）
+
+    ```
 "writeMode":{
     "type": "list",
     "mode": "lpush|rpush",
     "valueFieldDelimiter": "\u0001"
 }
-```
+    ```
 
-|描述|value 类型：list|value 是 list 类型时，写入的模式|value 类型是 string 时，value 之间的分隔符，比如 value1\\u0001value2\\u0001value3|
-|必选|是|是，可选值：lpush（在 list 最左边存储这个数据）| rpush（在 list 最右边存储这个数据）|否|
-|默认值|-|-|\\u0001|
-|字符串集合（set）```
+配置项说明：
+
+    -   type
+        -   描述：value为list类型
+        -   必选：是
+    -   mode
+        -   描述：value为list类型时，写入的模式。
+        -   必选：是，可选值为lpush（在list最左边存储这个数据）和rpush（在list最右边存储这个数据）。
+    -   valueFieldDelimiter
+        -   描述：value为string类型时，value之间的分隔符，比如value1\\u0001value2\\u0001value3。
+        -   必选：否
+        -   默认值：\\u0001
+-   字符串集合（set）
+
+    ```
 "writeMode":{
     "type": "set",
     "mode": "sadd",
     "valueFieldDelimiter": "\u0001"
 }
-```
+    ```
 
-|描述|value 类型：set|value 是 set 类型时，写入的模式|value 类型是 string 时，value 之间的分隔符，比如 value1\\u0001value2\\u0001value3|
-|必选|是|是，可选值：sadd（向 set 集合中存储这个数据，如果已经存在则覆盖）|否|
-|默认值|-|-|\\u0001|
-|有序字符串集合（zset）**说明：** 当 value 类型是 zset 时，数据源的每一行记录需要遵循相应的规范，即每一行记录除 key 以外，只能有一对 score 和 value，并且 score 必须在 value 前面，rediswriter 方能解析出哪一个 column 是 score，哪一个 column 是 value。
+配置项说明：
 
-```
+    -   type
+        -   描述：value为set类型
+        -   必选：是
+    -   mode
+        -   描述：value为set类型时，写入的模式。
+        -   必选：是，可选值：sadd（向set集合中存储这个数据，如果已经存在则覆盖）。
+    -   valueFieldDelimiter
+        -   描述：value类型是string时，value之间的分隔符，比如value1\\u0001value2\\u0001value3。
+        -   必选：否
+        -   默认值：\\u0001
+-   有序字符串集合（zset）
+
+**说明：** 当value类型为zset时，数据源的每一行记录需要遵循相应的规范，即每一行记录除key以外，只能有一对score和value，并且score必须在value前面，rediswriter方能解析出哪一个column是score，哪一个column是value。
+
+    ```
 "writeMode":{
     "type": "zset",
     "mode": "zadd"
 }
-```
+    ```
 
-|描述|value 类型：zset|value 是 zset 类型时，写入的模式|-|
-|必选|是|是，可选值：zadd（向 zset 有序集合中存储这个数据，如果已经存在则覆盖）|-|
-|哈希（hash）**说明：** 当 value 类型是 hash 时，数据源的每一行记录需要遵循相应的规范，即每一行记录除 key 以外，只能有一对 attribute 和 value，并且 attribute 必须在 value 前面，Rediswriter 方能解析出哪一个 column 是 attribute，哪一个 column 是 value。
+配置项说明：
 
-```
+    -   type
+        -   描述：value为zset类型
+        -   必选：是
+    -   mode
+        -   描述：value为zset类型时，写入的模式。
+        -   必选：是，可选值为zadd（向zset有序集合中存储这个数据，如果已经存在则覆盖）。
+-   哈希（hash）
+
+**说明：** 当value类型为hash时，数据源的每一行记录需要遵循相应的规范，即每一行记录除key以外，只能有一对attribute和value，并且attribute必须在value前面，Rediswriter方能解析出哪一个column是attribute，哪一个column是value。
+
+    ```
 "writeMode":{
     "type": "hash",
     "mode": "hset"
 }
-```
+    ```
 
-|描述|value 类型：hash|value 是 hash 类型时，写入的模式。|-|
-|必选|是|是，可选值：hmset（向 hash 有序集合中存储这个数据，如果已经存在则覆盖）|-|
+配置项说明：
 
--   writeMode
-    -   描述：Redis 一大亮点是支持丰富的 value 类型，包括：字符串（string），字符串列表（list），字符串集合（set），有序字符串集合（zset），哈希（hash）。Redis Writer 也支持该五种类型的写入，根据不同的 value 类型，writeMode 配置会略有差异，writeMode 详细配置如下，您在配置 Redis Writer 时，只能配置以下五种类型中的一种：
-        -   字符串（string）
+    -   type
+        -   描述：value为hash类型
+        -   必选：是
+    -   mode
 
-            ```
-            "writeMode":{
-               "type": "string",
-               "mode": "set",
-               "valueFieldDelimiter": "\u0001"
-            }
-            ```
+        -   描述：value为hash类型时，写入的模式。
+        -   必选：是，可选值为hmset（向hash有序集合中存储这个数据，如果已经存在则覆盖）。
+您需要配置其中一种写入数据类型，如果您不填，默认数据类型是string。
 
-            配置项说明：
 
-        -   type
-            -   描述：value 类型：string
-            -   必选：是
-        -   mode
-            -   描述：value 是 string 类型时，写入的模式
-            -   必选：是，可选值：set（存储这个数据，如果已经存在则覆盖）
-        -   valueFieldDelimiter
-            -   描述：该配置项是考虑了当源数据每行超过两列的情况（如果您的源数据只有两列即 key 和 value 时，那么可以忽略该配置项，不用填写），value 类型是 string 时，value 之间的分隔符，比如 value1\\u0001value2\\u0001value3。
-            -   必选：否
-            -   默认值：\\u0001
-        -   字符串列表（list）
-
-            ```
-            "writeMode":{
-                "type": "list",
-                "mode": "lpush|rpush",
-                "valueFieldDelimiter": "\u0001"
-            }
-            ```
-
-            配置项说明：
-
-            -   type
-                -   描述：value 类型：list
-                -   必选：是
-            -   mode
-                -   描述：value 是 list 类型时，写入的模式
-                -   必选：是，可选值：lpush（在 list 最左边存储这个数据）| rpush（在 list 最右边存储这个数据）
-            -   valueFieldDelimiter
-                -   描述：value 类型是 string 时，value 之间的分隔符，比如 value1\\u0001value2\\u0001value3。
-                -   必选：否
-                -   默认值：\\u0001
-        -   字符串集合（set）
-
-            ```
-            "writeMode":{
-                "type": "set",
-                "mode": "sadd",
-                "valueFieldDelimiter": "\u0001"
-            }
-            ```
-
-            配置项说明：
-
-            -   type
-                -   描述：value 类型：set
-                -   必选：是
-            -   mode
-                -   描述：value 是 set 类型时，写入的模式
-                -   必选：是，可选值：sadd（向 set 集合中存储这个数据，如果已经存在则覆盖）
-            -   valueFieldDelimiter
-                -   描述：value 类型是 string 时，value 之间的分隔符，比如 value1\\u0001value2\\u0001value3
-                -   必选：否
-                -   默认值：\\u0001
-        -   有序字符串集合（zset）
-
-            **说明：** 当 value 类型是 zset 时，数据源的每一行记录需要遵循相应的规范，即每一行记录除 key 以外，只能有一对 score 和 value，并且 score 必须在 value 前面，rediswriter 方能解析出哪一个 column 是 score，哪一个 column 是 value。
-
-            ```
-            "writeMode":{
-                "type": "zset",
-                "mode": "zadd"
-            }
-            ```
-
-            配置项说明：
-
-            -   type
-                -   描述：value 类型：zset
-                -   必选：是；
-            -   mode
-                -   描述：value 是 zset 类型时，写入的模式
-                -   必选：是，可选值：zadd（向 zset 有序集合中存储这个数据，如果已经存在则覆盖）
-        -   哈希（hash）
-
-            **说明：** 当 value 类型是 hash 时，数据源的每一行记录需要遵循相应的规范，即每一行记录除 key 以外，只能有一对 attribute 和 value，并且 attribute 必须在 value 前面，Rediswriter 方能解析出哪一个 column 是 attribute，哪一个 column 是 value。
-
-            ```
-            "writeMode":{
-                "type": "hash",
-                "mode": "hset"
-            }
-            ```
-
-            配置项说明：
-
-            -   type
-                -   描述：value 类型：hash
-                -   必选：是
-            -   mode
-
-                -   描述：value 是 hash 类型时，写入的模式。
-                -   必选：是，可选值：hmset（向 hash 有序集合中存储这个数据，如果已经存在则覆盖）
-                您需要配置其中一种写入数据类型，如果您不填，默认数据类型是 string。
-
-    -   必选：否
-    -   默认值：string
+|否|string|
 
 ## 向导开发介绍 {#section_bp2_wsh_p2b .section}
 
