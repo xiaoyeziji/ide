@@ -5,13 +5,13 @@
 Before you use external tables, you need to understand the following concepts.
 
 |Name|Description|
-|[Object Storage Service \(OSS\)](https://www.aliyun.com/product/oss)|OSS supports Standard, Infrequent Access, and Archive storage types. It is applicable to service scenarios that involve different requirements for data storage and access. Additionally, OSS supports seamless integration with Apache Hadoop, E-MapReduce, BatchCompute, MaxCompute, Machine Learning Platform for AI \(PAI\), Data Lake Analytics, Function Compute, and other Alibaba Cloud services.|
+|Object Storage Service（OSS）|OSS supports Standard, Infrequent Access, and Archive storage types. It is applicable to service scenarios that involve different requirements for data storage and access. Additionally, OSS supports seamless integration with Apache Hadoop, E-MapReduce, BatchCompute, MaxCompute, Machine Learning Platform for AI \(PAI\), Data Lake Analytics, Function Compute, and other Alibaba Cloud services.|
 |MaxCompute|The big data computing service is a fast and fully-managed data warehousing solution. When used in conjunction with OSS, it enables you to effectively analyze and process large-scale data with reduced costs. Forrester names MaxCompute as one of the world's leading cloud-based data warehouses because of its processing performance.|
 |External tables of MaxCompute|This function is based on the new generation of the computing framework of MaxCompute v2.0. It allows you to directly query data that is stored in OSS without loading data into the internal tables of MaxCompute. This not only saves time and effort for data migration but also saves costs for storage of duplicate data. You can use the external tables of MaxCompute to query data that is stored in Table Store in a similar way.|
 
 The following figure shows the processing architecture of the external tables.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21811/155142367912702_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21811/155168397312702_en-US.png)
 
 Currently, MaxCompute supports processing external tables in the storage of unstructured data such as OSS and Table Store. Based on the flow of data and the processing rules, you can understand that the main function of the unstructured data processing framework is to import and export data and connect the input and output of MaxCompute. The following example describes the processing rules applied to external tables in OSS.
 
@@ -29,13 +29,13 @@ Authorization is required for MaxCompute to access data stored in OSS. MaxComput
 
 1.  STS authorization
 
-    If MaxCompute requires direct access to data stored in OSS, you need to grant the OSS access to RAM users first. Security Token Service \(STS\) is a security token management service provided by Alibaba Cloud. It is a product based on Resource Access Management \(RAM\). Authorized RAM users can issue tokens with custom validity and access through STS. Applications can use tokens to directly call Alibaba Cloud APIs to manipulate resources. For more information, see [STS authorization for OSS access](https://help.aliyun.com/document_detail/72777.html). You can choose either of the following methods to grant access.
+    If MaxCompute requires direct access to data stored in OSS, you need to grant the OSS access to RAM users first. Security Token Service \(STS\) is a security token management service provided by Alibaba Cloud. It is a product based on Resource Access Management \(RAM\). Authorized RAM users can issue tokens with custom validity and access through STS. Applications can use tokens to directly call Alibaba Cloud APIs to manipulate resources. For more information, see [OSS STS mode authorization](../../../../../intl.en-US/User Guide/External table/OSS STS mode authorization.md#). You can choose either of the following methods to grant access.
 
-    -   If MaxCompute and OSS are under the same Alibaba Cloud account, log on and perform Authorize. You can click Data Development and Create Table to jump to the Authorize page as shown in the following figure. For more information, see
+    -   If MaxCompute and OSS are under the same Alibaba Cloud account, log on and perform Authorize. You can click Data Development and Create Table to jump to the Authorize page as shown in the following figure.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21811/155142367912719_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21811/155168397312719_en-US.png)
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21811/155142368012720_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21811/155168397312720_en-US.png)
 
     -   Custom authorization. First, you need to grant MaxCompute access to OSS through RAM. Log on to the RAM console \(if MaxCompute and OSS are under different Alibaba Cloud accounts, use the account for OSS to log on\). Go to the **Role Management** page and click **Create Role**. Set the value of Role Name to AliyunODPSDefaultRole or AliyunODPSRoleForOtherUser.
 
@@ -124,7 +124,7 @@ Authorization is required for MaxCompute to access data stored in OSS. MaxComput
 
 1.  Use DDL statements to create tables
 
-    Go to the Data Development page. See [Table Management](intl.en-US/User Guide/Data development/Table Management.md#) and use DDL statements to create tables. You need to follow the ODPS syntax \(See [Operations for tables](https://help.aliyun.com/document_detail/73768.html)\). If you have STS authorization, then you do not need to include the odps.properties.rolearn attribute. The following example shows how to use DDL statements to create a table. The EXTERNAL keyword in the statement indicates that this table is an external table.
+    Go to the Data Development page. See [Table Management](intl.en-US/User Guide/Data development/Table Management.md#) and use DDL statements to create tables. You need to follow the ODPS syntax \(See [Table Operations](../../../../../intl.en-US/User Guide/SQL/DDL SQL/Table Operations.md#)\). If you have STS authorization, then you do not need to include the odps.properties.rolearn attribute. The following example shows how to use DDL statements to create a table. The EXTERNAL keyword in the statement indicates that this table is an external table.
 
     ```
     
@@ -233,7 +233,7 @@ Authorization is required for MaxCompute to access data stored in OSS. MaxComput
         -   rolearn: If you have STS authorization, you do not need to specify the rolearn attribute.
     -   Table structure design
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21811/155142368012750_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21811/155168397312750_en-US.png)
 
         -   **Data type**: MaxCompute 2.0 supports INYINT, SMALLINT, INT, BIGINT, VARCHAR and STRING types for fields.
         -   **Actions**: You can create, modify, and delete the fields.
@@ -271,7 +271,7 @@ If you need to use data types newly supported by MaxCompute 2.0 \(TINYINT、SMAL
 
 You can find the external tables in the [Tables](intl.en-US/User Guide/Data development/Table Management.md#) view.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21811/155142368012827_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21811/155168397312827_en-US.png)
 
 The processing of external tables is similar to that of internal tables. For more information about external tables, see [Table Management](intl.en-US/User Guide/Data development/Table Management.md#) and [All data](intl.en-US/User Guide/Data management/All data.md#).
 
