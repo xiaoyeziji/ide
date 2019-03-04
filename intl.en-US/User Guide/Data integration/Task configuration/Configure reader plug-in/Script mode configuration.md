@@ -17,37 +17,37 @@ The task configuration steps are as follows:
 
 ## Create data source {#section_vkd_w2c_p2b .section}
 
-Synchronization tasks supports data transmission between various homogenous and heterogeneous data sources. You need to register the target data source in Data Integration, and then you can select the data source when configuring a synchronization task on Data Integration. Integrate data source types that support synchronization as shown in [Supported data sources](reseller.en-US/User Guide/Data integration/Data source configuration/Supported data sources.md#).
+Synchronization tasks supports data transmission between various homogenous and heterogeneous data sources. You need to register the target data source in Data Integration, and then you can select the data source when configuring a synchronization task on Data Integration. Integrate data source types that support synchronization as shown in [Supported data sources](intl.en-US/User Guide/Data integration/Data source configuration/Supported data sources.md#).
 
-After confirming the target data source is supported by Data Integration, you can register the data source in Data Integration. For detailed data source registration, see [Configuring data source information](reseller.en-US/User Guide/Data integration/Data source configuration/Supported data sources.md#).
+After confirming the target data source is supported by Data Integration, you can register the data source in Data Integration. For detailed data source registration, see [Configuring data source information](intl.en-US/User Guide/Data integration/Data source configuration/Supported data sources.md#).
 
 **Note:** 
 
--   For some data sources, Data Integration does not support test connectivity. For more information on data source test connectivity, see [Test data source connectivity](reseller.en-US/User Guide/Data integration/Data source configuration/Test data source connectivity.md#).
--   Data sources created locally frequently cannot without a network connection or public network IP address. In this case, testing connectivity during the configuration time of the data source fails directly. Data Integration supports [Add task resources](reseller.en-US/User Guide/Data integration/Common configuration/Add task resources.md#) to solve this type of network inaccessibility.
+-   For some data sources, Data Integration does not support test connectivity. For more information on data source test connectivity, see [Test data source connectivity](intl.en-US/User Guide/Data integration/Data source configuration/Test data source connectivity.md#).
+-   Data sources created locally frequently cannot without a network connection or public network IP address. In this case, testing connectivity during the configuration time of the data source fails directly. Data Integration supports [Add task resources](intl.en-US/User Guide/Data integration/Common configuration/Add task resources.md#) to solve this type of network inaccessibility.
 
 ## Create a synchronization task and the synchronization task reader {#section_tfn_1kc_p2b .section}
 
 **Note:** This topic describes the configuration of synchronization tasks in script mode, select **Script Mode** when creating new synchronization tasks in dataset generation.
 
-1.  Enter the [DataWorks management console](https://partners-intl.aliyun.com) as a developer, and click **Data Development** in the corresponding project Action bar.
+1.  Enter the [DataWorks management console](https://workbench.data.aliyun.com/console) as a developer, and click **Data Development** in the corresponding project Action bar.
 2.  Click **Data Development** in the left-side navigation pane to open the Business Process .
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15514312197629_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15516842837629_en-US.png)
 
 3.  Right-click **Business Flow** in the left-side navigation pane to create **Data Integration** \> **Data Sync**, and enter the synchronization Task Name.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15514312197630_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15516842837630_en-US.png)
 
 4.  After creating the synchronization node, click the **Switch to Script Mode** in the upper-right corner of the new synchronization node. Select **OK** to enter the Script Mode.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15514312197631_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15516842837631_en-US.png)
 
     **Note:** Script Mode supports more features, such as synchronous task editing if the network is not up-to-date.
 
 5.  Click **Import Template** in the upper-right corner of the script pattern. Select the data source type for read/write respectively in the pop-up window, and then click **OK** to generate the initial script.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15514312197632_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16217/15516842837632_en-US.png)
 
 
 ## Configure the synchronization task reader {#section_nz2_jlc_p2b .section}
@@ -90,9 +90,9 @@ Configurations:
 -   Type: Specifies the synchronization task for this submission. Only the job parameter is supported, so you can only enter a job.
 -   Version: The version number currently supported by all jobs is 1.0 or 2.0.
 
-For more information on configuring the read side for specific parameter settings and code descriptions, see the Script Mode section in [Configuring reader](reseller.en-US/User Guide/Data integration/Task configuration/Configure reader plug-in/Configure DB2 reader.md#).
+For more information on configuring the read side for specific parameter settings and code descriptions, see the Script Mode section in [Configuring reader](intl.en-US/User Guide/Data integration/Task configuration/Configure reader plug-in/Configure DB2 reader.md#).
 
-**Note:** Many tasks require incremental synchronization of data when configuring read data sources, you can now obtain the date in conjunction with what DataWorks provided to complete the requirement [Parameter configuration](reseller.en-US/User Guide/Data development/Scheduling Configuration/Parameter configuration.md#) to obtain the incremental data.
+**Note:** Many tasks require incremental synchronization of data when configuring read data sources, you can now obtain the date in conjunction with what DataWorks provided to complete the requirement [Parameter configuration](intl.en-US/User Guide/Data development/Scheduling Configuration/Parameter configuration.md#) to obtain the incremental data.
 
 ## Configure the synchronization task writer {#section_xwc_g5c_p2b .section}
 
@@ -118,11 +118,11 @@ You can manually configure the writer data source and the target table informati
  }, //The above are reader configurations.
 ```
 
-For more information on configuring the write-side information, see the Script Mode section of [Configuring writer](reseller.en-US/User Guide/Data integration/Task configuration/Configure writer plug-in/Configure AnalyticDB(ADS) Writer.md#).
+For more information on configuring the write-side information, see the Script Mode section of [Configuring writer](intl.en-US/User Guide/Data integration/Task configuration/Configure writer plug-in/Configure AnalyticDB(ADS) Writer.md#).
 
 **Note:** 
 
-For most tasks, you need to select a Write mode based on data sources, such as overwrite or append mode. If you have Write control requirements, see [Configuring writer](reseller.en-US/User Guide/Data integration/Task configuration/Configure writer plug-in/Configure AnalyticDB(ADS) Writer.md#) to choose the write mode.
+For most tasks, you need to select a Write mode based on data sources, such as overwrite or append mode. If you have Write control requirements, see [Configuring writer](intl.en-US/User Guide/Data integration/Task configuration/Configure writer plug-in/Configure AnalyticDB(ADS) Writer.md#) to choose the write mode.
 
 ## Configure mapping {#section_h35_qlc_p2b .section}
 
@@ -158,10 +158,10 @@ Configurations:
 -   Dirty data is set to control the synchronized data quality. It supports setting a threshold for dirty data records. If the number of dirty data records exceeds the threshold during job transmission, the job is aborted with an error. For example, the specified maximum error limit is 1024 records in the preceding configuration. When the job dirty data record number is greater than 1024 during the transfer process, an error is reported during exit.
 -   You can specify a resource group configuration by clicking **configure task resource groups** in the upper-right corner of the current page.
 
-    When a synchronization task is configured, the resource group in which the task runs is specified. By default, the task runs on the default Resource Group. When the project resource scheduling is tight, you can also expand a resource scheduling by adding a Custom Resource Group. The synchronization task is then specified to run on a Custom Resource Group. For more information on how to add a Custom Resource Group, see [Adding a scheduled resource](https://help.aliyun.com/document_detail/72979.html). You can set configurations based on the data source network conditions, project scheduling resource conditions, and business importance.
+    When a synchronization task is configured, the resource group in which the task runs is specified. By default, the task runs on the default Resource Group. When the project resource scheduling is tight, you can also expand a resource scheduling by adding a Custom Resource Group. The synchronization task is then specified to run on a Custom Resource Group. For more information on how to add a Custom Resource Group, see [Add task resources](intl.en-US/User Guide/Data integration/Common configuration/Add task resources.md#) . You can set configurations based on the data source network conditions, project scheduling resource conditions, and business importance.
 
 
-**Note:** When synchronizing data is inefficient, see [Optimizing configuration](reseller.en-US/User Guide/Data integration/Task configuration/Optimizing configuration.md#) to optimize your synchronization tasks.
+**Note:** When synchronizing data is inefficient, see [Optimizing configuration](intl.en-US/User Guide/Data integration/Task configuration/Optimizing configuration.md#) to optimize your synchronization tasks.
 
 ## Configure scheduling properties {#section_a4t_rnc_p2b .section}
 
