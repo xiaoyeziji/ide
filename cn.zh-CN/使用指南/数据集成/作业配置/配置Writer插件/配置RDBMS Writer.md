@@ -8,13 +8,11 @@ RDBMS Writer 面向ETL开发工程师，他们使用 RDBMS Writer 从数仓导�
 
 ## 实现原理 {#section_f12_jyt_q2b .section}
 
-RDBMS Writer 通过 DataX 框架获取 Reader 生成的协议数据，RDBMS Writer 通过 JDBC 连接远程 RDBMS 数据库，并执行相应的 insert into … 的 SQL 语句将数据写入 RDBMS。
+RDBMS Writer 通过DataX框架获取Reader生成的协议数据，RDBMS Writer通过JDBC连接远程RDBMS数据库，并执行相应的insert into …的SQL语句将数据写入RDBMS。
 
 ## 功能说明 {#section_vhx_qk5_q2b .section}
 
-配置样例
-
--   配置一个写入RDBMS的作业。
+配置一个写入RDBMS的作业。
 
 ```
 {
@@ -82,35 +80,42 @@ RDBMS Writer 通过 DataX 框架获取 Reader 生成的协议数据，RDBMS Writ
 }
 ```
 
-参数说明
+|参数|描述|是否必选|默认值|
+|:-|:-|:---|:--|
+|jdbcUrl|描述的是到对端数据库的JDBC连接信息，JDBCUrl按照RDBMS官方规范，并可填写连接附件控制信息。请注意不同的数据库JDBC的格式是不同的，DataX会根据具体jdbc的格式选择合适的数据库驱动完成数据读取。-   达梦jdbc:dm://ip:port/database
+-   db2格式 jdbc:db2://ip:port/database
+-   PPAS格式 jdbc:edb://ip:port/database
 
--   jdbcUrl
-    -   描述：描述的是到对端数据库的JDBC连接信息，jdbcUrl按照RDBMS官方规范，并可以填写连接附件控制信息。请注意不同的数据库jdbc的格式是不同的，DataX会根据具体jdbc的格式选择合适的数据库驱动完成数据读取。
-        -   达梦 jdbc:dm://ip:port/database
-        -   db2格式 jdbc:db2://ip:port/database
-        -   PPAS格式 jdbc:edb://ip:port/database
+|是|无|
+|username|数据源的用户名|是|无|
+|password|数据源指定用户名的密码|是|无|
+|table|目标表名称，如果表的schema信息和上述配置username不一致，请使用schema.table的格式填写table信息。|是|无|
+|column|所配置的表中需要同步的列名集合。以英文逗号（,）进行分隔。`我们强烈不推荐用户使用默认列情况`|是|无|
+|preSql|执行数据同步任务之前率先执行的sql语句，目前只允许执行一条SQL语句，例如清除旧数据。|否|无|
+|postSql|执行数据同步任务之后执行的sql语句，目前只允许执行一条SQL语句，例如加上某一个时间戳。|否|无|
+|batchSize|一次性批量提交的记录数大小，该值可以极大减少DataX与RDBMS的网络交互次数，并提升整体吞吐量。但是该值设置过大可能会造成DataX运行进程OOM情况。|否|1024|
 
-RDBMS Writer如何增加新的数据库支持：
+RDBMS Writer增加新的数据库支持的操作如下。
 
--   进入RDBMS Writer对应目录，这里$\{DATAX\_HOME\}为DataX主目录，即: $\{DATAX\_HOME\}/plugin/writer/RDBMS Writer
--   在RDBMS Writer插件目录下有plugin.json配置文件，在此文件中注册您具体的数据库驱动，具体放在drivers数组中。RDBMS Writer插件在任务执行时会动态选择合适的数据库驱动连接数据库。
+1.  进入RDBMS Writer对应目录，这里$\{DATAX\_HOME\}为DataX主目录，即$\{DATAX\_HOME\}/plugin/writer/RDBMS Writer。
+2.  在RDBMS Writer插件目录下有plugin.json配置文件，在此文件中注册您具体的数据库驱动，具体放在drivers数组中。RDBMS Writer插件在任务执行时会动态选择合适的数据库驱动连接数据库。
 
-```
-{
-    "name": "RDBMS Writer",
-    "class": "com.alibaba.datax.plugin.reader.RDBMS Writer.RDBMS Writer",
-    "description": "useScene: prod. mechanism: Jdbc connection using the database, execute select sql, retrieve data from the ResultSet. warn: The more you know about the database, the less problems you encounter.",
-    "developer": "alibaba",
-    "drivers": [
-        "dm.jdbc.driver.DmDriver",
-        "com.ibm.db2.jcc.DB2Driver",
-        "com.sybase.jdbc3.jdbc.SybDriver",
-        "com.edb.Driver"
-    ]
-}
-```
+    ```
+    {
+        "name": "RDBMS Writer",
+        "class": "com.alibaba.datax.plugin.reader.RDBMS Writer.RDBMS Writer",
+        "description": "useScene: prod. mechanism: Jdbc connection using the database, execute select sql, retrieve data from the ResultSet. warn: The more you know about the database, the less problems you encounter.",
+        "developer": "alibaba",
+        "drivers": [
+            "dm.jdbc.driver.DmDriver",
+            "com.ibm.db2.jcc.DB2Driver",
+            "com.sybase.jdbc3.jdbc.SybDriver",
+            "com.edb.Driver"
+        ]
+    }
+    ```
 
--   在RDBMS Writer插件目录下有libs子目录，您需要将您具体的数据库驱动放到libs目录下。
+3.  在RDBMS Writer插件目录下有libs子目录，您需要将您具体的数据库驱动放到libs目录下。
 
     ```
     $tree
@@ -139,18 +144,6 @@ RDBMS Writer如何增加新的数据库支持：
     `-- RDBMS Writer-0.0.1-SNAPSHOT.jar
     ```
 
-    -   必选：是。
-    -   默认值：无。
-
-|参数|描述|是否必选|默认值|
-|:-|:-|:---|:--|
-|username|数据源的用户名|是|无|
-|password|数据源指定用户名的密码|是|无|
-|table|目标表名称，如果表的schema信息和上述配置username不一致，请使用schema.table的格式填写table信息。|是|无|
-|column|所配置的表中需要同步的列名集合。以英文逗号（,）进行分隔。`我们强烈不推荐用户使用默认列情况`|是|无|
-|preSql|执行数据同步任务之前率先执行的sql语句，目前只允许执行一条SQL语句，例如清除旧数据。|否|无|
-|postSql|执行数据同步任务之后执行的sql语句，目前只允许执行一条SQL语句，例如加上某一个时间戳。|否|无|
-|batchSize|一次性批量提交的记录数大小，该值可以极大减少DataX与RDBMS的网络交互次数，并提升整体吞吐量。但是该值设置过大可能会造成DataX运行进程OOM情况。|否|1024|
 
 ## 类型转换 {#section_yt2_cn5_q2b .section}
 
