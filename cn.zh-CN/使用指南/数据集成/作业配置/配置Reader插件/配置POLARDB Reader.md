@@ -2,22 +2,22 @@
 
 本文为您介绍POLARDB Reader支持的数据类型、读取方式、字段映射和数据源等参数及配置举例。
 
-POLARDB Reader插件通过JDBC连接器连接到远程的POLARDB数据库，并根据您配置的信息生成查询SQL语句，发送到远程POLARDB数据库，并将该SQL语句执行返回结果，然后使用数据同步自定义的数据类型拼装为抽象的数据集，并传递给下游Writer处理。
+POLARDB Reader插件通过JDBC连接器连接到远程的POLARDB数据库，根据您配置的信息生成查询SQL语句，发送到远程POLARDB数据库，执行该SQL语句并返回结果，然后使用数据同步自定义的数据类型拼装为抽象的数据集，传递给下游Writer处理。
 
 POLARDB Reader插件通过JDBC连接远程POLARDB数据库，并执行相应的SQL语句，将数据从POLARDB库中Select出来，从底层实现了从POLARDB数据库读取数据。POLARDB Reader插件支持读取表和视图。表字段可以依序指定全部列、指定部分列、调整列顺序、指定常量字段和配置POLARDB的函数如now\(\)等。
 
 ## 类型转换列表 {#section_ny3_4fr_5fb .section}
 
-POLARDB Writer针对POLARDB类型的转换列表，如下所示。
+POLARDB Reader针对POLARDB类型的转换列表，如下所示。
 
 |类型分类|POLARDB数据类型|
 |:---|:----------|
-|整数类|Int，Tinyint，Smallint，Mediumint，Int，Bigint|
-|浮点类|Float，Double，Decimal|
-|字符串类|Varchar，Char，Tinytext，Text，Mediumtext，Longtext|
-|日期时间类|Date，Datetime，Timestamp，Time，Year|
-|布尔型|Bit，Bool|
-|二进制类|Tinyblob，Mediumblob，Blob，Longblob，Varbinary|
+|整数类|Int，Tinyint，Smallint，Mediumint和Bigint|
+|浮点类|Float，Double和Decimal|
+|字符串类|Varchar，Char，Tinytext，Text，Mediumtext和Longtext|
+|日期时间类|Date，Datetime，Timestamp，Time和Year|
+|布尔型|Bit和Bool|
+|二进制类|Tinyblob，Mediumblob，Blob，Longblob和Varbinary|
 
 **说明：** 
 
@@ -32,7 +32,7 @@ POLARDB Writer针对POLARDB类型的转换列表，如下所示。
 |table|选取的需要同步的表名称，一个数据集成Job只能同步一张表。|是|无|
 |column|所配置的表中需要同步的列名集合，使用JSON的数组描述字段信息 。默认使用所有列配置，例如\[ \* \]。-   支持列裁剪，即列可以挑选部分列进行导出。
 -   支持列换序，即列可以不按照表schema信息顺序进行导出。
--   支持常量配置，您需要按照MySQL SQL语法格式，例如`[“id”, “table”,”1”, “‘mingya.wmy’”, “‘null’”, “to_char(a+1)”, “2.3” , “true”]`。
+-   支持常量配置，您需要按照MySQL SQL语法格式，例如`[“id”,“table”,”1”, “‘mingya.wmy’”,“‘null’”, “to_char(a+1)”,“2.3”,“true”]`。
     -   id为普通列名
     -   table为包含保留字的列名
     -   1为整形数字常量
@@ -62,21 +62,21 @@ POLARDB Writer针对POLARDB类型的转换列表，如下所示。
 
     配置同步任务的**数据来源**和**数据去向**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62197/154229539032058_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62197/155177227732058_zh-CN.png)
 
     |配置|说明|
     |:-|:-|
     |**数据源**|即上述参数说明中的datasource，一般填写您配置的数据源名称。|
-    |**表**|即上述参数说明中的table，选择需要同步的表。|
+    |**表**|即上述参数说明中的table。|
     |**导入前准备语句**|即上述参数说明中的preSql，输入执行数据同步任务之前率先执行的SQL语句。|
     |**导入后完成语句**|即上述参数说明中的postSql，输入执行数据同步任务之后执行的SQL语句。|
     |**主键冲突**|即上述参数说明中的writeMode，可选择需要的导入模式。|
 
 2.  **字段映射**，即上述参数说明中的column。
 
-    左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
+    左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，鼠标放至需要删除的字段上，即可单击**删除**图标进行删除。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62209/154229539032015_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62209/155177227732015_zh-CN.png)
 
     |配置|说明|
     |:-|:-|
@@ -87,14 +87,14 @@ POLARDB Writer针对POLARDB类型的转换列表，如下所示。
 
 3.  **通道控制**
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62209/154229539032018_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62209/155177227732018_zh-CN.png)
 
     |配置|说明|
     |:-|:-|
     |**DMU**|数据集成消耗资源（包括CPU、内存、网络等资源分配）的度量单位。一个DMU描述了一个数据集成作业最小运行能力，即在限定的CPU、内存、网络等资源情况下对于数据同步的处理能力。|
     |**作业并发数**|可将此属性视为数据同步任务内，可从源并行读取或并行写入数据存储端的最大线程数。向导模式通过界面化配置并发数，指定任务所使用的并行度。|
     |**错误记录数**|错误记录数，表示脏数据的最大容忍条数。|
-    |**任务资源组**|任务运行的机器，如果任务数比较多，使用默认资源组出现等待资源的情况，建议添加自定义资源组（目前只有华东1，华东2支持添加自定义资源组），详情请参见[新增调度资源](cn.zh-CN/使用指南/数据集成/常见配置/新增调度资源.md#)。|
+    |**任务资源组**|任务运行的机器，如果任务数比较多，使用默认资源组出现等待资源的情况，建议添加自定义资源组（目前只有华东1，华东2支持添加自定义资源组），详情请参见[新增任务资源](intl.zh-CN/使用指南/数据集成/常见配置/新增任务资源.md#)。|
 
 
 ## 脚本开发介绍 {#section_vw5_p3r_5fb .section}
