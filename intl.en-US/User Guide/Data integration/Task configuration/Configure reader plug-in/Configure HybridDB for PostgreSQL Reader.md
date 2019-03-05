@@ -64,7 +64,7 @@ HybridDB for PostgreSQL Reader converts the data types in HybridDB for PostgreSQ
 
     Configure the source and destination of data for a synchronization task.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62195/155143171132069_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62195/155175235732069_en-US.png)
 
     |Parameter|Description|
     |:--------|:----------|
@@ -79,6 +79,8 @@ HybridDB for PostgreSQL Reader converts the data types in HybridDB for PostgreSQ
 
     Each source table field on the left maps a destination table field on the right. You can click **Add** to add a mapping or move the cursor over a line and click **Delete** to delete the current mapping.
 
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62195/155175235732070_en-US.png)
+
     |Configuration|Description|
     |:------------|:----------|
     |**Map Fields with the Same Name**|Click **Map Fields with the Same Name** to establish a mapping between fields with the same name. Note that the data type must be consistent.|
@@ -92,14 +94,16 @@ HybridDB for PostgreSQL Reader converts the data types in HybridDB for PostgreSQ
     -   If the value you entered cannot be parsed, the type is displayed as Unidentified.
  |
 
-3.  **Configure channel control.**
+3.  **Configure channel control**
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62195/155175235739902_en-US.png)
 
     |Parameter|Description|
     |:--------|:----------|
     |**DMU**|The unit that measures the resources \(including CPU, memory, and network resources\) consumed by Data Integration. A DMU represents the minimum operating capability of a Data Integration task, that is, the data synchronization processing capability given limited CPU, memory, and network resources.|
     |**Concurrent Jobs**|The maximum number of threads used to concurrently read data from the source or write data into the data storage media in a data synchronization task. In wizard mode, you can configure the concurrency for a task on the wizard page.|
     |**Dirty Data Records Allowed**|The maximum number of errors or dirty data records allowed.|
-    |**Task Resource Group**|The machines on which tasks are run. If a large number of tasks are run on the default resource group, some tasks may be delayed due to insufficient resources. In this case, we recommend that you add a custom resource group. Currently, a custom resource group can be added only in China \(Hangzhou\) and China \(Shanghai\). For more information, see [Add task resources](reseller.en-US/User Guide/Data integration/Common configuration/Add task resources.md#).|
+    |**Task Resource Group**|The machines on which tasks are run. If a large number of tasks are run on the default resource group, some tasks may be delayed due to insufficient resources. In this case, we recommend that you add a custom resource group. Currently, a custom resource group can be added only in China \(Hangzhou\) and China \(Shanghai\). For more information, see [Add task resources](intl.en-US/User Guide/Data integration/Common configuration/Add task resources.md#).|
 
 
 ## Development in script mode {#section_xqz_qyr_5fb .section}
