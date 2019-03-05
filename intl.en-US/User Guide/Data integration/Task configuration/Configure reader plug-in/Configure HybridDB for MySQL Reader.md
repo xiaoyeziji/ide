@@ -58,7 +58,7 @@ HybridDB for MySQL Reader converts the data types in HybridDB for MySQL as follo
 
 Configure the source and destination of data for a synchronization task.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62192/155176533332098_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62192/155176743532098_en-US.png)
 
 |Parameter|Description|
 |:--------|:----------|
@@ -73,7 +73,7 @@ Configure mappings of fields \(the column attribute in the preceding parameter d
 
 Each source table field on the left maps a destination table field on the right. You can click Add to add a mapping or move the cursor over a line and click Delete to delete the current mapping.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62192/155176533332100_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62192/155176743532100_en-US.png)
 
 |Parameter|Description|
 |:--------|:----------|
@@ -91,7 +91,7 @@ Each source table field on the left maps a destination table field on the right.
 
 **Configure channel control**
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62192/155176533332104_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62192/155176743532104_en-US.png)
 
 |Parameter|Description|
 |:--------|:----------|
