@@ -28,11 +28,8 @@ HybridDB for MySQL Reader converts the data types in HybridDB for MySQL as follo
 -   Constant configuration is supported. Constants must be configured by using the SQL syntax, for example,
 
     ```
-["id", "table","1", "'mingya.wmy'", "'null'",
-                      "to_char(a+1)", "2.3" , "true"].
+["id","table","1","'mingya.wmy'","'null'","to_char(a+1)","2.3","true"]
     ```
-
-\[DO NOT TRANSLATE\]
 
     -   id: A common column name.
     -   table: A column name that contains a reserved word.
@@ -54,24 +51,14 @@ HybridDB for MySQL Reader converts the data types in HybridDB for MySQL as follo
 -   You cannot set the where attribute to limit 10, which does not conform to the constraints of HybridDB for MySQL on the SQL WHERE clause.
 
 |No|None|
-|querySql \(an advanced attribute, which is not available in wizard mode\)|The custom filter SQL statement used in some business scenarios where the filter condition specified by the where attribute is insufficient. After this attribute is set, Data Integration ignores the table, column, and splitPk attributes, but directly filters data based on this attribute. For example, to synchronize data after joining multiple tables, set the querySql attribute to```
-select a,b from table_a join table_b on table_a.id =
-                table_b.id.
-```
-
-\[DO NOT TRANSLATE\] The priority of querySql is higher than those of table, column, where, and splitPk. When querySql is set, HybridDB for MySQL Reader directly ignores the configuration of the table, column, where, or splitPk attribute. The data source uses querySql to parse out information such as the username and password.|No|None|
-|singleOrMulti \(applicable only to database and table sharding\)|Indicates whether to perform database and table sharding. When you switch from the wizard mode to script mode, the following configuration is automatically generated:```
-"singleOrMulti":
-                "multi"
-```
-
-However, the task script configuration template does not automatically generate this configuration. You need to add it manually. Otherwise, only the first data source is recognized. The singleOrMulti attribute is used only at the front end. The back end does not use this attribute to determine whether to perform database and table sharding.|Yes|multi|
+|querySql \(an advanced attribute, which is not available in wizard mode\)|The custom filter SQL statement used in some business scenarios where the filter condition specified by the where attribute is insufficient. After this attribute is set, Data Integration ignores the table, column, and splitPk attributes, but directly filters data based on this attribute. For example, to synchronize data after joining multiple tables, set the querySql attribute to`select a,b from table_a join table_b on table_a.id = table_b.id`. The priority of querySql is higher than those of table, column, where, and splitPk. When querySql is set, HybridDB for MySQL Reader directly ignores the configuration of the table, column, where, or splitPk attribute. The data source uses querySql to parse out information such as the username and password.|No|None|
+|singleOrMulti \(applicable only to database and table sharding\)|Indicates whether to perform database and table sharding. When you switch from the wizard mode to script mode, the following configuration is automatically generated:`"singleOrMulti": "multi"`. However, the task script configuration template does not automatically generate this configuration. You need to add it manually. Otherwise, only the first data source is recognized. The singleOrMulti attribute is used only at the front end. The back end does not use this attribute to determine whether to perform database and table sharding.|Yes|multi|
 
 ## Development in wizard mode {#section_trc_5ls_5fb .section}
 
 Configure the source and destination of data for a synchronization task.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62192/155143152432098_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62192/155176533332098_en-US.png)
 
 |Parameter|Description|
 |:--------|:----------|
@@ -86,13 +73,15 @@ Configure mappings of fields \(the column attribute in the preceding parameter d
 
 Each source table field on the left maps a destination table field on the right. You can click Add to add a mapping or move the cursor over a line and click Delete to delete the current mapping.
 
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62192/155176533332100_en-US.png)
+
 |Parameter|Description|
-|---------|-----------|
+|:--------|:----------|
 |Map Fields with the Same Name|Click Map Fields with the Same Name to establish a mapping between fields with the same name. Note that the data type must be consistent.|
 |Map Fields in the Same Line|Click Map Fields in the Same Line to establish a mapping for the same row. Note that the data type must be consistent.|
 |Remove Mappings|Click Remove Mappings to remove mappings that have been established.|
 |Auto Layout|The fields are automatically sorted based on specified rules.|
-|Change Fields in Source Table![](images/32103_en-US.png)|You can manually edit fields in the source table. Each field occupies a row. The first and the last blank rows are included, while other blank rows are ignored.|
+|Change Fields in Source Table|You can manually edit fields in the source table. Each field occupies a row. The first and the last blank rows are included, while other blank rows are ignored.|
 |Add|Click Add to add a mapping.-   You can enter constants. Each constant must be enclosed in single quotation marks, such as 'abc' and '123'.
 -   You can use scheduling parameters, such as $\{bizdate\}.
 -   You can enter functions supported by relational databases, such as now\(\) and count\(1\).
@@ -100,14 +89,16 @@ Each source table field on the left maps a destination table field on the right.
 
 |
 
-**Configure channel control.**
+**Configure channel control**
+
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62192/155176533332104_en-US.png)
 
 |Parameter|Description|
-|---------|-----------|
+|:--------|:----------|
 |DMU|The unit that measures the resources \(including CPU, memory, and network resources\) consumed by Data Integration. A DMU represents the minimum operating capability of a Data Integration task, that is, the data synchronization processing capability given limited CPU, memory, and network resources.|
 |Concurrent Jobs|The maximum number of threads used to concurrently read data from the source or write data into the data storage media in a data synchronization task. In wizard mode, you can configure the concurrency for a task on the wizard page.|
 |Dirty Data Records Allowed|The maximum number of errors or dirty data records allowed.|
-|Task Resource Group|The machines on which tasks are run. If a large number of tasks are run on the default resource group, some tasks may be delayed due to insufficient resources. In this case, we recommend that you add a custom resource group. Currently, a custom resource group can be added only in China \(Hangzhou\) and China \(Shanghai\). For more information, see <xref\>.[Add task resources](reseller.en-US/User Guide/Data integration/Common configuration/Add task resources.md#)|
+|Task Resource Group|The machines on which tasks are run. If a large number of tasks are run on the default resource group, some tasks may be delayed due to insufficient resources. In this case, we recommend that you add a custom resource group. Currently, a custom resource group can be added only in China \(Hangzhou\) and China \(Shanghai\). For more information, see <xref\>.[Add task resources](intl.en-US/User Guide/Data integration/Common configuration/Add task resources.md#)|
 
 ## Development in script mode {#section_pvs_k4s_5fb .section}
 
