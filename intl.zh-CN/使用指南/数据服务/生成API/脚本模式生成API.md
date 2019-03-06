@@ -9,7 +9,7 @@
 1.  进入**API服务列表** \> **生成API**页面。
 2.  单击**脚本模式**，填写API基础信息。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15413799928791_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15518581558791_zh-CN.png)
 
     |配置|说明|
     |:-|:-|
@@ -43,7 +43,7 @@
 
     在代码编辑区中输入SQL代码。系统支持一键添加SQL功能，在字段列表中勾选字段，单击**一键添加SQL**，即可自动生成`SELECT xxx FROM xxx`的SQL语句并插入到右边光标处。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16408/15413799928802_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16408/15518581558802_zh-CN.png)
 
     **说明：** 
 
@@ -53,7 +53,7 @@
 
     编写好API查询SQL后，单击右上角的**参数**切换到参数信息编辑页面，在这里可编辑参数的类型、示例值、默认值和描述，其中类型和描述是必填项。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16408/15413799928803_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16408/15518581558803_zh-CN.png)
 
     **说明：** 为了帮助API的调用者更全面地了解API，请尽量全面地填写API的参数信息。
 
@@ -84,6 +84,7 @@
 -   如果使用聚合函数（min/max/sum/count等），必须取别名作为返回参数名（如sum\(num\) as total\\\_num）。
 -   SQL中的$\{param\}统一当请求参数进行替换，包含字符串中的$\{param\}。当$\{param\}前包含转义符\\时，不做请求参数处理，作为普通字符串处理。
 -   不支持将$\{param\}放在引号中，如'$\{id\}'、'abc$\{xyz\}123'，如果需要可以通过concat\('abc', $\{xyz\}, '123’\)实现。
+-   不支持将参数设置为可选。
 
 完成API参数的配置后，单击**下一步**，即可进入API测试环节。
 
@@ -91,13 +92,13 @@
 
 完成API查询SQL及参数的配置后，即可进行API测试。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15413799928797_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15518581558797_zh-CN.png)
 
 填写好参数值，单击**开始测试**，即可在线发送API请求，在右侧可以看到API请求详情及返回内容。如果测试失败，请仔细查看错误提示并做相应的修改重新测试。
 
 配置过程中需要注意正常返回示例的设置。配置好API之后，系统会自动生成异常返回示例和错误码，但没办法自动生成正常返回示例。需要在测试成功后，单击**保存为正常返回示例**，将当前的测试结果保存为正常返回示例。如果返回结果中有敏感数据需要脱敏，可以手动编辑修改。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15413799928799_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15518581558799_zh-CN.png)
 
 **说明：** 
 
@@ -110,5 +111,5 @@
 
 回到API服务列表页面，单击操作列中的**详情**，可查看API的详情信息。API详情页面以调用者的视角展示了API的详细信息。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15413799928800_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15518581568800_zh-CN.png)
 
