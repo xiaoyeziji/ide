@@ -1,6 +1,6 @@
 # Structure {#concept_arb_4kp_1fb .concept}
 
-The structure is based on the current Code, which parses the process diagram that runs under SQL, help users quickly review the edited SQL situation, so that it can be easily modified and viewed.
+The structure is based on the current Code, which parses the process diagram that runs under SQL, helps users quickly review the edited SQL situation, so that it can be easily modified and viewed.
 
 ## Structure {#section_d1y_qkp_1fb .section}
 
@@ -34,14 +34,14 @@ on a.uid = b.uid ;
 
 According to this Code, the structure is parsed:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/20204/153899059611297_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/20204/155193766211297_en-US.png)
 
-When the mouse is placed in a circle, the corresponding explanation appears:
+When the mouse is placed in a circle, the corresponding explanation is displayed:
 
-1.  Source table: the target table for the SELECT query.
-2.  Filter: filters the specific partitions in the table that you want to query.
-3.  In the first part of the intermediate table \(query view\): place the results of the query data into a temporary table.
-4.  Join: mosaic the results of the two-part query through join.
-5.  In the second section, the intermediate table \(the query view\): summarize the results of the join into a temporary table, this temporary table exists for three days and is automatically cleared three days later.
-6.  Target table \(insert\): inserts the data obtained in the second part into the table in insert override.
+1.  Source table: The target table for the SELECT query.
+2.  Filter: Filters the specific partitions in the table that you want to query.
+3.  In the first part of the intermediate table \(query view\): Place the query data results into a temporary table.
+4.  Join: The mosaic of the results in the two-part query through join.
+5.  In the second section, the intermediate table \(the query view\): Summarizes the results of join in a temporary table. This temporary table exists for three days and is automatically cleared three days later.
+6.  Target table \(insert\): Inserts data obtained in the second part of the table in insert override.
 
