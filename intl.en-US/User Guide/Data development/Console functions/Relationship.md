@@ -1,16 +1,16 @@
 # Relationship {#concept_jb4_1cm_z2b .concept}
 
-kinship relations show the relationships between the current node and other nodes. This relationship shows two parts: the dependency diagram and the internal relationship map.
+This topic describes relationships that displays the relations between the current node and other nodes. This relationship displays two parts: The dependency diagram and the internal relationship diagram.
 
-## Dependency Graph {#section_flg_43p_1fb .section}
+## Dependency graph {#section_flg_43p_1fb .section}
 
-Depending on the dependency of the node, the dependency graph shows whether the dependency of the current node is what it expects, if not, you can return to the Schedule configuration interface to reset.
+Depending on the node dependency, the dependency graph shows whether the current node dependency meets expectations. If the dependency graph does not meet expectations, you can return to the schedule configuration interface to reset.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/19064/153899389711295_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/19064/155193769311295_en-US.png)
 
-## Internal relationship Map {#section_ucq_53p_1fb .section}
+## Internal relationship diagram {#section_ucq_53p_1fb .section}
 
-The internal relationship map is parsed Based on the node's code, for example:
+The internal relationship diagram is parsed based on the node code, for example:
 
 ```
 INSERT OVERWRITE TABLE dw_user_info_all_d PARTITION (dt='${bdp.system.bizdate}')
@@ -38,7 +38,7 @@ LEFT OUTER JOIN (
 on a.uid = b.uid ;
 ```
 
-According to this SQL, the following internal relationship map is resolved, parses an output table that will be used as a join mosaic to show the relationship relationship between the tables:
+According to the preceding SQL, the parsed internal relationship map join "dw\_user\_info\_all\_d" with "ods\_log\_info\_d", and export table as follows :
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/19064/153899389811296_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/19064/155193769411296_en-US.png)
 
