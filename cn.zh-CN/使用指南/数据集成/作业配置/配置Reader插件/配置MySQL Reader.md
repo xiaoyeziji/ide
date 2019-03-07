@@ -37,7 +37,10 @@ MySQL Reader针对MySQL类型的转换列表，如下所示。
     -   table为包含保留字的列名
     -   1为整形数字常量
     -   'mingya.wmy'为字符串常量（注意需要加上一对单引号）
-    -   null为空指针
+    -   关于null：
+        -   ''表示空
+        -   null表示null
+        -   'null'表示null这个字符串
     -   CHAR\_LENGTH\(s\)为计算字符串长度函数
     -   2.3为浮点数
     -   true为布尔值
@@ -60,7 +63,7 @@ MySQL Reader针对MySQL类型的转换列表，如下所示。
 
 1.  选择数据源配置同步任务的数据来源和数据去向。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16227/15516864717781_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16227/15519434767781_zh-CN.png)
 
     |配置|说明|
     |:-|:-|
@@ -77,7 +80,7 @@ MySQL Reader针对MySQL类型的转换列表，如下所示。
 
     左侧的源头表字段和右侧的目标表字段为一一对应关系，单击**添加一行**可增加单个字段，鼠标放至需要删除的字段上，即可单击**删除**图标进行删除 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16227/15516864717782_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16227/15519434767782_zh-CN.png)
 
     |配置|说明|
     |:-|:-|
@@ -92,14 +95,14 @@ MySQL Reader针对MySQL类型的转换列表，如下所示。
 
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15516864717675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15519434767675_zh-CN.png)
 
     |配置|说明|
     |:-|:-|
     |**DMU**|数据集成消耗资源（包括CPU、内存、网络等资源分配）的度量单位。一个DMU描述了一个数据集成作业最小运行能力，即在限定的CPU、内存、网络等资源情况下对于数据同步的处理能力。|
     |**作业并发数**|可将此属性视为数据同步任务内，可从源并行读取或并行写入数据存储端的最大线程数。向导模式通过界面化配置并发数，指定任务所使用的并行度。|
     |**错误记录数**|错误记录数，表示脏数据的最大容忍条数。|
-    |**任务资源组**|任务运行的机器，如果任务数比较多，使用默认资源组出现等待资源的情况，建议添加自定义资源组（目前只有华东1，华东2支持添加自定义资源组），详情请参见[新增任务资源](intl.zh-CN/使用指南/数据集成/常见配置/新增任务资源.md#)。|
+    |**任务资源组**|任务运行的机器，如果任务数比较多，使用默认资源组出现等待资源的情况，建议添加任务资源（目前只有华东1，华东2支持添加任务资源），详情请参见[新增任务资源](cn.zh-CN/使用指南/数据集成/常见配置/新增任务资源.md#)。|
 
 
 ## 脚本开发介绍 {#section_cp2_wsh_p2b .section}
