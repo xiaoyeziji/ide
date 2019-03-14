@@ -19,31 +19,31 @@ You can choose the following methods to create instances from a published node.
 
 1.  On the DataStudio page, create a **Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62003/155253294031405_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62003/155255599031405_en-US.png)
 
 2.  Create a node in the created business flow. The following example uses an ODPS SQL node.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62003/155253294031406_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62003/155255599031406_en-US.png)
 
 3.  Double-click the node, edit the code, and click **Schedule** on the right-navigation pane of the page. Then set the instance creation method to **Immediately After Publishing**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62003/155253294131416_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62003/155255599031416_en-US.png)
 
     **Note:** 
 
-    -   You can publish the node any time. However, both unpublished and published nodes will not create instances during the time period 22:00 to 24:00.
+    -   You can publish the node any time. However, both unpublished and published nodes will not create instances during the time period 23:30 to 24:00.
     -   After an Immediately After Publishing Node is published, you must wait 10 minutes to create instances.
     -   If you change the instance creation method from **Next Day** to **Immediately After Publishing** to republish the node. Only the instances that have been run are retained. After the node is republished, it will pend 10 minutes before deleting instances that have not been run, and then create now instances.
     -   An Immediately After Publishing node determines whether to create new instances based on the **CRON Expression**. If the expression changes, the node then creates new instances. Therefore, if you need to republish Immediately After Publishing node to create a new instance, you must change the **CRON Expression** of the node.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62003/155253294131427_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62003/155255599031427_en-US.png)
 
 
 ## Scenarios {#section_a41_fww_tfb .section}
 
 The Immediately After Publishing method typically uses the following scenario: The predecessor node uses the Next Day method to create instances. The successor nodes all use the Immediately After Publishing method to create instances. The following figure shows the dependency relationships between these nodes:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62003/155253294131417_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62003/155255599031417_en-US.png)
 
 This scenario includes the following situations:
 
@@ -64,12 +64,12 @@ This scenario includes the following situations:
 3.  **If the daily run upstream node has a created instance, and an hourly run upstream node is changed to a daily run node that uses the Immediately After Publishing method:**
     -   **Nodes before modification:** Both the upstream and downstream nodes are hourly run nodes that use the Next Day method.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62003/155253294131422_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62003/155255599031422_en-US.png)
 
     -   **Update:** The hourly run node that depends on the upstream node is changed to a daily run node that uses the Immediately After Publishing method.
     -   **Instance creation and dependencies after modification:** The dotted line in the preceding figure indicates the time when the node is submitted and republished. The node will delete all instances that are created 10 minutes after the node is republished, and create a new daily run instance. The hourly run successor nodes of the republished node will depend on the newly created daily run instance. If the republished node dependency type is set to self-dependent, the newly created instance will depend on the instance created by the Next Day node.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62003/155253294131425_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62003/155255599031425_en-US.png)
 
     -   **Instances after modification:** Before the node is published, it creates hourly run instances. After the node is republished, it creates daily run instances.
     -   **Conclusion:** The dependencies of the republished node remain unchanged. Only the instance created on the current day is affected.
