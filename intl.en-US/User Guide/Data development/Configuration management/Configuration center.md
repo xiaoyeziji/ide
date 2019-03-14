@@ -1,70 +1,70 @@
 # Configuration center {#concept_qb5_ybs_q2b .concept}
 
-The configuration center is the setting for common features, including module management and editor management.
+The configuration center sets the common features, including module management and editor management.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16337/15414952998272_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16337/15525330068272_en-US.png)
 
 ## Module management {#section_ylx_kcs_q2b .section}
 
-Module management is the operation of adding and deleting modules to the left-side column function module of the DataStudio interface, you can click to filter the functional modules that need to be displayed in the left side, you can also sort the functions of a module by dragging and dropping.
+Module management can add and delete modules in the left-side navigation pane function module of the DataStudio interface, you can click filter to display functional modules on the left-side, you can also sort the module functions by dragging and dropping.
 
-When the mouse is over the module you want to add, the module turns blue and displays **Add**.
+When you move the cursor over the module you want to add, the module turns blue and displays **Add**.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16337/15414952998274_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16337/15525330068274_en-US.png)
 
-When the mouse is over the module that needs to be removed, the module turns red and displays **Remove**.
+When the cursor moves over the module that needs to be removed, the module turns red and displays **Remove**.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16337/15414952998275_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16337/15525330078275_en-US.png)
 
-**Note:** Template management filtering takes effect immediately and takes effect for the current project, if you want to take effect for all projects, click **the above settings to apply to all projects**.
+**Note:** The template management filtering takes effect immediately in the current project, if you want it to take effect for all projects, click **Apply Settings To All Projects**.
 
 ## Editor management {#section_h22_32s_q2b .section}
 
-The editor is the setting for code and keywords, the setting takes effect in real-time without refreshing the interface.
+The editor is the setting for code and keywords, and the settings takes effect in real time without the need to refresh the interface.
 
--   Thumbnail View
+-   Thumbnail view
 
-    The display of the current interface code is displayed on the right side of the code, the shaded area in the figure is the area currently being displayed, and when the code is longer, you can move the mouse up and down to switch the displayed code area.
+    The current interface code is displayed on the right side of the code, and the shaded area in the figure is in the displayed area. When the code is longer, you can move the cursor up and down to switch the displayed code area.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16337/15414952998311_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16337/15525330078311_en-US.png)
 
 -   Check for errors
 
-    Check the error statement in the current code. When the mouse is placed in the red error code area, an error-specific field condition is displayed.
+    Check the error statement in the current code. When the cursor is placed in the red error code area, an error-specific field condition is displayed.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16337/15414952998312_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16337/15525330078312_en-US.png)
 
 -   Auto save
 
-    Automatically cache the currently edited code to avoid the page crashing and causing the code to not be saved during the editing process. You can choose **Use server-saved code** in the left-side or **Use locally cached code** in the right-side.
+    Automatically cache the currently edited code to avoid the page from crashing and losing edited code that has not been saved. You can choose **Use Server-Saved Code** in the left-side navigation pane or **Use Locally Cached Code** in the right-side navigation pane.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16337/15414952998313_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16337/15525330078313_en-US.png)
 
 -   Code style
 
-    The code style can be set to uppercase or lowercase, select your favorite style. Enter the keyword and press Enter to enter the required keywords through Lenovo shortcut.
+    You can select a favorite code style of either uppercase or lowercase. You can enter keywords or use the keyword association shortcut to enter the required keywords.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16337/15414952998364_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16337/15525330078364_en-US.png)
 
 -   Code font size
 
-    The code font size supports a minimum of 12 and a maximum of 18 fonts, change the setting according to your code writing habits and quantity.
+    The code font size supports a minimum font size of 12 and a maximum font size of 18. You can change the setting based on your code writing habits and volume.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16337/15414952998366_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16337/15525330078366_en-US.png)
 
 -   Code Hint
 
-    Code prompts are used during code entry, and the display of intelligent prompts is divided into the following sections.
+    Code prompts are used during code entry, and intelligent prompt displays are separated into the following sections.
 
-    -   Space Smart Tip: Add a space after selecting Lenovo's keywords, tables, and fields.
-    -   keywords: the prompt code supports the keywords entered.
-    -   Syntax templates: supported syntax templates.
-    -   Project: enter the project name of the Lenovo.
-    -   Table: The table that Lenovo needs to enter.
-    -   Field: Smart prompt for fields in this table.
+    -   Space Smart Tip: Add a space after selecting associated keywords, tables, and fields.
+    -   Keywords: The prompt code supports the keywords entered.
+    -   Syntax templates: The syntax templates are supported.
+    -   Project: The associated project name.
+    -   Table: The required table for association.
+    -   Field: The smart prompt for table fields.
 -   Theme
 
-    The theme style is the setting of the DataStudio interface style, currently supports both black and white.
+    The theme style is the DataStudio interface style setting, which currently supports both black and white.
 
 -   Application
 
