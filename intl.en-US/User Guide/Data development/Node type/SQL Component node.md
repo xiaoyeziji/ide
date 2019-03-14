@@ -4,11 +4,11 @@
 
 1.  Right-click the **Business Flow** under **Data Development**, and select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15525323457651_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15525324307651_en-US.png)
 
 2.  Right-click **Data Development**, and select **Create Data Development Node** \> **SQL Component Node**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15525323457778_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15525324307778_en-US.png)
 
 3.  To improve the development efficiency, the data task developers can use components contributed by project and tenant members to create data processing nodes.
 
@@ -16,11 +16,11 @@
     -   Components created by tenant members are located under Public Components.
     When you create a node, set the node type to **SQL Component node**, and specify the node name.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15525323457777_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15525324307777_en-US.png)
 
     Specify parameters for the selected component.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15525323457779_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15525324307779_en-US.png)
 
     Enter the parameter name, and set the parameter type to Table or String.
 
@@ -57,7 +57,7 @@ You can easily upgrade an SQL component node based on the component template, by
 
 ## Interface functions {#section_h3p_32q_p2b .section}
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15525323457780_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15525324307780_en-US.png)
 
 The interface features are described below:
 
