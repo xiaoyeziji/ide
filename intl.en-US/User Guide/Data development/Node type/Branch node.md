@@ -6,17 +6,17 @@ The branch node is a logical control family nodes provided in DataStudio. The br
 
 The branch node is located in the **Control** class directory of the new node menu, as shown in the following figure.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82217/155253262035372_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82217/155253268035372_en-US.png)
 
 ## Define the branch logic {#section_nzg_t1s_ggb .section}
 
 1.  After creating the branch node, go to the Branch Logic Definition page, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82217/155253262035378_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82217/155253268035378_en-US.png)
 
 2.  In the **Branch Logic Definition** page, you can use **Add Branch** button to define the **Branch Conditions**, **Associated to Node Output**, and the **Branch Describe**, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82217/155253262035380_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82217/155253268135380_en-US.png)
 
     **The parameters are as follows:**
 
@@ -33,7 +33,7 @@ The branch node is located in the **Control** class directory of the new node me
 
         Define two branches as follows: $\{Input\}==1 and $\{Input\}\>2, as shown in the following figure.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82217/155253262035388_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82217/155253268135388_en-US.png)
 
         -   Edit: Click the **Edit** button to modify the setting branches. The related dependencies will also be updated.
         -   Delete: Click the **Delete** button to delete the setting branches. The related dependencies will also be updated.
@@ -42,7 +42,7 @@ The branch node is located in the **Control** class directory of the new node me
 
 After defining the branch condition, the output name is automatically added to the node **Output** of the **Schedule**, and the downstream node can depend on the output name mount. As shown in the following figure:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82217/155253262035389_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82217/155253268135389_en-US.png)
 
 **Note:** You need to enter output records and context dependencies established by the connection manually if there are no output records in the scheduling configuration for context dependencies.
 
@@ -50,15 +50,15 @@ After defining the branch condition, the output name is automatically added to t
 
 You can define the branch direction under different conditions by selecting the corresponding branch node output in the downstream node, after adding the branch node as the upstream node. For example, in the business process shown in the figure below,**Branch\_1** and **Branch\_2** are both downstream nodes of the branch node.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82217/155253262035394_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82217/155253268135394_en-US.png)
 
 Branch\_1 depends on the output of 'autotest.fenzhi121902\_1', as shown in the following figure.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82217/155253262035396_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82217/155253268135396_en-US.png)
 
 Branch\_2 depends on the output of 'autotest.fenzhi121902\_2', as shown in the following figure.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82217/155253262035399_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82217/155253268135399_en-US.png)
 
 ## Submit scheduling operation {#section_n1j_chs_ggb .section}
 
