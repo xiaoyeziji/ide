@@ -24,7 +24,7 @@
 
     配置同步任务的**数据来源**和**数据去向**。
 
-    ![选择数据源](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15475283767998_zh-CN.png)
+    ![选择数据源](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15529871967998_zh-CN.png)
 
     |配置项|说明|
     |:--|:-|
@@ -43,7 +43,7 @@
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15475283768002_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16239/15529871968002_zh-CN.png)
 
     |配置项|说明|
     |:--|:-|
@@ -52,7 +52,7 @@
 
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15475283767675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15529871967675_zh-CN.png)
 
     |配置项|说明|
     |:--|:-|
@@ -60,7 +60,7 @@
     |**作业并发数**|配置的时候会结合读取端指定的切分建，将数据分成多个Task，多个Task同时运行，以达到提速的效果。|
     |**同步速率**|设置同步速率可保护读取端数据库，以避免抽取速度过大，给源库造成太大的压力。同步速率建议限流，结合源库的配置，请合理配置抽取速率。|
     |**错误记录数**|错误记录数，表示脏数据的最大容忍条数。|
-    |**任务资源组**|任务运行的机器，如果任务数比较多，使用默认资源组出现等待资源的情况，建议添加自定义资源组（目前只有华东1，华东2支持添加自定义资源组），详情请参见[新增调度资源](cn.zh-CN/使用指南/数据集成/常见配置/新增调度资源.md#)。|
+    |**任务资源组**|任务运行的机器，如果任务数比较多，使用默认资源组出现等待资源的情况，建议添加自定义资源组（目前只有华东1，华东2支持添加自定义资源组），详情请参见[新增任务资源](cn.zh-CN/使用指南/数据集成/常见配置/新增任务资源.md#)。|
 
 4.  单击**保存**和**提交**，配置任务需要的其他信息，例如基础属性、时间属性、调度依赖以及节点上下文。
 5.  完成同步任务的配置后，先**保存**和**提交**节点，再单击**运行**，开始导入操作。
@@ -125,7 +125,7 @@
 |datasource|数据源名称，脚本模式支持添加数据源，此配置项填写的内容必须与添加的数据源名称保持一致。|是|无|
 |table|目标表的表名称。|是|无|
 |partition|目标表的分区名称，当目标表为普通表，需要指定该字段。|否|无|
-|writeMode|**Insert Ignore（实时插入）**模式，如果系统中已经有相同主键的记录，则当前INSERT IGNORE模式下新记录会被丢弃掉。|是|无|
+|writeMode|Insert模式，覆盖写（在主键冲突情况下新的记录会覆盖旧的记录）。|是|无|
 |column|目的表字段列表，可以为\["\*"\]，或者具体的字段列表，例如\["a", "b", "c"\]。|是|无|
 |suffix|AnalyticDB url配置项的格式为ip:port，实际在AnalyticDB数据库访问时，会变成JDBC数据库连接串，此部分为您定制的连接串，可选参数（请参见MySQL支持的JDBC控制参数）。例如配置suffix为autoReconnect=true&failOverReadOnly=false&maxReconnects=10。|否|无|
 |batchSize|AnalyticDB提交数据写的批量条数，当writeMode为insert时，该值才会生效。|writeMode为insert时，为必选。|无|
