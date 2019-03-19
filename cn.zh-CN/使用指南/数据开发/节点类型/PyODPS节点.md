@@ -2,21 +2,25 @@
 
 DataWorks也提供PyODPS任务类型，集成了Maxcompute的Python SDK，您可在DataWorks的PyODPS节点上直接编辑Python代码操作Maxcompute。
 
-Maxcompute提供了[Python SDK](https://www.alibabacloud.com/help/doc-detail/34615.htm)，您可以使用Python的SDK来操作Maxcompute。
+Maxcompute提供了[Python SDK](https://help.aliyun.com/document_detail/34615.html)，您可以使用Python的SDK来操作Maxcompute。
 
 **说明：** PyODPS节点底层的Python版本为2.7。
 
+推荐用SQL或者Dataframe的方式处理数据，详情请参考[DataFrame概述](../../../../../cn.zh-CN/用户指南/PyODPS/DataFrame/DataFrame概述.md#)。不建议直接调用pandas等第三方包来处理数据。
+
 PyODPS节点获取到本地处理的数据**不能超过50MB**，节点运行时占用内存**不能超过1G**，否则节点任务会被系统Kill，请避免在PyODPS任务中写额外的python数据处理代码。
+
+**PyODPS操作实践可参考[使用MaxCompute分析IP来源最佳实践](../../../../../cn.zh-CN/最佳实践/数据开发/使用MaxCompute分析IP来源最佳实践.md#)，更多信息请参考[PyODPS文档](../../../../../cn.zh-CN/用户指南/PyODPS/基本操作/基本操作概述.md#)。**
 
 ## 新建PyODPS节点 {#section_eyd_w3l_p2b .section}
 
 1.  右键单击**数据开发**下的**业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15451298807651_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16292/15529875617651_zh-CN.png)
 
 2.  右键单击**数据开发**，选择**新建数据开发节点** \> **PyODPS**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15451298807741_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/15529875617741_zh-CN.png)
 
 3.  编辑PyODPS节点。
     1.  ODPS入口
@@ -81,19 +85,23 @@ PyODPS节点获取到本地处理的数据**不能超过50MB**，节点运行时
 
 PYODPS节点使用调度参数需时，**系统定义的调度参数**，可以直接通过在页面赋值获取。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154512988034264_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/155298756134264_zh-CN.png)
 
 在赋值完成后，提交节点并在运维中心进行**测试运行**，可查看赋值结果。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154512988034265_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/155298756234265_zh-CN.png)
 
 对于**自定义参数**，您可以在调度配置页面的**基础属性**一栏配置。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154512988034268_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/155298756234268_zh-CN.png)
+
+**说明：** 自定义参数需要使用args\['参数名'\]形式调用，例如`print (args['ds'])`。
 
 完成配置后提交节点并在运维中心进行**测试运行**，可查看赋值结果。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/154512988034289_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16295/155298757134289_zh-CN.png)
+
+如果您需要使用PyODPS第三方库，请参考[PyODPS DataFrame自定义函数中使用第三方包](../../../../../cn.zh-CN/用户指南/PyODPS/DataFrame/PyODPS DataFrame自定义函数中使用第三方包.md#)。
 
 ## 后续操作 {#section_lkd_4mt_cgb .section}
 
@@ -103,10 +111,10 @@ PYODPS节点使用调度参数需时，**系统定义的调度参数**，可以�
 
 2.  发布节点任务。
 
-    具体操作请参见[发布管理](intl.zh-CN/使用指南/数据开发/发布管理/任务发布.md#)。
+    具体操作请参见[发布管理](cn.zh-CN/使用指南/数据开发/发布管理/任务发布.md#)。
 
 3.  在生产环境测试。
 
-    具体操作请参见[周期任务](intl.zh-CN/使用指南/运维中心/任务列表/周期任务.md#)。
+    具体操作请参见[周期任务](cn.zh-CN/使用指南/运维中心/任务列表/周期任务.md#)。
 
 
