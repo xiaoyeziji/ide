@@ -51,13 +51,13 @@ LogHub Reader针对LogHub类型的转换列表，如下所示。
 **说明：** 列名区分大小写。
 
 |是|无|
-|beginDateTime|数据消费的开始时间位点，为时间范围（左闭右开）的左边界，为yyyyMMddHHmmss格式的时间字符串（例如20180111013000），可以和DataWorks的调度时间参数配合使用。**说明：** beginDateTime和endDateTime组合配套使用。
+|beginDateTime|数据消费的开始时间位点，**即日志数据到达Loghub的时间**。该参数为时间范围（左闭右开）的左边界，yyyyMMddHHmmss格式的时间字符串（例如20180111013000），可以和DataWorks的调度时间参数配合使用。**说明：** beginDateTime和endDateTime需互相组合配套使用。
 
 |和endTimestampMillis选择一种|空|
-|endDateTime|数据消费的结束时间位点，为时间范围（左闭右开）的右边界，为yyyyMMddHHmmss格式的时间字符串（例如20180111013010），可以和DataWorks的调度时间参数配合使用。**说明：** endDateTime和beginDateTime组合配套使用。
+|endDateTime|数据消费的结束时间位点，为时间范围（左闭右开）的右边界，yyyyMMddHHmmss格式的时间字符串（例如20180111013010），可以和DataWorks的调度时间参数配合使用。**说明：** 请尽量保证周期之间重合：即上周期的endDateTime时间和下周期的beginDateTime时间一致，或比下周期的beginDateTime时间晚。否则，可能造成部分区域数据无法拉取。
 
 |否|无|
-|beginTimestampMillis|数据消费的开始时间位点，为时间范围（左闭右开）的左边界，单位毫秒。**说明：** beginTimestampMillis和endTimestampMillis组合配套使用。
+|beginTimestampMillis|数据消费的开始时间位点。该参数为时间范围（左闭右开）的左边界，单位毫秒。**说明：** beginTimestampMillis和endTimestampMillis组合配套使用。
 
 -1表示日志服务游标的最开始CursorMode.BEGIN。推荐使用beginDateTime模式。
 
@@ -77,13 +77,13 @@ LogHub Reader针对LogHub类型的转换列表，如下所示。
     配置项说明如下：
 
     -   数据源：即上述参数说明中的datasource，一般填写您配置的数据源名称。
-    -   日志开始时间：数据消费的开始时间位点，为时间范围（左闭右开）的左边界，为yyyyMMddHHmmss格式的时间字符串（例如20180111013000），可以和DataWorks的调度时间参数配合使用。
-    -   日志结束时间：数据消费的开始时间位点，为时间范围（左闭右开）的右边界，为yyyyMMddHHmmss格式的时间字符串（例如20180111013010），可以和DataWorks的调度时间参数配合使用。
+    -   日志开始时间：数据消费的开始时间位点，即日志数据到达Loghub的时间。时间范围（左闭右开）的左边界，yyyyMMddHHmmss格式的时间字符串（例如20180111013000），可以和DataWorks的调度时间参数配合使用。
+    -   日志结束时间：数据消费的开始时间位点，时间范围（左闭右开）的右边界，yyyyMMddHHmmss格式的时间字符串（例如20180111013010），可以和DataWorks的调度时间参数配合使用。
 2.  字段映射，即上述参数说明中的column。
 
     左侧的源头表字段和右侧的目标表字段为一一对应的关系，单击**添加一行**可增加单个字段，单击**删除**即可删除当前字段 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16233/15408847967879_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16233/15531368017879_zh-CN.png)
 
     -   同行映射：单击**同行映射**可以在同行建立相应的映射关系，请注意匹配数据类型。
     -   自动排版：可以根据相应的规律自动排版。
@@ -96,14 +96,14 @@ LogHub Reader针对LogHub类型的转换列表，如下所示。
     -   如果您输入的值无法解析，则类型显示为未识别。
 3.  通道控制
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15408847967675_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15531368017675_zh-CN.png)
 
     配置项说明如下：
 
     -   DMU：数据集成消耗资源（包括CPU、内存、网络等资源分配）的度量单位。一个DMU描述了一个数据集成作业最小运行能力，即在限定的CPU、内存、网络等资源情况下对于数据同步的处理能力。
     -   作业并发数：可将此属性视为数据同步任务内，可从源并行读取或并行写入数据存储端的最大线程数。向导模式通过界面化配置并发数，指定任务所使用的并行度
     -   错误记录数：错误记录数，表示脏数据的最大容忍条数。
-    -   任务资源组：任务运行的机器，如果任务数比较多，使用默认资源组出现等待资源的情况，建议添加自定义资源组（目前只有华东1，华东2支持添加自定义资源组），详情请参见[新增调度资源](intl.zh-CN/使用指南/数据集成/常见配置/新增调度资源.md#)。
+    -   任务资源组：任务运行的机器，如果任务数比较多，使用默认资源组出现等待资源的情况，建议添加自定义资源组（目前只有华东1，华东2支持添加自定义资源组），详情请参见[新增调度资源](intl.zh-CN/使用指南/数据集成/常见配置/新增任务资源.md#)。
 
 ## 脚本开发介绍 {#section_cp2_wsh_p2b .section}
 
