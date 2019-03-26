@@ -108,105 +108,85 @@ Development in wizard mode is not supported currently.
 
 Configure a job to synchronously extract data from an RDBMS database:
 
-```
+```language-json
 {
-    "job": {
-        "setting": {
-            "speed": {
-                "byte": 1048576//Speed
-            },
-            "errorLimit": {
-                "record": "0",
-                "percentage": 0.02
-            }
-        },
-        "content": [
+    "order": {
+        "hops": [
             {
-                "reader": {
-                    "name": "RDBMS Reader ",
-                    "parameter": {
-                        "username": "xxx",
-                        "password": "xxx",
-                        "column": [
-                            "id",
-                            "name"
-                        ],
-                         "splitPk": "pk",
-                        "connection": [
-                            {
-                                "table": [
-                                    "table"
-                                ],
-                                "jdbcUrl": [
-                                    "jdbc:dm://ip:port/database"
-                                ]
-                            }
-                        ],
-                        "fetchSize": 1024,
-                         "where": "1 = 1"
-                    }
-                },
-                "writer": {
-                    "name": "streamwriter",
-                    "parameter": {
-                        "print": true
-                    }
-                }
+                "from": "Reader",
+                "to": "Writer"
             }
         ]
-    }
-}
-```
-
-Configure a Database Synchronization task for custom SQL to the job for MaxCompute \(formerly ODPS\).
-
-```
-{
-     "job": {
-        "setting": {
-             "speed": {
-                "byte": 1048576//Speed
-            },
-            "errorLimit": {
-                "record": "0"
-                "Percentage": 0.02
-            }
+    },
+    "setting": {
+        "errorLimit": {
+            "record": "0"
         },
-        "content": [
-            {
-                "reader": {
-                     "name": "RDBMS Reader",
-                    "parameter": {
-                         "username": "xxx",
-                         "password": "xxx",
-                         "column": [
-                            "id",
-                            "name"
-                        ],
-                        "splitPk": "pk",
-                        "connection": [
-                            {
-                                "querySql": [
-                                    "SELECT * from dual"
-                                ],
-                                 "jdbcUrl": [
-                                    "jdbc:dm://ip:port/database"
-                                ]
-                            }
-                        ],
-                        "fetchSize": 1024,
-                        "where": "1 = 1""Where": "1 = 1"
+        "speed": {
+            "concurrent": 1,
+            "dmu": 1,
+            "throttle": false
+        }
+    },
+    "steps": [
+        {
+            "category": "reader",
+            "name": "Reader",
+            "parameter": {
+                "column": [
+                    {
+                        "type": "string",
+                        "value": "field"
+                    },
+                    {
+                        "type": "long",
+                        "value": 100
+                    },
+                    {
+                        "dateFormat": "yyyy-MM-dd HH:mm:ss",
+                        "type": "date",
+                        "value": "2014-12-12 12:12:12"
+                    },
+                    {
+                        "type": "bool",
+                        "value": true
+                    },
+                    {
+                        "type": "bytes",
+                        "value": "byte string"
                     }
-                },
-                "writer": {
-                    "name": "streamwriter",
-                    "parameter": {
-                        "print": true
+                ],
+                "sliceRecordCount": "10"
+            },
+            "stepType": "stream"
+        },
+        {
+            "category": "writer",
+            "name": "Writer",
+            "parameter": {
+                "connection": [
+                    {
+                        "jdbcUrl": "jdbc:dm://ip:port/database",
+                        "table": [
+                            "table"
+                        ]
                     }
-                }
-            }
-        ]
-    }
+                ],
+                "username": "username",
+                "password": "password",
+                "table": "table",
+                "column": [
+                    "*"
+                ],
+                "preSql": [
+                    "delete from XXX;"
+                ]
+            },
+            "stepType": "rdbms"
+        }
+    ],
+    "type": "job",
+    "version": "2.0"
 }
 ```
 

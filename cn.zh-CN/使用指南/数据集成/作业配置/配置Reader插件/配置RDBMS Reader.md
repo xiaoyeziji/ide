@@ -108,105 +108,85 @@ $tree
 
 配置一个从RDBMS数据库同步抽取数据作业。
 
-```
+```language-json
 {
-    "job": {
-        "setting": {
-            "speed": {
-                "byte": 1048576
-            },
-            "errorLimit": {
-                "record": 0,
-                "percentage": 0.02
-            }
-        },
-        "content": [
+    "order": {
+        "hops": [
             {
-                "reader": {
-                    "name": "rdbmsreader",
-                    "parameter": {
-                        "username": "xxx",
-                        "password": "xxx",
-                        "column": [
-                            "id",
-                            "name"
-                        ],
-                        "splitPk": "pk",
-                        "connection": [
-                            {
-                                "table": [
-                                    "table"
-                                ],
-                                "jdbcUrl": [
-                                    "jdbc:dm://ip:port/database"
-                                ]
-                            }
-                        ],
-                        "fetchSize": 1024,
-                        "where": "1 = 1"
-                    }
-                },
-                "writer": {
-                    "name": "streamwriter",
-                    "parameter": {
-                        "print": true
-                    }
-                }
+                "from": "Reader",
+                "to": "Writer"
             }
         ]
-    }
-}
-```
-
-配置一个自定义SQL的数据库同步任务到MaxCompute（原ODPS）的作业。
-
-```
-{
-    "job": {
-        "setting": {
-            "speed": {
-                "byte": 1048576
-            },
-            "errorLimit": {
-                "record": 0,
-                "percentage": 0.02
-            }
+    },
+    "setting": {
+        "errorLimit": {
+            "record": "0"
         },
-        "content": [
-            {
-                "reader": {
-                    "name": "rdbmsreader",
-                    "parameter": {
-                        "username": "xxx",
-                        "password": "xxx",
-                        "column": [
-                            "id",
-                            "name"
-                        ],
-                        "splitPk": "pk",
-                        "connection": [
-                            {
-                                "querySql": [
-                                    "SELECT * from dual"
-                                ],
-                                "jdbcUrl": [
-                                    "jdbc:dm://ip:port/database"
-                                ]
-                            }
-                        ],
-                        "fetchSize": 1024,
-                        "where": "1 = 1"
+        "speed": {
+            "concurrent": 1,
+            "dmu": 1,
+            "throttle": false
+        }
+    },
+    "steps": [
+        {
+            "category": "reader",
+            "name": "Reader",
+            "parameter": {
+                "column": [
+                    {
+                        "type": "string",
+                        "value": "field"
+                    },
+                    {
+                        "type": "long",
+                        "value": 100
+                    },
+                    {
+                        "dateFormat": "yyyy-MM-dd HH:mm:ss",
+                        "type": "date",
+                        "value": "2014-12-12 12:12:12"
+                    },
+                    {
+                        "type": "bool",
+                        "value": true
+                    },
+                    {
+                        "type": "bytes",
+                        "value": "byte string"
                     }
-                },
-                "writer": {
-                    "name": "streamwriter",
-                    "parameter": {
-                        "print": true
+                ],
+                "sliceRecordCount": "10"
+            },
+            "stepType": "stream"
+        },
+        {
+            "category": "writer",
+            "name": "Writer",
+            "parameter": {
+                "connection": [
+                    {
+                        "jdbcUrl": "jdbc:dm://ip:port/database",
+                        "table": [
+                            "table"
+                        ]
                     }
-                }
-            }
-        ]
-    }
+                ],
+                "username": "username",
+                "password": "password",
+                "table": "table",
+                "column": [
+                    "*"
+                ],
+                "preSql": [
+                    "delete from XXX;"
+                ]
+            },
+            "stepType": "rdbms"
+        }
+    ],
+    "type": "job",
+    "version": "2.0"
 }
 ```
 
