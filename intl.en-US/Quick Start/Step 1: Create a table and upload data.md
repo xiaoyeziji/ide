@@ -9,11 +9,11 @@ In this topic, the created tables bank\_data and result\_table are used as an ex
 1.  After [Create Workspace](../../../../../reseller.en-US/Preparation/Administrator Operations/Create Workspace.md#) , click **Enter workspace**in the corresponding project.
 2.  Go to the Data Studio \(original data development\) page and select **new** \> **table**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15480557148972_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15535790858972_en-US.png)
 
 3.  Enter the table name in the **new table** dialog box.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15480557148973_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15535790858973_en-US.png)
 
 4.  Click **Submit**.
 5.  Enter the new table page, and select the **DDL mode**.
@@ -21,7 +21,7 @@ In this topic, the created tables bank\_data and result\_table are used as an ex
 
     For more SQL syntax for creating tables, see [creating/viewing/deleting tables](https://www.alibabacloud.com/help/doc-detail/27808.htm).
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15480557148974_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15535790858974_en-US.png)
 
     The statements used for table creation in this example are as follows:
 
@@ -54,18 +54,18 @@ In this topic, the created tables bank\_data and result\_table are used as an ex
 
 7.  After the table structure is generated, enter the table name and click **Submit to Production Environment**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15480557148976_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15535790858976_en-US.png)
 
 8.  You can search the created table by entering the table name in the left-hand navigation **table management** to view the table information.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15480557148977_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15535790858977_en-US.png)
 
 
 **Create result\_table**
 
 1.  Go to the DataStudio page and select **new** \> **table**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15480557148972_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15535790858972_en-US.png)
 
 2.  Enter the table name in the **new table** dialog box and click **Submit**.
 3.  Enter the new table page and select **DDL mode**.
@@ -98,19 +98,19 @@ For example, import local file [banking.txt](https://docs-aliyun.cn-hangzhou.oss
 
 1.  Click **Import** to select **import local data**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15480557148978_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15535790858978_en-US.png)
 
 2.  Select a local data file, configure the import information, and click **Next**,
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15480557148979_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15535790868979_en-US.png)
 
 3.  Enter at least two letters to search the table by name. Select the table for the data to be imported, for example, bank\_data.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15480557148980_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15535790868980_en-US.png)
 
 4.  Select the field matching method \("Match by Position" used in this example\) and click **Import**,
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15480557148981_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16180/15535790868981_en-US.png)
 
 
 After the file is imported, the system returns the number of lines that were successful in the data import or an exception that failed.
@@ -125,7 +125,7 @@ After the file is imported, the system returns the number of lines that were suc
 
 -   Local file uploads
 
-    This file upload method is suitable for .txt and .csv files smaller than 30M , and the target supports both partition and non-partition tables , but does not support Chinese partition.
+    This file upload method is suitable for .txt and .csv files smaller than 10M , and the target supports both partition and non-partition tables , but does not support Chinese partition.
 
     For DataWorks local file upload, see preceding local data upload to bank\_data for details.
 
