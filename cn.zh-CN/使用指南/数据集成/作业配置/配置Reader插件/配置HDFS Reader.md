@@ -10,7 +10,7 @@ TextFile是Hive建表时默认使用的存储格式，数据不做压缩，本�
 
 **说明：** 数据同步需要使用Admin账号，并且有访问相应文件的读写权限。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16224/15428755687725_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16224/15542704497725_zh-CN.png)
 
 命令说明如下：
 
@@ -77,9 +77,9 @@ TextFile是Hive建表时默认使用的存储格式，数据不做压缩，本�
 
 **RCFile**
 
-如果您同步的HDFS文件是RCFile，由于RCFile底层存储的时候不同的数据类型存储方式不一样，而HDFS Reader不支持对Hive元数据数据库进行访问查询，因此需要您在column type中指定该column在Hive表中的数据类型，如果该column是Bigint/Double/Float类型，则填写Bigint/Double/Float，如果是Varchar或者Char类型，则填写String。
+如果您同步的HDFS文件是RCFile，由于RCFile底层存储的时候不同的数据类型存储方式不一样，而HDFS Reader不支持对Hive元数据的数据库进行访问查询，因此需要您在column type中指定该column在Hive表中的数据类型，如果该column是Bigint/Double/Float类型，则填写Bigint/Double/Float，如果是Varchar或者Char类型，则填写String。
 
-RCFile中的类型默认会转成数据集成支持的内部类型，对照表如下所示。
+RCFile中的类型会默认转为数据集成支持的内部类型，对照表如下所示。
 
 |类型分类|HDFS数据类型|
 |:---|:-------|
@@ -105,9 +105,9 @@ ParquetFile中的类型默认会转成数据集成支持的内部类型，对照
 
 **TextFile、ORCFile和SequenceFile**
 
-由于TextFile和ORCFile文件表的元数据信息由Hive维护并存放在Hive自己维护的数据库（如MySQL）中，目前HDFS Reader不支持对Hive元数据数据库进行访问查询，因此您在进行类型转换时，必须指定数据类型。
+由于TextFile和ORCFile文件表的元数据信息由Hive维护并存放在Hive自己维护的数据库（如MySQL）中，目前HDFS Reader不支持对Hive元数据的数据库进行访问查询，因此您在进行类型转换时，必须指定数据类型。
 
-TextFile、ORCFile和SequenceFile中的类型默认会转成数据集成支持的内部类型，对照表如下所示。
+TextFile、ORCFile和SequenceFile中的类型会默认转为数据集成支持的内部类型，对照表如下所示。
 
 |类型分类|HDFS数据类型|
 |:---|:-------|
@@ -150,7 +150,7 @@ TextFile、ORCFile和SequenceFile中的类型默认会转成数据集成支持�
 
 
 |是|无|
-|defaultFS|Hadoop HDFS文件系统namenode节点地址，默认资源组不支持Hadoop高级参数HA的配置。|是|无|
+|defaultFS|Hadoop HDFS文件系统namenode节点地址。默认资源组不支持Hadoop高级参数HA的配置，请[新增任务资源](intl.zh-CN/使用指南/数据集成/常见配置/新增任务资源.md#)。|是|无|
 |fileType|文件的类型，目前只支持您配置为text、orc、rc、seq、csv和parquet。HDFS Reader能够自动识别文件的类型，并使用对应文件类型的读取策略。HDFS Reader在做数据同步前，会检查您配置的路径下所有需要同步的文件格式是否和fileType一致，如果不一致任务会失败。fileType可以配置的参数值列表如下所示。
 
 -   text：表示TextFile文件格式。
@@ -265,7 +265,7 @@ boolean captureRawRecord = true;
 ```
 
 |否|无|
-|hadoopConfig|hadoopConfig中可以配置与Hadoop相关的一些高级参数，例如HA的配置。```
+|hadoopConfig|hadoopConfig中可以配置与Hadoop相关的一些高级参数，例如HA的配置。默认资源组不支持Hadoop高级参数HA的配置，请[新增任务资源](intl.zh-CN/使用指南/数据集成/常见配置/新增任务资源.md#)。```
 "hadoopConfig":{
 "dfs.nameservices": "testDfs",
 "dfs.ha.namenodes.testDfs": "namenode1,namenode2",
