@@ -9,14 +9,14 @@
 1.  进入**API服务列表** \> **生成API**页面。
 2.  单击**脚本模式**，填写API基础信息。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15518581558791_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15542820178791_zh-CN.png)
 
     |配置|说明|
     |:-|:-|
     |**API名称**|支持中文、英文、数字、下划线，且只能以英文或中文开头，4-50个字符。|
     |**API分组**|API分组是指针对某一个功能或场景的API集合，也是API网关对API的最小管理单元。在阿里云API市场中，一个API分组对应于一个API商品。您可单击**新建API分组**进行新建。|
-    |**协议**|目前，生成API仅支持HTTP协议。|
     |**API Path**|API存放的路径，如/user。|
+    |**协议**|目前，生成API仅支持HTTP协议。|
     |**请求方式**|目前，生成API仅支持GET请求方式。|
     |**返回类型**|目前，生成API仅支持JSON返回类型。|
     |**描述**|对API进行简要描述。|
@@ -27,7 +27,7 @@
 
     当然，如果您生成的API是在自己的APP中使用的，那可以把分组当作分类来使用。
 
-3.  填写好API基础信息后，单击**下一步**，即可进入API参数配置页面。
+3.  填写好API基础信息后，单击**确认**，即可进入API参数配置页面。
 
 ## 配置API查询SQL及参数 {#section_c1n_g13_r2b .section}
 
@@ -41,64 +41,61 @@
     -   必须先选择一个数据源，并且只支持同一个数据源的多表关联查询，不支持跨数据源的关联查询。
 2.  编写API查询SQL。
 
-    在代码编辑区中输入SQL代码。系统支持一键添加SQL功能，在字段列表中勾选字段，单击**一键添加SQL**，即可自动生成`SELECT xxx FROM xxx`的SQL语句并插入到右边光标处。
+    在代码编辑区中输入SQL代码。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16408/15518581558802_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16408/15542820178802_zh-CN.png)
 
-    **说明：** 
+    **说明：** SELECT查询的字段为API的返回参数，WHERE条件处的参数为API的请求参数，请求参数请使用$\{\}标识。
 
-    -   一键添加SQL特别适用于当字段数量比较多的情况，可大大提高SQL编写效率。
-    -   SELECT查询的字段为API的返回参数，WHERE条件处的参数为API的请求参数，请求参数请使用$\{\}标识。
-3.  编辑参数信息。
+3.  编辑请求参数信息。
 
-    编写好API查询SQL后，单击右上角的**参数**切换到参数信息编辑页面，在这里可编辑参数的类型、示例值、默认值和描述，其中类型和描述是必填项。
+    编写好API查询SQL后，单击右侧的**请求参数**，设置参数的名称、参数类型、示例值、默认值和描述。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16408/15518581558803_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16408/15542820178803_zh-CN.png)
 
     **说明：** 为了帮助API的调用者更全面地了解API，请尽量全面地填写API的参数信息。
 
+4.  编辑返回参数信息。
 
-配置过程中需要注意返回结果分页的设置。
+    单击右侧的**返回参数**，设置参数的名称、参数类型示例值和描述，并可进行返回结果分页和使用过滤器等高级配置。
 
--   如果不开启**返回结果分页**，则API默认最多返回500条记录。
--   如果返回结果可能超过500条，请开启**返回结果分页**功能。
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16408/155428201743280_zh-CN.png)
 
-开启返回结果分页后，会自动增加以下公共参数。
+    配置过程中需要注意返回结果分页的设置。
 
--   公共请求参数
-    -   pageNum：当前页号。
-    -   pageSize：页面大小，即每页记录数。
--   公共返回参数
-    -   pageNum：当前页号。
-    -   pageSize：页面大小，即每页记录数。
-    -   totalNum：总记录数。
+    -   如果不开启**返回结果分页**，则API默认最多返回500条记录。
+    -   如果返回结果可能超过500条，请开启**返回结果分页**功能。
+    开启返回结果分页后，会自动增加以下公共参数。
 
-**说明：** SQL规则提示。
+    -   公共请求参数
+        -   pageNum：当前页号。
+        -   pageSize：页面大小，即每页记录数。
+    -   公共返回参数
+        -   pageNum：当前页号。
+        -   pageSize：页面大小，即每页记录数。
+        -   totalNum：总记录数。
+    **说明：** SQL规则提示。
 
--   仅支持一条SQL语句，不支持多条SQL语句。
--   支持SELECT，不支持非SELECT语法，如INSERT、UPDATE、DELETE等。
--   SELECT的查询字段为API的返回参数，WHERE条件中的$\{param\}内的变量param为API的请求参数。
--   不支持`SELECT \*`，必须明确指定查询的列。
--   支持同一数据源下的单表查询，多表关联查询，嵌套查询。
--   如果SELECT查询列的列名带有表名前缀（如t.name），则必须取别名作为返回参数名（如t.name as name）。
--   如果使用聚合函数（min/max/sum/count等），必须取别名作为返回参数名（如sum\(num\) as total\\\_num）。
--   SQL中的$\{param\}统一当请求参数进行替换，包含字符串中的$\{param\}。当$\{param\}前包含转义符\\时，不做请求参数处理，作为普通字符串处理。
--   不支持将$\{param\}放在引号中，如'$\{id\}'、'abc$\{xyz\}123'，如果需要可以通过concat\('abc', $\{xyz\}, '123’\)实现。
--   不支持将参数设置为可选。
-
-完成API参数的配置后，单击**下一步**，即可进入API测试环节。
+    -   仅支持一条SQL语句，不支持多条SQL语句。
+    -   支持SELECT，不支持非SELECT语法，如INSERT、UPDATE、DELETE等。
+    -   SELECT的查询字段为API的返回参数，WHERE条件中的$\{param\}内的变量param为API的请求参数。
+    -   不支持`SELECT \*`，必须明确指定查询的列。
+    -   支持同一数据源下的单表查询，多表关联查询，嵌套查询。
+    -   如果SELECT查询列的列名带有表名前缀（如t.name），则必须取别名作为返回参数名（如t.name as name）。
+    -   如果使用聚合函数（min/max/sum/count等），必须取别名作为返回参数名（如sum\(num\) as total\\\_num）。
+    -   SQL中的$\{param\}统一当请求参数进行替换，包含字符串中的$\{param\}。当$\{param\}前包含转义符\\时，不做请求参数处理，作为普通字符串处理。
+    -   不支持将$\{param\}放在引号中，如'$\{id\}'、'abc$\{xyz\}123'，如果需要可以通过concat\('abc', $\{xyz\}, '123’\)实现。
+    -   不支持将参数设置为可选。
 
 ## API测试 {#section_d5j_nb3_r2b .section}
 
-完成API查询SQL及参数的配置后，即可进行API测试。
+完成API参数的配置并保存后，单击右上角的**测试**，即可进入API测试环节。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15518581558797_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16408/155428201743281_zh-CN.png)
 
 填写好参数值，单击**开始测试**，即可在线发送API请求，在右侧可以看到API请求详情及返回内容。如果测试失败，请仔细查看错误提示并做相应的修改重新测试。
 
 配置过程中需要注意正常返回示例的设置。配置好API之后，系统会自动生成异常返回示例和错误码，但没办法自动生成正常返回示例。需要在测试成功后，单击**保存为正常返回示例**，将当前的测试结果保存为正常返回示例。如果返回结果中有敏感数据需要脱敏，可以手动编辑修改。
-
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15518581558799_zh-CN.png)
 
 **说明：** 
 
@@ -109,7 +106,5 @@
 
 ## API详情查看 {#section_xp4_mc3_r2b .section}
 
-回到API服务列表页面，单击操作列中的**详情**，可查看API的详情信息。API详情页面以调用者的视角展示了API的详细信息。
-
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16407/15518581568800_zh-CN.png)
+回到API服务列表页面，右键单击相应API服务，选择**详情**，即可查看API的详情信息。API详情页面以调用者的视角展示了API的详细信息。
 
