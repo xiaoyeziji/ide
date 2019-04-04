@@ -9,7 +9,7 @@ MongoDB是文档型的NoSQL数据库，目前是全世界最受欢迎的文档�
 1.  以项目管理员身份进入[DataWorks管理控制台](https://workbench.data.aliyun.com/console)，单击对应项目操作栏中的**进入数据集成**。
 2.  单击**数据源** \> **新增数据源**，弹出支持的数据源。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15532345307534_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15543665017534_zh-CN.png)
 
 3.  在新建数据源弹出框中，选择数据源类型为**MongoDB**。
 4.  填写MongoDB数据源的各配置项。
@@ -20,7 +20,7 @@ MongoDB是文档型的NoSQL数据库，目前是全世界最受欢迎的文档�
     -   有公网IP的自建数据库：一般使用的网络是公网，然而公网可能产生一定的费用。
     以新增**MongDB** \> **阿里云数据库**类型的数据源为例。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15532345307547_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15543665017547_zh-CN.png)
 
     |配置|说明|
     |:-|:-|
@@ -36,7 +36,7 @@ MongoDB是文档型的NoSQL数据库，目前是全世界最受欢迎的文档�
 
     以新增**MongDB** \> **有公网IP的自建数据库**类型的数据源为例。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15532345307548_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15543665017548_zh-CN.png)
 
     |配置|说明|
     |:-|:-|
@@ -48,6 +48,12 @@ MongoDB是文档型的NoSQL数据库，目前是全世界最受欢迎的文档�
     |**数据库名**|该数据源对应的数据库名称。|
     |**用户名/密码**|数据库对应的用户名和密码。|
 
+    **说明：** 无公网的数据库可通过下述操作添加MongoDB数据源。
+
+    1.  选择数据源类型为**有公网IP**。
+    2.  填写新增MongoDB数据源对话框中的配置项，其中访问地址填写您的内网地址。
+    3.  添加完成后，不需要进行连通性测试，单击**确认**。
+    4.  添加自定义资源组，将任务运行在自定义资源组上，详情请参见[新增任务资源](intl.zh-CN/使用指南/数据集成/常见配置/新增任务资源.md#)。
 5.  单击**测试连通性**。
 6.  测试连通性通过后，单击**确定**。
 
@@ -58,5 +64,5 @@ MongoDB是文档型的NoSQL数据库，目前是全世界最受欢迎的文档�
 
 ## 后续步骤 {#section_dqv_5d1_p2b .section}
 
-现在，您已经学习了如何配置MongoDB数据源，您可以继续学习下一个教程。在该教程中您将学习如何通过配置MongoDB Writer插件。详情请参见[配置MongoDB Writer](intl.zh-CN/使用指南/数据集成/作业配置/配置Writer插件/配置MongoDB Writer.md#)和[配置MongoDB Reader](intl.zh-CN/使用指南/数据集成/作业配置/配置Reader插件/配置MongoDB Reader.md#)。
+现在，您已经学习了如何配置MongoDB数据源，您可以继续学习下一个教程。在该教程中您将学习如何通过配置MongoDB Writer插件。详情请参见[配置MongoDB Reader](intl.zh-CN/使用指南/数据集成/作业配置/配置Reader插件/配置MongoDB Reader.md#)和[配置MongoDB Writer](intl.zh-CN/使用指南/数据集成/作业配置/配置Writer插件/配置MongoDB Writer.md#)。
 
