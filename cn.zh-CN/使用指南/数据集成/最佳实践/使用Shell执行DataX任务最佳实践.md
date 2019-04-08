@@ -16,7 +16,7 @@
 
 1.  双击创建的Shell节点，填写下述代码。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132473/155123854239667_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132473/155471317039667_zh-CN.png)
 
     ```
     shell_datax_home='/home/admin/shell_datax'
@@ -95,7 +95,7 @@
     
     rm ${shell_datax_config}
     
-    if [${shell_datax_run_result} -ne 0]
+    if [ ${shell_datax_run_result} -ne 0 ]
     then
         echo "`date '+%Y-%m-%d %T'` shell datax ended failed :("
         exit -1
@@ -105,23 +105,23 @@
 
     代码说明如下：
 
-    -   生成临时datax配置文件（您只需修改配置文件内容即可，详情请参见[DataX文档](https://github.com/alibaba/DataX)。
-    -   读取调度参数，分别为$1, $2。
+    -   生成临时DataX配置文件（您只需修改配置文件内容即可，详情请参见[DataX文档](https://github.com/alibaba/DataX)。
+    -   读取调度参数，分别为$1，$2。
         1.  不需配置$\{bdp.system.bizdate\}，$\{bdp.system.cyctime\}，参数详情请参见[参数配置](cn.zh-CN/使用指南/数据开发/调度配置/参数配置.md#)。
-        2.  执行datax任务，进行数据同步。
+        2.  执行DataX任务，进行数据同步。
         3.  删除临时文件。
         4.  判断任务成功或失败，进行返回，0代表成功。
 2.  单击右侧的**调度配置**，进行系统参数的配置，详情请参见[调度配置](cn.zh-CN/使用指南/数据开发/调度配置/基本属性.md#)模块的文档。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132473/155123854239669_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132473/155471317039669_zh-CN.png)
 
 3.  配置完成后，提交并发布节点任务。
 4.  进入**运维中心** \> **周期任务**页面，选择相应的节点修改自定义资源组。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132473/155123854239679_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132473/155471317039679_zh-CN.png)
 
 5.  单击相应节点后的**测试**，并查看执行结果。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132473/155123854239680_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132473/155471317039680_zh-CN.png)
 
 
