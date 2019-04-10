@@ -1,39 +1,39 @@
 # Permission list {#concept_i53_vfm_hfb .concept}
 
-DataWorks provides seven roles for project owners \(non-authorizable\), project administrators, development, operations, deployment, guest, and Security Administrators. This article will introduce you to the permissions descriptions for specific roles.
+DataWorks provides seven roles for users in your organization. This topic describes the permissions for specific roles.
 
-## Data Management {#section_ssf_nhh_kfb .section}
+## Data management {#section_ssf_nhh_kfb .section}
 
-|Permission Point|Owner|Administrator|Development|O&M|Deploy|Visitor|Security Administrator|
-|:---------------|:----|:------------|:----------|:--|:-----|:------|:---------------------|
-|Delete tables created by one-self|√|√|√|N/A|N/A|N/A|N/A|
-|Settings of table categories by one-self|√|√|√|N/A|N/A|N/A|N/A|
-|View your own collection of tables|√|√|√|N/A|N/A|N/A|N/A|
+|Permission Point|Owner|Administrator|Developer|Administration Expert|Deployment Expert|Visitor|Security Expert|
+|:---------------|:----|:------------|:--------|:--------------------|:----------------|:------|:--------------|
+|Delete created tables|√|√|√|N/A|N/A|N/A|N/A|
+|Table category settings|√|√|√|N/A|N/A|N/A|N/A|
+|View table collection|√|√|√|N/A|N/A|N/A|N/A|
 |New table|√|√|√|N/A|N/A|N/A|N/A|
-|Unhide the table you created|√|√|√|N/A|N/A|N/A|N/A|
-|Self-created table structure changes|√|√|√|N/A|N/A|N/A|N/A|
-|Self-created table view|√|√|√|N/A|N/A|N/A|N/A|
-|Viewing the content of the Right applied by one-self|√|√|√|N/A|N/A|N/A|N/A|
-|Self-created table Hiding|√|√|√|N/A|N/A|N/A|N/A|
-|Self-created table lifecycle settings|√|√|√|N/A|N/A|N/A|N/A|
-|Non-self-created table data permission application|√|√|√|N/A|N/A|N/A|N/A|
+|Unhide created table|√|√|√|N/A|N/A|N/A|N/A|
+|Created table structure changes|√|√|√|N/A|N/A|N/A|N/A|
+|View created table|√|√|√|N/A|N/A|N/A|N/A|
+|View the content on the right you applied|√|√|√|N/A|N/A|N/A|N/A|
+|Hide created tables|√|√|√|N/A|N/A|N/A|N/A|
+|Created table lifecycle settings|√|√|√|N/A|N/A|N/A|N/A|
+|Non-created table data permission application|√|√|√|N/A|N/A|N/A|N/A|
 |Update table|√|√|√|√|√|N/A|N/A|
-|Delete a table|√|√|√|N/A|N/A|N/A|N/A|
+|Delete table|√|√|√|N/A|N/A|N/A|N/A|
 
-## **release management** {#section_e5c_phh_kfb .section}
+## **Release management** {#section_e5c_phh_kfb .section}
 
-|Permission Point|Owner|Project administrator|Development|O&M|Deploy|Visitor|Security Administrator|
-|:---------------|:----|:--------------------|:----------|:--|:-----|:------|:---------------------|
+|Permissions|Owner|Administrator|Developer|Administration Expert|Deployment Expert|Visitor|Security Expert|
+|:----------|:----|:------------|:--------|:--------------------|:----------------|:------|:--------------|
 |Create a publishing package|√|√|√|√|N/A|N/A|N/A|
-|View the Publishing Package List|√|√|√|√|√|√|N/A|
+|View the publishing package list|√|√|√|√|√|√|N/A|
 |Delete package|√|√|√|√|N/A|N/A|N/A|
 |Perform publish|√|√|N/A|√|√|N/A|N/A|
-|see release package content|√|√|√|√|√|√|N/A|
+|View release package content|√|√|√|√|√|√|N/A|
 
-## button control {#section_qjj_g3h_kfb .section}
+## Button control {#section_qjj_g3h_kfb .section}
 
-|Permission Point|Owner|Project administrator|Development|O&M|Deploy|Visitor|Security Administrator|
-|:---------------|:----|:--------------------|:----------|:--|:-----|:------|:---------------------|
+|Permissions|Owner|Administrator|Developer|Administration Expert|Deployment Expert|Visitor|Security Expert|
+|:----------|:----|:------------|:--------|:--------------------|:----------------|:------|:--------------|
 |button-stop|√|√|√|N/A|N/A|N/A|N/A|
 |button-format|√|√|√|N/A|N/A|N/A|N/A|
 |button-Edit|√|√|√|N/A|N/A|N/A|N/A|
@@ -45,31 +45,31 @@ DataWorks provides seven roles for project owners \(non-authorizable\), project 
 
 ## Code development {#section_vrz_h3h_kfb .section}
 
-|Permission Point|Owner|Project administrator|Development|O&M|Deploy|Visitor|Security Administrator|
-|:---------------|:----|:--------------------|:----------|:--|:-----|:------|:---------------------|
+|Permission|Owner|Administrator|Developer|Administration Expert|Deployment Expert|Visitor|Security Expert|
+|:---------|:----|:------------|:--------|:--------------------|:----------------|:------|:--------------|
 |Save submitted code|√|√|√|N/A|N/A|N/A|N/A|
-|view code content|√|√|√|√|√|√|N/A|
-|Create Code|√|√|√|N/A|N/A|N/A|N/A|
-|Delete Code|√|√|√|N/A|N/A|N/A|N/A|
-|view code list|√|√|√|√|√|√|N/A|
-|run code|√|√|√|N/A|N/A|N/A|N/A|
-|modify code|√|√|√|N/A|N/A|N/A|N/A|
-|Your files download|√|√|√|N/A|N/A|N/A|N/A|
-|Your files upload|√|√|√|N/A|N/A|N/A|N/A|
+|View code content|√|√|√|√|√|√|N/A|
+|Create code|√|√|√|N/A|N/A|N/A|N/A|
+|Delete code|√|√|√|N/A|N/A|N/A|N/A|
+|View code list|√|√|√|√|√|√|N/A|
+|Run code|√|√|√|N/A|N/A|N/A|N/A|
+|Modify code|√|√|√|N/A|N/A|N/A|N/A|
+|Download files|√|√|√|N/A|N/A|N/A|N/A|
+|Upload files|√|√|√|N/A|N/A|N/A|N/A|
 
 ## Function development {#section_lkw_33h_kfb .section}
 
-|Permission Point|Owner|Project administrator|Development|O&M|Deploy|Visitor|Security Administrator|
-|:---------------|:----|:--------------------|:----------|:--|:-----|:------|:---------------------|
+|Permissions|Owner|Administrator|Developer|Administration Expert|Deployment Expert|Visitor|Security Expert|
+|:----------|:----|:------------|:--------|:--------------------|:----------------|:------|:--------------|
 |View function details|√|√|√|√|√|√|N/A|
-|Create Function|√|√|√|N/A|N/A|N/A|N/A|
-|query function|√|√|√|√|√|√|N/A|
-|delete function|√|√|√|N/A|N/A|N/A|N/A|
+|Create function|√|√|√|N/A|N/A|N/A|N/A|
+|Query function|√|√|√|√|√|√|N/A|
+|Delete function|√|√|√|N/A|N/A|N/A|N/A|
 
-## Node Type Control {#section_gpt_k3h_kfb .section}
+## Node type control {#section_gpt_k3h_kfb .section}
 
-|Permission Point|Owner|Project administrator|Development|O&M|Deploy|Visitor|Security Administrator|
-|:---------------|:----|:--------------------|:----------|:--|:-----|:------|:---------------------|
+|Permissions|Owner|Administrator|Developer|Administration Expert|Deployment Expert|Visitor|Security Expert|
+|:----------|:----|:------------|:--------|:--------------------|:----------------|:------|:--------------|
 |node-PAI|√|√|√|N/A|N/A|N/A|N/A|
 |Node -- MR|√|√|√|N/A|N/A|N/A|N/A|
 |node-CDP|√|√|√|N/A|N/A|N/A|N/A|
@@ -82,74 +82,74 @@ DataWorks provides seven roles for project owners \(non-authorizable\), project 
 |Node -- dtboost\_recommand|√|√|√|N/A|N/A|N/A|N/A|
 |Node -- pyodps|√|√|√|N/A|N/A|N/A|N/A|
 
-## Resources Management {#section_yl5_l3h_kfb .section}
+## Resources management {#section_yl5_l3h_kfb .section}
 
-|Permission Point|Owner|Project administrator|Development|O&M|Deploy|Visitor|Security Administrator|
-|:---------------|:----|:--------------------|:----------|:--|:-----|:------|:---------------------|
-|view resources list|√|√|√|√|√|√|N/A|
-|delete Resources|√|√|√|N/A|N/A|N/A|N/A|
-|create resources|√|√|√|N/A|N/A|N/A|N/A|
-|Upload jar your files|√|√|√|N/A|N/A|N/A|N/A|
-|Upload taxt your files|√|√|√|N/A|N/A|N/A|N/A|
-|Upload archive your files|√|√|√|N/A|N/A|N/A|N/A|
+|Permission|Owner|Administrator|Developer|Administration Expert|Deployment Expert|Visitor|Security Expert|
+|:---------|:----|:------------|:--------|:--------------------|:----------------|:------|:--------------|
+|View resources list|√|√|√|√|√|√|N/A|
+|Delete resources|√|√|√|N/A|N/A|N/A|N/A|
+|Create resources|√|√|√|N/A|N/A|N/A|N/A|
+|Upload JAR files|√|√|√|N/A|N/A|N/A|N/A|
+|Upload text files|√|√|√|N/A|N/A|N/A|N/A|
+|Upload archive files|√|√|√|N/A|N/A|N/A|N/A|
 
-## workflow development {#section_ip3_m3h_kfb .section}
+## Workflow development {#section_ip3_m3h_kfb .section}
 
-|Permission Point|Owner|Project administrator|Development|O&M|Deploy|Visitor|Security Administrator|
-|:---------------|:----|:--------------------|:----------|:--|:-----|:------|:---------------------|
-|Run/Stop Workflow|√|√|√|N/A|N/A|N/A|N/A|
-|save workflow|√|√|√|N/A|N/A|N/A|N/A|
+|Permissions|Owner|Administrator|Developer|Administration Expert|Deployment Expert|Visitor|Security Expert|
+|:----------|:----|:------------|:--------|:--------------------|:----------------|:------|:--------------|
+|Run/stop workflow|√|√|√|N/A|N/A|N/A|N/A|
+|Save workflow|√|√|√|N/A|N/A|N/A|N/A|
 |View workflow content|√|√|√|√|√|√|N/A|
-|Submitted Node Code|√|√|√|N/A|N/A|N/A|N/A|
-|Modify Workflow|√|√|√|N/A|N/A|N/A|N/A|
+|Submitted node code|√|√|√|N/A|N/A|N/A|N/A|
+|Modify workflow|√|√|√|N/A|N/A|N/A|N/A|
 |View workflow list|√|√|√|√|√|√|N/A|
-|Modify the Owner property|√|√|N/A|N/A|N/A|N/A|N/A|
-|Open Node Code|√|√|√|N/A|N/A|N/A|N/A|
-|delete Workflow|√|√|√|N/A|N/A|N/A|N/A|
-|create workflow|√|√|√|N/A|N/A|N/A|N/A|
+|Modify the owner property|√|√|N/A|N/A|N/A|N/A|N/A|
+|Open node code|√|√|√|N/A|N/A|N/A|N/A|
+|Delete workflow|√|√|√|N/A|N/A|N/A|N/A|
+|Create workflow|√|√|√|N/A|N/A|N/A|N/A|
 |Create folder|√|√|√|N/A|N/A|N/A|N/A|
-|delete folder|√|√|√|N/A|N/A|N/A|N/A|
+|Delete folder|√|√|√|N/A|N/A|N/A|N/A|
 |Modify folder|√|√|√|N/A|N/A|N/A|N/A|
 
-## Data Integration {#section_kpl_n3h_kfb .section}
+## Data integration {#section_kpl_n3h_kfb .section}
 
-|Permission Point|Owner|Project administrator|Development|O&M|Deploy|Visitor|Security Administrator|
-|:---------------|:----|:--------------------|:----------|:--|:-----|:------|:---------------------|
-|Data Integration-node Edit|√|√|√|N/A|N/A|N/A|N/A|
-|Data Integration-node View|√|√|√|N/A|N/A|N/A|N/A|
-|Data Integration-node Delete|√|√|√|N/A|N/A|N/A|N/A|
-|project resources consumption monitoring menu|√|√|N/A|N/A|N/A|N/A|N/A|
-|Project synchronous Resources Management menu|√|√|√|√|√|N/A|N/A|
-|Project synchronous Resources Group list|√|√|√|√|√|√|N/A|
-|Project synchronous Resources Group create|√|√|√|√|√|N/A|N/A|
-|Project synchronous Resources Group Management machine list|√|√|√|√|√|N/A|N/A|
-|Project synchronous Resources Group Add Machine|√|√|√|√|√|N/A|N/A|
-|Project synchronous Resources Group Delete Machine|√|√|√|√|√|N/A|N/A|
-|Project synchronous Resources Group modify Machine|√|√|√|√|√|N/A|N/A|
-|Project synchronous Resources Group get Resources Group AK|√|√|√|√|√|N/A|N/A|
-|Project synchronous Resources Group Delete|√|√|√|√|√|N/A|N/A|
-|project resources consumption monitoring|√|√|N/A|N/A|N/A|N/A|N/A|
-|Operation and Maintenance Center task modify Resources Group|√|√|√|√|√|N/A|N/A|
+|Permissions|Owner|Administrator|Developer|Administration Expert|Deployment Expert|Visitor|Security Expert|
+|:----------|:----|:------------|:--------|:--------------------|:----------------|:------|:--------------|
+|Data integration-node edit|√|√|√|N/A|N/A|N/A|N/A|
+|Data integration-node view|√|√|√|N/A|N/A|N/A|N/A|
+|Data integration-node delete|√|√|√|N/A|N/A|N/A|N/A|
+|Project resources consumption monitoring menu|√|√|N/A|N/A|N/A|N/A|N/A|
+|Project synchronous resources management menu|√|√|√|√|√|N/A|N/A|
+|Project synchronous resources group list|√|√|√|√|√|√|N/A|
+|Project synchronous resources group create|√|√|√|√|√|N/A|N/A|
+|Project synchronous resources group management machine list|√|√|√|√|√|N/A|N/A|
+|Project synchronous resources group add machine|√|√|√|√|√|N/A|N/A|
+|Project synchronous resources group delete machine|√|√|√|√|√|N/A|N/A|
+|Project synchronous resources group modify machine|√|√|√|√|√|N/A|N/A|
+|Project synchronous resources group get resources group AcessKey|√|√|√|√|√|N/A|N/A|
+|Project synchronous resources group delete|√|√|√|√|√|N/A|N/A|
+|Project resources consumption monitoring|√|√|N/A|N/A|N/A|N/A|N/A|
+|O&M Center task modify resources group|√|√|√|√|√|N/A|N/A|
 |Synchronous task list menu|√|√|√|√|√|N/A|N/A|
-|The task is moved script|√|√|√|√|√|N/A|N/A|
-|Get project members list|√|√|√|√|√|N/A|N/A|
-|New Code Interface|√|√|√|√|√|N/A|N/A|
-|Save/update code Interface|√|√|√|√|√|N/A|N/A|
-|According to fileId get code Interface|√|√|√|√|√|√|N/A|
-|Get Data Integrated node list|√|√|√|√|√|N/A|N/A|
-|Search table Interfaces|√|√|√|√|√|N/A|N/A|
-|search field interface|√|√|√|√|√|N/A|N/A|
-|query data source list Interface|√|√|√|√|√|√|N/A|
-|new data source interface|√|√|N/A|N/A|N/A|N/A|N/A|
-|query data source details Interface|√|√|√|√|√|N/A|N/A|
-|update data source interface|√|√|N/A|N/A|N/A|N/A|N/A|
-|delete data source interface|√|√|N/A|N/A|N/A|N/A|N/A|
+|The task is moved to script|√|√|√|√|√|N/A|N/A|
+|Obtain project members list|√|√|√|√|√|N/A|N/A|
+|New code interface|√|√|√|√|√|N/A|N/A|
+|Save/update code interface|√|√|√|√|√|N/A|N/A|
+|According to fileId obtain code Interface|√|√|√|√|√|√|N/A|
+|Get data integrated node list|√|√|√|√|√|N/A|N/A|
+|Search table interfaces|√|√|√|√|√|N/A|N/A|
+|Search field interface|√|√|√|√|√|N/A|N/A|
+|Query data source list interface|√|√|√|√|√|√|N/A|
+|New data source interface|√|√|N/A|N/A|N/A|N/A|N/A|
+|Query data source details interface|√|√|√|√|√|N/A|N/A|
+|Update data source interface|√|√|N/A|N/A|N/A|N/A|N/A|
+|Delete data source interface|√|√|N/A|N/A|N/A|N/A|N/A|
 |Test connectivity|√|√|√|√|√|N/A|N/A|
-|Data Preview|√|√|√|√|√|N/A|N/A|
-|Check whether open OTSStream|√|√|√|√|√|N/A|N/A|
+|Data preview|√|√|√|√|√|N/A|N/A|
+|Check whether it is open OTSStream|√|√|√|√|√|N/A|N/A|
 |Open Table Store|√|√|√|√|√|N/A|N/A|
 |Query ODPS table building statement|√|√|√|√|√|N/A|N/A|
 |New ODPS table|√|√|√|√|√|N/A|N/A|
 |Query ODPS table status|√|√|√|√|√|N/A|N/A|
-|Migration Database Table|√|√|N/A|N/A|N/A|N/A|N/A|
+|Migration database table|√|√|N/A|N/A|N/A|N/A|N/A|
 
