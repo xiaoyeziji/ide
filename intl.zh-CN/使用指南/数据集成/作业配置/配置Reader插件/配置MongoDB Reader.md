@@ -13,18 +13,61 @@ MongoDB Reader通过数据集成框架从MongoDB并行地读取数据，通过�
 
 ## 类型转换列表 {#section_m2v_hxm_q2b .section}
 
-MongoDB Writer支持大部分MongoDB类型，但也存在部分没有支持的情况，请注意检查您的类型。
+MongoDB Reader支持大部分MongoDB类型，但也存在部分没有支持的情况，请注意检查您的类型。
 
-MongoDB Writer针对MongoDB类型的转换列表，如下所示。
+MongoDB Reader针对MongoDB类型的转换列表，如下所示。
 
 |类型分类|MongoDB数据类型|
 |:---|:----------|
-|整数类|Int和Long|
-|浮点类|Double|
-|字符串类|String|
-|日期时间类|Date|
-|布尔型|Bool|
-|二进制类|Bytes|
+|Long|int，long，document.int和document.long|
+|Double|double和document.double|
+|String|string，array，document.string，document.array和combine|
+|Date|date和document.date|
+|Boolean|bool和document.bool|
+|Bytes|bytes和document.bytes|
+
+**说明：** 
+
+-   document类型为嵌入文档类型，即object类型。
+-   combine类型的使用如下：
+
+    使用MongoDB Reader插件读出数据时，支持将MongoDB document中的多个字段合并成一个json串。
+
+    例如将MongoDB中的字段导入到MaxCompute，有字段如下（下文均省略了value使用key来代替整个字段）的三个document，其中a b是所有document均有的公共字段，x\_n是不固定字段。
+
+    ```
+    doc1： a b x_1 x_2
+    doc2:  a b x_2 x_3 x_4
+    doc3:  a b x_5
+    ```
+
+    配置文件中要明确指出需要一一对应的字段，需要合并的字段则需另取名称（不可与document中已存在字段同名），并指定类型为combine，如：
+
+    ```
+    "column": [
+    {
+    "name": "a",
+    "type": "string",
+    },
+    {
+    "name": "b",
+    "type": "string",
+    },
+    {
+    "name": "doc",
+    "type": "combine",
+    }
+    ]
+    ```
+
+    最终导出的MaxCompute结果为：
+
+    |odps\_column1|odps\_column2|
+    |:------------|:------------|
+    |a|b|
+    |a|b|
+    |a|b|
+
 
 ## 参数说明 {#section_jn2_gqh_p2b .section}
 
@@ -41,7 +84,7 @@ MongoDB Writer针对MongoDB类型的转换列表，如下所示。
 
 ## 向导开发介绍 {#section_bp2_wsh_p2b .section}
 
-暂时没有向导开发模式。
+暂不支持向导开发模式。
 
 ## 脚本开发介绍 {#section_cp2_wsh_p2b .section}
 
