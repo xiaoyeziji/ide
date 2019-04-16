@@ -52,7 +52,7 @@ The following are DRDS Reader converted MySQL data types:
 
     Configuration item descriptions:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15514312677672_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15515081187672_en-US.png)
 
     Configurations:
 
@@ -69,7 +69,7 @@ The following are DRDS Reader converted MySQL data types:
 
     The Source Table Field on the left maps with the Target Table Field on the right. Click **Add Line**, and then add a field. Hover the cursor over a line, click **Delete**, and then delete the line.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15514312677673_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15515081187673_en-US.png)
 
     -   In-row mapping: You can click **Enable Same-Line Mapping** to create a mapping for the same row. Note that the data type must be consistent.
     -   Automatic formatting: The fields are automatically sorted based on corresponding rules.
@@ -82,7 +82,7 @@ The following are DRDS Reader converted MySQL data types:
     -   If the value you entered cannot be parsed, the type is displayed as 'Not Identified'.
 3.  Channel control
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15514312677675_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15515081187675_en-US.png)
 
     Configurations:
 

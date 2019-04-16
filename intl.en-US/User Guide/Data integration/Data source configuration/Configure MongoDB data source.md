@@ -8,7 +8,7 @@ This topic describes how to configure MongoDB data sources in DataWorks. MongoDB
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New Source** in the supported data source pop-up window.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15514225747534_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15514306867534_en-US.png)
 
 4.  Select the data source type **MongoDB** in the new data source dialog box.
 5.  Complete the MongoDB data source item configuration.
@@ -19,7 +19,7 @@ This topic describes how to configure MongoDB data sources in DataWorks. MongoDB
     -   User-created databases with public IP addresses: These databases generally use public networks that may incur certain costs.
     Consider a data source with a new **MongoDB** \> **ApsaraDB** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15514225747547_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15514306867547_en-US.png)
 
     Configurations:
 
@@ -37,7 +37,7 @@ This topic describes how to configure MongoDB data sources in DataWorks. MongoDB
     -   Username and password: The user name and password used for the database connection.
     The following is an example of a data source with a new **MongoDB** \> **On-Premise Database with Public Network IP Address**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15514225747548_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16206/15514306867548_en-US.png)
 
     Configurations:
 

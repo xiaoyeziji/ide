@@ -17,12 +17,12 @@ MaxCompute data sources you added manually can use the RAM user AccessKey.
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **New Source** in the supported data source pop-up window.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16204/15514227497542_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16204/15514309137542_en-US.png)
 
 4.  Select the data source type **MaxCompute \(ODPS\)** in the new window.
 5.  Complete the MaxCompute data source configurations.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16204/15514227497543_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16204/15514309147543_en-US.jpg)
 
     Configurations:
 

@@ -4,7 +4,7 @@ DataWorks也推出了PyODPS任务类型，集成了MaxCompute的Python SDK，可
 
 ## 新建PyODPS节点 {#section_e5k_pzl_q2b .section}
 
-Maxcompute提供了[Python SDK](https://www.alibabacloud.com/help/doc-detail/34615.htm)，您可以使用Python的SDK来操作Maxcompute。
+Maxcompute提供了[Python SDK](https://help.aliyun.com/document_detail/34615.html)，您可以使用Python的SDK来操作Maxcompute。
 
 新建PyODPS节点的具体操作如下。
 
@@ -12,13 +12,13 @@ Maxcompute提供了[Python SDK](https://www.alibabacloud.com/help/doc-detail/346
 
     单击左侧导航栏中的**手动业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15382083637961_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15481781957961_zh-CN.png)
 
 2.  新建PyODPS节点。
 
     右键单击**数据开发**，选择**新建数据开发节点** \> **PyODPS**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16322/15382083638036_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16322/15481781958036_zh-CN.png)
 
 3.  编辑PyODPS节点。
     1.  ODPS入口
@@ -78,7 +78,7 @@ Maxcompute提供了[Python SDK](https://www.alibabacloud.com/help/doc-detail/346
 
 4.  节点调度配置。
 
-    单击节点任务编辑在区域右侧的**调度配置**，即可进入节点调度配置页面，详情请参见[调度配置](intl.zh-CN/使用指南/数据开发/调度配置/基本属性.md#)模块。
+    单击节点任务编辑在区域右侧的**调度配置**，即可进入节点调度配置页面，详情请参见[调度配置](cn.zh-CN/使用指南/数据开发/调度配置/基本属性.md#)模块。
 
 5.  提交节点任务。
 
@@ -86,10 +86,10 @@ Maxcompute提供了[Python SDK](https://www.alibabacloud.com/help/doc-detail/346
 
 6.  发布节点任务。
 
-    具体操作请参见[发布管理](intl.zh-CN/使用指南/数据开发/发布管理/任务发布.md#)。
+    具体操作请参见[发布管理](cn.zh-CN/使用指南/数据开发/发布管理/任务发布.md#)。
 
 7.  在生产环境测试。
 
-    具体操作请参见[手动任务](intl.zh-CN/使用指南/运维中心/任务列表/手动任务.md#)。
+    具体操作请参见[手动任务](cn.zh-CN/使用指南/运维中心/任务列表/手动任务.md#)。
 
 

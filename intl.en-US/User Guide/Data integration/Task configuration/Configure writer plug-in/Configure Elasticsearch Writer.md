@@ -22,7 +22,7 @@ There can be multiple indexes \(INDEX\)/\(database\) in Elasticsearch, where eac
 |indexType|The index type name in Elasticsearch.|No|Elasticsearch|
 |cleanup|The parameter that determines if a data exists in an index or has been deleted. The method used to clean data is to delete and rebuild the corresponding index. By default, the value is False which means data in the existing index is retained.|No|False|
 |batchSize|The number of data entries imported in bulk each time.|No|1,000|
-|trySize|The number of retries after failure.|No|30|
+|trySize|The number of retries after task failure.|No|30|
 |timeout-|The client timeout.|No|600,000|
 |discovery|When this Node Discovery parameter is enabled, the server list in the client is polled and regularly updated.|No|False|
 |compression|The parameter that specifies whether compression is enabled for HTTP requests.|No|True|
@@ -163,5 +163,5 @@ The following is an example of a script configuration. For details about the par
 }
 ```
 
-**Note:** Currently, Elasticsearch for the VPC environment can only use custom scheduling resources. If you run the default Resource Group, the network connection will breakdown. For more information on how to add a custom resource group, see[Add task resources](intl.en-US/User Guide/Data integration/Common configuration/Add task resources.md#).
+**Note:** Currently, Elasticsearch for the VPC environment can only use custom scheduling resources. If you run the default Resource Group, the network connection will breakdown. For more information on how to add a custom resource group, see[Add task resources](reseller.en-US/User Guide/Data integration/Common configuration/Add task resources.md#).
 

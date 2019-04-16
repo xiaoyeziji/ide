@@ -8,7 +8,7 @@ This topic describes how to configure the DM data source. The DM relational data
 2.  Select **Data Integration** in the top navigation bar. Click **Data Source** from the left-side navigation pane.
 3.  Click **New Source** in the supported data source window.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16199/15514226267528_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16199/15514307387528_en-US.png)
 
 4.  In the new dialog box, select the **DM** data source type.
 5.  Complete the DM data source information items configurations.
@@ -17,7 +17,7 @@ This topic describes how to configure the DM data source. The DM relational data
 
     -   The New DM Data Sources with public IP address
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16199/15514226267529_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16199/15514307387529_en-US.png)
 
         Parameters:
 
@@ -28,7 +28,7 @@ This topic describes how to configure the DM data source. The DM relational data
         -   Username and password: The user name and password used for connecting to the database.
     -   New DM Data Sources without public IP address
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16199/15514226267530_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16199/15514307387530_en-US.png)
 
         Parameters:
 

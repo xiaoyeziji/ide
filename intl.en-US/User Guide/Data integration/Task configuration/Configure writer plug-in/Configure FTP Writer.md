@@ -50,7 +50,7 @@ The following two features are not supported for the time being.
 
     Configuration item descriptions:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15514320307697_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15514327567697_en-US.png)
 
     Parameters:
 
@@ -66,13 +66,13 @@ The following two features are not supported for the time being.
 
     The source table field on the left and the target table field on the right are one-to-one relationships, click **Add Line** to add a single field and click **Delete** to delete the current field.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15514320307701_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15514327567701_en-US.png)
 
     In-row mapping: You can click In-row mapping to create a mapping for the same row. Note that the data type must be consistent.
 
 3.  Channel control
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15514320307704_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16222/15514327567704_en-US.png)
 
     Parameters:
 

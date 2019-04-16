@@ -4,11 +4,11 @@ To ensure that tasks can dynamically adapt to environment changes when running a
 
 -   No space can be added on either side of the equation mark "=" of a parameter. Correct: bizdate=$bizdate
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16330/15475230668212_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16330/15525335318212_en-US.png)
 
 -   Multiple parameters \(if any\) must be separated by spaces.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16330/15475230668213_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16330/15525335318213_en-US.png)
 
 
 ## System parameters {#section_dp4_2sq_p2b .section}
@@ -46,7 +46,7 @@ For example, for an ODPS SQL node, add $\{variable name\} in the code, and then 
 
 For a parameter referenced in the code, you must add the parsed value during scheduling.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15475230667840_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15525335317840_en-US.png)
 
 ## Configure scheduling parameters for a Shell node {#section_slh_x1r_p2b .section}
 
@@ -56,7 +56,7 @@ For example, for a Shell node, the Shell syntax declaration in the code is: $1, 
 
 For a parameter referenced in the code, you must add the parsed value during scheduling.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15475230667842_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16301/15525335317842_en-US.png)
 
 **Note:** For a Shell node, when the number of parameters reaches 10, $\{10\} should be used to declare the variable.
 

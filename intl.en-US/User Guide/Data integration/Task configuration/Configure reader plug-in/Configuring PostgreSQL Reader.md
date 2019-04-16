@@ -69,7 +69,7 @@ The PostgreSQL reader has a list of Type transformations for PostgreSQL, as show
 
     Configure the source and destination of the data for the synchronization task.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16231/15514297457845_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16231/15515085347845_en-US.png)
 
     Configurations:
 
@@ -86,7 +86,7 @@ The PostgreSQL reader has a list of Type transformations for PostgreSQL, as show
 
     The source table field on the left and the target table field on the right are one-to-one relationships, click **Add row** to add a single field and click **Delete** to delete the current field.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16231/15514297457846_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16231/15515085347846_en-US.png)
 
     -   Peer mapping: Click **Enable Same-Line Mapping** to establish a corresponding mapping relationship in the peer, note that match the data type.
     -   Automatic formatting: The fields are automatically sorted based on corresponding rules.
@@ -99,7 +99,7 @@ The PostgreSQL reader has a list of Type transformations for PostgreSQL, as show
     -   If the value you entered cannot be parsed, the type is displayed as unidentified.
 3.  Control the tunnel
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15514297457675_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15515085347675_en-US.png)
 
     Configurations:
 

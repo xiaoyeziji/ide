@@ -51,7 +51,7 @@ PostgreSQL Writer converts PostgreSQL data types as follows:
 
     The following is configuration item descriptions:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16253/15514303498214_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16253/15514335468214_en-US.png)
 
     Parameters:
 
@@ -63,13 +63,13 @@ PostgreSQL Writer converts PostgreSQL data types as follows:
 
     The Source Table Field on the left maps with the Target Table Field on the right. To add a field, click **Add Line**. To delete a line, move the cursor over a line, and click **Delete**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16253/15514303498215_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16253/15514335468215_en-US.png)
 
     -   In-row mapping: To create a mapping for the same row, click **Enable Same-Line Mapping**. Note the mapped data type must be consistent.
     -   Automatic formatting: The fields are automatically sorted based on corresponding rules.
 3.  Control the tunnel
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15514303497675_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15514335467675_en-US.png)
 
     Parameters:
 

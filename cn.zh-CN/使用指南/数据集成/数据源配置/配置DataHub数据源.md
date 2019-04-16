@@ -2,17 +2,19 @@
 
 DataHub为您提供了完善的数据导入方案，能够更快速地解决海量数据计算问题。DataHub数据源作为数据中枢，提供了其它数据源将数据写入DataHub的能力，支持Writer插件。
 
+**说明：** 标准模式的工作空间支持[数据源隔离](intl.zh-CN/使用指南/数据集成/数据源配置/数据源隔离.md#)功能，您可以分别添加开发环境和生产环境的数据源并进行隔离，以保护您的数据安全。
+
 ## 操作步骤 {#section_jy4_q4v_42b .section}
 
 1.  以项目管理员身份进入[DataWorks管理控制台](https://workbench.data.aliyun.com/console)，单击对应项目操作栏中的**进入数据集成**。
 2.  单击**数据源** \> **新增数据源**，弹出支持的数据源。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16198/15469218817526_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16198/15532345697526_zh-CN.png)
 
-3.  在新建数据源弹出框中，选择数据源类型为DataHub。
-4.  配置DataHub数据源的各个信息项。
+3.  在新建数据源弹出框中，选择数据源类型为**DataHub**。
+4.  填写DataHub数据源的各配置项。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16198/15469218817527_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16198/15532345697527_zh-CN.png)
 
     |配置|说明|
     |:-|:-|

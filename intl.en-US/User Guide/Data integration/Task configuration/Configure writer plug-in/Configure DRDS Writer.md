@@ -46,7 +46,7 @@ DRDS Writer converts DRDS data types as follows:
 
     Configuration item descriptions:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16242/15501078788013_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16242/15514320058013_en-US.png)
 
     Parameters:
 
@@ -58,20 +58,20 @@ DRDS Writer converts DRDS data types as follows:
 
     The Source Table Field on the left maps with the Target Table Field on the right. Click **Add Line**, and then a field is added. Hover the cursor over a line, click **Delete**, and then the line is deleted.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16242/15501078788014_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16242/15514320058014_en-US.png)
 
     -   In-row mapping: You can click **Enable Same-Line Mapping** to create a mapping for the same row. Note that the data type must be consistent.
     -       -   Automatic formatting: The fields are automatically sorted based on corresponding rules.
 3.  Channel control
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15501078787675_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16221/15514320057675_en-US.png)
 
     Parameters:
 
     -   DMU: A unit which measures the resources consumed during data integration, including CPU, memory, and network bandwidth. One DMU represents the minimum amount of resources used for a data synchronization task.
     -   Concurrent count: The maximum number of threads used to concurrently read or write data into the data storage media in a data synchronization task. In wizard mode, configure a concurrency for the specified task on the wizard page.
     -   Number of error records: The maximum number of dirty data records.
-    -   Task resource group: The machine on which the task runs, if the number of tasks is large. The default Resource Group is used to wait for a resource, it is recommended that you add a Custom Resource Group \(currently only East China 1 and East China 2 supports adding custom resource groups\). For more information, see[Add task resources](reseller.en-US/User Guide/Data integration/Common Configuration/Add task resources.md#).
+    -   Task resource group: The machine on which the task runs, if the number of tasks is large. The default Resource Group is used to wait for a resource, it is recommended that you add a Custom Resource Group \(currently only East China 1 and East China 2 supports adding custom resource groups\). For more information, see[Add task resources](reseller.en-US/User Guide/Data integration/Common configuration/Add task resources.md#).
 
 ## Development in script mode {#section_cp2_wsh_p2b .section}
 

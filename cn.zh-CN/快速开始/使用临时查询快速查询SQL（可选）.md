@@ -8,15 +8,15 @@
 
 点击[DataWorks控制台工作空间列表](https://workbench.data.aliyun.com/consolenew#/projectlist)，选择您需要进入的项目，点击**进入数据开发**。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/144329/155305246641133_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/144329/155305251341133_zh-CN.png)
 
 直接点击**临时查询**，右键**临时查询**，点击**新建节点** \> **ODPS SQL**。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/144329/155305246741134_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/144329/155305251341134_zh-CN.png)
 
 在弹框中输入节点名称，点击**提交**，创建您的临时查询节点。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/144329/155305246741136_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/144329/155305251341136_zh-CN.png)
 
 ## 运行SQL {#section_ibs_kjp_dhb .section}
 
@@ -35,15 +35,15 @@ partitioned by (sale_date string,region string);
 -- 创建一张分区表sale_detail
 ```
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/144329/155305246741138_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/144329/155305251341138_zh-CN.png)
 
 在弹框中您可以看到本次运行的费用预估，继续点击**运行**。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/144329/155305246741139_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/144329/155305251341139_zh-CN.png)
 
 您可以在下方的日志窗口，看到运行情况和最终结果：本次运行成功，结果为**OK**。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/144329/155305246741140_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/144329/155305251341140_zh-CN.png)
 
 使用同样的方法，您也可以执行[查询语句](../../../../../cn.zh-CN/用户指南/SQL/SELECT操作/Select语法介绍.md#)。
 

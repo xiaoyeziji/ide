@@ -1,6 +1,6 @@
 # PyODPS node {#concept_ijm_dzl_q2b .concept}
 
-DataWorks also provides the PyODPS task type and integrates the Python SDK of MaxCompute. You can directly edit the Python code to operate MaxCompute on a PyODPS node of DataWorks.
+This topic describes the PyODPS node functions. DataWorks provides the PyODPS task type and integrates the Python SDK of MaxCompute. You can edit the Python code to operate MaxCompute on a PyODPS node of DataWorks.
 
 ## Create a PyODPS Node {#section_e5k_pzl_q2b .section}
 
@@ -10,20 +10,20 @@ To create a PyODPS node, perform the following steps:
 
 1.  Create a business flow
 
-    Click **Manual Business Flow** in the left-side navigation pane, select **Create Business Flow**.
+    Click **Manual Business Flow** in the left-side navigation pane, and select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15389922417961_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15525336917961_en-US.png)
 
 2.  Create a PyODPS node.
 
     Right-click **Data Development**, and select **Create Data Development Node** \> **PyODPS**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16322/15389922418036_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16322/15525336918036_en-US.png)
 
 3.  Edit the PyODPS node.
     1.  ODPS portal
 
-        On DataWorks, the PyODPS node contains a global variable odps or o, which is the ODPS entry.You do not need to manually define an ODPS entry.
+        On DataWorks, the PyODPS node contains a global variable odps or o, which is the ODPS entry. You do not need to manually define an ODPS entry.
 
         ```
         print(odps.exist_table('PyODPS_iris'))
@@ -78,7 +78,7 @@ To create a PyODPS node, perform the following steps:
 
 4.  Node scheduling configuration.
 
-    Click the **Schedule** on the right of the node task editing area to go to the node scheduling configuration page. For more information, see [Scheduling configuration](reseller.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
+    Click the **Schedule** on the right of the node task editing area to go to the node scheduling configuration page. For more information, see [Scheduling configuration](reseller.en-US/User Guide/Data development/Scheduling configuration/Basic attributes.md#).
 
 5.  Submit the node.
 
@@ -90,6 +90,6 @@ To create a PyODPS node, perform the following steps:
 
 7.  Test in the production environment.
 
-    For more information about the operation, see [Manual tasks](reseller.en-US/User Guide/Operation center/Task list/Manual task.md#).
+    For more information about the operation, see [Manual task](reseller.en-US/User Guide/O&M Center/Task list/Manual task.md#).
 
 

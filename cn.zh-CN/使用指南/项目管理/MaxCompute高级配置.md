@@ -8,9 +8,9 @@
 
 基本设置中可设置MaxCompute的常用权限点。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/20193/153611129811291_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/20193/154817924011291_zh-CN.png)
 
-MaxCompute安全设置：涉及底层MaxCompute相关的权限及安全设置。详情请参见 [安全指南](https://www.alibabacloud.com/help/doc-detail/27937.htm)。
+MaxCompute安全设置：涉及底层MaxCompute相关的权限及安全设置。详情请参见 [安全指南](https://help.aliyun.com/document_detail/27937.html)。
 
 -   使用ACL授权：激活/冻结该开关，相当于Owner账号在MaxCompute Project中执行`set CheckPermissionUsingACL=true/false`操作，默认激活。
 -   允许对象创建者访问对象：激活/冻结该开关，相当于Owner账号在MaxCompute Project中执行`set ObjectCreatorHasAccessPermission=true/false`操作，默认激活。
@@ -22,7 +22,7 @@ MaxCompute安全设置：涉及底层MaxCompute相关的权限及安全设置。
 
 ## 自定义用户角色 {#section_twg_hv4_1fb .section}
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/20193/153611129811293_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/20193/154817924011293_zh-CN.png)
 
 -   角色名称：MaxCompute Project中的角色名称。
 -   操作：

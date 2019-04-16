@@ -10,15 +10,15 @@ If this is your first time using DataWorks and logging on to the DTplus platform
 
 If you do not have the preceding information, verify the following information from the primary account:
 
--   The primary account user has prepared all configurations and information required by the RAM user according to [Prepare Alibaba Cloud account](reseller.en-US/Preparation/Administrator Operations/Alibaba Cloud Account Preparations.md#) and [Create a RAM user](reseller.en-US/Preparation/Administrator Operations/Create a RAM user.md#).
--   The primary account user has created a project and configured the appropriate member roles for your RAM user account, by following the instructions mentioned in [Create a project](reseller.en-US/Preparation/Administrator Operations/Create a project.md#) .
+-   The primary account user has prepared all configurations and information required by the RAM user according to [Alibaba Cloud Account Preparations](reseller.en-US/Preparation/Administrator Operations/Alibaba Cloud Account Preparations.md#) and [Create a RAM user](reseller.en-US/Preparation/Administrator Operations/Create a RAM user.md#).
+-   The primary account user has created a project and configured the appropriate member roles for your RAM user account, by following the instructions mentioned in [Create Workspace](reseller.en-US/Preparation/Administrator Operations/Create Workspace.md#) .
 
 ## Log on to DataWorks {#section_lxk_ynp_r2b .section}
 
 1.  Log on to the DTplus console by using the RAM user logon link provided by the primary account.
 2.  Go to the **DataWorks** \> **Workspace List** page, and click **Enter Project** in the corresponding project to enter the data development page.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16171/15480417258925_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16171/15514201848925_en-US.png)
 
 
 ## Update personal information {#section_kdx_f4p_r2b .section}
@@ -31,15 +31,15 @@ Before you start DataWorks,you must enter the AccessKey manually.
 
     -   When you log on to DataWorks dashboard for the first time, you will be prompted to enter the AccessKey. Click the link in the red box and enter the personal information page to update your AccessKey information.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16171/15480417258926_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16171/15514201848926_en-US.png)
 
     -   If you have used DataWorks dashboard before, you can enter the Overview page and click **Personal Information**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16171/15480417258927_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16171/15514201848927_en-US.png)
 
 2.  Click **Modify AccessKey Information** to enter AccessKey information obtained from the primary account.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16171/15480417258928_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16171/15514201848928_en-US.png)
 
 3.  Enter the DTplus console again or refresh the page. Now, you can start data development with DataWorks.
 

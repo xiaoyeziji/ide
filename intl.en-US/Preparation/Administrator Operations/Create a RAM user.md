@@ -37,7 +37,7 @@ The AccessKey facilitates smooth operation of the tasks created in DataWorks. Th
 
 If you want to create projects with your RAM account, you may need **AliyunDataWorksFullAccess** policy permission.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/154804175913331_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16176/155142020813331_en-US.png)
 
 ## Delivery RAM account to other users {#section_sng_tzp_r2b .section}
 

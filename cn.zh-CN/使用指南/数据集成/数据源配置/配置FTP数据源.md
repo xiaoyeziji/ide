@@ -2,21 +2,23 @@
 
 FTP数据源提供了读取和写入FTP双向通道的能力，可以通过向导模式和脚本模式配置同步任务。
 
+**说明：** 标准模式的工作空间支持[数据源隔离](intl.zh-CN/使用指南/数据集成/数据源配置/数据源隔离.md#)功能，您可以分别添加开发环境和生产环境的数据源并进行隔离，以保护您的数据安全。
+
 ## 操作步骤 {#section_jy4_q4v_42b .section}
 
 1.  以项目管理员身份进入[DataWorks管理控制台](https://workbench.data.aliyun.com/console)，单击对应项目操作栏中的**进入数据集成**。
 2.  单击**数据源** \> **新增数据源**，弹出支持的数据源。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15469220167534_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15532346747534_zh-CN.png)
 
 3.  在新建数据源弹出框中，选择数据源类型为**FTP**。
-4.  配置FTP数据源的各个信息项。
+4.  填写FTP数据源的各配置项。
 
     新建FTP数据源时，有以下两种数据源类型，您可根据自身情况进行选择。
 
     -   有公网IP
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15469220167535_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15532346757535_zh-CN.png)
 
         |配置|说明|
         |:-|:-|
@@ -30,14 +32,14 @@ FTP数据源提供了读取和写入FTP双向通道的能力，可以通过向�
 
     -   无公网IP
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15469220167536_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16201/15532346757536_zh-CN.png)
 
         |配置|说明|
         |:-|:-|
         |**数据源类型**|无公网IP。选择此类型的数据源需要使用自定义调度资源才能进行同步，您可单击**帮助手册**查看详情。|
         |**数据源名称**|数据源名称必须以字母、数字、下划线组合，且不能以数字和下划线开头。|
         |**数据源描述**|对数据源进行简单描述，不得超过80个字符。|
-        |**资源组**|可以用于执行同步任务，一般添加资源组时可以绑定多台机器。详情请参见[新增调度资源](intl.zh-CN/使用指南/数据集成/常见配置/新增调度资源.md#)。|
+        |**资源组**|可以用于执行同步任务，一般添加资源组时可以绑定多台机器。详情请参见[新增任务资源](intl.zh-CN/使用指南/数据集成/常见配置/新增任务资源.md#)。|
         |**Portocol**|目前仅支持FTP和SFTP协议。|
         |**Host**|对应FTP主机的IP地址。|
         |**Port**|若选择的是FTP协议，则端口默认为21。若选择的是SFTP协议，则端口默认为22。|

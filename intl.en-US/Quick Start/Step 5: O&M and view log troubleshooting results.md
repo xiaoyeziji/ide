@@ -16,7 +16,7 @@ To check whether the instance schedule and dependency are operating as expected,
 -   The scheduling system regularly runs the instance on a specified date and generates operation logs.
 -   Instances rather than a specified date does not run, and their statuses are directly changed to “Successful” if the running conditions are met. Therefore, no running logs are generated.
 
-For more operational and functional instructions, see [Task operations](../../../../../reseller.en-US/User Guide/Operation center/Task O&M/Cycle instance.md#).
+For more operational and functional instructions, see [Task operations](../../../../../reseller.en-US/User Guide/O&M Center/Task O&M/Cycle instance.md#).
 
 ## Test {#section_hmf_k2s_s2b .section}
 
@@ -24,15 +24,15 @@ For more operational and functional instructions, see [Task operations](../../..
 
 1.  On the Cycle Task page, locate the task that you want to run, and click **Test**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16184/15480559849007_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16184/15514203719007_en-US.png)
 
 2.  Enter the business Date and click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16184/15480559849008_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16184/15514203719008_en-US.png)
 
 3.  Go to the Basic information page to view the task run status.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16184/15480559849009_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16184/15514203719009_en-US.png)
 
 
 **View the information and operation logs of the test instance**
@@ -42,7 +42,7 @@ You can see the instance DAG graph by selecting the appropriate task instance in
 -   Right-click an instance, you can view the instance's dependency details and perform specific actions such as stop, resume, and more.
 -   Double-click an instance to enter the pop up task properties, run log, operation log, code, and so on.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16184/15480559849010_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16184/15514203719010_en-US.png)
 
 
 **Note:** 
@@ -59,7 +59,7 @@ If you need to confirm the timing and dependencies of multiple tasks, or need to
 1.  Select the **O&M center** \> **cycle task** page and enter the task name.
 2.  Click **replenishment data**after the query results.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16184/15480559849016_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16184/15514203719016_en-US.png)
 
 3.  Set the business date for the replenishment data as "to", select the write\_result node task, and click **OK**.
 4.  Click to **view the replenishment data results**.
@@ -90,14 +90,14 @@ Under periodic automatic run mode, the scheduling system automatically triggers 
 
 -   Select the parameters such as the business date or the running date on the **O&M center** \> **cycle instance** page, search for the instance that corresponds to the write\_result task, and then right-click on the instance information and the run log.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16184/15480559859020_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16184/15514203719020_en-US.png)
 
 -   You can see the instance DAG graph by selecting the appropriate task instance in the cycle instance page and clicking.
 
     -   Right-click an instance, you can view the dependencies and details of this instance and perform specific actions such as stop, resume, and more.
     -   Double-click an instance to pop up task properties, run log, operation log, code, and more.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16184/15480559859021_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16184/15514203719021_en-US.png)
 
     **Note:** 
 

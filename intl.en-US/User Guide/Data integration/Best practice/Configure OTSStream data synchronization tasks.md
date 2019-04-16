@@ -2,7 +2,7 @@
 
 The OTSStream plugin is used for exporting Table Store incremental data. The incremental data can be considered as operation logs that contain data and operation information.
 
-Different from full export plugins, the incremental export plugin only has multi-version mode that does not allow you to specify columns. This limit is related to how incremental export works. For more information, see [Configure OTSStream Reader](intl.en-US/User Guide/Data integration/Task Configuration/Configure Reader plug-in/Configure OTSStream Reader.md#).
+Different from full export plugins, the incremental export plugin only has multi-version mode that does not allow you to specify columns. This limit is related to how incremental export works. For more information, see [Configure OTSStream Reader](reseller.en-US/User Guide/Data integration/Task configuration/Configure reader plug-in/Configure OTSStream Reader.md#).
 
 **Note:** When configuring OTSStream data synchronization tasks, note the following:
 
@@ -17,7 +17,7 @@ The start time and the end time must cover the time period for operating Table S
 
 ## Add a data source {#section_zvh_wrx_pfb .section}
 
-1.  Log on to the [DataWorks console](https://workbench.data.aliyun.com/console) as a project administrator, find the project, and then click **Data Integration**.
+1.  Log on to the [DataWorks console](https://partners-intl.aliyun.com) as a project administrator, find the project, and then click **Data Integration**.
 2.  Choose **Sync Resources** \> **Data Source** and click **Add Data Source** in the upper-right corner.
 3.  Select **Table Store \(OTS\)** as the data source type and set up the configurations in the dialog box that appears.
 
@@ -79,7 +79,7 @@ The start time and the end time must cover the time period for operating Table S
     |**Number of concurrent jobs**|When you configure Synchronization Concurrency, the data records are split into several tasks based on the specified reader splitting key. These tasks run simultaneously to improve the transmission rate.|
     |**Transmission Rate**|Setting a transmission rate protects the source database from excessive read activity and heavy load. We recommend that you throttle the transmission rate and configure the transmission rate properly based on the source database configurations.|
     |**If there are more than**|The number of dirty data entries. For example, if varchar type data in the source is to be written into a destination column of the int type, a data conversion exception occurs and the data cannot be written into the destination column. You can set an upper limit for the dirty data entries to control the quality of synchronized data. Set an appropriate upper limit based on your business requirements.|
-    |**Task's Resource Group**|The resource group used for running the synchronization task. By default, the task runs with the default resource group. When the project has insufficient resources, you can add a custom resource group and run the synchronization task using the custom resource group. For more information about how to add custom resource groups, see [Add scheduling resource](intl.en-US/User Guide/Data integration/Common configuration/Add scheduling resources.md#).Choose an appropriate resource group based on your data source network conditions, project scheduling resources, and business importance.
+    |**Task's Resource Group**|The resource group used for running the synchronization task. By default, the task runs with the default resource group. When the project has insufficient resources, you can add a custom resource group and run the synchronization task using the custom resource group. For more information about how to add custom resource groups, see [Add scheduling resource](reseller.en-US/User Guide/Data integration/Common configuration/Add task resources.md#).Choose an appropriate resource group based on your data source network conditions, project scheduling resources, and business importance.
 
 |
 

@@ -14,7 +14,7 @@ Created and managed by the primary account in RAM , the RAM user has no resource
 
 1.  Go to the Workspace List page of DataWorks, and click **Enter Project** after the corresponding project list.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16177/15480513348952_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16177/15514202488952_en-US.png)
 
 2.  Click **Project Management** to go to the project management page.
 3.  Click **Project Member Management** in the left-side navigation pane.
@@ -22,17 +22,17 @@ Created and managed by the primary account in RAM , the RAM user has no resource
 
     Click **Refresh** to synchronize the RAM user under the current Alibaba Cloud account in the RAM console to the selected list.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16177/154805133510476_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16177/155142024910476_en-US.png)
 
     **Note:** To add a new RAM user, click **RAM Console** in the preceding figure to open the Alibaba Cloud RAM page. For more information about adding and delivering a RAM user, see [Alibaba Cloud Account Preparations](reseller.en-US/Preparation/Administrator Operations/Alibaba Cloud Account Preparations.md#).
 
 5.  Check RAM users in the New Members dialog box, select a role permission for these RAM users in batches, and click **OK** to add members.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16177/15480513358953_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16177/15514202498953_en-US.png)
 
     The existing members and their roles in the project can be viewed in the list and modified as required. You can also remove RAM users from the project.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16177/15480513358955_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16177/15514202498955_en-US.png)
 
     The project members can be assigned five roles namely, project administrator, deployer, developer, guest, and maintainer. The project creator is the project administrator by default.
 

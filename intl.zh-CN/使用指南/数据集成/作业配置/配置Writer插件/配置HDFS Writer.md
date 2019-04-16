@@ -18,7 +18,7 @@ HDFS Writer的实现过程，如下所示。
 
 **说明：** 数据同步需要使用Admin账号，并且有访问相应文件的读写权限。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16224/15411408347725_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16224/15519393277725_zh-CN.png)
 
 命令说明如下：
 
@@ -98,7 +98,7 @@ HDFS Writer针对Hive数据类型的转换列表，如下所示。
 
 |参数|描述|必选|默认值|
 |:-|:-|:-|:--|
-|defaultFS|Hadoop HDFS文件系统namenode节点地址，例如`hdfs://127.0.0.1:9000`，默认资源组不支持Hadoop高级参数HA的配置。|是|无|
+|defaultFS|Hadoop HDFS文件系统namenode节点地址，例如`hdfs://127.0.0.1:9000`。默认资源组不支持Hadoop高级参数HA的配置，请[新增任务资源](intl.zh-CN/使用指南/数据集成/常见配置/新增任务资源.md#)。|是|无|
 |fileType|文件的类型，目前仅支持您配置为text，orc或parquet。-   text：表示TextFile文件格式。
 -   orc：表示ORCFile文件格式。
 -   parquet：表示普通parquet file文件格式。
@@ -168,6 +168,17 @@ optional int32 status;
 optional int64 bidding_req_num;
 optional int64 imp;
 optional int64 click_num;
+}
+```
+
+|否|无|
+|hadoopConfig|hadoopConfig中可以配置与Hadoop相关的一些高级参数，例如HA的配置。默认资源组不支持Hadoop高级参数HA的配置，请[新增任务资源](intl.zh-CN/使用指南/数据集成/常见配置/新增任务资源.md#)。```
+"hadoopConfig":{
+"dfs.nameservices": "testDfs",
+"dfs.ha.namenodes.testDfs": "namenode1,namenode2",
+"dfs.namenode.rpc-address.youkuDfs.namenode1": "",
+"dfs.namenode.rpc-address.youkuDfs.namenode2": "",
+"dfs.client.failover.proxy.provider.testDfs": "org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider"
 }
 ```
 

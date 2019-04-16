@@ -8,20 +8,20 @@ SHELL任务支持标准SHELL语法，不支持交互性语法。SHELL任务可�
 
     单击左侧导航栏中的**手动业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15382071157961_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15481781897961_zh-CN.png)
 
 2.  新建SHELL节点。
 
     右键单击**数据开发**，选择**新建数据开发节点** \> **SHELL**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16327/15382071158173_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16327/15481781908173_zh-CN.png)
 
 3.  选择节点类型为SHELL，命名节点名称并选择目标文件夹，单击**提交**。
 4.  编辑节点代码。
 
     进入SHELL节点代码编辑页面编辑代码。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16296/15382071157753_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16296/15481781907753_zh-CN.png)
 
     如果想在SHELL中调用系统调度参数，SHELL语句如下所示：
 
@@ -29,11 +29,11 @@ SHELL任务支持标准SHELL语法，不支持交互性语法。SHELL任务可�
     echo "$1 $2 $3"
     ```
 
-    **说明：** 参数1 参数2…多个参数之间用空格分隔。更多系统调度参数的使用，请参见[参数配置](intl.zh-CN/使用指南/数据开发/调度配置/参数配置.md#)。
+    **说明：** 参数1 参数2…多个参数之间用空格分隔。更多系统调度参数的使用，请参见[参数配置](cn.zh-CN/使用指南/数据开发/调度配置/参数配置.md#)。
 
 5.  节点调度配置。
 
-    单击节点任务编辑在区域右侧的**调度配置**，即可进入节点调度配置页面，详情请参见[调度配置](intl.zh-CN/使用指南/数据开发/调度配置/基本属性.md#)模块。
+    单击节点任务编辑在区域右侧的**调度配置**，即可进入节点调度配置页面，详情请参见[调度配置](cn.zh-CN/使用指南/数据开发/调度配置/基本属性.md#)模块。
 
 6.  提交节点任务。
 
@@ -41,11 +41,11 @@ SHELL任务支持标准SHELL语法，不支持交互性语法。SHELL任务可�
 
 7.  发布节点任务。
 
-    具体操作请参见[发布管理](intl.zh-CN/使用指南/数据开发/发布管理/任务发布.md#)。
+    具体操作请参见[发布管理](cn.zh-CN/使用指南/数据开发/发布管理/任务发布.md#)。
 
 8.  在生产环境测试。
 
-    具体操作请参见[手动任务](intl.zh-CN/使用指南/运维中心/任务列表/手动任务.md#)。
+    具体操作请参见[手动任务](cn.zh-CN/使用指南/运维中心/任务列表/手动任务.md#)。
 
 
 ## 应用场景 {#section_vlg_w1p_p2b .section}

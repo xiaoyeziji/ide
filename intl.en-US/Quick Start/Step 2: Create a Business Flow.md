@@ -15,11 +15,11 @@ Make sure you have [built the table and uploaded the data](reseller.en-US/Quick 
 1.  After [Create Workspace](../../../../../reseller.en-US/Preparation/Administrator Operations/Create Workspace.md#), click **Enter workspace** in the corresponding project.
 2.  Go to the DataStudio page and select **create** \> **business flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16181/15480557568983_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16181/15514203298983_en-US.png)
 
 3.  Enter the name and description of the business flow.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16181/15480557568984_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16181/15514203298984_en-US.png)
 
 
 **Create a node and dependency on the flow canvas**
@@ -36,12 +36,12 @@ We recommend you create a virtual node as the root node to control the whole bus
 
 1.  Double-click the virtual node and enter the node name start.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16181/15480557568985_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16181/15514203298985_en-US.png)
 
 2.  Double-click **MaxCompute SQL** to enter the node name “insert\_data”.
 3.  Click the start node, and draw a line between start and insert\_data to make insert\_data a dependency on start, as shown in the following figure:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16181/15480557568986_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16181/15514203298986_en-US.png)
 
 
 **Editing code in the MaxCompute SQL Node**
@@ -65,14 +65,14 @@ GROUP BY education
 1.  After editing the SQL statements in the insert\_data node, click **Save** to prevent code loss.
 2.  Click **Run** to view the operations logs and results,
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16181/15480557568987_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16181/15514203298987_en-US.png)
 
 
 **Save and submit business flows**
 
 After running and debugging the MaxCompute SQL node “insert\_data”, return to the flow page. Click **Save** and **Submit** the whole flow.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16181/15480557568988_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16181/15514203298988_en-US.png)
 
 ## Subsequent steps {#section_gm5_llr_s2b .section}
 

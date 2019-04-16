@@ -10,17 +10,17 @@ Check whether the primary account is available according to the [Alibaba Cloud A
 2.  You can create the MaxCompute project with the following two methods.
     -   Click **Create Workspace** in **Common Functions** area.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16175/15480431958937_en-US.jpg)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16175/15514202368937_en-US.jpg)
 
     -   Go on Workspace List page, click **Create Workspace**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16175/15480431958938_en-US.jpg)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16175/15514202368938_en-US.jpg)
 
 3.  Enter the configuration items in the Create Workspace dialog box. Select a region and a calculation engine service.
 
     If you have not purchased the relevant services, the Region section will directly display it as no service is available . Data development, O&M center, and data management are selected by default..
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16175/15480431958939_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16175/15514202368939_en-US.png)
 
     **Choose calculation Engine services:**
 
@@ -28,19 +28,19 @@ Check whether the primary account is available according to the [Alibaba Cloud A
     -   Machine learning PAI: Machine learning refers to a machine that uses statistical algorithms to learn a large amount of historical data to generate empirical models for business references.
     **Choose DataWorks service:**
 
-    -   Data integration: A data synchronization platform that provides stable, efficient, and elastically scalable services. Data integration is designed to implement fast and stable data movement and synchronization between multiple heterogeneous data sources in complex network environments. For more information, see [Data Integration Overview](../../../../../reseller.en-US/User Guide/Data integration/Data integration introduction/Data Integration Overview.md#).
+    -   Data integration: A data synchronization platform that provides stable, efficient, and elastically scalable services. Data integration is designed to implement fast and stable data movement and synchronization between multiple heterogeneous data sources in complex network environments. For more information, see [Data integration overview](../../../../../reseller.en-US/User Guide/Data integration/Data integration introduction/Data integration overview.md#).
     -   Data development: Data development helps you design data computing processes based on business requirements and make task dependencies automatically run in the scheduling system. For more information, see [Data development overview](../../../../../reseller.en-US/User Guide/Data development/Node type/Node type overview.md#).
-    -   O&M center: O&M center is a place where tasks and instances are displayed and operated. You can view all your tasks in Task List and perform such operations on the displayed tasks. For more information, see [Operation center overview](../../../../../reseller.en-US/User Guide/Operation center/Operation center overview.md#).
+    -   O&M center: O&M center is a place where tasks and instances are displayed and operated. You can view all your tasks in Task List and perform such operations on the displayed tasks. For more information, see [Operation center overview](../../../../../reseller.en-US/User Guide/O&M Center/O&M center overview.md#).
     -   Data management: Data management in Alibaba Cloud DTplus platform displays the global data view and metadata details of an organization, and enables operations such as separate permission management, data lifecycle management, and approval and management of data table, resource, or function permissions. For more information, see [Data management overview](../../../../../reseller.en-US/User Guide/Data management/Introduction.md#).
 4.  Enter project basic information and set advanced settings.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16175/15480431958940_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16175/15514202368940_en-US.png)
 
     **Basic Information**
 
     -   **Workspace name**: The workspace name must be between 3 and 27 characters in length.
     -   **Display name**: The display name must be less than 27 characters in length.
-    -   **Mode**: The project mode is a new feature introduced by the new DataWorks version. It is separated into simple and standard mode. For differences between the two project development patterns, see [Simple mode and standard mode](../../../../../reseller.en-US/Best Practices/Simple mode and standard mode.md#).
+    -   **Mode**: The project mode is a new feature introduced by the new DataWorks version. It is separated into simple and standard mode. For differences between the two project development patterns, see [Simple mode and standard mode](../../../../../reseller.en-US/Product Introduction/Simple mode and standard mode.md#).
         -   Simple mode: A DataWorks project corresponding to a MaxCompute project, cannot set the development and production environment. Under this mode, you can only perform simple data development, and cannot control the data development process and table permissions.
         -   Standard mode: A DataWorks project corresponding to two MaxCompute projects can set both the development and production environments, improve code development specifications, and strictly control table permissions, prohibits arbitrary operation of the production environment table, and ensure the data security of the production table.
     **Advanced Settings**

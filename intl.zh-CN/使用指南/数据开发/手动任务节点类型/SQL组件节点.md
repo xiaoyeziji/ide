@@ -6,13 +6,13 @@
 
     单击左侧导航栏中的**手动业务流程**，选择**新建业务流程**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15381259887961_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15507168327961_zh-CN.png)
 
 2.  新建SQL组件节点。
 
     右键单击**数据开发**，选择**新建数据开发节点** \> **SQL组件节点**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16325/15381259888127_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16325/15507168328127_zh-CN.png)
 
 3.  为提高开发效率，数据任务的开发者可以使用项目成员和租户成员贡献的组件来新建数据处理节点。
 
@@ -20,11 +20,11 @@
     -   租户成员创建的组件在公共组件下。
     新建节点时，选择节点类型为**SQL组件节点**类型，并为该节点指定名字。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15381259887777_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15507168327777_zh-CN.png)
 
     为选定的组件指定参数。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15381259887779_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16297/15507168327779_zh-CN.png)
 
     输入参数名称后，选择参数类型为Table或String。
 
@@ -34,7 +34,7 @@
 
 4.  节点调度配置。
 
-    单击节点任务编辑在区域右侧的**调度配置**，即可进入节点调度配置页面，详情请参见[调度配置](intl.zh-CN/使用指南/数据开发/调度配置/基本属性.md#)模块。
+    单击节点任务编辑在区域右侧的**调度配置**，即可进入节点调度配置页面，详情请参见[调度配置](cn.zh-CN/使用指南/数据开发/调度配置/基本属性.md#)模块。
 
 5.  提交节点任务。
 
@@ -42,11 +42,11 @@
 
 6.  发布节点任务。
 
-    具体操作请参见[发布管理](intl.zh-CN/使用指南/数据开发/发布管理/任务发布.md#)。
+    具体操作请参见[发布管理](cn.zh-CN/使用指南/数据开发/发布管理/任务发布.md#)。
 
 7.  在生产环境测试。
 
-    具体操作请参见[手动任务](intl.zh-CN/使用指南/运维中心/任务列表/手动任务.md#)。
+    具体操作请参见[手动任务](cn.zh-CN/使用指南/运维中心/任务列表/手动任务.md#)。
 
 
 ## 升级SQL组件节点的版本 {#section_tmq_qdq_p2b .section}
@@ -61,7 +61,7 @@
 
 ## 界面功能 {#section_h3p_32q_p2b .section}
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16325/15381259898137_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16325/15507168328137_zh-CN.png)
 
 界面功能说明如下：
 

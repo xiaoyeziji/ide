@@ -2,32 +2,32 @@
 
 This topic describes the data types and parameters supported by Memcache \(OCS\) Writer and how to configure Writer in script mode.
 
-ApsaraDB for Memcache \(formerly known as OCS\) is a seamlessly scalable distributed memory database service with high performance and reliability. Based on the Apsara distributed system and high performance storage, ApsaraDB for Memcache provides a complete set of solutions for active/standby hot standby, disaster recovery, business monitoring, data migration, and other scenarios.
+ApsaraDB for Memcache \(formerly known as OCS\) is a seamless scalable distributed memory database service with high performance and reliability. Based on the Apsara distributed system and high performance storage, ApsaraDB for Memcache provides a complete set of solutions for active/standby hot standby, disaster recovery, business monitoring, data migration, and other scenarios.
 
-ApsaraDB for Memcache supports out-of-the-box deployment mode, and relieves the database load for dynamic web applications using the cache service, thus accelerating the overall response of the website.
+ApsaraDB for Memcache supports out-of-the-box deployment mode, and alleviates database load for dynamic web applications using the cache service, thus accelerating the overall website response.
 
-Similar to local Memcache databases, ApsaraDB for Memcache is compatible with the Memcached protocol. You can use it directly in your operating environment. The difference is that the hardware and data of ApsaraDB for Memcache are deployed in the cloud, providing complete infrastructure, network security, and system maintenance services. All these services are billed on a Pay-As-You-Go basis.
+Similar to local Memcache databases, ApsaraDB for Memcache is compatible with the Memcached protocol. You can use it directly in the operating environment. The difference is that the hardware and data of ApsaraDB for Memcache are deployed in the cloud, providing complete infrastructure, network security, and system maintenance services. All these services are billed on a Pay-As-You-Go basis.
 
 Memcache Writer writes data into Memcache channels based on the Memcached protocol.
 
 Currently, Memcache Writer supports only one write mode. Data types written in different modes are converted differently:
 
 -   text: Memcache Writer serializes source data to the String type, and uses your fieldDelimiter as the delimiter.
--   Binary: not supported.
+-   Binary: Data type is not supported.
 
 ## Parameter description​ {#section_ls4_n5m_q2b .section}
 
-|Attribute|Description|Required|Default Value|
+|Attribute|Description|Required|Default value|
 |:--------|:----------|:-------|:------------|
-|datasource|The data source name. It must be identical to the data source name added. Adding data source is supported in script mode.|Yes|None|
+|datasource|The data source name. It must be identical to the added data source name . Adding data source is supported in script mode.|Yes|None|
 |writeMode|Memcache Writer writes data in the following modes:-   set: Stores the data.
--   add: Stores the data only when this key does not exist \(currently is not supported\).
--   replace: Stores the data only when this key exists \(currently is not supported \).
--   append: Stores data after the existing key, and ignores exptime \(currently is not supported\).
--   prepend: Stores data before the existing key, and ignores exptime \(currently is not supported\).
+-   add: Stores the data only when the key does not exist \(currently is not supported\).
+-   replace: Stores the data only when the key exists \(currently is not supported\).
+-   append: Stores data after the existing key and ignores exptime \(currently is not supported\).
+-   prepend: Stores data before the existing key and ignores exptime \(currently is not supported\).
 
 |Yes|None |
-|writeFormat|Currently, Memcache Writer supports writing data in only one format:TEXT: Serialize the source data to the text format with the first field being the key written into Memcache, and all subsequent fields to the String type. Use fieldDelimiter you specified as the delimiter to concatenate the text data into a complete string and write it into Memcache.
+|writeFormat|Currently, Memcache Writer supports writing data in only TEXT formatTEXT: Serializes the source data to the text format with the first field being the key written into Memcache, and all subsequent fields to the String type. Use the specified fieldDelimiter as the delimiter to concatenate the text data into a complete string and write it into Memcache.
 
 For example, the source data is:
 
@@ -46,19 +46,19 @@ If fieldDelimiter is specified as \\^, the data format written into Memcache is:
 ```
 
 |No|None |
-|ExpireTime|The cache invalidation time for the Memcache value. Currently, Memcache supports two types of invalidation time.-   Unix time \(number of seconds since January 1, 1970\) indicates that data is invalid at a certain time point in the future.
+|ExpireTime|The Memcache invalidation time. Currently, MemCache supports two types of invalidation time.-   Unix time \(expressed in number of seconds since January 1, 1970\) indicates the data is invalid at a certain time point in the future.
 -   The relative time \(in seconds\) starting from the current time point, which indicates the time length from the current time before data is invalid.
 
-**Note:** If the invalidation time is larger than 60\\\*60\\\*24\*30 \(30 days\), the server identifies the invalidation time as the Unix time.
+**Note:** If the invalidation time is greater than 60\\\*60\\\*24\*30 \(30 days\), the server identifies the invalidation time as the Unix time.
 
  |No|0. 0 permanently valid|
-|batchSize|The quantity of records submitted in one operation. Setting this parameter can greatly reduce interactions between CDP and Memcache over the network, and increase the overall throughput. However, an excessively large value may cause the CDP running processes to become Out of Memory \(OOM\). \(Writing in batches is not supported for the current Memcache version.\)|No|1,024|
+|batchSize|The quantity of records submitted in one operation. Setting this parameter can greatly reduce interactions between CDP and Memcache over the network, and increase the overall throughput. However, an excessively large value may cause the CDP running processes to become Out of Memory \(OOM\). \(The current Memcache version does not support writing in batches.\)|No|1,024|
 
-## Development in wizard mode {#section_b5s_hwm_q2b .section}
+## Development in Wizard Mode {#section_b5s_hwm_q2b .section}
 
-Currently, development in wizard mode is not supported.
+Currently, development in Wizard Mode is not supported.
 
-## Development in script mode {#section_fgb_jwm_q2b .section}
+## Development in Script Mode {#section_fgb_jwm_q2b .section}
 
 Use the data generated from memory and imported into Memcache.
 

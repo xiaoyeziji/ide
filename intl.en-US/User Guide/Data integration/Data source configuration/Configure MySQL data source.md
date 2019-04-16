@@ -18,7 +18,7 @@ This topic describes how to configure the MySQL data source. The MySQL data sour
 2.  Click **Data Integration** in the top navigation bar to go to the **Data Source** page.
 3.  Click **Add Data Source** in the supported data source pop-up window.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16207/15514228317549_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16207/15514309587549_en-US.png)
 
 4.  Select the data source type **MySQL** in the new dialog box.
 5.  Complete the MySQL data source information items configuration.
@@ -27,7 +27,7 @@ This topic describes how to configure the MySQL data source. The MySQL data sour
 
     Consider a data source for the new **MySQL** \> **Alibaba Cloud Database \(RDS\)** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16207/15514228317550_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16207/15514309587550_en-US.png)
 
     Configurations:
 
@@ -36,18 +36,18 @@ This topic describes how to configure the MySQL data source. The MySQL data sour
     -   Description: A brief description of the data source that does not exceed 80 characters in length.
     -   RDS Instance ID: You can go to the RDS console to view the RDS instance ID.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16207/15514228317551_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16207/15514309597551_en-US.png)
 
     -   RDS instance buyer ID: You can view information in the RDS console security settings.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16207/15514228317553_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16207/15514309597553_en-US.png)
 
     -   Username and password: The user name and password used to connect to the database.
     **Note:** You need to add an RDS whitelist before connection. For more information, see[Add whitelist](reseller.en-US/User Guide/Data integration/Common configuration/Add whitelist.md#).
 
     Consider a data source for the new **MySQL** \> **Public Network IP Address** type as an example.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16207/15514228317554_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16207/15514309597554_en-US.png)
 
     Configurations:
 
@@ -58,7 +58,7 @@ This topic describes how to configure the MySQL data source. The MySQL data sour
     -   Username and password: The user name and password used for connecting to the database.
     For example, a data source with a new **MySQL** \> **Non-Public Network IP Address** type.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16207/15514228317555_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16207/15514309597555_en-US.png)
 
     Configurations:
 

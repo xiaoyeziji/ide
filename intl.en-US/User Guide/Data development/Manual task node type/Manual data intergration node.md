@@ -1,20 +1,20 @@
 # Manual data intergration node {#concept_amn_wcm_q2b .concept}
 
-Currently, the data intergration task supports the following data sources: MaxCompute, MySQL, DRDS, SQL Server, PostgreSQL, Oracle, MongoDB, DB2, Table Store, OTSStream, OSS, FTP, Hbase, LogHub, HDFS, and Stream. For details about more supported data sources, see [Supported data sources](intl.en-US/User Guide/Data integration/Data source configuration/Supported data sources.md#).
+Currently, the data intergration task supports the following data sources: MaxCompute, MySQL, DRDS, SQL Server, PostgreSQL, Oracle, MongoDB, DB2, Table Store, OTSStream, OSS, FTP, Hbase, LogHub, HDFS, and Stream. For details about more supported data sources, see [Supported data sources](reseller.en-US/User Guide/Data integration/Data source configuration/Supported data sources.md#).
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16323/15476904648058_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16323/15525337288058_en-US.png)
 
 1.  Create a business flow
 
     Click **Manual Business Flow** in the left-side navigation pane, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15476904647961_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15525337287961_en-US.png)
 
 2.  Create a data intergration node
 
     Right-click **Data Integration**, and select **Create Data Data Integration Node** \> **Data Integration**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16323/15476904648059_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16323/15525337288059_en-US.png)
 
 3.  Configure a intergration task
 
@@ -24,7 +24,7 @@ Currently, the data intergration task supports the following data sources: MaxCo
 
     1.  Configure intergration tables.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16323/15476904648068_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16323/15525337288068_en-US.png)
 
     2.  Edit the data source.
 
@@ -51,7 +51,7 @@ Currently, the data intergration task supports the following data sources: MaxCo
 
         Fields are mapped based on the locations of fields in the source table and destination table, instead of based on the field names and types.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16323/15476904648081_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16323/15525337288081_en-US.png)
 
         **Note:** If the source table is an ODPS table, fields cannot be added during data intergration. If the source table is not an ODPS table, fields can be added during data intergration.
 
@@ -66,7 +66,7 @@ Currently, the data intergration task supports the following data sources: MaxCo
         -   Task resource group: To select a resource group where the current intergration node is located, you can add or modify the resource group on the data integration page.
 4.  Node scheduling configuration.
 
-    Click the **Schedule** on the right of the node task editing area to go to the node scheduling configuration page. For more information, see [Scheduling configuration](intl.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
+    Click the **Schedule** on the right of the node task editing area to go to the node scheduling configuration page. For more information, see [Scheduling configuration](reseller.en-US/User Guide/Data development/Scheduling configuration/Basic attributes.md#).
 
 5.  Submit a node task.
 
@@ -78,6 +78,6 @@ Currently, the data intergration task supports the following data sources: MaxCo
 
 7.  Test in the production environment.
 
-    For more information about the operation, see [Cyclic task](intl.en-US/User Guide/Operation center/Task list/Cyclic task.md#).
+    For more information about the operation, see [Cyclic task](reseller.en-US/User Guide/O&M Center/Task list/Cyclic task.md#).
 
 

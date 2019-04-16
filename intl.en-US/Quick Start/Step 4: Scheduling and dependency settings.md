@@ -12,7 +12,7 @@ DataWorks provides powerful scheduling capabilities including time-based or depe
 2.  Double-click the synchronization task \(write\_result\) that you want to configure\).
 3.  Click **schedule configuration** on the right to configure scheduling properties for the task.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16183/15480559569000_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16183/15514203599000_en-US.png)
 
     Parameters:
 
@@ -26,7 +26,7 @@ DataWorks provides powerful scheduling capabilities including time-based or depe
 
 After completing the synchronization task schedule properties configuration , you can configure its deployment dependency properties.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16183/15480559569001_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16183/15514203599001_en-US.png)
 
 You can configure an upstream dependency for a task. In this way, even if the current task instance reaches the scheduled time, the task only run after the instance upstream task is completed.
 
@@ -38,7 +38,7 @@ If no upstream tasks is configured then, by default the current task is triggere
 
 Save the synchronization task **write\_result** and click **Submit** to submit it to the scheduling system.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16183/15480559569003_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16183/15514203599003_en-US.png)
 
 The system automatically generates an instance for the task at each time point according to the scheduling attribute configuration and periodically runs the task from the second day only after a task is submitted to the scheduling system.
 

@@ -8,20 +8,20 @@ A virtual node is a control node that does not generate any data. Generally, it 
 
     Click **Manual Business Flow** in the left-side navigation pane, select **Create Business Flow**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15389925857961_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16319/15525338877961_en-US.png)
 
 2.  Create a virtual node. Right-click **Data Development**, and select **Create Data Development Node** \> **Virtual Node**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16326/15389925858159_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16326/15525338878159_en-US.png)
 
 3.  Set the node type to **Virtual Node**, enter the node name, select the target folder, and click **Submit**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16298/15389925857817_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16298/15525338877817_en-US.png)
 
 4.  Edit the node code: You do not need to edit the code of a virtual node.
 5.  Node scheduling configuration.
 
-    Click the **Schedule** on the right of the node task editing area to go to the node scheduling configuration page. For more information, see [Scheduling configuration](reseller.en-US/User Guide/Data development/Scheduling Configuration/Basic attributes.md#).
+    Click the **Schedule** on the right of the node task editing area to go to the node scheduling configuration page. For more information, see [Scheduling configuration](reseller.en-US/User Guide/Data development/Scheduling configuration/Basic attributes.md#).
 
 6.  Submit the node.
 
@@ -33,6 +33,6 @@ A virtual node is a control node that does not generate any data. Generally, it 
 
 8.  Test in the production environment.
 
-    For more information about the operation, see [Manual tasks](reseller.en-US/User Guide/Operation center/Task list/Manual task.md#).
+    For more information about the operation, see [Manual task](reseller.en-US/User Guide/O&M Center/Task list/Manual task.md#).
 
 
