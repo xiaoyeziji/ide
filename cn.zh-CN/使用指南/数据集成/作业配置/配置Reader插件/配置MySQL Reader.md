@@ -121,7 +121,7 @@ MySQL Reader针对MySQL类型的转换列表，如下所示。
                     "id"
                 ],
                 "connection":[
-                    {   "querysql":["select a,b from join1 c join join2 d on c.id = d.id;"], //将querySql写在connection里，使用字符串的形式
+                    {   "querySql":["select a,b from join1 c join join2 d on c.id = d.id;"], //将querySql写在connection里，使用字符串的形式,并且区分大小写
                         "datasource":"",//数据源
                         "table":[//表名
                             "xxx"
